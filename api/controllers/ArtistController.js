@@ -16,7 +16,7 @@
  */
 
 module.exports = {
-    
+	
   'new': function(req, res){
 		res.view();
 	},
@@ -64,26 +64,13 @@ module.exports = {
 	},
 
  index: function(req, res, next){
- 	Artist.find().sort('name').exec(function foundArtists(err, artists){
- 		res.view({
- 			layout: "layouts/artistLayout.ejs",
- 			artists: artists
- 		});
- 	});
+	Artist.find().sort('name').exec(function foundArtists(err, artists){
+		res.view({
+			layout: "layouts/artistLayout.ejs",
+			artists: artists
+		});
+	});
   },
-
-
-	// index: function(req, res, next){
-	// 	//send all user objects to main page for display
-	// 	//using waterline sort method to make alphabetical
-	// 	Artist.find().sort('name').exec(function foundArtists(err, artists){
-	// 		res.render('artist/index', {
-	// 			artists: artists,
-	// 			_layoutFile: "../layouts/artistLayout.ejs"
-	// 		});
-	// 	});
-	// },
-
 
 	//edit.ejs
 	edit: function(req, res, next){

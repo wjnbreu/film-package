@@ -58,6 +58,16 @@ function addInfo(name, pic, nickname){
 	$('#artist-info').find('.exit').removeClass('hidden');
 	$('#artist-info').find('.assets img').attr('src', '../images/artist/' + pic + '.jpg');
 
+	//loop through h2 titles
+	$('#artist-info').find('h2').each(function(){
+		//make sure each one is hidden
+		$(this).addClass('hidden');
+
+		if ($(this).hasClass(pic + '-title')){
+			$(this).removeClass('hidden');
+		}
+	});
+
 	//loop through each p item (which are dynamically created via database objects)
 	$('#artist-info').find('p').each(function(){
 		//make sure each one is hidden

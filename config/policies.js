@@ -19,15 +19,15 @@ module.exports.policies = {
   '*': 'flash',
 
   user: {
-  	'new': "admin"
+	'new': "admin"
   },
 
   artist: {
-  	'new': 'admin',
-  	'create': 'flash',
-  	'edit': 'isAuthenticated',
-  	'list': 'isAuthenticated',
-  	'show': 'isAuthenticated'
+	'new': 'admin',
+	'create': 'flash',
+	'edit': 'isAuthenticated',
+	'list': 'isAuthenticated',
+	'show': 'isAuthenticated'
   }
 
   /*

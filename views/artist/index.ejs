@@ -16,6 +16,7 @@
             <div class="exit hidden">X</div>
             <h1><span class="insert-name"></span></h1>
             <% _.each(artists, function(artist){ %>
+            <h2 class="title <%= artist.nickname + '-title' %>"><%= artist.title %></h2>
             <p class="bio <%= artist.nickname + '-bio' %>"><%= artist.bio %></p>
             <% }) %>
             <div class='assets'>
