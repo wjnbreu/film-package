@@ -1,0 +1,14 @@
+<div class="container">
+	<h1><%= user.name %></h1>
+	<% if (user.admin) { %>
+	<img style="width: 50px;height:50px" src="/images/admin.png">
+	<p>Admin</p>
+			<% } else { %>
+	<img style="width: 50px;height:50px" src="/images/pawn.png">
+			<% } %>
+	<hr>
+	<h3>contact: <%= user.email %></h3>
+
+
+	<a class="btn btn-medium btn-primary" href="/user/edit/<%= user.id %>">Edit</a>
+</div>
