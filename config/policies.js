@@ -16,7 +16,19 @@ module.exports.policies = {
 
   // Default policy for all controllers and actions
   // (`true` allows public access) 
-  '*': 'flash'
+  '*': 'flash',
+
+  user: {
+  	'new': "admin"
+  },
+
+  artist: {
+  	'new': 'admin',
+  	'create': 'flash',
+  	'edit': 'isAuthenticated',
+  	'list': 'isAuthenticated',
+  	'show': 'isAuthenticated'
+  }
 
   /*
 	// Here's an example of adding some policies to a controller
