@@ -1,0 +1,37 @@
+<div class="backend">
+<form action="/artist/create" method="POST" class="form-signin" id="sign-up-form">
+	<h2 class="form-signin-heading">Add New Artist</h2>
+
+	<% if(flash && flash.err){ %>
+		<ul class="alert alert-success">
+			<% Object.keys(flash.err).forEach(function(error){ %>
+			<li><%- JSON.stringify(flash.err[error]) %></li>
+		<% }) %>
+		</ul>
+	<% } %>
+	
+	<div class="control-group">
+		<input type="text" class="form-control" placeholder="Name" name="name">
+	</div>
+
+	<div class="control-group">
+		<input type="text" class="form-control" placeholder="Title" name="title">
+	</div>
+
+	<div class="control-group">
+		<input type="text" class="form-control" placeholder="Pic Id / Nickname to be used for photo" name="nickname">
+	</div>
+
+	<div class="control-group">
+		<textarea cols="80" rows="10" wrap="physical" name="bio" placeholder="Bio"></textarea>
+	</div>
+
+	<br />
+
+	<input type="submit" class="btn btn-lg btn-primary btn-block" value="Add Artist"/>
+
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+</form>
+<br /><br />
+<a class="back-link" href="/artist/list"><--Back to Artist List</a>
+</div>

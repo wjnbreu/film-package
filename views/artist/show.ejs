@@ -1,0 +1,13 @@
+<div class="backend">
+<div class="container">
+	<h1><%= artist.name %></h1>
+
+	<h3>Role: <%= artist.title %></h3>
+	<h3>Bio:</h3>
+	<p><%= artist.bio %></p>
+
+
+	<a class="btn btn-medium btn-primary" href="/artist/edit/<%= artist.id %>">Edit</a>
+</div>
+<a class="back-link" href="/artist/list"><--Back to Artist List</a>
+</div>

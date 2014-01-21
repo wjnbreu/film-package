@@ -1,0 +1,38 @@
+<div class="container">
+	<h3>RBMA 15 Artists</h3>
+	<table class="table artist-list">
+		<tr>
+			<th>Name</th>
+			<th>Pic Id</th>
+			<th>Has Bio</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<% _.each(artists, function(artist){ %>
+		<tr data-id="<%= artist.id %>" data-model="artist">
+			<td><%= artist.name %></td>
+			<td><%= artist.nickname %></td>
+			<td>
+				<% if(artist.bio) { %>
+					YES
+				<% } else if(!artist.bio) { %>
+					NO
+				<% } %>
+			</td>
+			<td><a href="/artist/show/<%= artist.id %>" class="btn btn-sm btn-primary">Show</a></td>
+			<td><a href="/artist/edit/<%= artist.id %>" class="btn btn-sm btn-warning">Edit</a></td>
+
+			<td><form action="/artist/destroy/<%= artist.id %>" method="POST">
+				<input type="hidden" name="_method" value="delete" />
+				<input type="submit" class="btn btn-sm btn-danger" value="Delete" />
+				<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+			</form>
+		</td>
+
+		</tr>
+		<% }) %>
+	</table>
+	<a href="/artist/new/" class="btn btn-medium btn-primary">Add Artist</a>
+</div>

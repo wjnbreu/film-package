@@ -1,0 +1,26 @@
+<div class="backend">
+<form action="/artist/update/<%= artist.id %>" method="POST" class="form-signin">
+	<h2>Hey there, you're editing <%= artist.name %>...</h2>
+
+	<div class="form-group">
+	<label for="<%= artist.name %>">Artist Name</label>
+	<input value="<%= artist.name %>" name="name" type="text" class="form-control"/>
+</div>
+<div class="form-group">
+	<label for="<%= artist.title %>">Artist Title/Year</label>
+	<input value="<%= artist.title %>" name="title" type="text" class="form-control" />
+</div>
+<div class="form-group">
+	<label for="<% artist.nickname %>">Pic Id</label>
+	<input value="<%= artist.nickname %>" name="nickname" type="text" class="form-control" />
+</div>
+<div class="form-group">
+	<label for="<%= artist.bio %>">New Bio</label>
+	<textarea value="<%= artist.bio %>" placeholder="<%= artist.bio %>" name="bio" wrap="physical" rows="10" class="form-control"></textarea>
+</div>
+
+
+	<input type="submit" value="Proceed" class="btn btn-large center btn-primary btn-block"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+</form>
+</div>

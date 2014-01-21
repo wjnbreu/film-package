@@ -23,23 +23,21 @@
 	<h3>Users</h3>
 	<table class="table">
 		<tr>
-			<th>ID</th>
 			<th>Name</th>
 			<th>Email</th>
-			<th></th>
+			<th>Admin</th>
 			<th></th>
 			<th></th>
 		</tr>
 
 		<% _.each(users, function(user){ %>
 		<tr data-id="<%= user.id %>" data-model="user">
-			<td><%= user.id %></td>
 			<td><%= user.name %></td>
 			<td><%= user.email %></td>
 			<% if (user.admin) { %>
-				<td><img style="width: 50px;height:50px" src="images/admin.png"></td>
+				<td>ADMIN</td>
 			<% } else { %>
-				<td><img style="width: 50px;height:50px" src="images/pawn.png"></td>
+				<td>X</td>
 			<% } %>
 			<td><a href="/user/show/<%= user.id %>" class="btn btn-sm btn-primary">Show</a></td>
 			<td><a href="/user/edit/<%= user.id %>" class="btn btn-sm btn-warning">Edit</a></td>
