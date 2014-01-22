@@ -236,13 +236,13 @@ module.exports = function (grunt) {
       expand: true,
       cwd: 'assets/styles/',
       src: ['*.scss', '*.sass'], // Feel free to remove a format if you do not use it.
-      dest: '.tmp/public/styles/',
+      dest: 'assets/styles/',
       ext: '.css'
     }, {
       expand: true,
-      cwd: 'assets/linker/styles/',
+      cwd: 'assets/styles/',
       src: ['*.scss', '*.sass'], // Feel free to remove a format if you do not use it.
-      dest: '.tmp/public/linker/styles/',
+      dest: 'assets/styles/',
       ext: '.css'
     }
     ]
