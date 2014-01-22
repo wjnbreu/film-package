@@ -254,14 +254,10 @@ Video background not fading out on video play button click
 		}
 		else if(clk.hasClass('booklink')){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 2) + 10
+				scrollTop: (win_height * 3) + 10
 			}, 750);
 		}
-		else if(clk.hasClass('extraslink')){
-			$('#wrapper').animate({
-				scrollTop: (win_height * 3) + 10
-			}, 1000);
-		}
+
 		else if(clk.hasClass('aboutlink')){
 			$('#wrapper').animate({
 				scrollTop: (win_height * 4) + 10
