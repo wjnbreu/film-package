@@ -22,12 +22,6 @@ body {
     font-size: 1em;
     line-height: 1.4;
     overflow: hidden;
-    font-family: Helvetica, sans-serif;
-}
-
-a{
-    text-decoration: none;
-    color: black;
 }
 
 /*
@@ -100,11 +94,23 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+
 @-webkit-keyframes 'twitch'{
     from {-webkit-transform: rotate(0.5deg)};
     to {-webkit-transform: rotate(-0.5deg)};
 }
+@font-face {
+  font-family: 'Clan';
+  src: url("../font/ClanPro-NarrUltra.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; 
+}
 
+h1, h2, h3{
+    font-family: 'Clan', helvetica, sans-serif;
+    letter-spacing: 3px;
+}
 
    #wrapper{
     position: absolute;
@@ -113,43 +119,54 @@ textarea {
     height: 100%;
     width: 100%;
     background-color: white;
-    overflow: hidden;
+    overflow-x: hidden;
     }
 
     #insert-name{
         position: fixed;
         top: 20px;
-        left: 20px;
-        height: 100px;
+        left: 10%;
+        right: 10%;
+        height: 150px;
+        text-transform: uppercase;
+        line-height: 1;
+        width: 80%;
         color: black;
-        font-size: 4em;
+        font-size: 3em;
+        text-align: center;
+        z-index: 3;
     }
 
     .artists{
         position: absolute;
-        width: auto;
-        height: 40%;
         top: 30%;
         left: 0;
+        width: 80%;
+        left: 10%;
+        right: 10%;
+        text-align: center;
+        margin: 0;
+        z-index: 2;
         ul{
-            display: inline-block;
+            list-style-type: none;
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+            
             li{
-                display: inline-block;
-                img{
-                    max-height: 100%;
-                    max-width: 250px;
-                    padding-right: 100px;
-                    -webkit-transition: all .1s ease-in-out;
-                    -webkit-filter: grayscale(100%);
-                    -moz-filter: grayscale(100%);
-                    filter: grayscale(100%);
-                    opacity: 0.5;
+                
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: black;
+                    font-size: 2em;
+                    font-family: helvetica, sans-serif;
+                    margin-bottom: 20px;
+                    -webkit-transition: all .2s ease-in-out;
                     &:hover{
-                        -webkit-animation: 'twitch' 0.05s infinite alternate;
-                        -webkit-filter: grayscale(0%);
-                        -moz-filter: grayscale(0%);
-                        filter: grayscale(0%);
-                        opacity: 0.9;
+                        font-weight: bold;
+                        font-size: 2.3em;
+                        font-style: italic;
                     }
                 }
             }
@@ -157,10 +174,25 @@ textarea {
         
     }
 
+    .artist-images{
+        display: block;
+        width: 80%;
+        position: fixed;
+        left: 10%;
+        right: 10%;
+        top: 10%;
+        bottom: 10%;
+        overflow: hidden;
+        z-index: 0;
+        img{
+            width: 100%;
+        }
+    }
+
     #artist-info{
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: 0;
+        left: 100%;
         width: 100%;
         height: 100%;
         background-color: white;
@@ -169,56 +201,49 @@ textarea {
         h1{
             position: fixed;
             top: 0;
-            left: 5%;
+            left: 40px;
             color: black;
-            top: -40px;
             font-size: 6em;
             z-index: 4;
         }
         p{
-            width: 50%;
-            margin-top: 15%;
-            margin-left: 5%;
+            width: 40%;
+            margin-top: 20%;
+            margin-left: 40px;
             line-height: 2;
             z-index: 3;
-            font-size: 0.9em;
         }
         .assets{
-            width: 45%;
+            width: 50%;
             position: absolute;
             height: 60%;
-            left: 55%;
+            left: 50%;
             background-color: white;
             top: 28%;
             text-align: center;
             
             img{
                 margin-left: 5%;
-                max-width: 300px;
                 margin-right: auto;
             }
         }
 
         .links{
             position: absolute;
-            bottom: 50px;
+            bottom: 100px;
             width: 100%;
             ul{
                 list-style-type: none;
                 text-align: center;
                 li{
-                    font-size: 1.2em;
+                    font-size: 2em;
                     margin: 40px;
                     font-weight: bold;
                     text-transform: uppercase;
                     display: inline;
-                    a{
-                        color: black;
-                        &:hover{
-                            background-color: black;
-                            color: white;
-                            text-decoration: none !important;
-                        }
+                    &:hover{
+                        background-color: black;
+                        color: white;
                     }
                 }
             }
@@ -241,38 +266,9 @@ textarea {
         }
     }
 
-    .backend{
-        width: 80%;
-        margin-left: 10%;
-        h1{
-            margin-top: 5%;
-        }
-        h2{
-            margin-left: 10%;
-            margin-top: 5%;
-        }
-        .btn{
-            width: 50% !important;
-            margin-left: 25%;
-            &.center{
-                margin-left: 10%;
-                margin-top: 15px;
-            }
-        }
-        .back-link{
-            color: blue;
-            text-decoration: underline;
-            width: 100%;
-            position: absolute;
-            top: 0;
-
-        }
-    }
-
-    textarea{
-        width: 80% !important;
-        margin-left: 10% !important;
-    }
+.container #artist-list{
+    background-color: white;
+}
 
 
 

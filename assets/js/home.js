@@ -189,29 +189,27 @@ Video background not fading out on video play button click
 			});
 
 			burgerBlack.css({
-				display: 'block'
+				display: 'black'
 			});
 		}
-
-		//FIFTH SCREEN
 
 		if (top > (win_height * 4) - 35){
 			if (win_width <= 721){
 					burgerWhite.css({
-						display: 'block'
+						display: 'none'
 					});
 
 					burgerBlack.css({
-						display: 'none'
+						display: 'black'
 					});
 			}
 			else{
 				burgerWhite.css({
-					display: 'block'
+					display: 'none'
 				});
 
 				burgerBlack.css({
-					display: 'none'
+					display: 'block'
 				});
 			}
 			

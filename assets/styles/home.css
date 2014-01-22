@@ -641,8 +641,8 @@ nav .nav-top-right li a.scroll:hover {
   left: 0;
   width: 100%;
   height: 180%;
-  background-color: black;
-  color: white;
+  background-color: white;
+  border-top: 3px dotted black;
 }
 #about .text {
   margin-top: 5%;
@@ -661,7 +661,7 @@ nav .nav-top-right li a.scroll:hover {
   font-size: 1em;
 }
 #about .text p a {
-  color: white;
+  color: black;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -678,11 +678,6 @@ nav .nav-top-right li a.scroll:hover {
   width: 20%;
   margin-left: 40%;
   margin-right: 40%;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
 }
 #about .text .logo img:hover {
   opacity: 0.7;
@@ -699,13 +694,10 @@ nav .nav-top-right li a.scroll:hover {
   height: auto;
 }
 #about .text .social img.social-black {
-  display: none;
-}
-#about .text .social img.social-white {
   display: inline-block;
 }
-#about .text .social img.social-white:hover {
-  opacity: 0.7;
+#about .text .social img.social-white {
+  display: none;
 }
 #about .text .social iframe {
   display: none;

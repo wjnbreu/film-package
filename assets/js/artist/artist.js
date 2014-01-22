@@ -2,24 +2,27 @@ $(document).ready(function(){
 
 var imgWidth = 250; //px
 var padding = 100;
-var images = $('#wrapper').find('.artists ul li img');
-var imgLength = images.length;
+var artist = $('#wrapper').find('.artists ul li a');
+var artistLength = artist.length;
+var images = $('#wrapper').find('.artist-images img');
+var imageBlock = $('#wrapper').find('.artist-images');
 
 
 
-function makeWidth(){
-	var setWidth = ((imgWidth + padding) * (imgLength + 1)); //add exta image place for padding
-	$('.artists').css({
-		width: setWidth + 'px'
+function setDisplayOn(){
+	$('#wrapper').find('.artist-images').css({
+		display: 'block'
 	});
 }
 
-$(function() {
-	$("#wrapper").mousewheel(function(event, delta) {
-		this.scrollLeft -= (delta * 1.5);
-		event.preventDefault();
+
+function hideImages(){
+	images.each(function(){
+		$(this).addClass('hidden');
 	});
-});
+}
+//loop through each image from database and set to hidden
+
 
 var cast = $('#insert-name').text();
 
@@ -31,14 +34,14 @@ if (cast.indexOf('Cast') !== -1){
 }
 
 //SLIDE UP INFO WHEN CLICKED
-images.on('click', function(){
+artist.on('click', function(){
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
 	//empty out default picture
 	$('#artist-info').find('.assets img').empty();
 	addInfo(name, pic);
 	$('#artist-info').transition({
-		top: 0
+		left: 0
 	}, 500, "ease");
 });
 
@@ -47,7 +50,7 @@ images.on('click', function(){
 $('#artist-info').find('.exit').on('click', function(){
 	$(this).addClass('hidden');
 	$('#artist-info').transition({
-		top: '100%'
+		left: '100%'
 	}, 500, "ease");
 	$(this).parent().find('span').empty();
 });
@@ -81,15 +84,40 @@ function addInfo(name, pic, nickname){
 }
 
 //GET NAME TITLES
-images.on('mouseenter', function(){
+artist.on('mouseenter', function(){
 	var name = $(this).data('name');
-	$('#insert-name').text(name);
+	var pic = $(this).data('pic');
+	imageBlock.css({
+		display: 'block'
+	});
+
+	//loop again through images and find matching one
+	images.each(function(){
+		$(this).addClass('hidden');
+
+		if ($(this).hasClass(pic)){
+			$(this).removeClass('hidden');
+		}
+	});
 });
 
-images.on('mouseleave', function(){
-	$('#insert-name').empty().text('Cast');
+artist.on('mouseleave', function(){
+	hideImages();
+	imageBlock.css({
+		display: 'none'
+	});
 });
 
-makeWidth();
+
+//get images ready to load
+setDisplayOn();
+
+
+//hide all images on load
+hideImages();
+
+
+
+
 
 }); //end doc ready
