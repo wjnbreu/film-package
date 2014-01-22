@@ -85,11 +85,15 @@ function addInfo(name, pic, nickname){
 
 //GET NAME TITLES
 artist.on('mouseenter', function(){
+	artist.css({
+		opacity: 0.5
+	});
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
 	imageBlock.css({
 		display: 'block'
 	});
+	$('#insert-name').hide();
 
 	//loop again through images and find matching one
 	images.each(function(){
@@ -105,6 +109,10 @@ artist.on('mouseleave', function(){
 	hideImages();
 	imageBlock.css({
 		display: 'none'
+	});
+	$('#insert-name').show();
+	artist.css({
+		opacity: 1
 	});
 });
 
