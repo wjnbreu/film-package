@@ -101,12 +101,20 @@ artist.on('mouseenter', function(){
 
 		if ($(this).hasClass(pic)){
 			$(this).removeClass('hidden');
+			$(this).transition({
+				width: '101%'
+			}, 900);
 		}
 	});
 });
 
 artist.on('mouseleave', function(){
 	hideImages();
+	images.each(function(){
+		$(this).css({
+			width: '100%'
+		});
+	});
 	imageBlock.css({
 		display: 'none'
 	});
