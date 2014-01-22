@@ -519,8 +519,8 @@ nav .nav-top-right li a.scroll:hover {
 }
 #film .film-wrap video {
   display: block;
-  max-width: 150%;
-  width: 150%;
+  max-width: 200%;
+  width: 200%;
   left: -50%;
 }
 #film .film-info {
@@ -532,6 +532,17 @@ nav .nav-top-right li a.scroll:hover {
   position: absolute;
   top: 100%;
   background-color: black;
+}
+#film .film-info .info-left {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+#film .film-info .info-right {
+  width: 50%;
+  float: right;
+  background-color: red;
+  text-align: center;
 }
 
 #book {
@@ -630,7 +641,8 @@ nav .nav-top-right li a.scroll:hover {
   left: 0;
   width: 100%;
   height: 180%;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 #about .text {
   margin-top: 5%;
@@ -649,7 +661,7 @@ nav .nav-top-right li a.scroll:hover {
   font-size: 1em;
 }
 #about .text p a {
-  color: black;
+  color: white;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -666,6 +678,11 @@ nav .nav-top-right li a.scroll:hover {
   width: 20%;
   margin-left: 40%;
   margin-right: 40%;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #about .text .logo img:hover {
   opacity: 0.7;
@@ -682,10 +699,13 @@ nav .nav-top-right li a.scroll:hover {
   height: auto;
 }
 #about .text .social img.social-black {
-  display: inline-block;
+  display: none;
 }
 #about .text .social img.social-white {
-  display: none;
+  display: inline-block;
+}
+#about .text .social img.social-white:hover {
+  opacity: 0.7;
 }
 #about .text .social iframe {
   display: none;

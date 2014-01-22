@@ -31,15 +31,7 @@ Video background not fading out on video play button click
 		target.find('.text').hide();
 		target.find('#loop').addClass('video-playing').fadeOut();
 
-		/*OG SOURCE
 
-		<iframe frameborder="0" scrolling="no" seamless="seamless" 
-		webkitallowfullscreen="webkitAllowFullScreen" 
-		mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" 
-		id="rbmaplayer" width="640" height="360" 
-		src="http://www.youtube.com/embed/8dtZsnPKeo8?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;rel=0&amp;playlist=O8hi7CaqE8A"></iframe>
-
-		*/
 		//display controls on mobile video
 		
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -170,11 +162,11 @@ Video background not fading out on video play button click
 		//THIRD SCREEN
 		if (top > (win_height * 2) - 35){
 			burgerWhite.css({
-				display: 'none'
+				display: 'block'
 			});
 
 			burgerBlack.css({
-				display: 'block'
+				display: 'none'
 			});
 		}
 
@@ -193,13 +185,15 @@ Video background not fading out on video play button click
 		//if desktop, burger should be white
 		if (top > (win_height * 3) - 35){
 			burgerWhite.css({
-				display: 'block'
+				display: 'none'
 			});
 
 			burgerBlack.css({
-				display: 'none'
+				display: 'block'
 			});
 		}
+
+		//FIFTH SCREEN
 
 		if (top > (win_height * 4) - 35){
 			if (win_width <= 721){
@@ -213,11 +207,11 @@ Video background not fading out on video play button click
 			}
 			else{
 				burgerWhite.css({
-					display: 'none'
+					display: 'block'
 				});
 
 				burgerBlack.css({
-					display: 'block'
+					display: 'none'
 				});
 			}
 			
