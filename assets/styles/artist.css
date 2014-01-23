@@ -235,6 +235,7 @@ h1, h2, h3 {
   width: 70%;
   max-height: 50%;
   overflow: hidden;
+  opacity: 0.2;
 }
 #artist-info .links {
   position: absolute;
