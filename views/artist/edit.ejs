@@ -1,26 +1,34 @@
-<div class="backend">
-<form action="/artist/update/<%= artist.id %>" method="POST" class="form-signin">
+ <nav class="user-nav">
+ 	<ul>
+ 		<% if (session.authenticated) { %>
+ 		<li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %></a></li>
+ 		<li class="artist-list"><a href="/artist/list/">Return To Artist List</a></li>
+ 		<li class="logout"><a href="/session/destroy">Log Out</a></li>
+ 		<% } else { %>
+ 		<li class="inactive"><a href="/session/new">Log In</a></li>
+ 		<% } %>
+ </nav>
+
+<form action="/artist/update/<%= artist.id %>" method="POST" class="edit-form form-signin">
 	<h2>Hey there, you're editing <%= artist.name %>...</h2>
 
-	<div class="form-group">
-	<label for="<%= artist.name %>">Artist Name</label>
+	<div class="control-group">
 	<input value="<%= artist.name %>" name="name" type="text" class="form-control"/>
 </div>
-<div class="form-group">
-	<label for="<%= artist.title %>">Artist Title/Year</label>
+<div class="control-group">
 	<input value="<%= artist.title %>" name="title" type="text" class="form-control" />
 </div>
-<div class="form-group">
-	<label for="<% artist.nickname %>">Pic Id</label>
+<div class="control-group">
 	<input value="<%= artist.nickname %>" name="nickname" type="text" class="form-control" />
 </div>
-<div class="form-group">
-	<label for="<%= artist.bio %>">New Bio</label>
+<div class="control-group">
 	<textarea value="<%= artist.bio %>" placeholder="<%= artist.bio %>" name="bio" wrap="physical" rows="10" class="form-control"></textarea>
 </div>
 
 
-	<input type="submit" value="Proceed" class="btn btn-large center btn-primary btn-block"/>
+
+	<input type="submit" value="Proceed" class="create-button"/>
 	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 </form>
-</div>
+
+<img class="show-image" src="<%='/images/artist/' + artist.nickname + '.jpg'%>">

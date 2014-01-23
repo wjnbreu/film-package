@@ -1,6 +1,20 @@
-<div class="backend">
-<div class="container">
-	<h3>RBMA 15 Artists</h3>
+<% var counter = 0 %>
+<nav class="user-nav">
+ 	<ul>
+ 		<% if (session.authenticated) { %>
+ 		<li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %></a></li>
+ 		<li class="artist-list"><a href="/user/">User List</a></li>
+ 		<li class="add-artist"><a href="/artist/new">Add Artist</a></li>
+ 		<li class="logout"><a href="/session/destroy">Log Out</a></li>
+ 		<% } else { %>
+ 		<li class="inactive"><a href="/session/new">Log In</a></li>
+ 		<% } %>
+ </nav>
+
+
+
+<div class="artist-list-container">
+	<h1>RBMA 15 Artists</h1>
 	<table class="table artist-list">
 		<tr>
 			<th>Name</th>
@@ -12,6 +26,7 @@
 		</tr>
 
 		<% _.each(artists, function(artist){ %>
+		<% counter++ %>
 		<tr data-id="<%= artist.id %>" data-model="artist">
 			<td><%= artist.name %></td>
 			<td><%= artist.nickname %></td>
@@ -22,19 +37,18 @@
 					NO
 				<% } %>
 			</td>
-			<td><a href="/artist/show/<%= artist.id %>" class="btn btn-sm btn-primary">Show</a></td>
-			<td><a href="/artist/edit/<%= artist.id %>" class="btn btn-sm btn-warning">Edit</a></td>
+			<td><a href="/artist/show/<%= artist.id %>" class="show-button">Show</a></td>
+			<td><a href="/artist/edit/<%= artist.id %>" class="edit-button">Edit</a></td>
 
 			<td><form action="/artist/destroy/<%= artist.id %>" method="POST">
 				<input type="hidden" name="_method" value="delete" />
-				<input type="submit" class="btn btn-sm btn-danger" value="Delete" />
+				<input type="submit" class="delete-button" value="Delete" />
 				<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 			</form>
 		</td>
 
 		</tr>
 		<% }) %>
+		<p class="counter"><strong><%= counter %></strong> TOTAL ARTISTS</p>
 	</table>
-	<a href="/artist/new/" class="btn btn-medium btn-primary">Add Artist</a>
-</div>
 </div>

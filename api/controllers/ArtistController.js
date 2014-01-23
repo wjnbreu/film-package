@@ -18,7 +18,9 @@
 module.exports = {
 	
   'new': function(req, res){
-		res.view();
+		res.view({
+			_layoutFile: '../layouts/userLayout.ejs'
+		});
 	},
 
 	create: function(req, res, next){
@@ -49,16 +51,18 @@ module.exports = {
 			if (err) return next(err);
 			if (!artist) return next('Artist doesn\'t exist.');
 			res.view({
-				artist: artist
+				artist: artist,
+				_layoutFile: '../layouts/userLayout.ejs'
 			});
 		});
 	},
 
 	list: function(req, res, next){
 		//send all user objects to main page for display
-		Artist.find(function foundArtists(err, artists){
+		Artist.find().sort('name').exec(function foundArtists(err, artists){
 			res.view({
-				artists: artists
+				artists: artists,
+				_layoutFile: '../layouts/userLayout.ejs'
 			});
 		});
 	},
@@ -80,7 +84,8 @@ module.exports = {
 			if (!artist) return next('Artist doesn\'t exist.');
 
 			res.view({
-				artist: artist
+				artist: artist,
+				_layoutFile: '../layouts/userLayout.ejs'
 			});
 		});
 	},
@@ -106,7 +111,7 @@ module.exports = {
 				if (err) return next(err);
 			});
 
-			res.redirect('/artist');
+			res.redirect('/artist/list');
 		});
 	}
   

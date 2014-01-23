@@ -1,37 +1,29 @@
 <form action="/user/create" method="POST" class="form-signin" id="sign-up-form">
-	<h2 class="form-signin-heading">Create an account</h2>
+	<h2 class="form-signin-heading">Add new user</h2>
 
-	<% if(flash && flash.err){ %>
-		<ul class="alert alert-success">
-			<% Object.keys(flash.err).forEach(function(error){ %>
-			<li><%- JSON.stringify(flash.err[error]) %></li>
-		<% }) %>
-		</ul>
-	<% } %>
-	
 	<div class="control-group">
-	<input type="text" class="form-control" placeholder="Name" name="name">
+		<input type="text" class="form-control" placeholder="Name" name="name">
 	</div>
 
 	<div class="control-group">
-	<input type="text" class="form-control" placeholder = "email address" name="email">
+		<input type="text" class="form-control" placeholder = "Email Address" name="email">
 	</div>
 
 
 	<div class="control-group">
-	<input type="password" class="form-control" placeholder="password" id="password" name="password">
+		<input type="password" class="form-control" placeholder="Password" id="password" name="password">
 	</div>
 
 
 	<div class="control-group">
-	<input type="password" class="form-control" placeholder="password confirmation" name="confirmation">
+		<input type="password" class="form-control" placeholder="Password confirmation" name="confirmation">
 	</div>
 
 
 
 	<br />
 
-	<input type="submit" class="btn btn-lg btn-primary btn-block" value="Create Account"/>
+	<input type="submit" class="create-button" value="Create Account"/>
 
 	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 </form>

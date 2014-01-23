@@ -1,13 +1,29 @@
-<div class="backend">
-<div class="container">
+ <nav class="user-nav">
+ 	<ul>
+ 		<% if (session.authenticated) { %>
+ 		<li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %></a></li>
+ 		<li class="artist-list"><a href="/artist/list/">Return To Artist List</a></li>
+ 		<li class="logout"><a href="/session/destroy">Log Out</a></li>
+ 		<% } else { %>
+ 		<li class="inactive"><a href="/session/new">Log In</a></li>
+ 		<% } %>
+ </nav>
+
+
+<div class="show-container">
 	<h1><%= artist.name %></h1>
 
 	<h3>Role: <%= artist.title %></h3>
+	<h3>Pic Id:</h3>
+	<p><%= artist.nickname %></p>
 	<h3>Bio:</h3>
 	<p><%= artist.bio %></p>
 
+	<img class="show-image" src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
 
-	<a class="btn btn-medium btn-primary" href="/artist/edit/<%= artist.id %>">Edit</a>
+
+
+
+	<a class="edit-button edit-screen" href="/artist/edit/<%= artist.id %>">Edit</a>
 </div>
-<a class="back-link" href="/artist/list"><--Back to Artist List</a>
-</div>
+

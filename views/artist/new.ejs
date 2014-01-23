@@ -1,4 +1,17 @@
-<div class="backend">
+
+<nav class="user-nav">
+ 	<ul>
+ 		<% if (session.authenticated) { %>
+ 		<li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %></a></li>
+ 		<li class="artist-list"><a href="/artist/list">Return To Artist Index</a></li>
+ 		<li class="logout"><a href="/session/destroy">Log Out</a></li>
+ 		<% } else { %>
+ 		<li class="inactive"><a href="/session/new">Log In</a></li>
+ 		<% } %>
+ </nav>
+
+
+<div class="new-artist-container">
 <form action="/artist/create" method="POST" class="form-signin" id="sign-up-form">
 	<h2 class="form-signin-heading">Add New Artist</h2>
 
@@ -15,15 +28,14 @@
 	</div>
 
 	<div class="control-group">
-		<textarea cols="80" rows="10" wrap="physical" name="bio" placeholder="Bio"></textarea>
+		<textarea rows="10" wrap="physical" name="bio" placeholder="Bio"></textarea>
 	</div>
 
 	<br />
 
-	<input type="submit" class="btn btn-lg btn-primary btn-block" value="Add Artist"/>
+	<input type="submit" class="blue" value="Add Artist"/>
 
 	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 </form>
-<br /><br />
-<a class="back-link" href="/artist/list"><--Back to Artist List</a>
+
 </div>

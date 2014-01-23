@@ -1,25 +1,18 @@
-<div class="navbar  navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <% if (session.authenticated) { %>
-              <li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %></a></li>
-              <% } %>
-            <% if (session.authenticated && session.User.admin) { %>
-              <li><a href="/user">User Admin</a></li>
-              <li><a href="/artist/list">Artist Admin</a></li>
-          <% } %>
-          <% if (session.authenticated) { %>
-          <li><a class="btn btn-default navbar-btn navbar-right" href="/session/destroy">SIGN OUT</a></li>
-        <% } %>
-        </ul>
-      </div>
-    </div>
-</div>
 
 
+ <nav class="user-nav">
+ 	<ul>
+ 		<% if (session.authenticated) { %>
+ 		<li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %></a></li>
+ 		<li class="artist-list"><a href="/artist/list/">Artist List</a></li>
+ 		<li class="logout"><a href="/session/destroy">Log Out</a></li>
+ 		<% } else { %>
+ 		<li class="inactive"><a href="/session/new">Log In</a></li>
+ 		<% } %>
+ </nav>
 
-<div class="container" id="artist-list">
+
+<div class="user-container" id="artist-list">
 	<h3>Users</h3>
 	<table class="table">
 		<tr>
@@ -39,8 +32,8 @@
 			<% } else { %>
 				<td>X</td>
 			<% } %>
-			<td><a href="/user/show/<%= user.id %>" class="btn btn-sm btn-primary">Show</a></td>
-			<td><a href="/user/edit/<%= user.id %>" class="btn btn-sm btn-warning">Edit</a></td>
+			<td><a href="/user/show/<%= user.id %>" class="show-button">Show</a></td>
+			<td><a href="/user/edit/<%= user.id %>" class="edit-button">Edit</a></td>
 
 			<td><form action="/user/destroy/<%= user.id %>" method="POST">
 				<input type="hidden" name="_method" value="delete" />
@@ -52,5 +45,5 @@
 		</tr>
 		<% }) %>
 	</table>
-	<a href="/user/new/" class="btn btn-medium btn-primary">Add User</a>
+	<a href="/user/new/" class="add-user">Add User</a>
 </div>

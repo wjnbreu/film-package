@@ -18,7 +18,9 @@
 module.exports = {
 
 	'new': function(req, res){
-		res.view();
+		res.view({
+			_layoutFile: "../layouts/userLayout.ejs"
+		});
 	},
 
 	create: function (req, res, next){
@@ -52,7 +54,8 @@ module.exports = {
 			if (err) return next(err);
 			if (!user) return next('User doesn\'t exist.');
 			res.view({
-				user: user
+				user: user,
+				_layoutFile: "../layouts/userLayout.ejs"
 			});
 		});
 	},
@@ -65,10 +68,12 @@ module.exports = {
 
 			//pass array down to index.ejs page
 			res.view({
-				users: users
+				users: users,
+				_layoutFile: "../layouts/userLayout.ejs"
 			});
 		});
 	},
+
 
 	//edit.ejs
 	edit: function(req, res, next){
@@ -78,7 +83,8 @@ module.exports = {
 			if (!user) return next('User doesn\'t exist.');
 
 			res.view({
-				user: user
+				user: user,
+				_layoutFile: "../layouts/userLayout.ejs"
 			});
 		});
 	},
