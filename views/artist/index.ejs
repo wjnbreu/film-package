@@ -34,13 +34,13 @@
             <div class="links">
                 <ul class="<%= artist.nickname + '-links' %>">
                     <% if (artist.lecture){ %>
-                        <li><a href="<%= artist.lecture %>">Watch Lecture</a></li>
+                        <li><a href="<%= artist.lecture %>" target="blank">Watch Lecture</a></li>
                     <% } if (artist.radio) { %>
-                        <li><a href="<%= artist.radio %>">Play RBMA Radio Show</a></li>
+                        <li><a href="<%= artist.radio %>" target="blank">Play RBMA Radio Show</a></li>
                     <% } if (artist.magazine) { %>
-                        <li><a href="<%= artist.magazine %>">Read RBMA Feature</a></li>
+                        <li><a href="<%= artist.magazine %>" target="blank">Read RBMA Feature</a></li>
                     <% } if (artist.website) { %>
-                        <li><a href="<%= artist.website %>">On The Web</a></li>
+                        <li><a href="<%= artist.website %>" target="blank">On The Web</a></li>
                     <% } %>
                 </ul>
             </div>
