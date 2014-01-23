@@ -6,6 +6,7 @@ var artist = $('#wrapper').find('.artists ul li a');
 var artistLength = artist.length;
 var images = $('#wrapper').find('.artist-images img');
 var imageBlock = $('#wrapper').find('.artist-images');
+var links = $('#artist-info').find('.links ul');
 
 
 
@@ -67,6 +68,14 @@ function addInfo(name, pic, nickname){
 		$(this).addClass('hidden');
 
 		if ($(this).hasClass(pic + '-title')){
+			$(this).removeClass('hidden');
+		}
+	});
+
+	//loop through ul's, hide them, then show only the one that matches the class of artist clicked
+	links.each(function(){
+		$(this).addClass('hidden');
+		if ($(this).hasClass(pic + '-links')){
 			$(this).removeClass('hidden');
 		}
 	});
