@@ -13,24 +13,38 @@ module.exports = {
   attributes: {
 	
 	name: {
-		type: 'string',
-		required: true
+		type: 'string'
 	},
 
 	title: {
-		type: 'string',
-		required: true
+		type: 'string'
 	},
 
 	nickname: {
-		type: 'string',
-		required: true
+		type: 'string'
 	},
 
 	bio: {
-		type: 'string',
-		required: true
+		type: 'string'
 	},
+
+	lecture: {
+		type: 'url'
+	},
+
+	radio: {
+		type: 'url'
+	},
+
+	magazine: {
+		type: 'url'
+	},
+
+	website: {
+		type: 'url'
+	},
+
+
 
 
 	toJSON: function(){

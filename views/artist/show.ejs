@@ -14,10 +14,13 @@
 	<h1><%= artist.name %></h1>
 
 	<h3>Role: <%= artist.title %></h3>
-	<h3>Pic Id:</h3>
-	<p><%= artist.nickname %></p>
+	<h3>Pic Id: <%= artist.nickname %></h3>
 	<h3>Bio:</h3>
 	<p><%= artist.bio %></p>
+	<h3>LECTURE: <a href="<%= artist.lecture %>"><%= artist.lecture %></a></h3>
+	<h3>RADIO: <a href="<%= artist.radio %>"><%= artist.radio %></a></h3>
+	<h3>FEATURE: <a href="<%= artist.magazine %>"><%= artist.magazine %></a></h3>
+	<h3>WEBSITE: <a href="<%= artist.website %>"><%= artist.website %></a></h3>
 
 	<img class="show-image" src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
 

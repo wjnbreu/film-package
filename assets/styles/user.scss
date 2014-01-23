@@ -130,6 +130,26 @@ form{
 
 .edit-form{
 	margin-top: 100px;
+	h2{
+		color: white;
+	}
+	&.black{
+		h2{
+			color: black;
+		}
+	}
+}
+
+.user-edit-form{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 100px;
+	h2{
+		color: black;
+	}
+	.control-group{
+		margin-left: 0;
+	}
 }
 
 .control-group{
@@ -145,6 +165,10 @@ form{
 			border: 1px solid black;
 		}
 	}
+	label{
+		color: white;
+		font-weight: bold;
+	}
 }
 input[type="submit"]{
 	background-color: red !important;
@@ -155,7 +179,7 @@ input[type="submit"]{
 		background-color: #2ecc71 !important;
 		text-align: center;
 		width: 200px;
-		height: 40px;
+		height: 30px;
 		margin-top: 40px;
 		&:hover{
 			background-color: #27ae60 !important;
@@ -202,7 +226,20 @@ input[type="submit"]{
 	width: 60%;
 	margin-left: 10%;
 	margin-top: 150px;
+	color: white;
+	h3 a{
+		color: #9b59b6;
+		text-transform: lowercase;
+	}
 }
+
+.user-show-container{
+	width: 60%;
+	margin-left: 10%;
+	margin-top: 150px;
+	color: black;
+}
+
 
 .artist-list-container{
 	width: 80%;
@@ -254,9 +291,19 @@ textarea{
 }
 
 .show-image{
-	width 100%;
-	height: 100%;
+	width: 100%;
+	min-height: 100%;
 	left: 0;
 	top: 60px;
 	position: fixed;
+	z-index: -1;
+}
+
+.session-form{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10%;
+	.control-group{
+		margin-left: 0;
+	}
 }

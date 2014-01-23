@@ -1,10 +1,12 @@
-<form action="/session/create" method="POST" class="form-signin">
+<form action="/session/create" method="POST" class="form-signin session-form">
 	<h2 class="form-signin-heading">Please sign in...</h2>
 
 
-	<input type="text" class="form-control" placeholder="Email" name="email"/>
-	<input type="password" class="form-control" placeholder="Password" name="password"/>
-	<input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign-in"/>
+	<input type="text" class="control-group" placeholder="Email" name="email"/>
+	<br />
+	<input type="password" class="control-group" placeholder="Password" name="password"/>
+	<br />
+	<input type="submit" class="create-button" value="Sign-in"/>
 	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 	
 </form>

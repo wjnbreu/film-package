@@ -22,7 +22,9 @@ module.exports = {
     
 'new': function(req, res){
 
-	res.view('session/new');
+	res.view('session/new', {
+		_layoutFile: '../layouts/userLayout.ejs'
+	});
 },
 
 create: function(req, res, next){
