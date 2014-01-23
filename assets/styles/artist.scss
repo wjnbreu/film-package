@@ -120,6 +120,7 @@ h1, h2, h3{
     width: 100%;
     background-color: white;
     overflow-x: hidden;
+    overflow-y: auto;
     background-color: black;
     }
 
@@ -196,57 +197,78 @@ h1, h2, h3{
         left: 100%;
         width: 100%;
         height: 100%;
-        background-color: white;
+        max-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #fefff9;
         z-index: 9;
         border-top: 1px solid black;
         h1{
-            position: fixed;
+            position: relative;
             top: 0;
             left: 40px;
             color: black;
-            font-size: 6em;
+            width: 100%;
+            font-size: 5em;
             z-index: 4;
             text-transform: uppercase;
+            line-height: 1;
+        }
+        h2{
+            position: relative;
+            margin-top: 0;
+            left: 40px;
+            line-height: 1;
+
         }
         p{
             width: 40%;
-            margin-top: 20%;
+            margin-top: 50px;
             margin-left: 40px;
+            margin-bottom: 75px;
             line-height: 2;
             z-index: 3;
         }
         .assets{
             width: 50%;
             position: absolute;
-            height: 60%;
+            top: 0;
+            right: 0;
             left: 50%;
-            background-color: white;
-            top: 28%;
+            margin-top: 0;
             text-align: center;
             
             img{
+                margin-top: 50px;
                 margin-left: 5%;
                 margin-right: auto;
+                width: 70%;
+                max-height: 50%;
+                overflow:hidden;
             }
         }
 
         .links{
             position: absolute;
-            bottom: 100px;
-            width: 100%;
+            width: 50%;
+            right: 0;
+            top: 50%;
             ul{
                 list-style-type: none;
                 text-align: center;
                 li{
-                    font-size: 2em;
+                    font-size: 1.5em;
                     margin: 40px;
                     font-weight: bold;
                     text-transform: uppercase;
-                    display: inline;
-                    &:hover{
+                    a{
+                        color: black;
+                        &:hover{
                         background-color: black;
                         color: white;
+                        }
                     }
+                    
                 }
             }
         }
@@ -260,6 +282,7 @@ h1, h2, h3{
             background-color: white;
             color: black;
             border: 2px solid black;
+            z-index: 9999;
             &:hover{
                 background-color: black;
                 color: white;

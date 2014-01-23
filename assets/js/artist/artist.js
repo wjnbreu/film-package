@@ -102,7 +102,7 @@ artist.on('mouseenter', function(){
 	imageBlock.css({
 		display: 'block'
 	});
-	$('#insert-name').hide();
+	//$('#insert-name').hide();
 
 	//loop again through images and find matching one
 	images.each(function(){
