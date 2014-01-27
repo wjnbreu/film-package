@@ -119,6 +119,22 @@ h1, h2, h3 {
   background-color: black;
 }
 
+#return {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 95px;
+  z-index: 9;
+  background: url(../../images/return.png) no-repeat center center;
+  background-size: 100%;
+}
+#return:hover {
+  background-size: 100%;
+  width: 100px;
+  height: 100px;
+}
+
 #insert-name {
   position: fixed;
   top: 20px;
@@ -131,7 +147,6 @@ h1, h2, h3 {
   color: white;
   font-size: 3em;
   text-align: center;
-  z-index: 3;
 }
 
 .artists {
@@ -151,29 +166,26 @@ h1, h2, h3 {
   padding-left: 0;
   text-align: center;
 }
+.artists ul li {
+  margin-bottom: 150px;
+}
 .artists ul li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
-  background-color: white;
-  font-size: 2em;
-  font-family: helvetica, sans-serif;
-  margin-bottom: 20px;
+  color: white;
+  font-size: 4em;
+  font-family: 'Rail', helvetica, sans-serif;
+  margin-bottom: 40px;
   -webkit-transition: all .2s ease-in-out;
-}
-.artists ul li a:hover {
-  font-weight: bold;
-  font-size: 2.3em;
-  font-style: italic;
 }
 
 .artist-images {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   position: fixed;
-  left: 0;
-  top: 0;
+  left: 15%;
+  top: 15%;
   overflow: hidden;
   z-index: 0;
 }
@@ -181,8 +193,37 @@ h1, h2, h3 {
   width: 100%;
 }
 
+.foot-left {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  color: white;
+}
+.foot-left h2 {
+  font-family: 'Rail', helvetica, sans-serif;
+  text-transform: uppercase;
+  line-height: 0.5;
+  font-size: 1em;
+}
+
+.foot-right {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  color: white;
+}
+.foot-right h2 {
+  font-family: 'Rail', helvetica, sans-serif;
+  text-transform: uppercase;
+  line-height: 0.5;
+  float: right;
+  font-size: 1em;
+}
+
 #artist-info {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 100%;
   width: 100%;
@@ -190,7 +231,7 @@ h1, h2, h3 {
   max-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #fefff9;
+  background-color: white;
   z-index: 9;
   border-top: 1px solid black;
 }

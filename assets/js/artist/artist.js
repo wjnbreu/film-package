@@ -2,12 +2,19 @@ $(document).ready(function(){
 
 var imgWidth = 250; //px
 var padding = 100;
+var artistList = $('#wrapper').find('.artists');
 var artist = $('#wrapper').find('.artists ul li a');
 var artistLength = artist.length;
 var images = $('#wrapper').find('.artist-images img');
 var imageBlock = $('#wrapper').find('.artist-images');
 var links = $('#artist-info').find('.links ul');
+var cast = $('#insert-name').text();
+var title = $('#insert-name');
 
+var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
+	'#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
+
+var colorsLength = colors.length;
 
 
 function setDisplayOn(){
@@ -24,8 +31,28 @@ function hideImages(){
 }
 //loop through each image from database and set to hidden
 
+function liftList(){
+	artistList.transition({
+		top: '20%'
+	}, 500);
+}
 
-var cast = $('#insert-name').text();
+function cycleArtists(){
+	ranColor = Math.floor(Math.random() * colorsLength);
+	title.css({
+		color: colors[ranColor]
+	});
+	setTimeout(cycleArtists, 200);
+}
+	
+cycleArtists();
+
+window.onBlur = function(){
+	alert('closed');
+	clearInterval(cycleArtists);
+};
+
+liftList();
 
 
 if (cast.indexOf('Cast') !== -1){
@@ -94,8 +121,8 @@ function addInfo(name, pic, nickname){
 
 //GET NAME TITLES
 artist.on('mouseenter', function(){
-	artist.css({
-		opacity: 0.5
+	$(this).css({
+		color: 'white'
 	});
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
@@ -129,7 +156,8 @@ artist.on('mouseleave', function(){
 	});
 	$('#insert-name').show();
 	artist.css({
-		opacity: 1
+		color: 'white',
+		backgroundColor: 'transparent'
 	});
 });
 
@@ -140,8 +168,6 @@ setDisplayOn();
 
 //hide all images on load
 hideImages();
-
-
 
 
 
