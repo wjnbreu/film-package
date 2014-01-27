@@ -316,7 +316,6 @@ $(document).ready(function() {
 	});
 
 	$('#pointer').on('click', function(){
-		alert('click');
 		var scrollAmount = $(window).height();
 		$('#wrapper').animate({
 				scrollTop: scrollAmount
