@@ -26,7 +26,7 @@ Video background not fading out on video play button click
 
 	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
 	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Transmicsoul', 'Jimi Nxir', 'Quietdust',
-	'Ale Hop', 'Koreless', 'Kraftmatiks', "Lee ‘Scratch’ Perry", 'Thundercat', 'Leo Aldrey',
+	'Ale Hop', 'Koreless', 'Kraftmatiks', "Lee Scratch Perry", 'Thundercat', 'Leo Aldrey',
 	'Nile Rodgers', 'Philip Glass', 'Deborah Harry', 'De La Montagne', 'Mr. Selfish',
 	'Ken Scott', 'Malcolm Cecil', 'Future Folk', 'Melmann', 'Ale Hop', 'Julian Love',
 	'Falty DL', 'Orquesta', 'Benjamin Damage', 'Nick Hook', 'François K', 'Many Ameri',

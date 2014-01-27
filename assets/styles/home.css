@@ -563,21 +563,21 @@ nav .nav-top-center li a.scroll:hover {
   color: white;
 }
 #info .info-top h2 a:hover {
-  background-color: red;
+  background-color: #00ff99;
   color: black;
 }
 #info .info-top h2.yellow a {
   color: white;
 }
 #info .info-top h2.yellow a:hover {
-  background-color: blue;
+  background-color: #ff00ff;
   color: black;
 }
 #info .info-top h2.green a {
   color: white;
 }
 #info .info-top h2.green a:hover {
-  background-color: green;
+  background-color: #ffcc00;
   color: black;
 }
 #info .info-top h2 span {
@@ -587,7 +587,10 @@ nav .nav-top-center li a.scroll:hover {
 #info .info-top .cities {
   display: none;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  padding-left: 5%;
+  padding-right: 5%;
+  word-spacing: 10px;
   color: white;
   margin-top: 0;
   margin-bottom: 20px;
