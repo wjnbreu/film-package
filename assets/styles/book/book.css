@@ -638,7 +638,7 @@ footer {
     #mobi-info .mobi-info {
       position: absolute;
       right: 10px;
-      background: url(../images/book/mobi-info.png) no-repeat center right;
+      background: url(../../images/book/mobi-info.png) no-repeat center right;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -649,7 +649,7 @@ footer {
       background-color: green;
       height: 50px;
       width: 100px;
-      background: url(../images/book/rbma-logo-black.png) no-repeat center left;
+      background: url(../../images/book/rbma-logo-black.png) no-repeat center left;
       background-size: 60%; }
     #mobi-info p {
       display: none; }
@@ -674,7 +674,7 @@ footer {
     #mobi-info-slider .mobi-close {
       position: absolute;
       right: 10px;
-      background: url(../images/book/mobi-close.png) no-repeat center right;
+      background: url(../../images/book/mobi-close.png) no-repeat center right;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -882,7 +882,7 @@ footer {
         background-color: green;
         height: 50px;
         width: 100px;
-        background: url(../images/book/rbma-logo-black.png) no-repeat center left;
+        background: url(../../images/book/rbma-logo-black.png) no-repeat center left;
         background-size: 60%; }
       #mobi-info .mobi-info p {
         display: none; }
@@ -902,7 +902,7 @@ footer {
     #mobi-info-slider .mobi-close {
       position: absolute;
       right: 10px;
-      background: url(../images/book/mobi-close.png) no-repeat center right;
+      background: url(../../images/book/mobi-close.png) no-repeat center right;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -1148,7 +1148,7 @@ footer {
     left: 20px;
     width: 40px;
     height: 60px;
-    background: url(../images/book/arrow-l-black.png) no-repeat center center;
+    background: url(../../images/book/arrow-l-black.png) no-repeat center center;
     background-size: 80%;
     display: none;
     background-color: white;
@@ -1158,7 +1158,7 @@ footer {
     -ms-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; }
     #nav-arrow-left:hover {
-      background: url(../images/book/arrow-l.png) no-repeat center center;
+      background: url(../../images/book/arrow-l.png) no-repeat center center;
       background-size: 80%;
       background-color: black; }
 
@@ -1169,7 +1169,7 @@ footer {
     right: 20px;
     width: 40px;
     height: 60px;
-    background: url(../images/book/arrow-r-black.png) no-repeat center center;
+    background: url(../../images/book/arrow-r-black.png) no-repeat center center;
     background-size: 80%;
     background-color: white;
     -webkit-transition: all .1s ease-in-out;
@@ -1178,7 +1178,7 @@ footer {
     -ms-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; }
     #nav-arrow-right:hover {
-      background: url(../images/book/arrow-r.png) no-repeat center center;
+      background: url(../../images/book/arrow-r.png) no-repeat center center;
       background-size: 80%;
       background-color: black; }
 
@@ -1207,7 +1207,7 @@ footer {
     #mobi-info .mobi-info {
       position: absolute;
       right: 20px;
-      background: url(../images/book/mobi-info.png) no-repeat center right;
+      background: url(../../images/book/mobi-info.png) no-repeat center right;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -1218,7 +1218,7 @@ footer {
       background-color: white;
       height: 50px;
       width: 100px;
-      background: url(../images/book/rbma-logo-black.png) no-repeat center left;
+      background: url(../../images/book/rbma-logo-black.png) no-repeat center left;
       background-size: 60%; }
     #mobi-info p {
       left: 95px;
@@ -1245,7 +1245,7 @@ footer {
     #mobi-info-slider .mobi-close {
       position: absolute;
       right: 10px;
-      background: url(../images/book/mobi-close.png) no-repeat center right;
+      background: url(../../images/book/mobi-close.png) no-repeat center right;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -1398,7 +1398,7 @@ footer {
     left: 20px;
     width: 40px;
     height: 60px;
-    background: url(../images/book/arrow-l-black.png) no-repeat center center;
+    background: url(../../images/book/arrow-l-black.png) no-repeat center center;
     background-size: 80%;
     display: none;
     background-color: white;
@@ -1408,7 +1408,7 @@ footer {
     -ms-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; }
     #nav-arrow-left:hover {
-      background: url(../images/book/arrow-l.png) no-repeat center center;
+      background: url(../../images/book/arrow-l.png) no-repeat center center;
       background-size: 80%;
       background-color: black; }
 
@@ -1419,7 +1419,7 @@ footer {
     right: 20px;
     width: 40px;
     height: 60px;
-    background: url(../images/book/arrow-r-black.png) no-repeat center center;
+    background: url(../../images/book/arrow-r-black.png) no-repeat center center;
     background-size: 80%;
     background-color: white;
     -webkit-transition: all .1s ease-in-out;
@@ -1428,7 +1428,7 @@ footer {
     -ms-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; }
     #nav-arrow-right:hover {
-      background: url(../images/book/arrow-r.png) no-repeat center center;
+      background: url(../../images/book/arrow-r.png) no-repeat center center;
       background-size: 80%;
       background-color: black; }
 
@@ -1457,7 +1457,7 @@ footer {
     #mobi-info .mobi-info {
       position: absolute;
       right: 20px;
-      background: url(../images/book/mobi-info.png) no-repeat center right;
+      background: url(../../images/book/mobi-info.png) no-repeat center right;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -1468,7 +1468,7 @@ footer {
       background-color: green;
       height: 50px;
       width: 100px;
-      background: url(../images/book/rbma-logo-black.png) no-repeat center left;
+      background: url(../../images/book/rbma-logo-black.png) no-repeat center left;
       background-size: 60%; }
     #mobi-info p {
       left: 95px;
@@ -1493,7 +1493,7 @@ footer {
     #mobi-info-slider .mobi-close {
       position: absolute;
       right: 10px;
-      background: url(../images/book/mobi-close.png) no-repeat center right;
+      background: url(../../images/book/mobi-close.png) no-repeat center right;
       background-size: 30%;
       width: 100px;
       height: 50px;

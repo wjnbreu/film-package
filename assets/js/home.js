@@ -22,7 +22,7 @@ Video background not fading out on video play button click
 	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
-	
+
 
 	function swapVideo(vid){
 		var height = measureVideo();
@@ -30,6 +30,7 @@ Video background not fading out on video play button click
 		var target = vid.parent().parent();
 		target.find('.text').hide();
 		target.find('#loop').addClass('video-playing').fadeOut();
+
 
 
 		//display controls on mobile video
@@ -253,9 +254,10 @@ Video background not fading out on video play button click
 			},500);
 		}
 		else if(clk.hasClass('booklink')){
-			$('#wrapper').animate({
-				scrollTop: (win_height * 3) + 10
-			}, 750);
+			$('#bookframe').transition({
+				left: 0,
+				top: 0
+			}, 1500);
 		}
 
 		else if(clk.hasClass('aboutlink')){
@@ -425,6 +427,7 @@ Video background not fading out on video play button click
 
 	//startup book slide. can change speed slide interval speed here too
 	setInterval(slideBook, 7000);
-	
+
+
 
 });
