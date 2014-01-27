@@ -22,7 +22,33 @@ Video background not fading out on video play button click
 	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
+	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
+	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Transmicsoul', 'Jimi Nxir', 'Quietdust',
+	'Ale Hop', 'Koreless', 'Kraftmatiks', "Lee ‘Scratch’ Perry", 'Thundercat', 'Leo Aldrey',
+	'Nile Rodgers', 'Philip Glass', 'Deborah Harry', 'De La Montagne', 'Mr. Selfish',
+	'Ken Scott', 'Malcolm Cecil', 'Future Folk', 'Melmann', 'Ale Hop', 'Julian Love',
+	'Falty DL', 'Orquesta', 'Benjamin Damage', 'Nick Hook', 'François K', 'Many Ameri',
+	'James Murphy', 'DFA', 'Skream', 'Jamie Jupiter', 'Egyptian Lover', 'Richie Hawtin',
+	'Seth Troxler', 'Steve Arrington', 'Todd Edwards', 'Easton West', 'Ralf Schmerberg',
+	'Giorgio Moroder', 'Q-Tip', 'Mathew Johnson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
+	'Flying Lotus', 'Gaslamp Killer', 'Louis Barker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
+	'Young Guru', 'Leroy Webb'];
 
+	var cycle = $('#film').find('#cycle');
+
+	artistLength = artists.length;
+	
+	//cycle through artist names
+
+	function cycleArtists(){
+		var ranArtist = Math.floor(Math.random() * artistLength);
+		cycle.text(artists[ranArtist]);
+		setTimeout(cycleArtists, 200);
+	}
+	
+
+
+	cycleArtists();
 
 	function swapVideo(vid){
 		var height = measureVideo();
@@ -426,7 +452,12 @@ Video background not fading out on video play button click
 	});
 
 	//startup book slide. can change speed slide interval speed here too
-	setInterval(slideBook, 7000);
+	//setInterval(slideBook, 7000);
+
+	
+	// window.onblur = stopArtists();
+	// window.onfocus = cycleArtists();
+	
 
 
 
