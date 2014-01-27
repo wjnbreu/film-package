@@ -1,112 +1,93 @@
 <link type="text/css" rel="stylesheet" href="styles/home.css" />
+
 <div id="wrapper">
-            <div id="nav-burger">
-                <a href="#" class="addNav"><img class="white" src="images/up_button_w.png" /></a>
-                <a href="#" class="addNav"><img class="black" src="images/up_button_b.png" /></a>
-            </div>
-            <nav>
-                <div class="nav-top-left">
-                    <li><a class="scroll filmlink" href="#">The Film</a></li>
-                </div>
-                <div class="nav-top-center">
-                    <li><a class="scroll booklink" href="#">The Book</a></li>
-                </div>
-            </nav>
-            <div id="nav-bottom">
-                <div class="nav-left">
-                    <li><a class="scroll aboutlink" href="#">About</a></li>
-                </div>
-                <div class="logo">
-                    <a class="titlelink" href="http://www.redbullmusicacademy.com" target="blank">
-                        .COM
-                    </a>
-                </div>
-            </div>
-            <div id="title">
-                <!-- <div id="title-text">
-                    <img src="images/rbma-logo.png"/>
-                    <h2>Red Bull Music Academy</h2>
-                    <h1>15 year</h1>
-                    <h1>anniversary</h1>
-                    <h2>film and book</h2>
-                </div> -->
-            </div>
-            <div id="pointer">
-                    <a href="#"><img class="pointer" src="images/pointer.png"/></a>
-                </div>
-
-            <div class="spin">
-            </div>
-            
-            <div id="film">
-                <span id="filmlink"></span>
-                
-                <div class="text">
-                    <img src="images/play_w.png" id="play-button" />
-                    <h2>Watch the trailer</h2>
-                </div>
-
-                <div class="film-wrap" id="loop">
-                    
-                    <video id="video" class="film-wrap" autoplay muted loop>
-                        <source src="images/Dance2.mp4" type="video/mp4">
-                        <source src="images/Dance2.webmhd.webm" type="video/webm">
-                            <p>Your browser doesn't support HTML5 video.</p>
-                    </video>
-                
-                </div>
-                <div class="film-wrap" id="embed">
-                    
-                    <iframe frameborder="0" scrolling="no" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" id="rbmaplayer" width="640" height="360" src="http://www.youtube.com/embed/uVzx_p_DrL8?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;playsinline=1&amp;loop=1&amp;hd=1&amp;controls=0&amp;showinfo=1&amp;modestbranding=0&amp;iv_load_policy=3&amp;rel=0"></iframe>
-                </div>
-                <div class="film-info">
-                    <div class="info-top">
-                        <h2>world premiere february 17, 2014</h2>
-                        <h2 class="yellow">digital release february 18, 2014</h2>
-
-                    </div>
-                    <a href="/artist">
-                    <div class="info-bottom">
-                        <h2>Featured artists</h2>
-                        <h2><span id="cycle" class="cycle"></span></h2>
-                    </div></a>
-                    <!-- <div class="info-left">
-                        <h2>Download</h2>
-                    </div>
-                    <div class="info-right">
-                        <h2>Featured Artists</h2>
-                    </div> -->
-                </div>
-            </div>
+    
+    <!-- NAV ICON -->
+    <div id="nav-burger">
+        <a href="#" class="addNav"><img class="white" src="images/up_button_w.png" /></a>
+        <a href="#" class="addNav"><img class="black" src="images/up_button_b.png" /></a>
+    </div>
+    
+    <!-- NAV -->
+    <nav>
+        <div class="nav-top-left">
+            <li><a class="scroll filmlink" href="#">The Film</a></li>
+        </div>
+        <div class="nav-top-center">
+            <li><a class="scroll booklink" href="#">The Book</a></li>
+        </div>
+    </nav>
 
 
-            <div id="bookframe">
-                <iframe src="/book" width="100%" height="100%" border="0"></iframe>
-            </div>
+    <!-- NAV BOTTOM -->
+    <div id="nav-bottom">
+        <div class="nav-left">
+            <li><a class="scroll aboutlink" href="#">About</a></li>
+        </div>
+        <div class="logo">
+            <a class="titlelink" href="http://www.redbullmusicacademy.com" target="blank">.COM</a>
+        </div>
+    </div>
 
-        <!--     <div id="book">
-                <span id="booklink"></span>
-                <div class="text">
-                    <h1>for the record</h1>
-                    <h2>conversations with people who have shaped the way 
-                    we listen to music<br /><br /></h2>
-                </div>
-                <div class="book-wrapper">
-                    <a href="/book"><img id="leftbook" class="leftbook" src="images/book-spread.png" /></a>
-                    <a href="/book"><img id="rightbook" class="rightbook" src="images/fortherecord_cover.png" /></a>
-                    <a href="/book"><img id="backbook" class="backbook" src="images/fortherecord_page2.png" /></a>
-                </div>
-                <div class="foot">
-                
-                    <h2 class="view-more"><a href="/book">View More</a></h2>
-                </div>
-            </div> -->
+    <!-- HERO BACKGROUND PICTURE -->
+    <div id="title"></div>
+
+    <div id="pointer">
+        <a href="#"><img class="pointer" src="images/pointer.png"/></a>
+    </div>
+
+    <!-- FILM SECTION -->
+    <div id="film">
+        <span id="filmlink"></span>
+        <div class="text">
+            <img src="images/play_w.png" id="play-button" />
+            <h2>Watch the trailer</h2>
+        </div>
+
+        <div class="film-wrap" id="loop">
+            <video id="video" class="film-wrap" autoplay muted loop>
+                <source src="images/Dance2.mp4" type="video/mp4">
+                <source src="images/Dance2.webmhd.webm" type="video/webm">
+                <p>Your browser doesn't support HTML5 video.</p>
+            </video>
+        </div>
+
+        <div class="film-wrap" id="embed">
+            <iframe frameborder="0" scrolling="no" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" id="rbmaplayer" width="640" height="360" src="http://www.youtube.com/embed/uVzx_p_DrL8?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;playsinline=1&amp;loop=1&amp;hd=1&amp;controls=0&amp;showinfo=1&amp;modestbranding=0&amp;iv_load_policy=3&amp;rel=0"></iframe>
+        </div>
+    </div> <!-- END FILM -->
 
 
-            <div id="about">
-                <span id="aboutlink"></span>
-                <div class="text">
-                    <h1>About</h1>
+    <!-- OFF SCREEN BOOK IFRAME -->
+    <div id="bookframe">
+        <iframe src="/book" width="100%" height="100%" border="0"></iframe>
+    </div>
+
+
+
+    <div id="info">
+        <div class="info-top">
+            <h2><a href="#" class="citylink">world premiere february 17, 2014</a></h2>
+            <span class="cities">athens atlanta austin barcelona belfast berlin bogota
+                         bratislava brno brussels buenos aires cape town chapel hill chicago dallas
+                            detroit dublin glasgow houston istanbul johannesburg kosice lausanne lisbon
+                            ljubljana los angeles madrid manama melbourne mexico city miami montreal moscow
+                            mumbai nashville new orleans new york oslo paris prague rio de jaineiro rome 
+                            saint petersburg san francisco santiago de chile são paulo sarajevo seoul sydney
+                            taipei tampa tbilski tokyo toronto vancouver victoria vienna zagreb zurich
+            </span>
+
+            <h2 class="yellow"><a href="#" class="digitallink">digital release february 18, 2014</a></h2>
+            <span class="digital">Stay tuned. Right here.</span>
+
+            <!-- LINK TO ARIST PAGE -->
+            <a href="/artist">
+                <h2 class="green"><a href="#">Featured artists</a></h2>
+                <h2><span id="cycle" class="cycle"></span></h2>
+            </a>
+
+            <div class="about-section">
+                <h1>About</h1>
                     <p><a href="http://www.redbullmusicacademy.com" target="blank">Red Bull Music Academy</a> has put together myriad projects to mark its 15th anniversary, chief among them a film and a book.
                     <br /><br />
 
@@ -115,13 +96,18 @@
 
                     The book, <em>For The Record</em>, pairs up artists like Nile Rodgers, Erykah Badu and Lee ‘Scratch’ Perry for 15 wide-ranging and expansive conversations that touch on an array of topics – live performance, instruments/interfaces, conceptualism and drumming among them. In addition to the conversations, top music journalists – including Philip Sherburne, Joe Muggs, Jeff ‘Chairman’ Mao and Sheryl Garratt – contribute essays about each of the personalities included. Together with stunning visual design by Chris Rehberger’s <a href="http://www.doublestandards.net/website/index.php" target="blank">Double Standards agency</a>, the results make for one of the most insightful publications on the current state of music and the music industry.
                     <br /><br />
+
                     <em><strong>What Difference Does It Make?</strong></em> will be released February 18
                     <br/><br/>
+
                     <em><strong>For The Record</strong></em> is currently <a href="http://shop.gestalten.com/rbma.html" target="blank">available through Gestalten</a>
                 </p>
+            </div> <!-- END ABOUT MAIN TEXT -->
+        </div> <!-- END INFO TOP -->
+
+
                 <div class="logo">
-                    <!-- <a href="http://www.redbullmusicacademy.com" target="blank"><img class="bottom-logo-black" src="images/rbma-logo-black.png" /></a> -->
-                        <a href="http://www.redbullmusicacademy.com" target="blank">
+                    <a href="http://www.redbullmusicacademy.com" target="blank">
                     <img class="bottom-logo-white" src="images/rbma-logo.png" /></a>
                 </div>
                 <div class="social">
@@ -144,6 +130,10 @@
                     <p><strong><a href="http://shop.gestalten.com/rbma.html">Purchase via Gestalten</a></strong></p>
                 </div>
                 </div>
-            </div>
+
+                    </div>
+                    
+                </div>
+
         </div>
         

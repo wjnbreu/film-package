@@ -22,6 +22,8 @@ Video background not fading out on video play button click
 	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
+	
+
 	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
 	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Transmicsoul', 'Jimi Nxir', 'Quietdust',
 	'Ale Hop', 'Koreless', 'Kraftmatiks', "Lee ‘Scratch’ Perry", 'Thundercat', 'Leo Aldrey',
@@ -32,16 +34,25 @@ Video background not fading out on video play button click
 	'Seth Troxler', 'Steve Arrington', 'Todd Edwards', 'Easton West', 'Ralf Schmerberg',
 	'Giorgio Moroder', 'Q-Tip', 'Mathew Johnson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
 	'Flying Lotus', 'Gaslamp Killer', 'Louis Barker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
-	'Young Guru', 'Leroy Webb'];
+	'Young Guru', 'Leroy Webb', '& more...'];
 
-	var cycle = $('#film').find('#cycle');
+	var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
+	'#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
 
-	artistLength = artists.length;
+	var cycle = $('#info').find('#cycle');
+
+	var artistLength = artists.length;
+	var colorsLength = colors.length;
+	
 	
 	//cycle through artist names
 
 	function cycleArtists(){
 		var ranArtist = Math.floor(Math.random() * artistLength);
+		var ranColor = Math.floor(Math.random() * colorsLength);
+		cycle.css({
+			color: colors[ranColor]
+		});
 		cycle.text(artists[ranArtist]);
 		setTimeout(cycleArtists, 200);
 	}
@@ -49,6 +60,16 @@ Video background not fading out on video play button click
 
 
 	cycleArtists();
+
+	$('#info').find('.citylink').on('click', function(){
+		$(this).parent().parent().find('.cities').fadeToggle(500);
+	});
+
+	$('#info').find('.digitallink').on('click', function(){
+		$(this).parent().parent().find('.digital').fadeToggle(500);
+	});
+
+
 
 	function swapVideo(vid){
 		var height = measureVideo();
@@ -283,13 +304,13 @@ Video background not fading out on video play button click
 			$('#bookframe').transition({
 				left: 0,
 				top: 0
-			}, 1500);
+			}, 1000);
 		}
 
 		else if(clk.hasClass('aboutlink')){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 4) + 10
-			}, 1500);
+				scrollTop: (win_height * 3) + 10
+			}, 1000);
 		}
 		else if(clk.hasClass('titlelink')){
 			$('#wrapper').animate({
@@ -299,108 +320,12 @@ Video background not fading out on video play button click
 	}
 
 
-	//get height of title text element
-	function calculateElementHeight(thiselement){
-		var rect = thiselement.getBoundingClientRect();
-		if (rect.height){
-			elementHeight = rect.height;
-		}
-		else{
-			elementHeight = rect.bottom - rect.height; //derive height
-		}
-
-		centerElement(elementHeight, $('#title-text'));
-	}
 
 	function getElementLeftTop(thiselement){
 		var rect = thiselement.getBoundingClientRect();
 		return [rect.left];
 	}
 
-	//center title text element based on height of window and element height
-	function centerElement(elementHeight){
-		win_height = $(window).height();
-		var difference = win_height - elementHeight;
-		var topMargin = difference / 2;
-		$('#title-text').css({
-			marginTop: (topMargin - 50) + 'px', //provide 50px padding
-			marginBottom: topMargin + 'px'
-		});
-		console.log(topMargin);
-	}
-
-	$(".scroll").click(function(event){
-		event.preventDefault();
-		smoothScroll($(this));
-	});
-
-	$('#pointer').on('click', function(e){
-		e.preventDefault();
-		$(this).fadeOut('fast');
-		$('#wrapper').animate({
-				scrollTop: win_height + 10
-			},500);
-	});
-
-	if (win_width > 800){
-			$('#extras .extras-container').on('mouseenter', 'div', function(){
-			$(this).find('p').show();
-		});
-
-			$('#extras .extras-container').on('mouseleave', 'div', function(){
-			$(this).find('p').hide();
-		});
-	}
-
-	
-	function slideBook(){
-		var books = $('#book').find('.book-wrapper');
-		var leftbook = $('#book').find('img.leftbook');
-		var win_width = $(window).width();
-
-		//get left position of right book element
-		var left_book_leftpos = getElementLeftTop(document.getElementById('leftbook'));
-
-		//make sure first image is visible if resized
-		if(win_width < 800){
-			books.transition({
-				x: 0
-			}, 1000);
-		}
-
-		else{
-			//if left book is visible
-			if (left_book_leftpos > 0){
-				books.transition({
-					x: -win_width
-				}, 2000);
-			}
-
-			else if (left_book_leftpos < 0 && left_book_leftpos > (-win_width * 1.5)){
-				books.transition({
-					x: -(win_width * 2)
-				}, 2000);
-			}
-
-			else if (left_book_leftpos < (-(win_width * 1.5))){
-				books.transition({
-					x: 0
-				}, 3000);
-			}
-
-			//otherwise, wrapper has already animated left
-			/*
-			else{
-				books.transition({
-					x: 0
-				}, 2000);
-			}
-			*/
-		}
-	}
-
-
-	
 
 
 
@@ -455,10 +380,6 @@ Video background not fading out on video play button click
 	//setInterval(slideBook, 7000);
 
 	
-	// window.onblur = stopArtists();
-	// window.onfocus = cycleArtists();
-	
-
 
 
 });
