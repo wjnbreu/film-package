@@ -19,7 +19,7 @@ Video background not fading out on video play button click
 	var win_width = $(window).width();
 	var elementHeight = 0; //used for call bounding rect to measure element
 	var scrollBottom = $(window).scrollTop() + (win_height * 4);
-	var backgrounds = ['pillow1', 'pillow2', 'pillow3', 'pillow4', 'pillow6', 'pillow7'];
+	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
 	
