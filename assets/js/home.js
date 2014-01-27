@@ -1,24 +1,16 @@
-
- $(document).ready(function() {
-
-/*
-CURRENT PROBLEMS!!!!!!!!
-CSS arrow down not animating on Firefox
-Video background not fading out on video play button click
-
-*/
-
+$(document).ready(function() {
 
 
  //GLOBAL VARIABLES
 	var nav = $('nav a');
 	var bottom = $('#nav-bottom a');
 	var burgerWhite = $('#nav-burger .white');
-	var burgerBlack = $('#nav-burger .black');
 	var win_height = $(window).height();
 	var win_width = $(window).width();
 	var elementHeight = 0; //used for call bounding rect to measure element
-	var scrollBottom = $(window).scrollTop() + (win_height * 4);
+
+	//number of content screens - 1
+	var scrollBottom = $(window).scrollTop() + (win_height * 3.5);
 	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
@@ -26,7 +18,7 @@ Video background not fading out on video play button click
 
 	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
 	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Transmicsoul', 'Jimi Nxir', 'Quietdust',
-	'Ale Hop', 'Koreless', 'Kraftmatiks', "Lee Scratch Perry", 'Thundercat', 'Leo Aldrey',
+	'Ale Hop', 'Koreless', 'Kraftmatiks', 'Lee Perry', 'Thundercat', 'Leo Aldrey',
 	'Nile Rodgers', 'Philip Glass', 'Deborah Harry', 'De La Montagne', 'Mr. Selfish',
 	'Ken Scott', 'Malcolm Cecil', 'Future Folk', 'Melmann', 'Ale Hop', 'Julian Love',
 	'Falty DL', 'Orquesta', 'Benjamin Damage', 'Nick Hook', 'François K', 'Many Ameri',
@@ -43,13 +35,14 @@ Video background not fading out on video play button click
 
 	var artistLength = artists.length;
 	var colorsLength = colors.length;
+	var ranArtist, ranColor;
 	
 	
-	//cycle through artist names
+	//cycle through artist names, choose random name/color
 
 	function cycleArtists(){
-		var ranArtist = Math.floor(Math.random() * artistLength);
-		var ranColor = Math.floor(Math.random() * colorsLength);
+		ranArtist = Math.floor(Math.random() * artistLength);
+		ranColor = Math.floor(Math.random() * colorsLength);
 		cycle.css({
 			color: colors[ranColor]
 		});
@@ -59,8 +52,7 @@ Video background not fading out on video play button click
 	
 
 
-	cycleArtists();
-
+	//slide up/down extra info like cities, etc
 	$('#info').find('.citylink').on('click', function(){
 		$(this).parent().parent().find('.cities').fadeToggle(500);
 	});
@@ -71,6 +63,7 @@ Video background not fading out on video play button click
 
 
 
+	//change out autoplay=none to autoplay=1 on click
 	function swapVideo(vid){
 		var height = measureVideo();
 		var width = $(window).width();
@@ -121,14 +114,7 @@ Video background not fading out on video play button click
 		return elementHeight;
 	}
 
-	//PICKS RANDOM BACKGROUND TO DISPLAY ON TITLE SCREEN
-	function swapBackground(string){
-		var length = string.length;
-		var randompic = Math.floor(Math.random() * length);
-		$('#title').one().css({
-			background: 'url(images/' + string[randompic] + '.jpg) no-repeat left top'
-		}).fadeIn();
-	}
+
 
 	//REMOVES VIDEO BACKGROUND FOR MOBILE
 	function removeVideo(windowsize){
@@ -166,17 +152,14 @@ Video background not fading out on video play button click
 	function navColors(){
 		var top = $('#wrapper').scrollTop();
 		win_height = $(window).height();
+
 		//used to track buy book image
 		if (top < 58){
 		
-
 			burgerWhite.css({
 				display: 'none'
 			});
 
-			burgerBlack.css({
-				display: 'none'
-			});
 
 			navMax(nav);
 			navMax(bottom);
@@ -186,11 +169,9 @@ Video background not fading out on video play button click
 			background_counter = 0;
 		}
 
-		if (top >= 58){ //change bottom nav once scroll begins
-			
-
+		// LOSE POINTER ONCE SCROLL BEGINS
+		if (top >= 58){
 			$('#pointer').fadeOut();
-
 		}
 
 		//SECOND SCREEN
@@ -199,70 +180,24 @@ Video background not fading out on video play button click
 				display: 'block'
 			});
 
-			burgerBlack.css({
-				display: 'none'
-			});
-
+			//CLOSE ALL NAVIGATION
 			navMin(nav);
 			navMin(bottom);
 		}
 
-		//THIRD SCREEN
-		if (top > (win_height * 2) - 35){
+		
+
+		//FOURTH SCREEN
+
+		if (top > (win_height * 3) - 35){
 			burgerWhite.css({
 				display: 'block'
 			});
-
-			burgerBlack.css({
-				display: 'none'
-			});
 		}
 
-		//change background once after scroll down
-		//counter will be reset when user has scrolled to top again
-		if (top > (win_height * 2) + 58){
-			if (background_counter === 0){
-				swapBackground(backgrounds);
-				background_counter = 1;
-			}
-			
-		}
 
-		//FOURTH SCREEN
-		//if mobile size, burger should be black
-		//if desktop, burger should be white
-		if (top > (win_height * 3) - 35){
-			burgerWhite.css({
-				display: 'none'
-			});
 
-			burgerBlack.css({
-				display: 'black'
-			});
-		}
-
-		if (top > (win_height * 4) - 35){
-			if (win_width <= 721){
-					burgerWhite.css({
-						display: 'none'
-					});
-
-					burgerBlack.css({
-						display: 'black'
-					});
-			}
-			else{
-				burgerWhite.css({
-					display: 'none'
-				});
-
-				burgerBlack.css({
-					display: 'block'
-				});
-			}
-			
-		}
-
+		//IF BACK ON HERO PAGE
 		if (top < (win_height - 58)){
 
 			navMax(nav);
@@ -276,17 +211,19 @@ Video background not fading out on video play button click
 			});
 		}
 
+
+		//SLIDE OUT BOOK
 		if (win_width > 800){
 			if ( top < (scrollBottom) && counter === 0){
 				counter = 1;
-				$('#about .buy').transition({
+				$('#info .buy').transition({
 					right: '-50%'
 				}, 750);
 				
 			}
 
 			if ( top > (scrollBottom) && counter === 1){
-				$('#about .buy').transition({
+				$('#info .buy').transition({
 					right: '0'
 				}, 750);
 				counter = 0;
@@ -309,7 +246,7 @@ Video background not fading out on video play button click
 
 		else if(clk.hasClass('aboutlink')){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 3) + 10
+				scrollTop: (win_height * 3) + 30
 			}, 1000);
 		}
 		else if(clk.hasClass('titlelink')){
@@ -332,7 +269,7 @@ Video background not fading out on video play button click
 	//STARTUP EVENT LISTENERS AND FUNCTIONS
 	
 	//slide out facebook like button on click
-	$('#about').find('.social .fb-button').on('click', function(e){
+	$('#info').find('.social .fb-button').on('click', function(e){
 		e.preventDefault();
 		$(this).parent().parent().find('iframe').slideToggle('slow');
 	});
@@ -340,12 +277,15 @@ Video background not fading out on video play button click
 	//make sure youtube html is empty on page load
 	$('#film').find('#embed').empty();
 
-	//swap background image
-	swapBackground(backgrounds);
 
-	//initiate function to measure title element height and call
-	//second function to center vertically
-	calculateElementHeight(document.getElementById('title-text'));
+	//on nav bar click, grab link class and pass to smooth scroll
+	$('nav').on('click', 'a.scroll', function(){
+		smoothScroll($(this));
+	});
+
+	$('#nav-bottom').on('click', 'a.scroll', function(){
+		smoothScroll($(this));
+	});
 
 	removeVideo(win_width);
 
@@ -359,7 +299,6 @@ Video background not fading out on video play button click
 		var windowsize = $(window).width();
 		removeVideo(windowsize);
 		navColors();
-		calculateElementHeight(document.getElementById('title-text'));
 	});
 
 	//scroll to top on arrow nav click
@@ -376,10 +315,17 @@ Video background not fading out on video play button click
 
 	});
 
-	//startup book slide. can change speed slide interval speed here too
-	//setInterval(slideBook, 7000);
+	$('#pointer').on('click', function(){
+		alert('click');
+		var scrollAmount = $(window).height();
+		$('#wrapper').animate({
+				scrollTop: scrollAmount
+			}, 500);
+	});
 
-	
+	//call cycle function
+	cycleArtists();
+
 
 
 });

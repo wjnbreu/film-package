@@ -100,15 +100,16 @@ textarea {
     from {-webkit-transform: rotate(0.5deg)};
     to {-webkit-transform: rotate(-0.5deg)};
 }
-@font-face {
-  font-family: 'Clan';
-  src: url("../font/ClanPro-NarrUltra.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal; 
+@font-face{
+    font-family: 'Rail';
+    src: url("../font/NewRailAlphabet-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 h1, h2, h3{
-    font-family: 'Clan', helvetica, sans-serif;
+    font-family: 'Rail', helvetica, sans-serif;
     letter-spacing: 3px;
 }
 
