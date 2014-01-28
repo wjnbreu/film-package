@@ -82,6 +82,12 @@ create: function(req, res, next){
 				if (err) return next(err);
 			});
 
+			//inform other sockets that this user is now logged in
+			User.publishUpdate(user.id, {
+				loggedIn: true,
+				id: user.id
+			});
+
 			//if the user is also an admin, redirect to the user list
 			//eg (views/user/index.ejs)
 			//this is used in conjuction with config/policies.js file
@@ -107,6 +113,12 @@ create: function(req, res, next){
 				online: false
 			}, function (err){
 				if (err) return next(err);
+
+				//inform other sockets that user is logged out
+				User.publishUpdate(user.id, {
+					loggedIn: false,
+					id: user.id
+				});
 
 				//wipe out session (log out)
 				req.session.destroy();

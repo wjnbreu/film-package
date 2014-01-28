@@ -118,6 +118,22 @@ module.exports = {
 
 			res.redirect('/user');
 		});
+	},
+
+	subscribe: function(req, res){
+		User.find(function foundUsers(err, users){
+			if (err) return next(err);
+
+			//subscribe this socket to the User model classroom
+			User.subscribe(req.socket);
+
+			//subscribe this socket to the user instance room
+			User.subscribe(req.socket, users);
+
+			//avoid warning from the socket for trying to render
+			//html over the socket
+			res.send(200);
+		});
 	}
   
 };

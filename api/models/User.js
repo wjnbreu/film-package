@@ -36,6 +36,7 @@ module.exports = {
 	encryptedPassword: {
 		type: 'string'
 	},
+	
 	online:{
 		type: 'boolean',
 		defaultsTo: false

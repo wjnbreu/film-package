@@ -31,6 +31,9 @@
 
     });
 
+    //subscribe to the user model classroom and instance room
+    socket.get('/user/subscribe');
+
 
     ///////////////////////////////////////////////////////////
     // Here's where you'll want to add any custom logic for
