@@ -174,7 +174,6 @@ h1, h2, h3 {
   font-size: 4em;
   font-family: 'Rail', helvetica, sans-serif;
   margin-bottom: 40px;
-  -webkit-transition: all .2s ease-in-out;
 }
 .artists ul a li {
   border-bottom: 1px solid white;
@@ -189,7 +188,8 @@ h1, h2, h3 {
   margin-right: 40px;
 }
 .artists ul a li:hover {
-  background-color: #ccc;
+  background-color: white;
+  color: black;
 }
 
 .artist-images {

@@ -98,9 +98,7 @@ function addInfo(name, pic, nickname){
 
 //GET NAME TITLES
 artist.on('mouseenter', function(){
-	$(this).css({
-		color: 'white'
-	});
+
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
 	imageBlock.css({
