@@ -719,7 +719,6 @@ textarea {
         .buy{
             text-align: right;
             width: 25%;
-            color: white;
             position: fixed;
             bottom: 150px;
             right: -50%;
@@ -739,9 +738,9 @@ textarea {
                 }
             }
             p{
-                background-color: white;
-                border: 1px solid black;
-                color: black;
+                background-color: transparent;
+                color: white;
+                border: 1px solid white;
                 position: absolute;
                 top: 0;
                 width: 170px;
@@ -749,14 +748,12 @@ textarea {
                 padding: 10px;
                 text-align: center;
                 left: 20%;
+
                 &:hover{
-                    background-color: #ccc;
-                    opacity: 1;
+                    background-color: white;
                     color: black;
-                    a{
-                        color: black;
-                    }
                 }
+                
             }
         }
     }

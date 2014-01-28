@@ -186,6 +186,7 @@ h1, h2, h3 {
 }
 .artists ul a li:hover {
   font-size: 1.1em;
+  text-decoration: underline;
 }
 
 .artist-images {
@@ -317,8 +318,8 @@ h1, h2, h3 {
 }
 #artist-info .exit {
   position: fixed;
-  top: 25px;
-  right: 25px;
+  top: 0;
+  right: 0;
   font-size: 3em;
   padding-right: 10px;
   padding-left: 10px;

@@ -684,7 +684,6 @@ nav .nav-top-center li a.scroll:hover {
 #info .buy {
   text-align: right;
   width: 25%;
-  color: white;
   position: fixed;
   bottom: 150px;
   right: -50%;
@@ -705,9 +704,9 @@ nav .nav-top-center li a.scroll:hover {
   opacity: 0.8;
 }
 #info .buy p {
-  background-color: white;
-  border: 1px solid black;
-  color: black;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
   position: absolute;
   top: 0;
   width: 170px;
@@ -717,11 +716,7 @@ nav .nav-top-center li a.scroll:hover {
   left: 20%;
 }
 #info .buy p:hover {
-  background-color: #ccc;
-  opacity: 1;
-  color: black;
-}
-#info .buy p:hover a {
+  background-color: white;
   color: black;
 }
 

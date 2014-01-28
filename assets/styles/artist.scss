@@ -190,6 +190,7 @@ h1, h2, h3{
                     transition: all .2s ease-in-out;
                     &:hover{
                         font-size: 1.1em;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -243,9 +244,6 @@ h1, h2, h3{
             font-size: 1em;
         }
     }
-
-    
-
 
 
     #artist-info{
@@ -335,8 +333,8 @@ h1, h2, h3{
         }
         .exit{
             position: fixed;
-            top: 25px;
-            right: 25px;
+            top: 0;
+            right: 0;
             font-size: 3em;
             padding-right: 10px;
             padding-left: 10px;
