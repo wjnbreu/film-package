@@ -143,7 +143,7 @@ h1, h2, h3{
     }
 
     #insert-name{
-        position: fixed;
+        position: absolute;
         top: 20px;
         left: 10%;
         right: 10%;
@@ -154,26 +154,29 @@ h1, h2, h3{
         color: white;
         font-size: 3em;
         text-align: center;
+        z-index: 3;
     }
 
     .artists{
         position: absolute;
         top: 30%;
         left: 0;
-        width: 50%;
-        left: 25%;
-        right: 25%;
-        text-align: center;
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        text-align: left;
         margin: 0;
         z-index: 2;
         ul{
             list-style-type: none;
             width: 100%;
             padding-left: 0;
-            text-align: center;
+            text-align: left;
             
             li{
-                margin-bottom: 150px;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid white;
                 a{
                     text-decoration: none;
                     text-transform: uppercase;
@@ -182,6 +185,14 @@ h1, h2, h3{
                     font-family: 'Rail', helvetica, sans-serif;
                     margin-bottom: 40px;
                     -webkit-transition: all .2s ease-in-out;
+                    img{
+                        max-width: 300px;
+                        max-height: 200px;
+                        overflow: hidden;
+                        width: 300px;
+                        height: auto;
+                        margin-right: 40px;
+                    }
                 }
             }
         }
@@ -208,6 +219,8 @@ h1, h2, h3{
         bottom: 0;
         width: 50%;
         color: white;
+        background-color: black;
+        z-index: 9;
         h2{
             font-family: 'Rail', helvetica, sans-serif;
             text-transform: uppercase;
@@ -221,6 +234,8 @@ h1, h2, h3{
         bottom: 0;
         width: 50%;
         color: white;
+        background-color: black;
+        z-index: 9;
 
         h2{
             font-family: 'Rail', helvetica, sans-serif;

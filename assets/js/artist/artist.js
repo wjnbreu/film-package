@@ -31,16 +31,6 @@ function hideImages(){
 }
 //loop through each image from database and set to hidden
 
-function liftList(){
-	artistList.transition({
-		top: '20%'
-	}, 500);
-}
-
-
-
-liftList();
-
 
 if (cast.indexOf('Cast') !== -1){
 	$('#insert-name').on('click', function(){

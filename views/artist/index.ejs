@@ -2,23 +2,33 @@
     <a href="/"><div id="return"></div></a>
     <h1><span id="insert-name">Featured Artists</span></h1>
 
+
+
+
     <!--  List of artists -->
     <div class="artists">
         <ul>
             <% _.each(artists, function(artist){ %>
-            <li><a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>"><%= artist.name %></a></li>
+            <li>
+                <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>"><img data-pic="<%= artist.nickname %>" class=" index-pic <%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>"></a>
+                <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>"><%= artist.name %></a>
+                <br />
+                
+            </li>
             <% }) %>
         </ul>
     </div>
 
 
+
+
     <!-- Picture on rollover -->
-    <div class="artist-images">
+<!--     <div class="artist-images">
         <% _.each(artists, function(artist){ %>
         <img data-pic="<%= artist.nickname %>" class="<%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
         <% }) %>
     </div>
-
+ -->
     <div class="foot-left">
         <h2>What difference does it make?</h2>
     </div>
@@ -28,6 +38,9 @@
 
     <!-- <div id="trans-back"></div>
  -->
+
+
+
 
     <!-- Box sliding left -->
     <div id="artist-info">
