@@ -592,14 +592,15 @@ textarea {
                 a{
                     color: white;
                     &:hover{
-                        background-color: #00ff99;
+                        background-color: white;
                         color: black;
                     }
                     &.green{
                         color: black;
                         background-color: white;
                         &:hover{
-                            background-color: #ff6600;
+                            background-color: white;
+                            color: black;
                         }
                     }
                 }
@@ -608,7 +609,7 @@ textarea {
                     a{
                         color: white;
                         &:hover{
-                            background-color: #ff00ff;
+                            background-color: white;
                             color: black;
                         }
                     }

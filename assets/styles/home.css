@@ -567,7 +567,7 @@ nav .nav-top-center li a.scroll:hover {
   color: white;
 }
 #info .info-top h2 a:hover {
-  background-color: #00ff99;
+  background-color: white;
   color: black;
 }
 #info .info-top h2 a.green {
@@ -575,13 +575,14 @@ nav .nav-top-center li a.scroll:hover {
   background-color: white;
 }
 #info .info-top h2 a.green:hover {
-  background-color: #ff6600;
+  background-color: white;
+  color: black;
 }
 #info .info-top h2.yellow a {
   color: white;
 }
 #info .info-top h2.yellow a:hover {
-  background-color: #ff00ff;
+  background-color: white;
   color: black;
 }
 #info .info-top h2 span {
