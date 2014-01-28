@@ -339,11 +339,11 @@ footer {
     footer .footer-right .footer-rbma {
       color: black;
       text-transform: uppercase;
+      margin-right: 5%;
       margin-bottom: 20px;
-      margin-right: 10%;
       font-size: 1.3em;
       font-weight: 800;
-      right: 2.5%; }
+      right: 0; }
  
 
 /* ==========================================================================

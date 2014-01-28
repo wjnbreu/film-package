@@ -8,6 +8,7 @@ $(document).ready(function() {
 	var win_height = $(window).height();
 	var win_width = $(window).width();
 	var elementHeight = 0; //used for call bounding rect to measure element
+	var exit = $('#wrapper').find('#exit');
 
 	//number of content screens - 1
 	var scrollBottom = $(window).scrollTop() + (win_height * 3.5);
@@ -242,6 +243,9 @@ $(document).ready(function() {
 				left: 0,
 				top: 0
 			}, 1000);
+
+			//make sure exit button is visible
+			exit.removeClass('hidden');
 		}
 
 		else if(clk.hasClass('aboutlink')){
@@ -320,6 +324,17 @@ $(document).ready(function() {
 		$('#wrapper').animate({
 				scrollTop: scrollAmount
 			}, 500);
+	});
+
+	//if book iframe is open, allow exit button to close iframe
+	exit.on('click', function(){
+		if (!(exit.hasClass('hidden'))){
+			$('#bookframe').transition({
+				left: '100%',
+				top: '-100%'
+			}, 1000);
+			$(this).addClass('hidden');
+		}
 	});
 
 	//call cycle function

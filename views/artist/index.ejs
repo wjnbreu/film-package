@@ -11,10 +11,7 @@
             <% _.each(artists, function(artist){ %>
             <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>">
             <li>
-                <img data-pic="<%= artist.nickname %>" class=" index-pic <%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
                 <%= artist.name %>
-                <br />
-                
             </li>
         </a>
             <% }) %>
@@ -25,12 +22,12 @@
 
 
     <!-- Picture on rollover -->
-<!--     <div class="artist-images">
+    <div class="artist-images">
         <% _.each(artists, function(artist){ %>
         <img data-pic="<%= artist.nickname %>" class="<%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
         <% }) %>
     </div>
- -->
+
     <div class="foot-left">
         <h2>What difference does it make?</h2>
     </div>
@@ -43,7 +40,7 @@
 
     <!-- Box sliding left -->
     <div id="artist-info">
-        <div class="exit hidden">X</div>
+        <div id="exit" class="exit hidden">X</div>
         <h1><span class="insert-name"></span></h1>
         <!-- Insert Artist Title And Bio-->
             <% _.each(artists, function(artist){ %>
