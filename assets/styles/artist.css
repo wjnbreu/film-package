@@ -145,6 +145,7 @@ h1, h2, h3 {
   line-height: 1;
   width: 80%;
   color: white;
+  background-color: black;
   font-size: 3em;
   text-align: center;
   z-index: 3;
