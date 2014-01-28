@@ -9,12 +9,14 @@
     <div class="artists">
         <ul>
             <% _.each(artists, function(artist){ %>
+            <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>">
             <li>
-                <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>"><img data-pic="<%= artist.nickname %>" class=" index-pic <%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>"></a>
-                <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>"><%= artist.name %></a>
+                <img data-pic="<%= artist.nickname %>" class=" index-pic <%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
+                <%= artist.name %>
                 <br />
                 
             </li>
+        </a>
             <% }) %>
         </ul>
     </div>

@@ -172,29 +172,32 @@ h1, h2, h3{
             width: 100%;
             padding-left: 0;
             text-align: left;
-            
-            li{
-                margin-bottom: 10px;
-                padding-bottom: 10px;
-                border-bottom: 1px solid white;
-                a{
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    color: white;
-                    font-size: 4em;
-                    font-family: 'Rail', helvetica, sans-serif;
-                    margin-bottom: 40px;
-                    -webkit-transition: all .2s ease-in-out;
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+                font-size: 4em;
+                font-family: 'Rail', helvetica, sans-serif;
+                margin-bottom: 40px;
+                -webkit-transition: all .2s ease-in-out;
+                li{
+                    border-bottom: 1px solid white;
                     img{
                         max-width: 300px;
                         max-height: 200px;
                         overflow: hidden;
-                        width: 300px;
-                        height: auto;
+                        min-width: 300px;
+                        width: auto;
+                        height: 100%;
                         margin-right: 40px;
+                    }
+                    &:hover{
+                        background-color: #ccc;
                     }
                 }
             }
+            
+            
         }
         
     }

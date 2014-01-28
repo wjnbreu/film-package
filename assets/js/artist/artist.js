@@ -3,7 +3,7 @@ $(document).ready(function(){
 var imgWidth = 250; //px
 var padding = 100;
 var artistList = $('#wrapper').find('.artists');
-var artist = $('#wrapper').find('.artists ul li a');
+var artist = $('#wrapper').find('.artists ul a');
 var artistLength = artist.length;
 var images = $('#wrapper').find('.artist-images img');
 var imageBlock = $('#wrapper').find('.artist-images');
