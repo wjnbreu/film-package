@@ -50,6 +50,9 @@ module.exports = {
 				if (err) return next(err);
 			});
 
+			//let other users know that the user was created
+			User.publishCreate(user);
+
 			//after success, redirect to show action
 			res.redirect('/user/show/'+user.id);
 		});
@@ -114,6 +117,9 @@ module.exports = {
 
 			User.destroy(req.param('id'), function userDestroyed(err){
 				if (err) return next(err);
+
+				//let other sockets know that user was destroyed
+				User.publishDestroy(user.id);
 			});
 
 			res.redirect('/user');

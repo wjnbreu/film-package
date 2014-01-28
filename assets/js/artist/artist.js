@@ -37,20 +37,7 @@ function liftList(){
 	}, 500);
 }
 
-function cycleArtists(){
-	ranColor = Math.floor(Math.random() * colorsLength);
-	title.css({
-		color: colors[ranColor]
-	});
-	setTimeout(cycleArtists, 200);
-}
-	
-cycleArtists();
 
-window.onBlur = function(){
-	alert('closed');
-	clearInterval(cycleArtists);
-};
 
 liftList();
 

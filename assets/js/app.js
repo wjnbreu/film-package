@@ -92,7 +92,18 @@ function updateUserInDom(userId, message){
       if (message.verb === 'update'){
         UserIndexPage.updateUser(userId, message);
       }
+
+      //coming from publish/create
+      if (message.verb === 'create'){
+        UserIndexPage.addUser(message);
+      }
+
+      //publishdestroy
+      if (message.verb === 'destroy'){
+        UserIndexPage.destroyUser(userId);
+      }
       break;
+
   }
 }
 
@@ -109,7 +120,7 @@ var UserIndexPage = {
       $userRow.attr('src', "/images/icon-offline.png");
     }
 
-  },
+  }
 
 };
 
