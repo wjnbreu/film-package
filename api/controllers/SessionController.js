@@ -76,6 +76,12 @@ create: function(req, res, next){
 			req.session.authenticated = true;
 			req.session.User = user;
 
+			//change status to online
+			user.online = true;
+			user.save(function(err, user){
+				if (err) return next(err);
+			});
+
 			//if the user is also an admin, redirect to the user list
 			//eg (views/user/index.ejs)
 			//this is used in conjuction with config/policies.js file
@@ -91,11 +97,24 @@ create: function(req, res, next){
 	},
 
 	destroy: function(req, res, next){
-		//wipe out the session/log out
-		req.session.destroy();
 
-		//redirect the browser to the signin screen
-		res.redirect('/session/new');
+		User.findOne(req.session.User.id, function foundUser(err, user){
+
+			var userId = req.session.User.id;
+
+			//the user is logging out
+			User.update(userId, {
+				online: false
+			}, function (err){
+				if (err) return next(err);
+
+				//wipe out session (log out)
+				req.session.destroy();
+
+				//redirect broswer to sign in page
+				res.redirect('/session/new');
+			});
+		});
 	}
   
 };

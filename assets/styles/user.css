@@ -77,6 +77,11 @@ table td {
   border-bottom: 1px solid black;
 }
 
+.user-icon {
+  max-width: 30px;
+  height: auto;
+}
+
 .user-container {
   margin-top: 150px;
   width: 80%;
