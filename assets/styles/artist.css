@@ -16,6 +16,10 @@ textarea {
   color: #222;
 }
 
+html, html a {
+  -webkit-font-smoothing: antialiased !important;
+}
+
 body {
   font-size: 1em;
   line-height: 1.4;
@@ -118,6 +122,8 @@ h1, h2, h3 {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: black;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0px);
 }
 
 #return {
