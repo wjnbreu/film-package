@@ -418,6 +418,7 @@ nav .nav-top-center li a.scroll:hover {
   background-size: 100% !important;
   background-size: bottom center;
   min-width: 100%;
+  background: url(../../images/title-image.jpg) no-repeat center center;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -503,7 +504,7 @@ nav .nav-top-center li a.scroll:hover {
   z-index: 9;
 }
 #film .text h1 {
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 4em;
   line-height: 1;
   width: 80%;

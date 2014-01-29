@@ -58,7 +58,7 @@ $(document).ready(function() {
 			setTimeout(cycleArtists, cycleSpeed);
 		}
 		else if (cycleSpeed <= 100){
-			if (cycleCounter <= 150){
+			if (cycleCounter <= 100){
 				cycleCounter += 1;
 				setTimeout(cycleArtists, cycleSpeed);
 			}

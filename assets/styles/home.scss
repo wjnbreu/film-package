@@ -428,7 +428,7 @@ textarea {
     background-size: 100% !important;
     background-size: bottom center;
     min-width: 100%;
-    //background: url(../../images/top.jpg) no-repeat center center;
+    background: url(../../images/title-image.jpg) no-repeat center center;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -522,7 +522,7 @@ textarea {
         position: absolute;
         z-index: 9;
         h1{
-            text-transform: uppercase;
+            text-transform: none;
             font-size: 4em;
             line-height: 1;
             width: 80%;
