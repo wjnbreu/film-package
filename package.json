@@ -1,8 +1,11 @@
 {
   "name": "film-package",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "0.1",
+  "description": "RBMA x 15",
+  "engines": {
+    "node": "0.10.25"
+  },
   "dependencies": {
     "sails": "0.9.8",
     "grunt": "0.4.1",
