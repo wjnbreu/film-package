@@ -1,7 +1,7 @@
 {
   "name": "film-package",
   "private": true,
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "RBMA x 15",
   "engines": {
     "node": "0.10.25"
