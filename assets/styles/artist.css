@@ -173,7 +173,7 @@ h1, h2, h3 {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-family: 'Rail', helvetica, sans-serif;
   margin-bottom: 40px;
 }
@@ -185,7 +185,7 @@ h1, h2, h3 {
   transition: all .2s ease-in-out;
 }
 .artists ul a li:hover {
-  font-size: 1.1em;
+  font-size: 1.5em;
   text-decoration: underline;
 }
 
@@ -205,8 +205,8 @@ h1, h2, h3 {
 
 .foot-left {
   position: fixed;
-  left: 0;
-  bottom: 0;
+  left: 30px;
+  bottom: 10px;
   width: 50%;
   color: white;
   z-index: 9;
@@ -220,8 +220,8 @@ h1, h2, h3 {
 
 .foot-right {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 30px;
+  bottom: 10px;
   width: 50%;
   color: white;
   z-index: 9;

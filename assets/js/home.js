@@ -15,6 +15,7 @@ $(document).ready(function() {
 	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
+	var flag = false; //used to make sure cycle function is only called once when user hits third screen
 	
 
 	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
@@ -27,7 +28,7 @@ $(document).ready(function() {
 	'Seth Troxler', 'Steve Arrington', 'Todd Edwards', 'Easton West', 'Ralf Schmerberg',
 	'Giorgio Moroder', 'Q-Tip', 'Mathew Johnson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
 	'Flying Lotus', 'Gaslamp Killer', 'Louis Barker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
-	'Young Guru', 'Leroy Webb', '& more...'];
+	'Young Guru', 'Leroy Webb'];
 
 	var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
 	'#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
@@ -37,6 +38,9 @@ $(document).ready(function() {
 	var artistLength = artists.length;
 	var colorsLength = colors.length;
 	var ranArtist, ranColor;
+	var cycleSpeed = 1000; //seconds between artist name (in ms)
+	var initialCycleSpeed = 1000; //won't change
+	var cycleCounter = 0;
 	
 	
 	//cycle through artist names, choose random name/color
@@ -48,7 +52,25 @@ $(document).ready(function() {
 			color: colors[ranColor]
 		});
 		cycle.text(artists[ranArtist]);
-		setTimeout(cycleArtists, 200);
+		//speed up cycle
+		if (cycleSpeed >= 100){
+			cycleSpeed -= 50;
+			setTimeout(cycleArtists, cycleSpeed);
+		}
+		else if (cycleSpeed <= 100){
+			if (cycleCounter <= 150){
+				cycleCounter += 1;
+				setTimeout(cycleArtists, cycleSpeed);
+			}
+			else{
+				cycle.text('Click for more');
+				//reset counter and speed
+				cycleSpeed = initialCycleSpeed;
+				cycleCounter = 0;
+
+			}
+		}
+		
 	}
 	
 
@@ -168,6 +190,11 @@ $(document).ready(function() {
 			//background counter is reset so user background will change
 			//again on scroll down
 			background_counter = 0;
+
+			//reset function so cycle can run again if user scrolls to top
+			if (flag === true){
+				flag = false;
+			}
 		}
 
 		// LOSE POINTER ONCE SCROLL BEGINS
@@ -184,6 +211,16 @@ $(document).ready(function() {
 			//CLOSE ALL NAVIGATION
 			navMin(nav);
 			navMin(bottom);
+		}
+
+		//THIRD SCREEN
+		if (top >= (win_height * 2) - 35){
+			if (!flag){
+				flag = true;
+				//call cycle function
+				cycleArtists();
+			}
+			
 		}
 
 		
@@ -337,8 +374,7 @@ $(document).ready(function() {
 		}
 	});
 
-	//call cycle function
-	cycleArtists();
+	
 
 
 

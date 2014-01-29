@@ -428,7 +428,7 @@ textarea {
     background-size: 100% !important;
     background-size: bottom center;
     min-width: 100%;
-    background: url(../../images/top.jpg) no-repeat center center;
+    //background: url(../../images/top.jpg) no-repeat center center;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -440,12 +440,10 @@ textarea {
     -ms-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     color: white;
-    .title-logo{
-        width: 50%;
-        text-align: center;
-        img{
-
-        }
+    img{
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
     }
     #title-text{
         margin-top: 10%;
@@ -603,11 +601,13 @@ textarea {
             z-index: 9999;
             background-color: black;
             border: 1px solid transparent;
+
             h2{
                 font-family: 'Rail';
                 font-size: 4em;
                 color: white;
                 margin-top: 20px;
+                text-transform: none !important;
                 a{
                     color: white;
                     &:hover{

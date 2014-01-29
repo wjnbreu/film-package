@@ -418,7 +418,6 @@ nav .nav-top-center li a.scroll:hover {
   background-size: 100% !important;
   background-size: bottom center;
   min-width: 100%;
-  background: url(../../images/top.jpg) no-repeat center center;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -431,9 +430,10 @@ nav .nav-top-center li a.scroll:hover {
   transition: all .4s ease-in-out;
   color: white;
 }
-#title .title-logo {
-  width: 50%;
-  text-align: center;
+#title img {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 #title #title-text {
   margin-top: 10%;
@@ -579,6 +579,7 @@ nav .nav-top-center li a.scroll:hover {
   font-size: 4em;
   color: white;
   margin-top: 20px;
+  text-transform: none !important;
 }
 #info .info-top h2 a {
   color: white;
