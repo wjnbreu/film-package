@@ -247,24 +247,6 @@ $(document).ready(function() {
 			});
 		}
 
-
-		//SLIDE OUT BOOK
-		if (win_width > 800){
-			if ( top < (scrollBottom) && counter === 0){
-				counter = 1;
-				$('#info .buy').transition({
-					right: '-50%'
-				}, 750);
-				
-			}
-
-			if ( top > (scrollBottom) && counter === 1){
-				$('#info .buy').transition({
-					right: '0'
-				}, 750);
-				counter = 0;
-			}
-		}
 	}
 	
 	function smoothScroll(clk){
