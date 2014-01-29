@@ -30,16 +30,16 @@
 }
 
 @font-face {
-  font-family: 'Clan';
-  src: url("../font/ClanPro-NarrNewsItalic.otf") format("opentype");
+  font-family: 'Rail';
+  src: url("../font/NewRailAlphabet-Bold.otf") format("opentype");
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Rail';
-  src: url("../font/NewRailAlphabet-Bold.otf") format("opentype");
-  font-weight: normal;
+  src: url("../font/NewRailAlphabet-White.otf") format("opentype");
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -261,6 +261,7 @@ nav {
   -o-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  letter-spacing: 3px;
 }
 nav .nav-top-left {
   width: 33.3333%;
@@ -335,6 +336,7 @@ nav .nav-top-center li a.scroll:hover {
   -o-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  letter-spacing: 3px;
 }
 #nav-bottom .nav-left {
   width: 50%;
@@ -509,7 +511,7 @@ nav .nav-top-center li a.scroll:hover {
   line-height: 1;
   width: 80%;
   text-align: center;
-  margin: 0 10% 0 10%;
+  margin: 10px 10% 0 10%;
 }
 #film .text h2 {
   text-align: center;
@@ -575,12 +577,29 @@ nav .nav-top-center li a.scroll:hover {
   background-color: black;
   border: 1px solid transparent;
 }
+#info .info-top h3 {
+  color: white;
+  font-family: 'Rail', helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.9em;
+}
+#info .info-top h3 a {
+  color: white;
+  font-weight: lighter;
+}
 #info .info-top h2 {
   font-family: 'Rail';
   font-size: 4em;
   color: white;
-  margin-top: 20px;
-  text-transform: none !important;
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  line-height: 0.6;
+}
+#info .info-top h2.featured-artists {
+  line-height: 1;
+  padding: 5px;
 }
 #info .info-top h2 a {
   color: white;
@@ -589,21 +608,9 @@ nav .nav-top-center li a.scroll:hover {
   background-color: white;
   color: black;
 }
-#info .info-top h2 span {
-  font-size: 2em;
-  padding-bottom: 50px;
-}
-#info .info-top .artist-bank div {
-  background-color: black;
-}
-#info .info-top .artist-bank div .featured-artists {
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-#info .info-top .artist-bank div .featured-artists:hover {
-  background-color: white;
-  color: black;
+#info .info-top .city-box {
+  width: 80%;
+  margin: 0 10% 60px 10%;
 }
 #info .info-top .cities {
   display: none;
@@ -613,18 +620,52 @@ nav .nav-top-center li a.scroll:hover {
   padding-right: 5%;
   word-spacing: 10px;
   color: white;
-  margin-top: 0;
-  margin-bottom: 20px;
   font-family: 'Rail', helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
 }
-#info .info-top .digital {
+#info .info-top .cities li {
+  list-style-type: none;
+  display: inline;
+}
+#info .info-top .cities li:hover {
+  border: 1px solid white;
+}
+#info .info-top .digital-section {
+  margin-top: 10%;
+}
+#info .info-top .digital-section .digital-box {
+  margin: 0 auto 60px auto;
+}
+#info .info-top .digital-section .digital-box .digital {
   display: none;
   text-transform: uppercase;
   font-size: 1.5em;
   color: white;
   margin-top: 0;
   margin-bottom: 20px;
+  font-weight: 100;
   font-family: 'Rail', helvetica, sans-serif;
+}
+#info .info-top .artist-bank div {
+  background-color: black;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+#info .info-top .artist-bank div .featured-artists {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 2px solid white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+#info .info-top .artist-bank div .featured-artists:hover {
+  background-color: white;
+  color: black;
+}
+#info .info-top .artist-bank div span {
+  font-size: 1.6em;
 }
 #info .about-section {
   margin-top: 5%;
@@ -633,6 +674,10 @@ nav .nav-top-center li a.scroll:hover {
 #info .about-section h1 {
   font-size: 4em;
   font-family: 'Rail', 'Clan', helvetica, sans-serif;
+  border: 2px solid white;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 #info .about-section p {
   font-family: helvetica, sans-serif;
