@@ -589,24 +589,21 @@ nav .nav-top-center li a.scroll:hover {
   background-color: white;
   color: black;
 }
-#info .info-top h2 a.green {
-  color: black;
-  background-color: white;
-}
-#info .info-top h2 a.green:hover {
-  background-color: white;
-  color: black;
-}
-#info .info-top h2.yellow a {
-  color: white;
-}
-#info .info-top h2.yellow a:hover {
-  background-color: white;
-  color: black;
-}
 #info .info-top h2 span {
   font-size: 2em;
   padding-bottom: 50px;
+}
+#info .info-top .artist-bank div {
+  background-color: black;
+}
+#info .info-top .artist-bank div .featured-artists {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+#info .info-top .artist-bank div .featured-artists:hover {
+  background-color: white;
+  color: black;
 }
 #info .info-top .cities {
   display: none;

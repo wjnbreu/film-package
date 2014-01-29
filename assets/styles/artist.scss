@@ -148,13 +148,15 @@ h1, h2, h3{
         top: 0;
         left: 0;
         right: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
         height: auto;
-        text-transform: uppercase;
+        text-transform: none;
         line-height: 1;
         width: 100%;
         color: white;
         background-color: black;
-        font-size: 3em;
+        font-size: 2.5em;
         text-align: center;
         z-index: 3;
     }

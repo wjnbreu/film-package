@@ -74,7 +74,6 @@ $(document).ready(function() {
 	}
 	
 
-
 	//slide up/down extra info like cities, etc
 	$('#info').find('.citylink').on('click', function(){
 		$(this).parent().parent().find('.cities').fadeToggle(500);

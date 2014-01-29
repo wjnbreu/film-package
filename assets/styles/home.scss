@@ -614,28 +614,26 @@ textarea {
                         background-color: white;
                         color: black;
                     }
-                    &.green{
-                        color: black;
-                        background-color: white;
-                        &:hover{
-                            background-color: white;
-                            color: black;
-                        }
-                    }
+
                 }
                 
-                &.yellow{
-                    a{
-                        color: white;
-                        &:hover{
-                            background-color: white;
-                            color: black;
-                        }
-                    }
-                }
                 span{
                     font-size: 2em;
                     padding-bottom: 50px;
+                }
+            }
+            .artist-bank{
+                div{
+                    background-color: black;
+                    .featured-artists{
+                        width: 50%;
+                        margin-left: 25%;
+                        margin-right: 25%;
+                        &:hover{
+                            background-color: white;
+                            color: black;
+                        }
+                    }
                 }
             }
 
