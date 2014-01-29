@@ -15,7 +15,7 @@ $(document).ready(function() {
 	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
-	var flag = false; //used to make sure cycle function is only called once when user hits third screen
+	
 	
 
 	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
@@ -209,17 +209,6 @@ $(document).ready(function() {
 			navMin(bottom);
 		}
 
-		//THIRD SCREEN
-
-		if (top >= (win_height * 2) - 35){
-			//wait till user has scrolled down to start animation cycle
-			if (!flag){
-				flag = true;
-				//call cycle function
-				cycleArtists();
-			}
-			
-		}
 
 		
 
@@ -353,6 +342,10 @@ $(document).ready(function() {
 			$(this).addClass('hidden');
 		}
 	});
+
+
+	//call cycle function
+	cycleArtists();
 
 	
 

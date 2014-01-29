@@ -674,7 +674,8 @@ h1, h2, h3{
 
 
     .artists{
-        top: 20%;
+        top: 10%;
+        margin-bottom: 10%;
         width: 60%;
         left: 20%;
         right: 20%;
@@ -711,19 +712,7 @@ h1, h2, h3{
 
 
     .foot-left{
-        position: fixed;
-        left: 0;
-        bottom: 10px;
-        width: 100%;
-        color: white;
-        z-index: 9;
-        text-align: center;
-        h2{
-            font-family: 'Rail', helvetica, sans-serif;
-            text-transform: uppercase;
-            line-height: 1;
-            font-size: 1em;
-        }
+        display: none;
     }
     .foot-right{
         display: none;
@@ -764,11 +753,11 @@ h1, h2, h3{
 
         }
         p{
-            width: 90%;
+            width: 80%;
             margin-top: 10%;
-            margin-left: 5%;
+            margin-left: 10%;
             margin-bottom: 75px;
-            line-height: 2;
+            line-height: 1.75;
             z-index: 3;
             font-family: 'Rail', helvetica, sans-serif;
             font-weight: 100;
