@@ -523,6 +523,7 @@ textarea {
         right: 10%;
         position: absolute;
         z-index: 9;
+
         h1{
             text-transform: none;
             font-size: 4em;
@@ -530,6 +531,7 @@ textarea {
             width: 80%;
             text-align: center;
             margin: 10px 10% 0 10%;
+            font-weight: 100;
         }
         h2{
             text-align: center;
@@ -624,7 +626,7 @@ textarea {
                 font-size: 4em;
                 color: white;
                 margin-top: 0;
-                margin-bottom: 60px;
+                margin-bottom: 30px;
                 padding: 0;
                 line-height: 0.6;
                 &.featured-artists{
@@ -664,6 +666,7 @@ textarea {
                 li{
                     list-style-type: none;
                     display: inline;
+                    border: 1px solid transparent;
                     &:hover{
                         border: 1px solid white;
                     }
@@ -688,22 +691,26 @@ textarea {
             .artist-bank{
                 div{
                     background-color: black;
-                    margin-top: 10%;
-                    margin-bottom: 10%;
+                    margin-top: 20%;
+                    margin-bottom: 20%;
                     .featured-artists{
                         width: 60%;
                         margin-left: 20%;
                         margin-right: 20%;
-                        border: 2px solid white;
+                        color: black;
+                        background-color: white;
                         padding: 10px;
                         text-transform: uppercase;
+                        border: 2px solid white;
                         &:hover{
-                            background-color: white;
-                            color: black;
+                            background-color: black;
+                            color: white;
+                            border: 2px solid white;
                         }
                     }
                     span{
                         font-size: 1.6em;
+                        line-height: 0.7;
                     }
                 }
             }

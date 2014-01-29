@@ -1,6 +1,6 @@
 <div id="wrapper">
     <a href="/"><div id="return"></div></a>
-    <h1><span id="insert-name">Featured artists</span></h1>
+<!--     <h1><span id="insert-name">Featured artists</span></h1> -->
 
 
 
@@ -54,11 +54,21 @@
             <div class="links">
                 <ul class="<%= artist.nickname + '-links' %>">
                     <% if (artist.lecture){ %>
-                        <li><a href="<%= artist.lecture %>" target="blank">Watch Lecture</a></li>
+                        <li>
+                            <a href="<%= artist.lecture %>" target="blank"><img src="images/play.gif" /></a>
+
+                            <a href="<%= artist.lecture %>" target="blank">Watch Lecture</a>
+                        </li>
                     <% } if (artist.radio) { %>
-                        <li><a href="<%= artist.radio %>" target="blank">RBMA Radio Show</a></li>
+                        <li>
+                            <a href="<%= artist.radio %>" target="blank"><img src="images/play.gif" /></a>
+                            <a href="<%= artist.radio %>" target="blank">RBMA Radio Show</a>
+                        </li>
                     <% } if (artist.magazine) { %>
-                        <li><a href="<%= artist.magazine %>" target="blank">RBMA Feature</a></li>
+                        <li>
+                            <a href="<%= artist.magazine %>" target="blank"><img src="images/read.gif" /></a>
+                            <a href="<%= artist.magazine %>" target="blank">RBMA Feature</a>
+                        </li>
                     <% } if (artist.website) { %>
                         <li><a href="<%= artist.website %>" target="blank">On The Web</a></li>
                     <% } %>

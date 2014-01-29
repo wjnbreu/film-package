@@ -122,18 +122,16 @@ h1, h2, h3 {
 
 #return {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 95px;
-  height: 95px;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
   z-index: 9;
-  background: url(../../images/return.png) no-repeat center center;
+  background: url(../../images/back-button.png) no-repeat center center;
   background-size: 100%;
 }
 #return:hover {
-  background-size: 100%;
-  width: 100px;
-  height: 100px;
+  opacity: 0.6;
 }
 
 #insert-name {
@@ -156,7 +154,7 @@ h1, h2, h3 {
 
 .artists {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 0;
   width: 50%;
   left: 25%;
@@ -175,7 +173,7 @@ h1, h2, h3 {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: 'Rail', helvetica, sans-serif;
   margin-bottom: 40px;
 }
@@ -185,10 +183,10 @@ h1, h2, h3 {
   -o-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  border: 3px solid transparent;
 }
 .artists ul a li:hover {
-  font-size: 1.5em;
-  text-decoration: underline;
+  border: 3px solid white;
 }
 
 .artist-images {
@@ -315,8 +313,11 @@ h1, h2, h3 {
   color: black;
 }
 #artist-info .links ul li a:hover {
-  background-color: black;
-  color: white;
+  opacity: 0.6;
+}
+#artist-info .links ul li a img {
+  width: 25px;
+  height: auto;
 }
 #artist-info .exit {
   position: fixed;

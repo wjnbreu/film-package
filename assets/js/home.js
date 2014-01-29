@@ -63,10 +63,11 @@ $(document).ready(function() {
 				setTimeout(cycleArtists, cycleSpeed);
 			}
 			else{
-				cycle.text('Click for more');
 				//reset counter and speed
 				cycleSpeed = initialCycleSpeed;
 				cycleCounter = 0;
+				cycle.text('Click for more');
+				setTimeout(cycleArtists, 5000);
 
 			}
 		}
@@ -190,10 +191,6 @@ $(document).ready(function() {
 			//again on scroll down
 			background_counter = 0;
 
-			//reset function so cycle can run again if user scrolls to top
-			if (flag === true){
-				flag = false;
-			}
 		}
 
 		// LOSE POINTER ONCE SCROLL BEGINS
@@ -213,7 +210,9 @@ $(document).ready(function() {
 		}
 
 		//THIRD SCREEN
+
 		if (top >= (win_height * 2) - 35){
+			//wait till user has scrolled down to start animation cycle
 			if (!flag){
 				flag = true;
 				//call cycle function

@@ -512,6 +512,7 @@ nav .nav-top-center li a.scroll:hover {
   width: 80%;
   text-align: center;
   margin: 10px 10% 0 10%;
+  font-weight: 100;
 }
 #film .text h2 {
   text-align: center;
@@ -593,7 +594,7 @@ nav .nav-top-center li a.scroll:hover {
   font-size: 4em;
   color: white;
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding: 0;
   line-height: 0.6;
 }
@@ -627,6 +628,7 @@ nav .nav-top-center li a.scroll:hover {
 #info .info-top .cities li {
   list-style-type: none;
   display: inline;
+  border: 1px solid transparent;
 }
 #info .info-top .cities li:hover {
   border: 1px solid white;
@@ -649,23 +651,27 @@ nav .nav-top-center li a.scroll:hover {
 }
 #info .info-top .artist-bank div {
   background-color: black;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 #info .info-top .artist-bank div .featured-artists {
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-  border: 2px solid white;
+  color: black;
+  background-color: white;
   padding: 10px;
   text-transform: uppercase;
+  border: 2px solid white;
 }
 #info .info-top .artist-bank div .featured-artists:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
 #info .info-top .artist-bank div span {
   font-size: 1.6em;
+  line-height: 0.7;
 }
 #info .about-section {
   margin-top: 5%;
