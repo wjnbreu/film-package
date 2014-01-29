@@ -41,6 +41,10 @@
     <!-- Box sliding left -->
     <div id="artist-info">
         <div id="exit" class="exit hidden">X</div>
+        <!-- Inject image -->
+        <div class='assets'>
+            <img src="#" />
+        </div>
         <h1><span class="insert-name"></span></h1>
         <!-- Insert Artist Title And Bio-->
             <% _.each(artists, function(artist){ %>
@@ -77,10 +81,7 @@
             
             <% }) %>
 
-        <!-- Inject image -->
-        <div class='assets'>
-            <img src="#" />
-        </div>
+        
             
         <!-- Inject links -->
     </div><!-- End artist info -->

@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+	//THINGS TO DO: DISABLE ALL INSERT NAMES. NOT NEEDED ANYMORE
+	//MAKE SURE IMAGES AREN'T LOADING ON MOBILE UNTIL CLICKED
+
 var imgWidth = 250; //px
 var padding = 100;
 var artistList = $('#wrapper').find('.artists');
