@@ -720,6 +720,7 @@ nav .nav-top-center li a.scroll:hover {
 }
 #info .social {
   margin-top: 2.5%;
+  margin-bottom: 10%;
   width: 100%;
   height: 58px;
   text-align: center;
@@ -834,6 +835,559 @@ nav .nav-top-center li a.scroll:hover {
   #info .social iframe {
     display: none;
     width: 100px !important;
+  }
+}
+@media only screen and (max-width: 1000px), screen and (max-device-width: 1000px) {
+  #title {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black !important;
+    background-size: 160% !important;
+    background-size: bottom center;
+    min-width: 100%;
+    background: url(../../images/title-image.jpg) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -ms-background-size: contain;
+    background-size: contain;
+  }
+  #title img {
+    width: 45%;
+    margin-top: 15%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  #film {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background: url(../../images/artist/eno.jpg) no-repeat top center;
+    background-size: 200%;
+  }
+  #film video {
+    max-width: 100%;
+    opacity: 1;
+  }
+  #film .text {
+    margin-top: 10%;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    z-index: 9;
+  }
+  #film .text h1 {
+    text-transform: none;
+    font-size: 2em;
+    line-height: 1;
+    width: 80%;
+    text-align: center;
+    margin: 10px 10% 0 10%;
+    font-weight: 100;
+  }
+  #film .text img {
+    max-width: 15%;
+    margin-top: 25%;
+  }
+
+  #info {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding-top: 5%;
+    position: absolute;
+    top: 200%;
+    background-color: black;
+  }
+  #info .info-top {
+    top: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    z-index: 9999;
+    background-color: black;
+    border: 1px solid transparent;
+  }
+  #info .info-top h3 {
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 2.5em;
+  }
+  #info .info-top h3 a {
+    color: white;
+    font-weight: lighter;
+  }
+  #info .info-top h2 {
+    font-family: 'Rail';
+    font-size: 4em;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    line-height: 0.6;
+  }
+  #info .info-top h2.featured-artists {
+    line-height: 1;
+    padding: 5px;
+  }
+  #info .info-top h2 a {
+    color: white;
+  }
+  #info .info-top h2 a:hover {
+    background-color: white;
+    color: black;
+  }
+  #info .info-top .city-box {
+    width: 80%;
+    margin: 0 10% 60px 10%;
+  }
+  #info .info-top .cities {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-spacing: 10px;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  #info .info-top .cities li {
+    list-style-type: none;
+    display: inline;
+    border: 1px solid transparent;
+  }
+  #info .info-top .cities li:hover {
+    border: 1px solid white;
+  }
+  #info .info-top .digital-section {
+    margin-top: 10%;
+  }
+  #info .info-top .digital-section .digital-box {
+    margin: 0 auto 60px auto;
+  }
+  #info .info-top .digital-section .digital-box .digital {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-family: 'Rail', helvetica, sans-serif;
+  }
+  #info .info-top .artist-bank div {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+  }
+  #info .info-top .artist-bank div .featured-artists {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+  #info .info-top .artist-bank div .featured-artists:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+  }
+  #info .info-top .artist-bank div span {
+    font-size: 1.25em;
+    line-height: 1;
+    margin-top: 20px;
+  }
+  #info .about-section {
+    margin-top: 5%;
+    color: white;
+  }
+  #info .about-section h1 {
+    font-size: 4em;
+    font-family: 'Rail', 'Clan', helvetica, sans-serif;
+    border: 2px solid white;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  #info .about-section p {
+    font-family: 'Rail', helvetica, sans-serif;
+    line-height: 2;
+    padding-right: 5%;
+    font-size: 1.3em;
+    padding-left: 5%;
+    text-align: center;
+  }
+  #info .logo {
+    width: 80%;
+    margin: 5% 10% auto 10%;
+    text-align: center;
+  }
+  #info .logo img {
+    max-width: 80%;
+    width: 14%;
+    margin: 10% 43% 10% 43%;
+  }
+  #info .logo img:hover {
+    opacity: 0.7;
+  }
+}
+@media only screen and (max-width: 721px), screen and (max-device-width: 721px) {
+  #nav-burger {
+    width: 35px;
+    height: 35px;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    z-index: 99;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: red;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    letter-spacing: 3px;
+  }
+  nav .nav-top-left {
+    width: 33.3333%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  nav .nav-top-left li {
+    float: left;
+    font-family: 'Clan', helvetica, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-top: 15px;
+    list-style-type: none;
+  }
+  nav .nav-top-left li a.scroll {
+    text-decoration: none;
+    color: white;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  nav .nav-top-left li a.scroll:hover {
+    color: gray;
+  }
+  nav .nav-top-center {
+    width: 33.3333%;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    padding-top: 15px;
+    overflow-y: hidden;
+  }
+  nav .nav-top-center li {
+    list-style-type: none;
+    float: right;
+    padding-right: 20px;
+  }
+
+  #nav-bottom {
+    display: block;
+    position: absolute;
+  }
+
+  #bookframe {
+    position: fixed;
+    background-color: white;
+    left: 100%;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  #bookframe:hover {
+    left: 89%;
+  }
+  #bookframe iframe {
+    border: none;
+    margin: 0;
+  }
+
+  #title {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black !important;
+    background-size: 200% !important;
+    background-size: bottom center;
+    min-width: 100%;
+    background: url(../../images/title-image.jpg) no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+  }
+  #title img {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 25%;
+  }
+
+  #pointer {
+    width: 20%;
+    position: absolute;
+    bottom: 80px;
+    left: 45%;
+    right: 45%;
+    z-index: 999;
+    text-align: center;
+  }
+  #pointer img {
+    width: 50%;
+    -webkit-animation: "shake" 0.5s ease 0 infinite alternate;
+    -moz-animation: "shake" 0.5s ease 0 infinite alternate;
+    -o-animation: shake 0.5s ease 0 infinite alternate;
+    animation: shake 0.5s ease 0 infinite alternate;
+    animation-delay: 0s;
+  }
+
+  #film {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background: url(../../images/artist/eno.jpg) no-repeat top center;
+    background-size: 200%;
+  }
+  #film video {
+    max-width: 100%;
+    opacity: 1;
+  }
+  #film .text {
+    margin-top: 40%;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    z-index: 9;
+  }
+  #film .text h1 {
+    text-transform: none;
+    font-size: 2em;
+    line-height: 1;
+    width: 80%;
+    text-align: center;
+    margin: 10px 10% 0 10%;
+    font-weight: 100;
+  }
+  #film .text img {
+    max-width: 15%;
+    margin-top: 25%;
+  }
+  #film .film-wrap {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    z-index: 0;
+    position: absolute;
+  }
+  #film .film-wrap iframe {
+    opacity: 1;
+    width: 100%;
+    display: none;
+  }
+  #film .film-wrap video {
+    display: block;
+    max-width: 200%;
+    width: 200%;
+    left: -50%;
+  }
+
+  #info {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding-top: 5%;
+    position: absolute;
+    top: 200%;
+    background-color: black;
+  }
+  #info .info-top {
+    top: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    z-index: 9999;
+    background-color: black;
+    border: 1px solid transparent;
+  }
+  #info .info-top h3 {
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.5em;
+  }
+  #info .info-top h3 a {
+    color: white;
+    font-weight: lighter;
+  }
+  #info .info-top h2 {
+    font-family: 'Rail';
+    font-size: 2.5em;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    line-height: 0.6;
+  }
+  #info .info-top h2.featured-artists {
+    line-height: 1;
+    padding: 5px;
+  }
+  #info .info-top h2 a {
+    color: white;
+  }
+  #info .info-top h2 a:hover {
+    background-color: white;
+    color: black;
+  }
+  #info .info-top .city-box {
+    width: 80%;
+    margin: 0 10% 60px 10%;
+  }
+  #info .info-top .cities {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-spacing: 10px;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  #info .info-top .cities li {
+    list-style-type: none;
+    display: inline;
+    border: 1px solid transparent;
+  }
+  #info .info-top .cities li:hover {
+    border: 1px solid white;
+  }
+  #info .info-top .digital-section {
+    margin-top: 10%;
+  }
+  #info .info-top .digital-section .digital-box {
+    margin: 0 auto 60px auto;
+  }
+  #info .info-top .digital-section .digital-box .digital {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-family: 'Rail', helvetica, sans-serif;
+  }
+  #info .info-top .artist-bank div {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    text-align: center;
+  }
+  #info .info-top .artist-bank div .featured-artists {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+  #info .info-top .artist-bank div .featured-artists:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+  }
+  #info .info-top .artist-bank div span {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-top: 20px;
+  }
+  #info .about-section {
+    margin-top: 5%;
+    color: white;
+  }
+  #info .about-section h1 {
+    font-size: 2.5em;
+    font-family: 'Rail', 'Clan', helvetica, sans-serif;
+    border: 2px solid white;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  #info .about-section p {
+    font-family: 'Rail', helvetica, sans-serif;
+    line-height: 2;
+    padding-right: 5%;
+    font-size: 1.3em;
+    padding-left: 5%;
+    text-align: left;
+  }
+  #info .logo {
+    width: 80%;
+    margin: 5% 10% auto 10%;
+    text-align: center;
+  }
+  #info .logo img {
+    max-width: 80%;
+    width: 20%;
+    margin: 10% 40% 10% 40%;
+  }
+  #info .logo img:hover {
+    opacity: 0.7;
   }
 }
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -977,6 +1531,8 @@ nav .nav-top-center li a.scroll:hover {
     width: 100%;
     height: 100%;
     background-color: black;
+    background: url(../../images/artist/eno.jpg) no-repeat top center;
+    background-size: 200%;
     color: white;
   }
   #film video {
@@ -1117,12 +1673,12 @@ nav .nav-top-center li a.scroll:hover {
     font-family: 'Rail', helvetica, sans-serif;
   }
   #info .info-top .artist-bank div {
-    background-color: black;
     margin-top: 20%;
     margin-bottom: 20%;
+    text-align: center;
   }
   #info .info-top .artist-bank div .featured-artists {
-    width: 60%;
+    width: 50%;
     margin-left: 20%;
     margin-right: 20%;
     color: white;
@@ -1153,19 +1709,12 @@ nav .nav-top-center li a.scroll:hover {
     margin-right: 20%;
   }
   #info .about-section p {
-    font-family: helvetica, sans-serif;
-    line-height: 1.5;
-    padding-right: 10%;
+    font-family: 'Rail', helvetica, sans-serif;
+    line-height: 1.7;
+    padding-right: 5%;
     font-size: 1em;
-    padding-left: 10%;
+    padding-left: 5%;
     text-align: left;
-  }
-  #info .about-section p a {
-    color: white;
-    text-decoration: underline;
-  }
-  #info .about-section p a:hover {
-    color: #ccc;
   }
   #info .logo {
     width: 80%;
@@ -1174,30 +1723,11 @@ nav .nav-top-center li a.scroll:hover {
   }
   #info .logo img {
     max-width: 80%;
-    width: 12%;
-    margin-left: 44%;
-    margin-right: 44%;
+    width: 30%;
+    margin: 10% 35% 10% 35%;
   }
   #info .logo img:hover {
     opacity: 0.7;
-  }
-  #info .social {
-    margin-top: 2.5%;
-    width: 100%;
-    height: 58px;
-    text-align: center;
-  }
-  #info .social img {
-    display: inline;
-    width: 30px;
-    height: auto;
-  }
-  #info .social img.social-white {
-    display: inline-block;
-  }
-  #info .social iframe {
-    display: none;
-    width: 100px !important;
   }
 }
 /* ==========================================================================
