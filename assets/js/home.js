@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
 
+//TO DO: ADD NAV ARROW DOWN TAXI
+//MAKE FEATURED,RELEASE,DIGITAL ALL ONE PAGE
+
  //GLOBAL VARIABLES
 	var nav = $('nav a');
 	var bottom = $('#nav-bottom a');
@@ -67,7 +70,7 @@ $(document).ready(function() {
 				cycleSpeed = initialCycleSpeed;
 				cycleCounter = 0;
 				cycle.text('Click for more');
-				setTimeout(cycleArtists, 5000);
+				setTimeout(cycleArtists, 4000);
 
 			}
 		}
