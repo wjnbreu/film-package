@@ -3,7 +3,7 @@
  <nav class="user-nav">
  	<ul>
  		<% if (session.authenticated) { %>
- 		<li class="active"><a href="/user/show/<%= session.User.id %>"><%= session.User.name %></a></li>
+ 		<li class="active"><%= session.User.name %></li>
  		<li class="artist-list"><a href="/artist/list/">Artist List</a></li>
  		<li class="logout"><a href="/session/destroy">Log Out</a></li>
  		<% } else { %>
