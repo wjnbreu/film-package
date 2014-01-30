@@ -19,16 +19,16 @@ $(document).ready(function() {
 	
 
 	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
-	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Transmicsoul', 'Jimi Nxir', 'Quietdust',
+	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Trancemicsoul', 'Jimi Nxir', 'Quietdust',
 	'Ale Hop', 'Koreless', 'Kraftmatiks', 'Lee Perry', 'Thundercat', 'Leo Aldrey',
 	'Nile Rodgers', 'Philip Glass', 'Deborah Harry', 'De La Montagne', 'Mr. Selfish',
-	'Ken Scott', 'Malcolm Cecil', 'Future Folk', 'Melmann', 'Ale Hop', 'Julian Love',
-	'Falty DL', 'Orquesta', 'Benjamin Damage', 'Nick Hook', 'François K', 'Many Ameri',
-	'James Murphy', 'DFA', 'Skream', 'Jamie Jupiter', 'Egyptian Lover', 'Richie Hawtin',
-	'Seth Troxler', 'Steve Arrington', 'Todd Edwards', 'Easton West', 'Ralf Schmerberg',
-	'Giorgio Moroder', 'Q-Tip', 'Mathew Johnson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
-	'Flying Lotus', 'Gaslamp Killer', 'Louis Barker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
-	'Young Guru', 'Leroy Webb'];
+	'Ken Scott', 'Malcolm Cecil', 'Melmann', 'Ale Hop', 'Julian Love',
+	'Falty DL', 'Orlando Volcano', 'Benjamin Damage', 'Nick Hook', 'François K',
+	'James Murphy', 'Skream', 'Jamie Jupiter', 'Egyptian Lover', 'Richie Hawtin',
+	'Seth Troxler', 'Steve Arrington', 'Todd Edwards', 'Easton West',
+	'Giorgio Moroder', 'Q-Tip', 'Mathew Jonson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
+	'Flying Lotus', 'Gaslamp Killer', 'Louis Baker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
+	'Young Guru'];
 
 	var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
 	'#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
