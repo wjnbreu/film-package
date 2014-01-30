@@ -307,6 +307,7 @@ h1, h2, h3 {
   width: 100%;
   right: 0;
   bottom: 5%;
+  margin-top: 150px;
 }
 #artist-info .links ul {
   list-style-type: none;
@@ -439,20 +440,20 @@ h1, h2, h3 {
     height: auto;
   }
   #artist-info .exit {
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-size: 2em;
-    padding-right: 10px;
-    padding-left: 10px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    background: url(../../images/close.gif) no-repeat center center;
+    background-size: 100%;
     z-index: 9999;
   }
   #artist-info .exit:hover {
-    background-color: black;
-    color: white;
+    background: url(../../images/close-black.gif) no-repeat center center;
+    background-size: 100%;
   }
 }
 @media only screen and (max-width: 800px), screen and (max-device-width: 800px) {
@@ -593,6 +594,7 @@ h1, h2, h3 {
     width: 100%;
     right: 0;
     bottom: 5%;
+    margin-top: 75px;
   }
   #artist-info .links ul {
     list-style-type: none;
@@ -618,10 +620,10 @@ h1, h2, h3 {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 30px;
-    height: 30px;
-    max-width: 30px;
-    max-height: 30px;
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
     background: url(../../images/close.gif) no-repeat center center;
     background-size: 100%;
     z-index: 9999;
@@ -756,6 +758,7 @@ h1, h2, h3 {
     width: 100%;
     right: 0;
     bottom: 5%;
+    margin-top: 50px;
   }
   #artist-info .links ul {
     list-style-type: none;
@@ -781,10 +784,10 @@ h1, h2, h3 {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 30px;
-    height: 30px;
-    max-width: 30px;
-    max-height: 30px;
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
     background: url(../../images/close.gif) no-repeat center center;
     background-size: 100%;
     z-index: 9999;
