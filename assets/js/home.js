@@ -77,7 +77,16 @@ $(document).ready(function() {
 
 	//slide up/down extra info like cities, etc
 	$('#info').find('.citylink').on('click', function(){
-		$(this).parent().parent().find('.cities').fadeToggle(500);
+		
+		if(win_width > 800){
+
+			$(this).parent().parent().find('.cities').fadeToggle(500);
+		}
+
+		else{
+			return;
+		}
+		
 	});
 
 	$('#info').find('.digitallink').on('click', function(){
@@ -157,7 +166,8 @@ $(document).ready(function() {
 
 
 
-	//hide all main navigation items, replace with arrow
+	//hide all main navigation items, replace with arrow.
+	//only fires when window width > 800
 	function navMin(item){
 		item.hide();
 		$('#nav-burger').fadeIn();
@@ -178,28 +188,26 @@ $(document).ready(function() {
 
 		//used to track buy book image
 		if (top < 58){
-		
+			//make sure nav arrow is hidden
 			burgerWhite.css({
 				display: 'none'
 			});
 
-
+			//make sure nav links display
 			navMax(nav);
 			navMax(bottom);
-
-			//background counter is reset so user background will change
-			//again on scroll down
-			background_counter = 0;
 
 		}
 
 		// LOSE POINTER ONCE SCROLL BEGINS
 		if (top >= 58){
+			//lose css animation
 			$('#pointer').fadeOut();
 		}
 
 		//SECOND SCREEN
 		if (top >= win_height - 35){
+			//add nav pointer
 			burgerWhite.css({
 				display: 'block'
 			});
@@ -209,29 +217,16 @@ $(document).ready(function() {
 			navMin(bottom);
 		}
 
-
-		
-
-		//FOURTH SCREEN
-
-		if (top > (win_height * 3) - 35){
-			burgerWhite.css({
-				display: 'block'
-			});
-		}
-
-
-
 		//IF BACK ON HERO PAGE
 		if (top < (win_height - 58)){
-
+			//re-add navigation links
 			navMax(nav);
 			navMax(bottom);
+			//lose nav pointer
 			burgerWhite.css({
 				display: 'none'
 			});
 		}
-
 	}
 	
 	function smoothScroll(clk){
@@ -240,6 +235,8 @@ $(document).ready(function() {
 				scrollTop: win_height + 10
 			},500);
 		}
+
+		//slide out book
 		else if(clk.hasClass('booklink')){
 			$('#bookframe').transition({
 				left: 0,
@@ -248,13 +245,12 @@ $(document).ready(function() {
 				//make sure exit button is visible
 				exit.removeClass('hidden').fadeIn();
 			});
-
-			
 		}
 
 		else if(clk.hasClass('aboutlink')){
+
 			$('#wrapper').animate({
-				scrollTop: (win_height * 3) + 30
+				scrollTop: $('#aboutlink').offset().top
 			}, 1000);
 		}
 		else if(clk.hasClass('titlelink')){
@@ -299,14 +295,23 @@ $(document).ready(function() {
 
 	//on scroll, change colors of nav items accordingly
 	$('#wrapper').scroll(function(){
-		navColors();
+		if (win_width > 800){
+			navColors();
+		}
+		else{
+			return;
+		}
+		
 	});
 
 	//retrigger scroll position colors on resize
 	$(window).resize(function(){
 		var windowsize = $(window).width();
 		removeVideo(windowsize);
-		navColors();
+		if (windowsize > 800){
+			navColors();
+		}
+		
 	});
 
 	//scroll to top on arrow nav click
@@ -333,15 +338,29 @@ $(document).ready(function() {
 	//if book iframe is open, allow exit button to close iframe
 	exit.on('click', function(){
 		if (!(exit.hasClass('hidden'))){
-			$('#bookframe').transition({
-				left: '100%',
-				top: '-100%'
-			}, 1000);
-			$(this).addClass('hidden');
-			//set back to none, so we can fade in when re-opened
-			$(this).css({
-				display: 'none'
-			});
+			if (win_width > 768){
+				$('#bookframe').transition({
+					left: '100%',
+					top: '-100%'
+				}, 1000);
+				$(this).addClass('hidden');
+				//set back to none, so we can fade in when re-opened
+				$(this).css({
+					display: 'none'
+				});
+			}
+			else{
+				$('#bookframe').transition({
+					left: '100%',
+					top: '0'
+				}, 1000);
+				$(this).addClass('hidden');
+				//set back to none, so we can fade in when re-opened
+				$(this).css({
+					display: 'none'
+				});
+			}
+			
 		}
 	});
 

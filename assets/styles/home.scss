@@ -1140,9 +1140,9 @@ textarea {
 
 
 
-@media only screen and (max-width: 721px), screen and (max-device-width: 721px){
+@media only screen and (max-width: 800px), screen and (max-device-width: 800px){
     #nav-burger{
-    display: none;
+    display: none !important;
    }
 
    nav{
@@ -1214,7 +1214,7 @@ textarea {
     position: fixed;
     background-color: white;
         left: 100%;
-        top: -100%;
+        top: 0;
         width: 100%;
         height: 100%;
         z-index: 9999;
@@ -1241,7 +1241,7 @@ textarea {
     width: 100%;
     height: 100%;
     background-color: black !important;
-    background-size: 200% !important;
+    background-size: 250% !important;
     background-size: bottom center;
     min-width: 100%;
     background: url(../../images/title-image.jpg) no-repeat bottom center;
@@ -1398,6 +1398,13 @@ textarea {
                         background-color: white;
                         color: black;
                     }
+                    &.citylink{
+                        background-color: white;
+                        color: black;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+
 
                 }
                 
@@ -1412,7 +1419,7 @@ textarea {
             }
 
             .cities{
-                display: none;
+                display: block;
                 text-transform: uppercase;
                 font-size: 1.25em;
                 padding-left: 5%;
@@ -1490,8 +1497,10 @@ textarea {
             }
             p{
                 font-family: 'Rail', helvetica, sans-serif;
+                font-weight: 100;
                 line-height: 2;
                 padding-right: 5%;
+                padding-left: 5%;
                 font-size: 1.3em;
                 padding-left: 5%;
                 text-align: left;
@@ -1521,7 +1530,7 @@ textarea {
 
 
    #nav-burger{
-    display: none;
+    display: none !important;
    }
 
    nav{
@@ -1771,11 +1780,16 @@ textarea {
                     line-height: 1;
                     padding: 5px;
                 }
+               
 
                 
                 a{
                     color: white;
                     &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                     &.citylink{
                         background-color: white;
                         color: black;
                     }
@@ -1793,7 +1807,7 @@ textarea {
             }
 
             .cities{
-                display: none;
+                display: block;
                 text-transform: uppercase;
                 font-size: 1.25em;
                 padding-left: 5%;

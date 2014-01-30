@@ -1048,9 +1048,9 @@ nav .nav-top-center li a.scroll:hover {
     opacity: 0.7;
   }
 }
-@media only screen and (max-width: 721px), screen and (max-device-width: 721px) {
+@media only screen and (max-width: 800px), screen and (max-device-width: 800px) {
   #nav-burger {
-    display: none;
+    display: none !important;
   }
 
   nav {
@@ -1121,7 +1121,7 @@ nav .nav-top-center li a.scroll:hover {
     position: fixed;
     background-color: white;
     left: 100%;
-    top: -100%;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 9999;
@@ -1147,7 +1147,7 @@ nav .nav-top-center li a.scroll:hover {
     width: 100%;
     height: 100%;
     background-color: black !important;
-    background-size: 200% !important;
+    background-size: 250% !important;
     background-size: bottom center;
     min-width: 100%;
     background: url(../../images/title-image.jpg) no-repeat bottom center;
@@ -1289,12 +1289,18 @@ nav .nav-top-center li a.scroll:hover {
     background-color: white;
     color: black;
   }
+  #info .info-top h2 a.citylink {
+    background-color: white;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   #info .info-top .city-box {
     width: 80%;
     margin: 0 10% 60px 10%;
   }
   #info .info-top .cities {
-    display: none;
+    display: block;
     text-transform: uppercase;
     font-size: 1.25em;
     padding-left: 5%;
@@ -1368,8 +1374,10 @@ nav .nav-top-center li a.scroll:hover {
   }
   #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
+    font-weight: 100;
     line-height: 2;
     padding-right: 5%;
+    padding-left: 5%;
     font-size: 1.3em;
     padding-left: 5%;
     text-align: left;
@@ -1390,7 +1398,7 @@ nav .nav-top-center li a.scroll:hover {
 }
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #nav-burger {
-    display: none;
+    display: none !important;
   }
 
   nav {
@@ -1629,12 +1637,16 @@ nav .nav-top-center li a.scroll:hover {
     background-color: white;
     color: black;
   }
+  #info .info-top h2 a.citylink {
+    background-color: white;
+    color: black;
+  }
   #info .info-top .city-box {
     width: 80%;
     margin: 0 10% 60px 10%;
   }
   #info .info-top .cities {
-    display: none;
+    display: block;
     text-transform: uppercase;
     font-size: 1.25em;
     padding-left: 5%;
