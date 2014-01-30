@@ -24,7 +24,7 @@
     <!-- Picture on rollover -->
     <div class="artist-images">
         <% _.each(artists, function(artist){ %>
-        <img data-pic="<%= artist.nickname %>" class="<%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
+        <img data-pic="<%= artist.nickname %>" class="<%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>" alt="<%= artist.name %>">
         <% }) %>
     </div>
 
