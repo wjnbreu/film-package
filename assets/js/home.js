@@ -230,10 +230,6 @@ $(document).ready(function() {
 			burgerWhite.css({
 				display: 'none'
 			});
-
-			burgerBlack.css({
-				display: 'none'
-			});
 		}
 
 	}
@@ -248,10 +244,12 @@ $(document).ready(function() {
 			$('#bookframe').transition({
 				left: 0,
 				top: 0
-			}, 1000);
+			}, 1000,function(){
+				//make sure exit button is visible
+				exit.removeClass('hidden').fadeIn();
+			});
 
-			//make sure exit button is visible
-			exit.removeClass('hidden');
+			
 		}
 
 		else if(clk.hasClass('aboutlink')){
@@ -340,6 +338,10 @@ $(document).ready(function() {
 				top: '-100%'
 			}, 1000);
 			$(this).addClass('hidden');
+			//set back to none, so we can fade in when re-opened
+			$(this).css({
+				display: 'none'
+			});
 		}
 	});
 

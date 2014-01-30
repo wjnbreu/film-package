@@ -137,14 +137,15 @@ h1, h2, h3 {
   position: fixed;
   top: 20px;
   left: 20px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   z-index: 9;
-  background: url(../../images/back-button.png) no-repeat center center;
+  background: url(../../images/back-black.gif) no-repeat center center;
   background-size: 100%;
 }
 #return:hover {
-  opacity: 0.6;
+  background: url(../../images/back.gif) no-repeat center center;
+  background-size: 100%;
 }
 
 .artists {
@@ -316,20 +317,20 @@ h1, h2, h3 {
   height: auto;
 }
 #artist-info .exit {
-  position: fixed;
-  top: 0;
-  right: 0;
-  font-size: 3em;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: white;
-  color: black;
-  border: 2px solid black;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  background: url(../../images/close.gif) no-repeat center center;
+  background-size: 100%;
   z-index: 9999;
 }
 #artist-info .exit:hover {
-  background-color: black;
-  color: white;
+  background: url(../../images/close-black.gif) no-repeat center center;
+  background-size: 100%;
 }
 
 .container #artist-list {

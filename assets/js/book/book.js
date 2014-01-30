@@ -59,13 +59,6 @@ function ready(player_id) {
     }
 });
 
-      owlTab.reinit({
-    afterMove: function(){
-    //if tablet size, modify span artist names
-    appendTabletTitles();
-    
-    }
-});
    
 	
 	
@@ -322,134 +315,7 @@ function ready(player_id) {
 		}
 
 
-	function appendTabletTitles(){
-		switch (owlTab.currentItem){
-
-			case 0:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1><span class="head-title">For The Record</span><br />Red Bull Music Academy presents a new book featuring' +
-									' 15 Conversations with people who have shaped the way we listen to music</h1>');
-			$('#tablet-preview').empty();
-			break;
-
-			case 1:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">Joao Barbosa x kalaf angelo x mulatu astatke</strong></h1>');
-			preview = $('#mobil-conversations').children('.joao').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 2:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">bernard purdie x jaki liebezeit</strong></h1>');
-			preview = $('#mobil-conversations').children('.bernard').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 3:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">martyn ware x nile rodgers</strong></h1>');
-			preview = $('#mobil-conversations').children('.nile').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 4:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">kerri chandler x patrick adams</strong></h1>');
-			preview = $('#mobil-conversations').children('.kerri').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 5:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">gareth jones x metro area</strong></h1>');
-			preview = $('#mobil-conversations').children('.gareth').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 6:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">carsten nicolai x olaf bender x uwe schmidt</strong></h1>');
-			preview = $('#mobil-conversations').children('.carsten').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 7:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">benny ill x moritz von oswald</strong></h1>');
-			preview = $('#mobil-conversations').children('.moritz').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 8:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">adrian sherwood x lee "scratch" perry</strong></h1>');
-			preview = $('#mobil-conversations').children('.lee').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 9:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">matias aguayo x sly &amp; robbie</strong></h1>');
-			preview = $('#mobil-conversations').children('.sly').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 10:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">ben ufo x dj harvey</strong></h1>');
-			preview = $('#mobil-conversations').children('.harvey').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 11:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">cosey fanni tutti x nik void</strong></h1>');
-			preview = $('#mobil-conversations').children('.cosey').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 12:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">modeselektor x mykki blanco</strong></h1>');
-			preview = $('#mobil-conversations').children('.mykki').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 13:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">erykah badu x the underachievers</strong></h1>');
-			preview = $('#mobil-conversations').children('.erykah').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 14:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">just blaze x paul riser</strong></h1>');
-			preview = $('#mobil-conversations').children('.blaze').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 15:
-			$('#tablet-title').empty();
-			$('#tablet-title').html('<h1 style="line-height: 1"><strong style="font-weight: 800; font-size: 1.3em">Robert henke x tom oberheim</strong></h1>');
-			preview = $('#mobil-conversations').children('.oberheim').find('p').html();
-			$('#tablet-preview').empty().html('<p>' + preview + '</p>');
-			break;
-
-			case 16:
-			$('#tablet-title').empty();
-			$('#tablet-preview').empty().html('<p></p>');
-			break;
-			
-
-			//display both arrows
-			default:
-			$('#tablet-title').html('<h1>15 Conversations with people who have shaped the way we listen to music</h1>');
-
-		}
-	}
-
+	
 
 
 
@@ -613,10 +479,6 @@ function ready(player_id) {
 		var thisOne = $(this).children().attr('id');
 		//call arrowStatus function, sending current arrow direction
 		arrowStatus(thisOne);
-		if ( windowWidth < 1024 ){
-			//inject title and description for each slide
-			appendTabletTitles();
-		}
 	});
 
 	//extras page
