@@ -3,21 +3,24 @@ $(document).ready(function() {
 
 //TO DO: ADD NAV ARROW DOWN TAXI
 //MAKE FEATURED,RELEASE,DIGITAL ALL ONE PAGE
+//DOUBLE CHECK BURGER DOWN FUNCTIONS
 
  //GLOBAL VARIABLES
 	var nav = $('nav a');
 	var bottom = $('#nav-bottom a');
 	var burgerWhite = $('#nav-burger .white');
+	var burgerDown = $('#nav-down');
 	var win_height = $(window).height();
 	var win_width = $(window).width();
 	var elementHeight = 0; //used for call bounding rect to measure element
 	var exit = $('#wrapper').find('#exit');
 
 	//number of content screens - 1
-	var scrollBottom = $(window).scrollTop() + (win_height * 3.5);
+	var scrollBottom = $(window).scrollTop() + (win_height * 4.5);
 	var backgrounds = ['top'];
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
+	var scrollSpeed = 500;
 	
 	
 
@@ -202,6 +205,13 @@ $(document).ready(function() {
 
 		}
 
+		//make sure down burger is hidden 
+		if (top > 0 && top < win_height){
+				burgerDown.css({
+				display: 'none'
+			});
+		}
+
 		// LOSE POINTER ONCE SCROLL BEGINS
 		if (top >= 58){
 			//lose css animation
@@ -212,6 +222,9 @@ $(document).ready(function() {
 		if (top >= win_height - 35){
 			//add nav pointer
 			burgerWhite.css({
+				display: 'block'
+			});
+			burgerDown.css({
 				display: 'block'
 			});
 
@@ -236,7 +249,7 @@ $(document).ready(function() {
 		if (clk.hasClass('filmlink')){
 			$('#wrapper').animate({
 				scrollTop: win_height + 10
-			},500);
+			},scrollSpeed);
 		}
 
 		//slide out book
@@ -254,12 +267,12 @@ $(document).ready(function() {
 
 			$('#wrapper').animate({
 				scrollTop: $('#aboutlink').offset().top
-			}, 1000);
+			}, scrollSpeed);
 		}
 		else if(clk.hasClass('titlelink')){
 			$('#wrapper').animate({
 				scrollTop: 0
-			}, 500);
+			}, scrollSpeed);
 		}
 	}
 
@@ -318,11 +331,73 @@ $(document).ready(function() {
 	});
 
 	//scroll to top on arrow nav click
-	$('#nav-burger').on('click', function(){
-		$('#wrapper').animate({
+	// $('#nav-burger').on('click', function(){
+	// 	$('#wrapper').animate({
+	// 			scrollTop: 0
+	// 		}, 500);
+	// });
+
+
+	function scrollDown(){
+		var scrolltop = $('#wrapper').scrollTop();
+		winheight = $(window).height();
+
+		//if between first and third screen (movie screen)
+		if (scrolltop >= (winheight / 2) && scrolltop < (winheight * 2)){
+			$('#wrapper').animate({
+				scrollTop: (win_height * 2) + 35 //allow extra padding
+			}, scrollSpeed);
+		}
+		//between third and fourth screen (info and about)
+		if (scrolltop >= (winheight *2 ) && (scrolltop < winheight * 3)){
+			$('#wrapper').animate({
+				scrollTop: (win_height * 3) + 55 //allow extra padding
+			}, scrollSpeed);
+		}
+		//go to the bottom of the about screen
+		if (scrolltop >= (winheight * 3)){
+			$('#wrapper').animate({
+				scrollTop: scrollBottom
+			}, scrollSpeed);
+		}
+	}
+
+	function scrollUp(){
+		var scrolltop = $('#wrapper').scrollTop();
+		winheight = $(window).height();
+
+		//if between first and third screen (movie screen)
+		if (scrolltop >= (winheight / 2) && scrolltop < (winheight * 2)){
+			$('#wrapper').animate({
 				scrollTop: 0
-			}, 500);
-	});
+			}, scrollSpeed);
+		}
+		//between third and fourth screen (info and about)
+		if (scrolltop >= ( winheight * 2 ) && ( scrolltop < winheight * 3 )){
+			$('#wrapper').animate({
+				scrollTop: win_height
+			}, scrollSpeed);
+		}
+		//go to the bottom of the about screen
+		if (scrolltop >= (winheight * 3) && scrolltop < (win_height * 4)){
+			$('#wrapper').animate({
+				scrollTop: (win_height * 2)
+			}, scrollSpeed);
+		}
+
+		if (scrolltop >= (win_height * 4)){
+			$('#wrapper').animate({
+				scrollTop: (win_height * 3)
+			}, scrollSpeed);
+		}
+	}
+
+	//scroll up one screen on nav burger up click
+	$('#nav-burger').on('click', scrollUp);
+
+
+	//scroll down exactly on screen on nav down click
+	$('#nav-down').on('click', scrollDown);
 
 
 	//change video background on play button click
@@ -331,6 +406,7 @@ $(document).ready(function() {
 
 	});
 
+	//use css animated arrow on hero page to scroll down one page
 	$('#pointer').on('click', function(){
 		var scrollAmount = $(window).height();
 		$('#wrapper').animate({
@@ -370,9 +446,6 @@ $(document).ready(function() {
 
 	//call cycle function
 	cycleArtists();
-
-	
-
 
 
 });

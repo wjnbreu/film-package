@@ -246,6 +246,22 @@ a:hover {
   opacity: 0.6;
 }
 
+#nav-down {
+  position: fixed;
+  left: 20px;
+  bottom: 15px;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  display: none;
+}
+#nav-down img {
+  max-width: 100%;
+}
+#nav-down img:hover {
+  opacity: 0.6;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -662,15 +678,15 @@ nav .nav-top-center li a.scroll:hover {
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   padding: 10px;
   text-transform: uppercase;
   border: 2px solid white;
 }
 #info .info-top .artist-bank div .featured-artists:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border: 2px solid white;
 }
 #info .info-top .artist-bank div span {
@@ -1054,6 +1070,10 @@ nav .nav-top-center li a.scroll:hover {
     display: none !important;
   }
 
+  #nav-down {
+    display: none !important;
+  }
+
   nav {
     position: absolute;
     top: 0;
@@ -1291,8 +1311,8 @@ nav .nav-top-center li a.scroll:hover {
     color: black;
   }
   #info .info-top h2 a.citylink {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -1345,16 +1365,16 @@ nav .nav-top-center li a.scroll:hover {
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
     padding: 10px;
     text-transform: uppercase;
     border: 2px solid white;
   }
   #info .info-top .artist-bank div .featured-artists:hover {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
   }
   #info .info-top .artist-bank div span {
     font-size: 1.5em;
@@ -1399,6 +1419,10 @@ nav .nav-top-center li a.scroll:hover {
 }
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #nav-burger {
+    display: none !important;
+  }
+
+  #nav-down {
     display: none !important;
   }
 
@@ -1639,8 +1663,8 @@ nav .nav-top-center li a.scroll:hover {
     color: black;
   }
   #info .info-top h2 a.citylink {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
   }
   #info .info-top .city-box {
     width: 80%;
