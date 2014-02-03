@@ -337,7 +337,6 @@ h1, h2, h3{
 
 //IPad
 @media only screen and (max-width: 1000px), screen and (max-device-width: 1000px){
-
     .artists{
         position: absolute;
         top: 0;
@@ -376,6 +375,21 @@ h1, h2, h3{
                     }
                 }
             }
+        }
+    }
+
+     .artist-images{
+        display: block;
+        width: 130%;
+        height: auto;
+        min-height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 0;
+        img{
+            width: 100%;
         }
     }
 

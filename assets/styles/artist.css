@@ -357,6 +357,21 @@ h1, h2, h3 {
     color: white;
   }
 
+  .artist-images {
+    display: block;
+    width: 130%;
+    height: auto;
+    min-height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .artist-images img {
+    width: 100%;
+  }
+
   #artist-info {
     position: fixed;
     top: 0;
