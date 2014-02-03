@@ -50,8 +50,6 @@ module.exports = {
 				if (err) return next(err);
 			});
 
-			//let other users know that the user was created
-			User.publishCreate(user);
 
 			//after success, redirect to show action
 			res.redirect('/user/show/'+user.id);
@@ -118,27 +116,9 @@ module.exports = {
 			User.destroy(req.param('id'), function userDestroyed(err){
 				if (err) return next(err);
 
-				//let other sockets know that user was destroyed
-				User.publishDestroy(user.id);
 			});
 
 			res.redirect('/user');
-		});
-	},
-
-	subscribe: function(req, res){
-		User.find(function foundUsers(err, users){
-			if (err) return next(err);
-
-			//subscribe this socket to the User model classroom
-			User.subscribe(req.socket);
-
-			//subscribe this socket to the user instance room
-			User.subscribe(req.socket, users);
-
-			//avoid warning from the socket for trying to render
-			//html over the socket
-			res.send(200);
 		});
 	}
   

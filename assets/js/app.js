@@ -18,13 +18,18 @@
 
   socket.on('connect', function socketConnected() {
 
-    console.log("This is from the connect: ", this.socket.sessionId);
+    // Listen for Comet messages from Sails
+    socket.on('message', function messageReceived(message) {
 
-    //listen for the socket message
-    socket.on('message', cometMessageReceivedFromServer);
+      ///////////////////////////////////////////////////////////
+      // Replace the following with your own custom logic
+      // to run when a new message arrives from the Sails.js
+      // server.
+      ///////////////////////////////////////////////////////////
+      log('New comet message received :: ', message);
+      //////////////////////////////////////////////////////
 
-    //subscribe to the user model classroom and instance room
-    socket.get('/user/subscribe');
+    });
 
 
     ///////////////////////////////////////////////////////////
@@ -64,63 +69,3 @@
   window.io
 
 );
-
-function cometMessageReceivedFromServer(message){
-  //function routes the message based on teh model which issued it
-  console.log("here's the message: ", message);
-
-  //this message has to do with User model
-  if (message.model === 'user'){
-    var userId = message.id;
-    updateUserInDom(userId, message);
-  }
-}
-
-function updateUserInDom(userId, message){
-
-  //what page am I on?
-  var page = document.location.pathname;
-
-  //strip trailing slash if we've got one
-  page = page.replace(/(\/)$/, '');
-
-  //route to appropriate user update handler based on which page you're on
-  switch(page){
-    //if we're on user index
-    case '/user':
-      //this is a message coming from publishUpdate
-      if (message.verb === 'update'){
-        UserIndexPage.updateUser(userId, message);
-      }
-
-      //coming from publish/create
-      if (message.verb === 'create'){
-        UserIndexPage.addUser(message);
-      }
-
-      //publishdestroy
-      if (message.verb === 'destroy'){
-        UserIndexPage.destroyUser(userId);
-      }
-      break;
-
-  }
-}
-
-
-//USER INDEX PAGE DOM MANIPULATION LOGIC
-var UserIndexPage = {
-  updateUser: function(id, message){
-    if (message.data.loggedIn){
-      var $userRow = $('tr[data-id="' + id + '"] td img').first();
-      $userRow.attr('src', "/images/icon-online.png");
-    }
-    else{
-      var $userRow = $('tr[data-id="' + id + '"] td img').first();
-      $userRow.attr('src', "/images/icon-offline.png");
-    }
-
-  }
-
-};
-

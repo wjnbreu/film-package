@@ -72,7 +72,11 @@
                             <a href="<%= artist.magazine %>" target="blank">RBMA Feature</a>
                         </li>
                     <% } if (artist.website) { %>
-                        <li><a href="<%= artist.website %>" target="blank">On The Web</a></li>
+                        <li>
+                            <a href="<%= artist.website %>" target="blank"><img src="images/www.svg" /></a>
+
+                            <a href="<%= artist.website %>" target="blank">On The Web</a>
+                        </li>
                     <% } %>
                 </ul>
             </div>
