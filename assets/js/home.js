@@ -268,6 +268,8 @@ $(document).ready(function() {
 				//make sure exit button is visible
 				exit.removeClass('hidden').fadeIn();
 			});
+			window.location.hash = "book";
+
 		}
 
 		else if(clk.hasClass('aboutlink')){
