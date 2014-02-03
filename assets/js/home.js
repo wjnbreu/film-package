@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
 
-//TO DO: ADD NAV ARROW DOWN TAXI
-//MAKE FEATURED,RELEASE,DIGITAL ALL ONE PAGE
+
 //DOUBLE CHECK BURGER DOWN FUNCTIONS
 
  //GLOBAL VARIABLES
@@ -82,11 +81,12 @@ $(document).ready(function() {
 	
 
 	//slide up/down extra info like cities, etc
-	$('#info').find('.citylink').on('click', function(){
+	$('#info').find('.release-button').on('click', function(){
 		
 		if(win_width > 800){
 
-			$(this).parent().parent().find('.cities').fadeToggle(500);
+			$(this).parent().find('.cities').fadeToggle(500);
+			$(this).parent().find('.digital').fadeToggle(500);
 		}
 
 		else{
@@ -330,13 +330,6 @@ $(document).ready(function() {
 		
 	});
 
-	//scroll to top on arrow nav click
-	// $('#nav-burger').on('click', function(){
-	// 	$('#wrapper').animate({
-	// 			scrollTop: 0
-	// 		}, 500);
-	// });
-
 
 	function scrollDown(){
 		var scrolltop = $('#wrapper').scrollTop();
@@ -351,7 +344,7 @@ $(document).ready(function() {
 		//between third and fourth screen (info and about)
 		if (scrolltop >= (winheight *2 ) && (scrolltop < winheight * 3)){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 3) + 55 //allow extra padding
+				scrollTop: (win_height * 3)  //allow extra padding
 			}, scrollSpeed);
 		}
 		//go to the bottom of the about screen
