@@ -14,10 +14,6 @@ var links = $('#artist-info').find('.links ul');
 var cast = $('#insert-name').text();
 var title = $('#insert-name');
 
-var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
-	'#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
-
-var colorsLength = colors.length;
 
 
 function setDisplayOn(){
