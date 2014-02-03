@@ -968,7 +968,6 @@ nav .nav-top-center li a.scroll:hover {
     height: auto;
     width: 100%;
     margin: 0 0 0 0;
-    padding-top: 2.5%;
     position: absolute;
     top: 200%;
     background-color: black;
@@ -989,11 +988,11 @@ nav .nav-top-center li a.scroll:hover {
   }
   #info h1 {
     text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+    max-width: 48%;
+    margin-left: 26%;
+    margin-right: 26%;
     border: 2px solid white;
-    font-size: 3em;
+    font-size: 4em;
   }
   #info h2 {
     font-size: 2em;
@@ -1028,9 +1027,7 @@ nav .nav-top-center li a.scroll:hover {
     border: 1px solid white;
   }
   #info .digital-box {
-    margin: 0 auto 60px auto;
-    border-bottom: 2px solid white;
-    padding-bottom: 20px;
+    margin: 0 auto 0 auto;
   }
   #info .digital-box .digital {
     display: none;
@@ -1044,7 +1041,7 @@ nav .nav-top-center li a.scroll:hover {
     text-align: center;
     border-bottom: 2px solid white;
     margin-bottom: 5%;
-    padding-bottom: 2.5%;
+    padding-bottom: 20px;
   }
   #info .artist-info h1 {
     text-transform: none !important;
@@ -1063,19 +1060,27 @@ nav .nav-top-center li a.scroll:hover {
   #info .artist-info .cycle {
     font-size: 5em;
     text-transform: uppercase;
+    color: black;
+    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   }
   #info .about-section {
     margin-top: 5%;
   }
+  #info .about-section h1 {
+    text-transform: none;
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid white;
+    font-size: 4em;
+  }
   #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
-    padding-right: 5%;
-    padding-left: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
     font-size: 1.3em;
-    padding-left: 5%;
     text-align: left;
     font-weight: 100;
   }
@@ -1316,7 +1321,6 @@ nav .nav-top-center li a.scroll:hover {
     height: auto;
     width: 100%;
     margin: 0 0 0 0;
-    padding-top: 2.5%;
     position: absolute;
     top: 200%;
     background-color: black;
@@ -1337,11 +1341,11 @@ nav .nav-top-center li a.scroll:hover {
   }
   #info h1 {
     text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+    max-width: 48%;
+    margin-left: 26%;
+    margin-right: 26%;
     border: 2px solid white;
-    font-size: 3em;
+    font-size: 4em;
   }
   #info h2 {
     font-size: 2em;
@@ -1376,9 +1380,7 @@ nav .nav-top-center li a.scroll:hover {
     border: 1px solid white;
   }
   #info .digital-box {
-    margin: 0 auto 60px auto;
-    border-bottom: 2px solid white;
-    padding-bottom: 20px;
+    margin: 0 auto 0 auto;
   }
   #info .digital-box .digital {
     display: none;
@@ -1392,7 +1394,7 @@ nav .nav-top-center li a.scroll:hover {
     text-align: center;
     border-bottom: 2px solid white;
     margin-bottom: 5%;
-    padding-bottom: 2.5%;
+    padding-bottom: 20px;
   }
   #info .artist-info h1 {
     text-transform: none !important;
@@ -1411,19 +1413,27 @@ nav .nav-top-center li a.scroll:hover {
   #info .artist-info .cycle {
     font-size: 5em;
     text-transform: uppercase;
+    color: black;
+    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   }
   #info .about-section {
     margin-top: 5%;
   }
+  #info .about-section h1 {
+    text-transform: none;
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid white;
+    font-size: 4em;
+  }
   #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
-    padding-right: 5%;
-    padding-left: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
     font-size: 1.3em;
-    padding-left: 5%;
     text-align: left;
     font-weight: 100;
   }
@@ -1478,7 +1488,7 @@ nav .nav-top-center li a.scroll:hover {
     left: 0;
     height: 100px;
     z-index: 99;
-    font-size: 1.25em;
+    font-size: 1em;
     text-transform: uppercase;
     color: red;
     -webkit-transition: all .2s ease-in-out;
@@ -1579,25 +1589,11 @@ nav .nav-top-center li a.scroll:hover {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 40%;
+    margin-top: 30%;
   }
 
   #pointer {
-    width: 20%;
-    position: absolute;
-    bottom: 80px;
-    left: 45%;
-    right: 45%;
-    z-index: 999;
-    text-align: center;
-  }
-  #pointer img {
-    width: 50%;
-    -webkit-animation: "shake" 0.5s ease 0 infinite alternate;
-    -moz-animation: "shake" 0.5s ease 0 infinite alternate;
-    -o-animation: shake 0.5s ease 0 infinite alternate;
-    animation: shake 0.5s ease 0 infinite alternate;
-    animation-delay: 0s;
+    display: none !important;
   }
 
   #film {
@@ -1616,7 +1612,7 @@ nav .nav-top-center li a.scroll:hover {
     opacity: 1;
   }
   #film .text {
-    margin-top: 40%;
+    margin-top: 30%;
     text-align: center;
     width: 80%;
     left: 10%;
@@ -1664,7 +1660,6 @@ nav .nav-top-center li a.scroll:hover {
     height: auto;
     width: 100%;
     margin: 0 0 0 0;
-    padding-top: 2.5%;
     position: absolute;
     top: 200%;
     background-color: black;
@@ -1685,48 +1680,49 @@ nav .nav-top-center li a.scroll:hover {
   }
   #info h1 {
     text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
     border: 2px solid white;
-    font-size: 3em;
+    font-size: 1.5em;
   }
   #info h2 {
-    font-size: 2em;
+    font-size: 1.2em;
     line-height: 0.5;
   }
   #info h3 {
     font-weight: 100;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 0.5;
+  }
+  #info .release-info h1 {
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
   #info .city-box {
     width: 80%;
     margin: 0 10% 60px 10%;
   }
   #info .city-box .cities {
-    display: none;
+    display: block;
     text-transform: uppercase;
-    font-size: 1em;
-    padding-left: 5%;
-    padding-right: 5%;
-    word-spacing: 10px;
+    font-size: 0.7em;
+    word-spacing: 1px;
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
+    font-weight: 100;
     letter-spacing: 3px;
   }
   #info .city-box .cities li {
     list-style-type: none;
     display: inline;
-    border: 1px solid transparent;
+    border: none;
   }
   #info .city-box .cities li:hover {
-    border: 1px solid white;
+    border: none;
   }
   #info .digital-box {
-    margin: 0 auto 60px auto;
-    border-bottom: 2px solid white;
-    padding-bottom: 20px;
+    margin: 0 auto 50px auto;
   }
   #info .digital-box .digital {
     display: none;
@@ -1740,10 +1736,14 @@ nav .nav-top-center li a.scroll:hover {
     text-align: center;
     border-bottom: 2px solid white;
     margin-bottom: 5%;
-    padding-bottom: 2.5%;
+    padding-bottom: 50px;
   }
   #info .artist-info h1 {
     text-transform: none !important;
+    max-width: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   #info .artist-info .featured-artists {
     color: white;
@@ -1757,58 +1757,34 @@ nav .nav-top-center li a.scroll:hover {
     border: 2px solid white;
   }
   #info .artist-info .cycle {
-    font-size: 5em;
+    font-size: 2em;
     text-transform: uppercase;
+    color: black;
+    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   }
   #info .about-section {
-    margin-top: 5%;
+    margin-top: 50px;
+  }
+  #info .about-section h1 {
+    text-transform: none;
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid white;
+    font-size: 1.5em;
   }
   #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
-    padding-right: 5%;
-    padding-left: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 1.3em;
-    padding-left: 5%;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 0.9em;
     text-align: left;
     font-weight: 100;
   }
   #info .about-section p a {
     text-decoration: underline;
-  }
-  #info .logo {
-    width: 80%;
-    margin: 0 10% auto 10%;
-    text-align: center;
-  }
-  #info .logo img {
-    max-width: 80%;
-    width: 20%;
-    margin: 10% 40% 5% 40%;
-  }
-  #info .logo img:hover {
-    opacity: 0.7;
-  }
-  #info .social {
-    margin-top: 2.5%;
-    margin-bottom: 10%;
-    width: 100%;
-    height: 58px;
-    text-align: center;
-  }
-  #info .social img {
-    display: inline;
-    width: 30px;
-    height: auto;
-  }
-  #info .social img.social-white {
-    display: inline-block;
-  }
-  #info .social iframe {
-    display: none;
-    width: 100px !important;
   }
 }
 /* ==========================================================================
