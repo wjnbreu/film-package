@@ -684,6 +684,14 @@ nav .nav-top-center li a.scroll:hover {
 #info .about-section {
   margin-top: 5%;
 }
+#info .about-section h1 {
+  text-transform: none;
+  max-width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 2px solid white;
+  font-size: 3em;
+}
 #info .about-section p {
   font-family: 'Rail', helvetica, sans-serif;
   line-height: 1.7;
