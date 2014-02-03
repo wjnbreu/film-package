@@ -31,6 +31,8 @@ function hideImages(){
 	images.each(function(){
 		$(this).addClass('hidden');
 	});
+	//get images ready to load
+	setDisplayOn();
 }
 //loop through each image from database and set to hidden
 
@@ -146,12 +148,12 @@ artist.on('mouseleave', function(){
 });
 
 
-//get images ready to load
-setDisplayOn();
-
-
-//hide all images on load
+//hide all images on load, makes callback to set images to display block
 hideImages();
+
+
+
+
 
 
 
