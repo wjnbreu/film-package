@@ -23,7 +23,7 @@
 	<input value="<%= artist.nickname %>" name="nickname" type="text" class="form-control" />
 </div>
 <div class="control-group">
-	<textarea value="<%= artist.bio %>" placeholder="<%= artist.bio %>" name="bio" wrap="physical" rows="10" class="form-control"></textarea>
+	<textarea id="editor1" value="<%- artist.bio %>" placeholder="<%- artist.bio %>" name="bio" wrap="physical" rows="10" class="form-control">&lt;p&gt;<%- artist.bio %>&lt;/p&gt;</textarea>
 </div>
 <div class="control-group">
 	<label>Lecture URL</label>
@@ -50,5 +50,7 @@
 </form>
 
 <img class="show-image" src="<%='/images/artist/' + artist.nickname + '.jpg'%>">
+
+
 
 

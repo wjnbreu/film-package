@@ -77,18 +77,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/js/jquery.mousewheel.js"></script>
     <script src="/js/jquery.transit.min.js"></script>
-    <!-- <script src="/js/tinymce.min.js"></script> -->
+    <script src="/js/ckeditor.js"></script>
     <script type="text/javascript" src="/js/artist/artist.js"></script>
-        <!-- <script type="text/javascript">
-tinymce.init({
-    selector: "textarea",
-    plugins: [
-        "advlist autolink lists link image charmap print preview anchor",
-        "searchreplace visualblocks code fullscreen",
-        "insertdatetime media table contextmenu paste"
-    ],
-    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-});
+  <script type="text/javascript">
+
+          // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+                CKEDITOR.replace( 'editor1', {
+                  forcePasteAsPlainText : true,
+                  enterMode : CKEDITOR.ENTER_BR
+               
+                } );
+
 </script>
 
     </body>

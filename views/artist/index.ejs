@@ -28,12 +28,10 @@
         <% }) %>
     </div>
 
-    <div class="foot-left">
-        <h2>What difference does it make?</h2>
+    <div class="film-title">
+        <img src="/images/text-dateless.svg" alt="What difference does it make title" />
     </div>
-    <div class="foot-right">
-        <h2>A film about making music</h2>
-    </div>
+
 </div> <!-- END LIST PAGE -->
 
  
@@ -41,8 +39,7 @@
 
     <!-- Box sliding left -->
     <div id="artist-info">
-        <div id="exit" class="exit hidden">
-        </div>
+        <div id="exit" class="exit hidden"></div>
         <!-- Inject image -->
         <div class='assets'>
             <img src="#" />
@@ -54,7 +51,7 @@
             <h2 class="title <%= artist.nickname + '-title' %>"><%= artist.title %></h2>
             
 
-            <p class="bio <%= artist.nickname + '-bio' %>"><%= artist.bio %></p>
+            <p class="bio <%= artist.nickname + '-bio' %>"><%- artist.bio %></p>
             
             <div class="links">
                 <ul class="<%= artist.nickname + '-links' %>">

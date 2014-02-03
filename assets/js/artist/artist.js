@@ -81,9 +81,15 @@ function addInfo(name, pic, nickname){
 
 	//loop through ul's, hide them, then show only the one that matches the class of artist clicked
 	links.each(function(){
+		$(this).css({
+			display: 'none'
+		});
 		$(this).addClass('hidden');
 		if ($(this).hasClass(pic + '-links')){
 			$(this).removeClass('hidden');
+			$(this).css({
+				display: 'block'
+			});
 		}
 	});
 
