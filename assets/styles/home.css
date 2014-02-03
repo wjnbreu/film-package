@@ -585,7 +585,6 @@ nav .nav-top-center li a.scroll:hover {
   height: auto;
   width: 100%;
   margin: 0 0 0 0;
-  padding-top: 2.5%;
   position: absolute;
   top: 200%;
   background-color: black;
@@ -606,11 +605,11 @@ nav .nav-top-center li a.scroll:hover {
 }
 #info h1 {
   text-transform: none;
-  max-width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
+  max-width: 48%;
+  margin-left: 26%;
+  margin-right: 26%;
   border: 2px solid white;
-  font-size: 3em;
+  font-size: 4em;
 }
 #info h2 {
   font-size: 2em;
@@ -645,9 +644,7 @@ nav .nav-top-center li a.scroll:hover {
   border: 1px solid white;
 }
 #info .digital-box {
-  margin: 0 auto 60px auto;
-  border-bottom: 2px solid white;
-  padding-bottom: 20px;
+  margin: 0 auto 0 auto;
 }
 #info .digital-box .digital {
   display: none;
@@ -661,7 +658,7 @@ nav .nav-top-center li a.scroll:hover {
   text-align: center;
   border-bottom: 2px solid white;
   margin-bottom: 5%;
-  padding-bottom: 2.5%;
+  padding-bottom: 20px;
 }
 #info .artist-info h1 {
   text-transform: none !important;
@@ -680,6 +677,8 @@ nav .nav-top-center li a.scroll:hover {
 #info .artist-info .cycle {
   font-size: 5em;
   text-transform: uppercase;
+  color: black;
+  text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 #info .about-section {
   margin-top: 5%;
@@ -690,17 +689,15 @@ nav .nav-top-center li a.scroll:hover {
   margin-left: 30%;
   margin-right: 30%;
   border: 2px solid white;
-  font-size: 3em;
+  font-size: 4em;
 }
 #info .about-section p {
   font-family: 'Rail', helvetica, sans-serif;
   line-height: 1.7;
-  padding-right: 5%;
-  padding-left: 5%;
-  margin-right: 5%;
-  margin-left: 5%;
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
   font-size: 1.3em;
-  padding-left: 5%;
   text-align: left;
   font-weight: 100;
 }

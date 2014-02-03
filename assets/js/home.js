@@ -35,14 +35,19 @@ $(document).ready(function() {
 	'Flying Lotus', 'Gaslamp Killer', 'Louis Baker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
 	'Young Guru'];
 
-	var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
-	'#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
+	// var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
+	// '#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
+
+	var colors = ['#fefefc', '#7fcbe2', '#528fa1', '#c4c5c0', '#dac9bf'];
 
 	var cycle = $('#info').find('#cycle');
 
+	var states = ['none', 'lowercase', 'uppercase'];
+
 	var artistLength = artists.length;
 	var colorsLength = colors.length;
-	var ranArtist, ranColor;
+	var stateLength = states.length;
+	var ranArtist, ranColor, ranState;
 	var cycleSpeed = 1000; //seconds between artist name (in ms)
 	var initialCycleSpeed = 1000; //won't change
 	var cycleCounter = 0;
@@ -52,10 +57,12 @@ $(document).ready(function() {
 
 	function cycleArtists(){
 		ranArtist = Math.floor(Math.random() * artistLength);
-		ranColor = Math.floor(Math.random() * colorsLength);
-		cycle.css({
-			color: colors[ranColor]
-		});
+		// ranState = Math.floor(Math.random() * stateLength);
+		// ranColor = Math.floor(Math.random() * colorsLength);
+		// cycle.css({
+
+		// color: colors[ranColor]
+		// });
 		cycle.text(artists[ranArtist]);
 		//speed up cycle
 		if (cycleSpeed >= 100){
