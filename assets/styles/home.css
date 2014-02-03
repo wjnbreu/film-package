@@ -919,10 +919,10 @@ nav .nav-top-center li a.scroll:hover {
     background-size: contain;
   }
   #title img {
-    width: 45%;
-    margin-top: 15%;
-    margin-left: 25%;
-    margin-right: 25%;
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 
   #film {
@@ -1241,7 +1241,7 @@ nav .nav-top-center li a.scroll:hover {
   }
 
   #pointer {
-    width: 20%;
+    width: 10%;
     position: absolute;
     bottom: 80px;
     left: 45%;
@@ -1273,7 +1273,7 @@ nav .nav-top-center li a.scroll:hover {
     opacity: 1;
   }
   #film .text {
-    margin-top: 40%;
+    margin-top: 30%;
     text-align: center;
     width: 80%;
     left: 10%;
@@ -1287,7 +1287,7 @@ nav .nav-top-center li a.scroll:hover {
     line-height: 1;
     width: 80%;
     text-align: center;
-    margin: 10px 10% 0 10%;
+    margin: 30px 10% 0 10%;
     font-weight: 100;
   }
   #film .text img {
@@ -1345,7 +1345,7 @@ nav .nav-top-center li a.scroll:hover {
     margin-left: 26%;
     margin-right: 26%;
     border: 2px solid white;
-    font-size: 4em;
+    font-size: 3em;
   }
   #info h2 {
     font-size: 2em;
@@ -1356,9 +1356,13 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 1.2em;
     line-height: 0.5;
   }
+  #info .release-info h1 {
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
   #info .city-box {
     width: 80%;
-    margin: 0 10% 60px 10%;
+    margin: 0 10% 100px 10%;
   }
   #info .city-box .cities {
     display: none;
@@ -1380,7 +1384,7 @@ nav .nav-top-center li a.scroll:hover {
     border: 1px solid white;
   }
   #info .digital-box {
-    margin: 0 auto 0 auto;
+    margin: 0 auto 100px auto;
   }
   #info .digital-box .digital {
     display: none;
@@ -1393,11 +1397,16 @@ nav .nav-top-center li a.scroll:hover {
   #info .artist-info {
     text-align: center;
     border-bottom: 2px solid white;
-    margin-bottom: 5%;
-    padding-bottom: 20px;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+    margin-top: 50px;
   }
   #info .artist-info h1 {
     text-transform: none !important;
+    max-width: 70%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
   #info .artist-info .featured-artists {
     color: white;
@@ -1411,7 +1420,7 @@ nav .nav-top-center li a.scroll:hover {
     border: 2px solid white;
   }
   #info .artist-info .cycle {
-    font-size: 5em;
+    font-size: 4em;
     text-transform: uppercase;
     color: black;
     text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
@@ -1424,16 +1433,17 @@ nav .nav-top-center li a.scroll:hover {
     max-width: 40%;
     margin-left: 30%;
     margin-right: 30%;
+    margin-bottom: 50px;
     border: 2px solid white;
-    font-size: 4em;
+    font-size: 3em;
   }
   #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
-    width: 70%;
-    margin-right: 15%;
-    margin-left: 15%;
-    font-size: 1.3em;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 1.1em;
     text-align: left;
     font-weight: 100;
   }

@@ -351,7 +351,7 @@ $(document).ready(function() {
 		//between third and fourth screen (info and about)
 		if (scrolltop >= (winheight *2 ) && (scrolltop < winheight * 3)){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 3)  //allow extra padding
+				scrollTop: (win_height * 3) + 55 //allow extra padding
 			}, scrollSpeed);
 		}
 		//go to the bottom of the about screen
