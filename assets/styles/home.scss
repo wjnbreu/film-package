@@ -782,7 +782,7 @@ textarea {
 
 
 
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1800px){
     #info{
     border-top: 2px solid white;
     max-width: 100%;
@@ -915,6 +915,9 @@ textarea {
             font-weight: 100;
             a{
                 text-decoration: underline;
+                &:hover{
+                    opacity: 0.6;
+                }
             }
         }
     }

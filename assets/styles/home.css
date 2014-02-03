@@ -737,7 +737,7 @@ nav .nav-top-center li a.scroll:hover {
   width: 100px !important;
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1800px) {
   #info {
     border-top: 2px solid white;
     max-width: 100%;
