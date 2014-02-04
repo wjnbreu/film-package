@@ -50,6 +50,7 @@
     <!-- COUNTDOWN -->
     <section id="countdown-container">
         <h1>Digital Release February 18 2014</h1>
+        <h2>Crappy Countdown Placeholder</h2>
         <div id="countdown"></div>
         <div id="player"></div>
     </section>
@@ -84,33 +85,12 @@
     </section>
 
 
-
-
-    <!-- ARTIST SECTION -->
-    <div id="artist">
-        <span id="artistlink"></span>
-        
-        <div class="artist-list">
-            <h1>Cast</h1>
-            <ul>
-                <% _.each(artists, function(artist){ %>
-                <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>">
-                    <li><%= artist.name %></li>
-                </a>
-                <% }) %>
-            </ul>
-        </div>
-
-        <!-- Picture on rollover -->
-        <!-- <div class="artist-images">
-            <% _.each(artists, function(artist){ %>
-            <img data-pic="<%= artist.nickname %>" class="<%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>" alt="<%= artist.name %>">
-            <% }) %>
-        </div> -->
-
-        <!-- Artist Box -->
+    <!-- Artist Box -->
         <div id="artist-info">
-            <div id="exit" class="exit hidden"></div>
+            <!-- <img class="go-home" src="/images/close.gif" /> -->
+            <div class="go-home">
+                <!-- <img src="/images/close.gif" /> -->
+            </div>
 
             <!-- Inject image -->
             <div class='assets'><img src="#" /></div>
@@ -149,7 +129,34 @@
             </div> <!-- END LINKS -->
             <% }) %> <!-- END EACH -->
         </div><!-- End artist info -->
+
+
+
+
+    <!-- ARTIST SECTION -->
+    <div id="artist">
+        <span id="artistlink"></span>
+        
+        <div class="artist-list">
+            <h1>Cast</h1>
+            <ul>
+                <% _.each(artists, function(artist){ %>
+                <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>">
+                    <li><%= artist.name %></li>
+                </a>
+                <% }) %>
+            </ul>
+        </div>
+
+        <!-- Picture on rollover -->
+        <div class="artist-images">
+            <% _.each(artists, function(artist){ %>
+            <img data-pic="<%= artist.nickname %>" class="<%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>" alt="<%= artist.name %>">
+            <% }) %>
+        </div>
     </div> <!-- END ARTIST -->
+
+
 
 
     <!-- ABOUT SECTION -->
@@ -195,7 +202,7 @@
 
 
 
-    
+
 </div> <!-- END WRAPPER -->
 
         

@@ -502,12 +502,12 @@ artist.on('click', function(){
 
 
 //EXIT INFO BOX
-$('#artist-info').find('.exit').on('click', function(){
-	$(this).addClass('hidden');
+$('#artist-info').find('.go-home').on('click', function(){
+	//$(this).addClass('hidden');
 	$('#artist-info').transition({
 		left: '100%'
 	}, 500, "ease");
-	$(this).parent().find('span').empty();
+	//$(this).parent().find('span').empty();
 });
 
 //ADD INFO TO SLIDE BOX
