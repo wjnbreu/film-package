@@ -269,22 +269,29 @@ $(document).ready(function() {
 		var scrolltop = $('#wrapper').scrollTop();
 		winheight = $(window).height();
 
-		//if between first and third screen (movie screen)
+		//if between first and third screen (countdown screen)
 		if (scrolltop >= (winheight / 2) && scrolltop < (winheight * 2)){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 2) + 35 //allow extra padding
+				scrollTop: (win_height * 2)
 			}, scrollSpeed);
 		}
-		//between third and fourth screen (info and about)
-		if (scrolltop >= (winheight *2 ) && (scrolltop < winheight * 3)){
+		//between third and fourth screen (movie screen)
+		if (scrolltop >= (winheight * 2 ) && (scrolltop < winheight * 3)){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 3) + 55 //allow extra padding
+				scrollTop: (win_height * 3)
+			}, scrollSpeed);
+		}
+
+		//between fourth and fifth screen (artist screen)
+		if (scrolltop >= (winheight * 3 ) && (scrolltop < winheight * 4)){
+			$('#wrapper').animate({
+				scrollTop: (win_height * 4)
 			}, scrollSpeed);
 		}
 		//go to the bottom of the about screen
-		if (scrolltop >= (winheight * 3)){
+		if (scrolltop >= (winheight * 4)){
 			$('#wrapper').animate({
-				scrollTop: scrollBottom
+				scrollTop: (win_height * 6)
 			}, scrollSpeed);
 		}
 	}
@@ -312,9 +319,16 @@ $(document).ready(function() {
 			}, scrollSpeed);
 		}
 
-		if (scrolltop >= (win_height * 4)){
+		//between fourth and fifth screen (artist screen)
+		if (scrolltop >= (winheight * 4 ) && (scrolltop < winheight * 5)){
 			$('#wrapper').animate({
-				scrollTop: (win_height * 3)
+				scrollTop: (win_height * 3) //allow extra padding
+			}, scrollSpeed);
+		}
+
+		if (scrolltop >= (win_height * 5)){
+			$('#wrapper').animate({
+				scrollTop: (win_height * 4)
 			}, scrollSpeed);
 		}
 	}
