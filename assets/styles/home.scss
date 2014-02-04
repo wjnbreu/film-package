@@ -644,12 +644,14 @@ nav{
             margin-right: 10%;
             list-style-type: none;
             color: white;
+            padding: 0; 
+            text-align: center;
             li{
-                display: inline;
-                padding: 5px;
+                display: inline-block;
                 line-height: 1.7;
                 font-size: 1.5em;
                 margin: 0;
+                padding: 2px;
                 text-transform: uppercase;
                 border: 2px solid transparent;
                 &:hover{
