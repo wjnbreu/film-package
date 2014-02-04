@@ -3,10 +3,10 @@ $(document).ready(function(){
 
 // ARTIST SECTION
 
-
 var artist = $('#artist').find('.artist-list ul a');
 var images = $('#artist').find('.artist-images img');
 var imageBlock = $('#artist').find('.artist-images');
+var artistBox = $('#artist-info');
 var links = $('#artist-info').find('.links ul');
 var cast = $('#insert-name').text();
 var title = $('#insert-name');
@@ -26,14 +26,7 @@ function hideImages(){
 	//get images ready to load
 	setDisplayOn();
 }
-//loop through each image from database and set to hidden
 
-
-if (cast.indexOf('Cast') !== -1){
-	$('#insert-name').on('click', function(){
-
-	});
-}
 
 //SLIDE UP INFO WHEN CLICKED
 artist.on('click', function(){
@@ -49,29 +42,19 @@ artist.on('click', function(){
 
 
 //EXIT INFO BOX
-$('#artist-info').find('.go-home').on('click', function(){
-	//$(this).addClass('hidden');
-	$('#artist-info').transition({
+artistBox.find('.go-home').on('click', function(){
+	artistBox.transition({
 		left: '100%'
 	}, 500, "ease");
-	//$(this).parent().find('span').empty();
 });
 
 //ADD INFO TO SLIDE BOX
 function addInfo(name, pic, nickname){
-	$('#artist-info').find('span').text(name);
-	$('#artist-info').find('.exit').removeClass('hidden');
-	$('#artist-info').find('.assets img').attr('src', '../images/artist/' + pic + '.jpg');
+	artistBox.find('.insert-name').text(name);
+	artistBox.find('.exit').removeClass('hidden');
+	artistBox.find('.assets img').attr('src', '../images/artist/' + pic + '.jpg');
 
-	//loop through h2 titles
-	$('#artist-info').find('h2').each(function(){
-		//make sure each one is hidden
-		$(this).addClass('hidden');
-
-		if ($(this).hasClass(pic + '-title')){
-			$(this).removeClass('hidden');
-		}
-	});
+	
 
 	//loop through ul's, hide them, then show only the one that matches the class of artist clicked
 	links.each(function(){
@@ -87,8 +70,8 @@ function addInfo(name, pic, nickname){
 		}
 	});
 
-	//loop through each p item (which are dynamically created via database objects)
-	$('#artist-info').find('p').each(function(){
+	//loop through each p item (created via database)
+	artistBox.find('p').each(function(){
 		//make sure each one is hidden
 		$(this).addClass('hidden');
 
@@ -106,7 +89,7 @@ artist.on('mouseenter', function(){
 	imageBlock.css({
 		display: 'block'
 	});
-	//$('#insert-name').hide();
+
 
 	//loop again through images and find matching one
 	images.each(function(){
@@ -131,7 +114,6 @@ artist.on('mouseleave', function(){
 	imageBlock.css({
 		display: 'none'
 	});
-	$('#insert-name').show();
 	artist.css({
 		color: 'white',
 		backgroundColor: 'transparent'
