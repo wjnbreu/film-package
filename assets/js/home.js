@@ -370,11 +370,4 @@ $(document).ready(function() {
 		}
 	});
 
-
-	//call cycle function
-	cycleArtists();
-
-
-
-
 });
