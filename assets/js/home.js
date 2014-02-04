@@ -18,8 +18,6 @@ $(document).ready(function() {
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
 	var scrollSpeed = 500;
-	
-	
 
 	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
 	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Trancemicsoul', 'Jimi Nxir', 'Quietdust',
@@ -32,77 +30,6 @@ $(document).ready(function() {
 	'Giorgio Moroder', 'Q-Tip', 'Mathew Jonson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
 	'Flying Lotus', 'Gaslamp Killer', 'Louis Baker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
 	'Young Guru'];
-
-	// var colors = ['#ccff00', '#ff0000', '#ff0099', '#ff00ff', '#cc00ff', '#6600ff', '#3300ff',
-	// '#0066ff', '#00ccff', '#00ffff', '#00ff99', '#00ff33', '#ffff00', '#ffcc00', '#ff6600'];
-
-	var colors = ['#fefefc', '#7fcbe2', '#528fa1', '#c4c5c0', '#dac9bf'];
-
-	var cycle = $('#info').find('#cycle');
-
-	var states = ['none', 'lowercase', 'uppercase'];
-
-	var artistLength = artists.length;
-	var colorsLength = colors.length;
-	var stateLength = states.length;
-	var ranArtist, ranColor, ranState;
-	var cycleSpeed = 1000; //seconds between artist name (in ms)
-	var initialCycleSpeed = 1000; //won't change
-	var cycleCounter = 0;
-	
-	
-	//cycle through artist names, choose random name/color
-
-	function cycleArtists(){
-		ranArtist = Math.floor(Math.random() * artistLength);
-		// ranState = Math.floor(Math.random() * stateLength);
-		// ranColor = Math.floor(Math.random() * colorsLength);
-		// cycle.css({
-
-		// color: colors[ranColor]
-		// });
-		cycle.text(artists[ranArtist]);
-		//speed up cycle
-		if (cycleSpeed >= 100){
-			cycleSpeed -= 50;
-			setTimeout(cycleArtists, cycleSpeed);
-		}
-		else if (cycleSpeed <= 100){
-			if (cycleCounter <= 100){
-				cycleCounter += 1;
-				setTimeout(cycleArtists, cycleSpeed);
-			}
-			else{
-				//reset counter and speed
-				cycleSpeed = initialCycleSpeed;
-				cycleCounter = 0;
-				cycle.text('Click for more');
-				setTimeout(cycleArtists, 4000);
-
-			}
-		}
-		
-	}
-	
-
-	//slide up/down extra info like cities, etc
-	$('#info').find('.release-button').on('click', function(){
-		
-		if(win_width > 800){
-
-			$(this).parent().find('.cities').fadeToggle(500);
-			$(this).parent().find('.digital').fadeToggle(500);
-		}
-
-		else{
-			return;
-		}
-		
-	});
-
-	$('#info').find('.digitallink').on('click', function(){
-		$(this).parent().parent().find('.digital').fadeToggle(500);
-	});
 
 
 
@@ -295,7 +222,7 @@ $(document).ready(function() {
 	//STARTUP EVENT LISTENERS AND FUNCTIONS
 	
 	//slide out facebook like button on click
-	$('#info').find('.social .fb-button').on('click', function(e){
+	$('#about').find('.social .fb-button').on('click', function(e){
 		e.preventDefault();
 		$(this).parent().parent().find('iframe').slideToggle('slow');
 	});
@@ -313,6 +240,7 @@ $(document).ready(function() {
 		smoothScroll($(this));
 	});
 
+	//call remove video function. will only remove loop if on device
 	removeVideo(win_width);
 
 	//on scroll, change colors of nav items accordingly
