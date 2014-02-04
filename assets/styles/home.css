@@ -275,13 +275,11 @@ nav {
   font-weight: 800;
   font-size: 1.5em;
   text-transform: uppercase;
-  color: red;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  letter-spacing: 3px;
 }
 nav .nav-top-left {
   width: 33.3333%;
@@ -356,7 +354,6 @@ nav .nav-top-center li a.scroll:hover {
   -o-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  letter-spacing: 3px;
 }
 #nav-bottom .nav-left {
   width: 50%;
@@ -865,6 +862,9 @@ nav .nav-top-center li a.scroll:hover {
   }
   #info .about-section p a {
     text-decoration: underline;
+  }
+  #info .about-section p a:hover {
+    opacity: 0.6;
   }
   #info .logo {
     width: 80%;
