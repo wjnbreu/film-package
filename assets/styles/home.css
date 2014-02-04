@@ -500,9 +500,30 @@ nav .nav-top-center li a.scroll:hover {
   animation-delay: 0s;
 }
 
-#film {
+#countdown-container {
   position: absolute;
   top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  border-top: 1px solid white;
+  text-align: center;
+}
+#countdown-container h1 {
+  margin-top: 10%;
+}
+#countdown-container #countdown {
+  width: 80%;
+  margin: 5% 10% 10% 10%;
+  font-size: 6em;
+  font-weight: bold;
+}
+
+#film {
+  position: absolute;
+  top: 200%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -576,119 +597,89 @@ nav .nav-top-center li a.scroll:hover {
   left: -50%;
 }
 
-#info {
-  border-top: 2px solid white;
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-  margin: 0 0 0 0;
+#artist {
   position: absolute;
-  top: 200%;
+  top: 300%;
+  height: 100%;
+  width: 100%;
   background-color: black;
   color: white;
-  text-align: center;
-}
-#info h1, #info h2, #info h3, #info p, #info a {
-  color: white;
   font-family: 'Rail', helvetica, sans-serif;
+  margin: 0;
 }
-#info a h1:hover {
-  border: 2px solid white;
-  background-color: white;
-  color: black;
+#artist h1, #artist h2, #artist h3, #artist h4, #artist a {
+  color: white;
 }
-#info h2, #info h3 {
-  text-transform: uppercase;
+#artist .artist-list {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  z-index: 1;
 }
-#info h1 {
-  text-transform: none;
-  max-width: 48%;
-  margin-left: 26%;
-  margin-right: 26%;
-  border: 2px solid white;
+#artist .artist-list h1 {
+  text-align: center;
   font-size: 4em;
 }
-#info h2 {
-  font-size: 2em;
-  line-height: 0.5;
-}
-#info h3 {
-  font-weight: 100;
-  font-size: 1.2em;
-  line-height: 0.5;
-}
-#info .city-box {
-  width: 80%;
-  margin: 0 10% 60px 10%;
-}
-#info .city-box .cities {
-  display: none;
-  text-transform: uppercase;
-  font-size: 1em;
-  padding-left: 5%;
-  padding-right: 5%;
-  word-spacing: 10px;
-  color: white;
-  font-family: 'Rail', helvetica, sans-serif;
-  letter-spacing: 3px;
-}
-#info .city-box .cities li {
+#artist .artist-list ul {
   list-style-type: none;
+  color: white;
+}
+#artist .artist-list ul li {
   display: inline;
-  border: 1px solid transparent;
+  padding: 5px;
+  font-size: 1.5em;
+  border: 2px solid transparent;
 }
-#info .city-box .cities li:hover {
-  border: 1px solid white;
-}
-#info .digital-box {
-  margin: 0 auto 0 auto;
-}
-#info .digital-box .digital {
-  display: none;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  color: white;
-  margin-top: 0;
-  font-family: 'Rail', helvetica, sans-serif;
-}
-#info .artist-info {
-  text-align: center;
-  border-bottom: 2px solid white;
-  margin-bottom: 5%;
-  padding-bottom: 20px;
-}
-#info .artist-info h1 {
-  text-transform: none !important;
-}
-#info .artist-info .featured-artists {
-  color: white;
-  background-color: black;
-  text-transform: uppercase;
+#artist .artist-list ul li:hover {
   border: 2px solid white;
 }
-#info .artist-info .featured-artists:hover {
+#artist .artist-images {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+#artist .artist-images img {
+  width: 100%;
+}
+#artist #artist-info {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: white;
-  color: black;
-  border: 2px solid white;
+  z-index: 999;
 }
-#info .artist-info .cycle {
-  font-size: 5em;
-  text-transform: uppercase;
-  color: black;
-  text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
+#about {
+  position: absolute;
+  border-top: 1px solid white;
+  top: 400%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: 'Rail', helvetica, sans-serif;
+  margin: 0;
 }
-#info .about-section {
-  margin-top: 5%;
-}
-#info .about-section h1 {
+#about h1 {
   text-transform: none;
   max-width: 40%;
   margin-left: 30%;
   margin-right: 30%;
+  margin-top: 5%;
   border: 2px solid white;
   font-size: 4em;
+  text-align: center;
 }
-#info .about-section p {
+#about p {
   font-family: 'Rail', helvetica, sans-serif;
   line-height: 1.7;
   width: 70%;
@@ -698,207 +689,43 @@ nav .nav-top-center li a.scroll:hover {
   text-align: left;
   font-weight: 100;
 }
-#info .about-section p a {
+#about p a {
   text-decoration: underline;
+  color: white;
 }
-#info .logo {
+#about .logo {
   width: 80%;
   margin: 0 10% auto 10%;
   text-align: center;
 }
-#info .logo img {
+#about .logo img {
   max-width: 80%;
   width: 20%;
   margin: 10% 40% 5% 40%;
 }
-#info .logo img:hover {
+#about .logo img:hover {
   opacity: 0.7;
 }
-#info .social {
+#about .social {
   margin-top: 2.5%;
   margin-bottom: 10%;
   width: 100%;
   height: 58px;
   text-align: center;
 }
-#info .social img {
+#about .social img {
   display: inline;
   width: 30px;
   height: auto;
 }
-#info .social img.social-white {
+#about .social img.social-white {
   display: inline-block;
 }
-#info .social iframe {
+#about .social iframe {
   display: none;
   width: 100px !important;
 }
 
-@media only screen and (min-width: 1800px) {
-  #info {
-    border-top: 2px solid white;
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    margin: 0 0 0 0;
-    padding-top: 2.5%;
-    position: absolute;
-    top: 200%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
-  #info h1, #info h2, #info h3, #info p, #info a {
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info a h1:hover {
-    border: 2px solid white;
-    background-color: white;
-    color: black;
-  }
-  #info h2, #info h3 {
-    text-transform: uppercase;
-  }
-  #info h1 {
-    text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    border: 2px solid white;
-    font-size: 3em;
-  }
-  #info h2 {
-    font-size: 2em;
-    line-height: 0.5;
-  }
-  #info h3 {
-    font-weight: 100;
-    font-size: 1.2em;
-    line-height: 0.5;
-  }
-  #info .city-box {
-    width: 80%;
-    margin: 0 10% 60px 10%;
-  }
-  #info .city-box .cities {
-    display: none;
-    text-transform: uppercase;
-    font-size: 1em;
-    padding-left: 5%;
-    padding-right: 5%;
-    word-spacing: 10px;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-    letter-spacing: 3px;
-  }
-  #info .city-box .cities li {
-    list-style-type: none;
-    display: inline;
-    border: 1px solid transparent;
-  }
-  #info .city-box .cities li:hover {
-    border: 1px solid white;
-  }
-  #info .digital-box {
-    margin: 0 auto 60px auto;
-    border-bottom: 2px solid white;
-    padding-bottom: 20px;
-  }
-  #info .digital-box .digital {
-    display: none;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    color: white;
-    margin-top: 0;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info .artist-info {
-    text-align: center;
-    border-bottom: 2px solid white;
-    margin-bottom: 5%;
-    padding-bottom: 2.5%;
-  }
-  #info .artist-info h1 {
-    text-transform: none !important;
-  }
-  #info .artist-info .featured-artists {
-    color: white;
-    background-color: black;
-    text-transform: uppercase;
-    border: 2px solid white;
-  }
-  #info .artist-info .featured-artists:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-  }
-  #info .artist-info .cycle {
-    font-size: 5em;
-    text-transform: uppercase;
-  }
-  #info .about-section {
-    margin-top: 5%;
-  }
-  #info .about-section h1 {
-    text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    border: 2px solid white;
-    font-size: 3em;
-  }
-  #info .about-section p {
-    font-family: 'Rail', helvetica, sans-serif;
-    line-height: 1.7;
-    padding-right: 5%;
-    padding-left: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 1.3em;
-    padding-left: 5%;
-    text-align: left;
-    font-weight: 100;
-  }
-  #info .about-section p a {
-    text-decoration: underline;
-  }
-  #info .about-section p a:hover {
-    opacity: 0.6;
-  }
-  #info .logo {
-    width: 80%;
-    margin: 0 10% auto 10%;
-    text-align: center;
-  }
-  #info .logo img {
-    max-width: 80%;
-    width: 20%;
-    margin: 10% 40% 5% 40%;
-  }
-  #info .logo img:hover {
-    opacity: 0.7;
-  }
-  #info .social {
-    margin-top: 2.5%;
-    margin-bottom: 10%;
-    width: 100%;
-    height: 58px;
-    text-align: center;
-  }
-  #info .social img {
-    display: inline;
-    width: 30px;
-    height: auto;
-  }
-  #info .social img.social-white {
-    display: inline-block;
-  }
-  #info .social iframe {
-    display: none;
-    width: 100px !important;
-  }
-}
 @media only screen and (max-width: 1000px), screen and (max-device-width: 1000px) {
   #title {
     position: fixed;
@@ -960,164 +787,6 @@ nav .nav-top-center li a.scroll:hover {
   #film .text img {
     max-width: 15%;
     margin-top: 25%;
-  }
-
-  #info {
-    border-top: 2px solid white;
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    margin: 0 0 0 0;
-    position: absolute;
-    top: 200%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
-  #info h1, #info h2, #info h3, #info p, #info a {
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info a h1:hover {
-    border: 2px solid white;
-    background-color: white;
-    color: black;
-  }
-  #info h2, #info h3 {
-    text-transform: uppercase;
-  }
-  #info h1 {
-    text-transform: none;
-    max-width: 48%;
-    margin-left: 26%;
-    margin-right: 26%;
-    border: 2px solid white;
-    font-size: 4em;
-  }
-  #info h2 {
-    font-size: 2em;
-    line-height: 0.5;
-  }
-  #info h3 {
-    font-weight: 100;
-    font-size: 1.2em;
-    line-height: 0.5;
-  }
-  #info .city-box {
-    width: 80%;
-    margin: 0 10% 60px 10%;
-  }
-  #info .city-box .cities {
-    display: none;
-    text-transform: uppercase;
-    font-size: 1em;
-    padding-left: 5%;
-    padding-right: 5%;
-    word-spacing: 10px;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-    letter-spacing: 3px;
-  }
-  #info .city-box .cities li {
-    list-style-type: none;
-    display: inline;
-    border: 1px solid transparent;
-  }
-  #info .city-box .cities li:hover {
-    border: 1px solid white;
-  }
-  #info .digital-box {
-    margin: 0 auto 0 auto;
-  }
-  #info .digital-box .digital {
-    display: none;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    color: white;
-    margin-top: 0;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info .artist-info {
-    text-align: center;
-    border-bottom: 2px solid white;
-    margin-bottom: 5%;
-    padding-bottom: 20px;
-  }
-  #info .artist-info h1 {
-    text-transform: none !important;
-  }
-  #info .artist-info .featured-artists {
-    color: white;
-    background-color: black;
-    text-transform: uppercase;
-    border: 2px solid white;
-  }
-  #info .artist-info .featured-artists:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-  }
-  #info .artist-info .cycle {
-    font-size: 5em;
-    text-transform: uppercase;
-    color: black;
-    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  }
-  #info .about-section {
-    margin-top: 5%;
-  }
-  #info .about-section h1 {
-    text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    border: 2px solid white;
-    font-size: 4em;
-  }
-  #info .about-section p {
-    font-family: 'Rail', helvetica, sans-serif;
-    line-height: 1.7;
-    width: 70%;
-    margin-right: 15%;
-    margin-left: 15%;
-    font-size: 1.3em;
-    text-align: left;
-    font-weight: 100;
-  }
-  #info .about-section p a {
-    text-decoration: underline;
-  }
-  #info .logo {
-    width: 80%;
-    margin: 0 10% auto 10%;
-    text-align: center;
-  }
-  #info .logo img {
-    max-width: 80%;
-    width: 20%;
-    margin: 10% 40% 5% 40%;
-  }
-  #info .logo img:hover {
-    opacity: 0.7;
-  }
-  #info .social {
-    margin-top: 2.5%;
-    margin-bottom: 10%;
-    width: 100%;
-    height: 58px;
-    text-align: center;
-  }
-  #info .social img {
-    display: inline;
-    width: 30px;
-    height: auto;
-  }
-  #info .social img.social-white {
-    display: inline-block;
-  }
-  #info .social iframe {
-    display: none;
-    width: 100px !important;
   }
 }
 @media only screen and (max-width: 800px), screen and (max-device-width: 800px) {
@@ -1314,174 +983,6 @@ nav .nav-top-center li a.scroll:hover {
     width: 200%;
     left: -50%;
   }
-
-  #info {
-    border-top: 2px solid white;
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    margin: 0 0 0 0;
-    position: absolute;
-    top: 200%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
-  #info h1, #info h2, #info h3, #info p, #info a {
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info a h1:hover {
-    border: 2px solid white;
-    background-color: white;
-    color: black;
-  }
-  #info h2, #info h3 {
-    text-transform: uppercase;
-  }
-  #info h1 {
-    text-transform: none;
-    max-width: 48%;
-    margin-left: 26%;
-    margin-right: 26%;
-    border: 2px solid white;
-    font-size: 3em;
-  }
-  #info h2 {
-    font-size: 2em;
-    line-height: 0.5;
-  }
-  #info h3 {
-    font-weight: 100;
-    font-size: 1.2em;
-    line-height: 0.5;
-  }
-  #info .release-info h1 {
-    margin-bottom: 100px;
-    margin-top: 100px;
-  }
-  #info .city-box {
-    width: 80%;
-    margin: 0 10% 100px 10%;
-  }
-  #info .city-box .cities {
-    display: none;
-    text-transform: uppercase;
-    font-size: 1em;
-    padding-left: 5%;
-    padding-right: 5%;
-    word-spacing: 10px;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-    letter-spacing: 3px;
-  }
-  #info .city-box .cities li {
-    list-style-type: none;
-    display: inline;
-    border: 1px solid transparent;
-  }
-  #info .city-box .cities li:hover {
-    border: 1px solid white;
-  }
-  #info .digital-box {
-    margin: 0 auto 100px auto;
-  }
-  #info .digital-box .digital {
-    display: none;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    color: white;
-    margin-top: 0;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info .artist-info {
-    text-align: center;
-    border-bottom: 2px solid white;
-    margin-bottom: 100px;
-    padding-bottom: 100px;
-    margin-top: 50px;
-  }
-  #info .artist-info h1 {
-    text-transform: none !important;
-    max-width: 70%;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-  #info .artist-info .featured-artists {
-    color: white;
-    background-color: black;
-    text-transform: uppercase;
-    border: 2px solid white;
-  }
-  #info .artist-info .featured-artists:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-  }
-  #info .artist-info .cycle {
-    font-size: 4em;
-    text-transform: uppercase;
-    color: black;
-    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  }
-  #info .about-section {
-    margin-top: 5%;
-  }
-  #info .about-section h1 {
-    text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 50px;
-    border: 2px solid white;
-    font-size: 3em;
-  }
-  #info .about-section p {
-    font-family: 'Rail', helvetica, sans-serif;
-    line-height: 1.7;
-    width: 80%;
-    margin-right: 10%;
-    margin-left: 10%;
-    font-size: 1.1em;
-    text-align: left;
-    font-weight: 100;
-  }
-  #info .about-section p a {
-    text-decoration: underline;
-  }
-  #info .logo {
-    width: 80%;
-    margin: 0 10% auto 10%;
-    text-align: center;
-  }
-  #info .logo img {
-    max-width: 80%;
-    width: 20%;
-    margin: 10% 40% 5% 40%;
-  }
-  #info .logo img:hover {
-    opacity: 0.7;
-  }
-  #info .social {
-    margin-top: 2.5%;
-    margin-bottom: 10%;
-    width: 100%;
-    height: 58px;
-    text-align: center;
-  }
-  #info .social img {
-    display: inline;
-    width: 30px;
-    height: auto;
-  }
-  #info .social img.social-white {
-    display: inline-block;
-  }
-  #info .social iframe {
-    display: none;
-    width: 100px !important;
-  }
 }
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #nav-burger {
@@ -1662,139 +1163,6 @@ nav .nav-top-center li a.scroll:hover {
     max-width: 200%;
     width: 200%;
     left: -50%;
-  }
-
-  #info {
-    border-top: 2px solid white;
-    max-width: 100%;
-    height: auto;
-    width: 100%;
-    margin: 0 0 0 0;
-    position: absolute;
-    top: 200%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
-  #info h1, #info h2, #info h3, #info p, #info a {
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info a h1:hover {
-    border: 2px solid white;
-    background-color: white;
-    color: black;
-  }
-  #info h2, #info h3 {
-    text-transform: uppercase;
-  }
-  #info h1 {
-    text-transform: none;
-    max-width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    border: 2px solid white;
-    font-size: 1.5em;
-  }
-  #info h2 {
-    font-size: 1.2em;
-    line-height: 0.5;
-  }
-  #info h3 {
-    font-weight: 100;
-    font-size: 1em;
-    line-height: 0.5;
-  }
-  #info .release-info h1 {
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-  #info .city-box {
-    width: 80%;
-    margin: 0 10% 60px 10%;
-  }
-  #info .city-box .cities {
-    display: block;
-    text-transform: uppercase;
-    font-size: 0.7em;
-    word-spacing: 1px;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
-    font-weight: 100;
-    letter-spacing: 3px;
-  }
-  #info .city-box .cities li {
-    list-style-type: none;
-    display: inline;
-    border: none;
-  }
-  #info .city-box .cities li:hover {
-    border: none;
-  }
-  #info .digital-box {
-    margin: 0 auto 50px auto;
-  }
-  #info .digital-box .digital {
-    display: none;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    color: white;
-    margin-top: 0;
-    font-family: 'Rail', helvetica, sans-serif;
-  }
-  #info .artist-info {
-    text-align: center;
-    border-bottom: 2px solid white;
-    margin-bottom: 5%;
-    padding-bottom: 50px;
-  }
-  #info .artist-info h1 {
-    text-transform: none !important;
-    max-width: 80%;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  #info .artist-info .featured-artists {
-    color: white;
-    background-color: black;
-    text-transform: uppercase;
-    border: 2px solid white;
-  }
-  #info .artist-info .featured-artists:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-  }
-  #info .artist-info .cycle {
-    font-size: 2em;
-    text-transform: uppercase;
-    color: black;
-    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  }
-  #info .about-section {
-    margin-top: 50px;
-  }
-  #info .about-section h1 {
-    text-transform: none;
-    max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    border: 2px solid white;
-    font-size: 1.5em;
-  }
-  #info .about-section p {
-    font-family: 'Rail', helvetica, sans-serif;
-    line-height: 1.7;
-    width: 80%;
-    margin-right: 10%;
-    margin-left: 10%;
-    font-size: 0.9em;
-    text-align: left;
-    font-weight: 100;
-  }
-  #info .about-section p a {
-    text-decoration: underline;
   }
 }
 /* ==========================================================================
