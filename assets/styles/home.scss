@@ -2037,6 +2037,449 @@ nav{
 
 }
 
+@media only screen and (max-device-width: 568px) and (orientation: landscape){
+    .exit{
+    position: fixed;
+    display: none;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/close.gif) no-repeat center center;
+    background-size: 100%;
+    z-index: 9999999999;
+    &:hover{
+        background: url(../../images/close-black.gif) no-repeat center center;
+        background-size: 100%;
+    }
+}
+
+   #nav-burger{
+    display: none !important;
+   }
+
+   #nav-down{
+    display: none !important;
+   }
+
+   nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    z-index: 99;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: red;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    letter-spacing: 3px;
+    .nav-top-left{
+        width: 33.3333%;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        li{
+            float: left;
+            font-family: 'Clan', helvetica, sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding-left: 20px;
+            padding-top: 15px;
+            list-style-type: none;
+            a.scroll{
+                text-decoration: none;
+                color: white;
+                -webkit-transition: all .2s ease-in-out;
+                -moz-transition: all .2s ease-in-out;
+                -o-transition: all .2s ease-in-out;
+                -ms-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                &:hover{
+                    color: gray;
+                }
+            }
+
+        }
+    }
+    .nav-top-center{
+            width: 33.3333%;
+            height: 100px;
+            position: absolute;
+            right: 0;
+            text-align: right;
+            padding-top: 15px;
+            overflow-y: hidden;
+            li{
+                list-style-type: none;
+                float: right;
+                padding-right: 20px;
+            }
+        }
+    }
+
+#nav-bottom{
+    display: none
+}
+
+#bookframe{
+    position: fixed;
+    background-color: white;
+        left: 100%;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover{
+            left: 89%;
+        }
+        iframe{
+            border: none;
+            margin: 0;
+        }
+}
+
+#countdown-container{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background: url(../../images/countdown-title.jpg) no-repeat center center;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    border-top: 1px solid white;
+    text-align: center;
+    h1{
+        margin-top: 5%;
+    }
+    #countdown{
+        width: 80%;
+        margin: 5% 10% 10% 10%;
+        font-size: 2em;
+        font-weight: bold;
+    }
+}
+
+
+   #title{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black !important;
+    background-size: 100% !important;
+    background-size: bottom center;
+    min-width: 100%;
+    background: url(../../images/title-image.jpg) no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    img{
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+        margin-top: 5%;
+    }
+}
+
+
+
+   #pointer{
+        display: none !important;
+    }         
+
+   #film{
+    position: absolute;
+    top: 200%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background: url(../../images/artist/eno.jpg) no-repeat top center;
+    background-size: 200%;
+    color: white;
+    video{
+            max-width: 100%;
+            opacity: 1;
+
+    }
+    .text{
+        margin-top: 5%;
+        text-align: center;
+        width: 80%;
+        left: 10%;
+        right: 10%;
+        position: absolute;
+        z-index: 9;
+
+        h1{
+            text-transform: none;
+            font-size: 2em;
+            line-height: 1;
+            width: 80%;
+            text-align: center;
+            margin: 10px 10% 0 10%;
+            font-weight: 100;
+        }
+        img{
+            max-width: 15%;
+            margin-top: 25%;
+        }
+    } 
+
+
+    .film-wrap{
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        width: 100%;
+        margin: 0 0 0 0;
+        z-index: 0;
+        position: absolute;
+        iframe{
+            opacity: 1;
+            width: 100%;
+            display: none;
+            
+        }
+        video{
+            display: block;
+            max-width: 200%;
+            width: 200%;
+            left: -50%;
+            //z-index: 9;
+        }
+    }
+
+}
+
+#artist{
+    position: absolute;
+    top: 300%;
+    height: 150%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+    h1, h2, h3, h4, a{
+        color: white;
+    }
+    .artist-list{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        z-index: 2;
+        h1{
+            text-align: center;
+            font-size:1.5em;
+            width: 30%;
+            margin-left: 35%;
+            margin-right: 35%;
+            border: 2px solid white;
+        }
+        ul{
+            list-style-type: none;
+            margin-top: 10%;
+            color: white;
+            li{
+                display: inline;
+                padding: 2px;
+                line-height: 0.8;
+                font-size: 0.8em;
+                text-transform: uppercase;
+                border: 2px solid transparent;
+                &:hover{
+                    border: 2px solid white;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+    .artist-images{
+        display: none !important;
+    }
+}
+
+#artist-info{
+    position: fixed;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 99999;
+    .go-home{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        background: url(../../images/close.gif) no-repeat center center;
+        background-size: 100%;
+        &:hover{
+            background: url(../../images/close-black.gif) no-repeat center center;
+            background-size: 100%;
+        }
+    }
+    h1{
+        position: relative;
+        top: 0;
+        padding-bottom: 0;
+        color: black;
+        width: 100%;
+        font-size: 2em;
+        z-index: 4;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+    }
+    p{
+        width: 70%;
+        margin-top: 0;
+        margin-left: 15%;
+        margin-bottom: 75px;
+        line-height: 1.75;
+        z-index: 3;
+        font-size: 0.8em;
+        font-family: 'Rail', helvetica, sans-serif;
+        font-weight: 100;
+    }
+    .assets{
+        width: 70%;
+        max-height: 60%;
+        overflow: hidden;
+        position: relative;
+        margin-top: 10px;
+        margin-left: 15%;
+        text-align: center;
+        img{
+            margin: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .links{
+        position: relative;
+        width: 100%;
+        right: 0;
+        ul{
+            list-style-type: none;
+            text-align: left;
+            padding-top: 0;
+
+            li{
+                font-size: 1em;
+                font-weight: bold;
+                display: block;
+                a{
+                    color: black;
+                    &:hover{
+                        opacity: 0.6;
+                    }
+                    img{
+                        width: 25px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#about{
+    position: absolute;
+    border-top: 1px solid white;
+    top: 450%;
+    //height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+    h1{
+        text-transform: none;
+        max-width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 5%;
+        border: 2px solid white;
+        font-size: 1.5em;
+        text-align: center;
+        }
+    p{
+        font-family: 'Rail', helvetica, sans-serif;
+        line-height: 1.7;
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        font-size: 0.8em;
+        text-align: left;
+        font-weight: 100;
+        a{
+            text-decoration: underline;
+            color: white;
+        }
+    }
+    .logo{
+        width: 80%;
+        margin: 0 10% auto 10%;
+        text-align: center;
+        img{
+            max-width: 80%;
+            width: 20%;
+            margin: 10% 40% 5% 40%;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+    .social{
+        margin-top: 2.5%;
+        margin-bottom: 10%;
+        width: 100%;
+        height: 58px;
+        text-align: center;
+        img{
+            display: inline;
+            width: 30px;
+            height: auto;
+            &.social-white{
+                display: inline-block;
+            }
+        }
+        iframe{
+            display: none;
+            width: 100px !important;
+        }
+    }
+}
+
+}
+
 
 
 
