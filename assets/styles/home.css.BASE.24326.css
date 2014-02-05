@@ -68,6 +68,11 @@ h1, h2 {
   font-weight: 800;
 }
 
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -170,37 +175,6 @@ a {
   }
 }
 
-h1, h2 {
-  text-transform: uppercase;
-}
-
-h2 {
-  font-weight: bold;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Rail', helvetica, sans-serif;
-}
-
-#loading {
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  position: fixed;
-  display: block;
-  background-color: black;
-  z-index: 99999999999999999999;
-  text-align: center;
-}
-
-#loading-image {
-  margin-top: 25%;
-  z-index: 100;
-  width: 30px;
-  height: 30px;
-}
-
 .exit {
   position: fixed;
   display: none;
@@ -215,6 +189,18 @@ h1, h2, h3, h4 {
 .exit:hover {
   background: url(../../images/close-black.gif) no-repeat center center;
   background-size: 100%;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Rail', helvetica, sans-serif;
 }
 
 #wrapper {
@@ -289,11 +275,13 @@ nav {
   font-weight: 800;
   font-size: 1.5em;
   text-transform: uppercase;
+  color: red;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  letter-spacing: 3px;
 }
 nav .nav-top-left {
   width: 33.3333%;
@@ -368,6 +356,7 @@ nav .nav-top-center li a.scroll:hover {
   -o-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  letter-spacing: 3px;
 }
 #nav-bottom .nav-left {
   width: 50%;
@@ -514,32 +503,9 @@ nav .nav-top-center li a.scroll:hover {
   animation-delay: 0s;
 }
 
-#countdown-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  background: url(../../images/countdown-title.jpg) no-repeat center center;
-  background-size: 100%;
-  color: white;
-  border-top: 1px solid white;
-  text-align: center;
-}
-#countdown-container h1 {
-  margin-top: 10%;
-}
-#countdown-container #countdown {
-  width: 80%;
-  margin: 5% 10% 10% 10%;
-  font-size: 6em;
-  font-weight: bold;
-}
-
 #film {
   position: absolute;
-  top: 200%;
+  top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -613,181 +579,119 @@ nav .nav-top-center li a.scroll:hover {
   left: -50%;
 }
 
-#artist {
-  position: absolute;
-  top: 300%;
-  height: 100%;
+#info {
+  border-top: 2px solid white;
+  max-width: 100%;
+  height: auto;
   width: 100%;
+  margin: 0 0 0 0;
+  position: absolute;
+  top: 200%;
   background-color: black;
+  color: white;
+  text-align: center;
+}
+#info h1, #info h2, #info h3, #info p, #info a {
   color: white;
   font-family: 'Rail', helvetica, sans-serif;
-  margin: 0;
 }
-#artist h1, #artist h2, #artist h3, #artist h4, #artist a {
-  color: white;
-}
-#artist .artist-list {
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  z-index: 2;
-}
-#artist .artist-list h1 {
-  text-align: center;
-  font-size: 4em;
-  width: 30%;
-  margin-left: 35%;
-  margin-right: 35%;
+#info a h1:hover {
   border: 2px solid white;
-}
-#artist .artist-list ul {
-  margin: 0;
-  max-width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  list-style-type: none;
-  color: white;
-  padding: 0;
-  text-align: center;
-}
-#artist .artist-list ul li {
-  display: inline-block;
-  line-height: 1.7;
-  font-size: 1.4em;
-  margin: 0;
-  padding: 2px;
-  text-transform: uppercase;
-  border: 2px solid transparent;
-}
-#artist .artist-list ul li:hover {
-  border: 2px solid white;
-  background-color: black;
-  color: white;
-}
-#artist .artist-images {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  z-index: -1;
-}
-#artist .artist-images img {
-  width: 100%;
-}
-
-#artist-info {
-  position: fixed;
-  left: 100%;
-  height: 100%;
-  width: 100%;
-  max-height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
   background-color: white;
-  z-index: 99999;
-}
-#artist-info .go-home {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  opacity: 1;
-  background: url(../../images/close.gif) no-repeat center center;
-  background-size: 100%;
-}
-#artist-info .go-home:hover {
-  background: url(../../images/close-black.gif) no-repeat center center;
-  background-size: 100%;
-}
-#artist-info h1 {
-  position: relative;
-  top: 0;
-  padding-bottom: 0;
   color: black;
-  width: 100%;
-  font-size: 4em;
-  z-index: 4;
+}
+#info h2, #info h3 {
   text-transform: uppercase;
-  line-height: 1;
-  text-align: center;
 }
-#artist-info p {
-  width: 60%;
-  margin-top: 0;
-  margin-left: 20%;
-  margin-bottom: 75px;
-  line-height: 1.75;
-  z-index: 3;
-  font-family: 'Rail', helvetica, sans-serif;
+#info h1 {
+  text-transform: none;
+  max-width: 48%;
+  margin-left: 26%;
+  margin-right: 26%;
+  border: 2px solid white;
+  font-size: 4em;
+}
+#info h2 {
+  font-size: 2em;
+  line-height: 0.5;
+}
+#info h3 {
   font-weight: 100;
+  font-size: 1.2em;
+  line-height: 0.5;
 }
-#artist-info .assets {
-  width: 60%;
-  max-height: 60%;
-  overflow: hidden;
-  position: relative;
-  margin-top: 0;
-  margin-left: 20%;
-  text-align: center;
+#info .city-box {
+  width: 80%;
+  margin: 0 10% 60px 10%;
 }
-#artist-info .assets img {
-  margin: 0;
-  width: 100%;
-  height: auto;
-}
-#artist-info .links {
-  position: relative;
-  width: 100%;
-  right: 0;
-  bottom: 5%;
-}
-#artist-info .links ul {
-  list-style-type: none;
-  text-align: center;
-  padding-top: 50px;
-}
-#artist-info .links ul li {
+#info .city-box .cities {
+  display: none;
+  text-transform: uppercase;
   font-size: 1em;
-  margin: 40px;
-  font-weight: bold;
-  display: inline;
-}
-#artist-info .links ul li a {
-  color: black;
-}
-#artist-info .links ul li a:hover {
-  opacity: 0.6;
-}
-#artist-info .links ul li a img {
-  width: 25px;
-  height: auto;
-}
-
-#about {
-  position: absolute;
-  border-top: 1px solid white;
-  top: 400%;
-  width: 100%;
-  background-color: black;
+  padding-left: 5%;
+  padding-right: 5%;
+  word-spacing: 10px;
   color: white;
   font-family: 'Rail', helvetica, sans-serif;
-  margin: 0;
+  letter-spacing: 3px;
 }
-#about h1 {
+#info .city-box .cities li {
+  list-style-type: none;
+  display: inline;
+  border: 1px solid transparent;
+}
+#info .city-box .cities li:hover {
+  border: 1px solid white;
+}
+#info .digital-box {
+  margin: 0 auto 0 auto;
+}
+#info .digital-box .digital {
+  display: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: white;
+  margin-top: 0;
+  font-family: 'Rail', helvetica, sans-serif;
+}
+#info .artist-info {
+  text-align: center;
+  border-bottom: 2px solid white;
+  margin-bottom: 5%;
+  padding-bottom: 20px;
+}
+#info .artist-info h1 {
+  text-transform: none !important;
+}
+#info .artist-info .featured-artists {
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  border: 2px solid white;
+}
+#info .artist-info .featured-artists:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+}
+#info .artist-info .cycle {
+  font-size: 5em;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+#info .about-section {
+  margin-top: 5%;
+}
+#info .about-section h1 {
   text-transform: none;
   max-width: 40%;
   margin-left: 30%;
   margin-right: 30%;
-  margin-top: 5%;
   border: 2px solid white;
   font-size: 4em;
-  text-align: center;
 }
-#about p {
+#info .about-section p {
   font-family: 'Rail', helvetica, sans-serif;
   line-height: 1.7;
   width: 70%;
@@ -797,43 +701,204 @@ nav .nav-top-center li a.scroll:hover {
   text-align: left;
   font-weight: 100;
 }
-#about p a {
+#info .about-section p a {
   text-decoration: underline;
-  color: white;
 }
-#about .logo {
+#info .logo {
   width: 80%;
   margin: 0 10% auto 10%;
   text-align: center;
 }
-#about .logo img {
+#info .logo img {
   max-width: 80%;
   width: 20%;
   margin: 10% 40% 5% 40%;
 }
-#about .logo img:hover {
+#info .logo img:hover {
   opacity: 0.7;
 }
-#about .social {
+#info .social {
   margin-top: 2.5%;
   margin-bottom: 10%;
   width: 100%;
   height: 58px;
   text-align: center;
 }
-#about .social img {
+#info .social img {
   display: inline;
   width: 30px;
   height: auto;
 }
-#about .social img.social-white {
+#info .social img.social-white {
   display: inline-block;
 }
-#about .social iframe {
+#info .social iframe {
   display: none;
   width: 100px !important;
 }
 
+@media only screen and (min-width: 1800px) {
+  #info {
+    border-top: 2px solid white;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding-top: 2.5%;
+    position: absolute;
+    top: 200%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  #info h1, #info h2, #info h3, #info p, #info a {
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+  }
+  #info a h1:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+  }
+  #info h2, #info h3 {
+    text-transform: uppercase;
+  }
+  #info h1 {
+    text-transform: none;
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid white;
+    font-size: 3em;
+  }
+  #info h2 {
+    font-size: 2em;
+    line-height: 0.5;
+  }
+  #info h3 {
+    font-weight: 100;
+    font-size: 1.2em;
+    line-height: 0.5;
+  }
+  #info .city-box {
+    width: 80%;
+    margin: 0 10% 60px 10%;
+  }
+  #info .city-box .cities {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-spacing: 10px;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    letter-spacing: 3px;
+  }
+  #info .city-box .cities li {
+    list-style-type: none;
+    display: inline;
+    border: 1px solid transparent;
+  }
+  #info .city-box .cities li:hover {
+    border: 1px solid white;
+  }
+  #info .digital-box {
+    margin: 0 auto 60px auto;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px;
+  }
+  #info .digital-box .digital {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: white;
+    margin-top: 0;
+    font-family: 'Rail', helvetica, sans-serif;
+  }
+  #info .artist-info {
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-bottom: 5%;
+    padding-bottom: 2.5%;
+  }
+  #info .artist-info h1 {
+    text-transform: none !important;
+  }
+  #info .artist-info .featured-artists {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+  #info .artist-info .featured-artists:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+  }
+  #info .artist-info .cycle {
+    font-size: 5em;
+    text-transform: uppercase;
+  }
+  #info .about-section {
+    margin-top: 5%;
+  }
+  #info .about-section h1 {
+    text-transform: none;
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid white;
+    font-size: 3em;
+  }
+  #info .about-section p {
+    font-family: 'Rail', helvetica, sans-serif;
+    line-height: 1.7;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 1.3em;
+    padding-left: 5%;
+    text-align: left;
+    font-weight: 100;
+  }
+  #info .about-section p a {
+    text-decoration: underline;
+  }
+  #info .logo {
+    width: 80%;
+    margin: 0 10% auto 10%;
+    text-align: center;
+  }
+  #info .logo img {
+    max-width: 80%;
+    width: 20%;
+    margin: 10% 40% 5% 40%;
+  }
+  #info .logo img:hover {
+    opacity: 0.7;
+  }
+  #info .social {
+    margin-top: 2.5%;
+    margin-bottom: 10%;
+    width: 100%;
+    height: 58px;
+    text-align: center;
+  }
+  #info .social img {
+    display: inline;
+    width: 30px;
+    height: auto;
+  }
+  #info .social img.social-white {
+    display: inline-block;
+  }
+  #info .social iframe {
+    display: none;
+    width: 100px !important;
+  }
+}
 @media only screen and (max-width: 1000px), screen and (max-device-width: 1000px) {
   #title {
     position: fixed;
@@ -862,7 +927,7 @@ nav .nav-top-center li a.scroll:hover {
 
   #film {
     position: absolute;
-    top: 200%;
+    top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -897,217 +962,160 @@ nav .nav-top-center li a.scroll:hover {
     margin-top: 25%;
   }
 
-  #artist {
-    position: absolute;
-    top: 300%;
-    height: 100%;
+  #info {
+    border-top: 2px solid white;
+    max-width: 100%;
+    height: auto;
     width: 100%;
+    margin: 0 0 0 0;
+    position: absolute;
+    top: 200%;
     background-color: black;
+    color: white;
+    text-align: center;
+  }
+  #info h1, #info h2, #info h3, #info p, #info a {
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
-    margin: 0;
   }
-  #artist h1, #artist h2, #artist h3, #artist h4, #artist a {
-    color: white;
-  }
-  #artist .artist-list {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    z-index: 2;
-  }
-  #artist .artist-list h1 {
-    text-align: center;
-    font-size: 4em;
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
+  #info a h1:hover {
     border: 2px solid white;
-  }
-  #artist .artist-list ul {
-    list-style-type: none;
-    color: white;
-  }
-  #artist .artist-list ul li {
-    display: inline;
-    padding: 5px;
-    line-height: 1.7;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    border: 2px solid transparent;
-  }
-  #artist .artist-list ul li:hover {
-    border: 2px solid white;
-    background-color: black;
-    color: white;
-  }
-  #artist .artist-images {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    z-index: -1;
-  }
-  #artist .artist-images img {
-    width: 100%;
-  }
-
-  #artist-info {
-    position: fixed;
-    left: 100%;
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: white;
-    z-index: 99999;
-  }
-  #artist-info .go-home {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    opacity: 1;
-    background: url(../../images/close.gif) no-repeat center center;
-    background-size: 100%;
-  }
-  #artist-info .go-home:hover {
-    background: url(../../images/close-black.gif) no-repeat center center;
-    background-size: 100%;
-  }
-  #artist-info h1 {
-    position: relative;
-    top: 0;
-    padding-bottom: 0;
     color: black;
-    width: 100%;
-    font-size: 3em;
-    z-index: 4;
+  }
+  #info h2, #info h3 {
     text-transform: uppercase;
-    line-height: 1;
-    text-align: center;
   }
-  #artist-info p {
-    width: 70%;
-    margin-top: 0;
-    margin-left: 15%;
-    margin-bottom: 75px;
-    line-height: 1.75;
-    z-index: 3;
-    font-size: 0.9em;
-    font-family: 'Rail', helvetica, sans-serif;
+  #info h1 {
+    text-transform: none;
+    max-width: 48%;
+    margin-left: 26%;
+    margin-right: 26%;
+    border: 2px solid white;
+    font-size: 4em;
+  }
+  #info h2 {
+    font-size: 2em;
+    line-height: 0.5;
+  }
+  #info h3 {
     font-weight: 100;
+    font-size: 1.2em;
+    line-height: 0.5;
   }
-  #artist-info .assets {
-    width: 70%;
-    max-height: 60%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 0;
-    margin-left: 15%;
-    text-align: center;
+  #info .city-box {
+    width: 80%;
+    margin: 0 10% 60px 10%;
   }
-  #artist-info .assets img {
-    margin: 0;
-    width: 100%;
-    height: auto;
-  }
-  #artist-info .links {
-    position: relative;
-    width: 100%;
-    right: 0;
-    bottom: 5%;
-  }
-  #artist-info .links ul {
-    list-style-type: none;
-    text-align: center;
-    padding-top: 50px;
-  }
-  #artist-info .links ul li {
+  #info .city-box .cities {
+    display: none;
+    text-transform: uppercase;
     font-size: 1em;
-    font-weight: bold;
-    display: inline;
-  }
-  #artist-info .links ul li a {
-    color: black;
-  }
-  #artist-info .links ul li a:hover {
-    opacity: 0.6;
-  }
-  #artist-info .links ul li a img {
-    width: 25px;
-    height: auto;
-  }
-
-  #about {
-    position: absolute;
-    border-top: 1px solid white;
-    top: 400%;
-    width: 100%;
-    background-color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-spacing: 10px;
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
-    margin: 0;
+    letter-spacing: 3px;
   }
-  #about h1 {
+  #info .city-box .cities li {
+    list-style-type: none;
+    display: inline;
+    border: 1px solid transparent;
+  }
+  #info .city-box .cities li:hover {
+    border: 1px solid white;
+  }
+  #info .digital-box {
+    margin: 0 auto 0 auto;
+  }
+  #info .digital-box .digital {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: white;
+    margin-top: 0;
+    font-family: 'Rail', helvetica, sans-serif;
+  }
+  #info .artist-info {
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-bottom: 5%;
+    padding-bottom: 20px;
+  }
+  #info .artist-info h1 {
+    text-transform: none !important;
+  }
+  #info .artist-info .featured-artists {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+  #info .artist-info .featured-artists:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+  }
+  #info .artist-info .cycle {
+    font-size: 5em;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  #info .about-section {
+    margin-top: 5%;
+  }
+  #info .about-section h1 {
     text-transform: none;
     max-width: 40%;
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 5%;
     border: 2px solid white;
     font-size: 4em;
-    text-align: center;
   }
-  #about p {
+  #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
     width: 70%;
     margin-right: 15%;
     margin-left: 15%;
-    font-size: 1em;
+    font-size: 1.3em;
     text-align: left;
     font-weight: 100;
   }
-  #about p a {
+  #info .about-section p a {
     text-decoration: underline;
-    color: white;
   }
-  #about .logo {
+  #info .logo {
     width: 80%;
     margin: 0 10% auto 10%;
     text-align: center;
   }
-  #about .logo img {
+  #info .logo img {
     max-width: 80%;
     width: 20%;
     margin: 10% 40% 5% 40%;
   }
-  #about .logo img:hover {
+  #info .logo img:hover {
     opacity: 0.7;
   }
-  #about .social {
+  #info .social {
     margin-top: 2.5%;
     margin-bottom: 10%;
     width: 100%;
     height: 58px;
     text-align: center;
   }
-  #about .social img {
+  #info .social img {
     display: inline;
     width: 30px;
     height: auto;
   }
-  #about .social img.social-white {
+  #info .social img.social-white {
     display: inline-block;
   }
-  #about .social iframe {
+  #info .social iframe {
     display: none;
     width: 100px !important;
   }
@@ -1181,7 +1189,7 @@ nav .nav-top-center li a.scroll:hover {
   }
 
   #nav-bottom {
-    display: none;
+    display: block;
     position: absolute;
   }
 
@@ -1250,31 +1258,9 @@ nav .nav-top-center li a.scroll:hover {
     animation-delay: 0s;
   }
 
-  #countdown-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    color: white;
-    border-top: 1px solid white;
-    text-align: center;
-  }
-  #countdown-container h1 {
-    margin-top: 10%;
-    font-size: 2em;
-  }
-  #countdown-container #countdown {
-    width: 80%;
-    margin: 5% 10% 10% 10%;
-    font-size: 3em;
-    font-weight: bold;
-  }
-
   #film {
     position: absolute;
-    top: 200%;
+    top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1329,211 +1315,175 @@ nav .nav-top-center li a.scroll:hover {
     left: -50%;
   }
 
-  #artist {
-    position: absolute;
-    top: 300%;
-    height: 100%;
+  #info {
+    border-top: 2px solid white;
+    max-width: 100%;
+    height: auto;
     width: 100%;
+    margin: 0 0 0 0;
+    position: absolute;
+    top: 200%;
     background-color: black;
+    color: white;
+    text-align: center;
+  }
+  #info h1, #info h2, #info h3, #info p, #info a {
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
-    margin: 0;
   }
-  #artist h1, #artist h2, #artist h3, #artist h4, #artist a {
-    color: white;
-  }
-  #artist .artist-list {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    z-index: 2;
-  }
-  #artist .artist-list h1 {
-    text-align: center;
-    font-size: 3em;
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
+  #info a h1:hover {
     border: 2px solid white;
-  }
-  #artist .artist-list ul {
-    list-style-type: none;
-    color: white;
-  }
-  #artist .artist-list ul li {
-    display: inline;
-    padding: 5px;
-    line-height: 1.7;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    border: 2px solid transparent;
-  }
-  #artist .artist-list ul li:hover {
-    border: 2px solid white;
-    background-color: black;
-    color: white;
-  }
-  #artist .artist-images {
-    display: none !important;
-  }
-
-  #artist-info {
-    position: fixed;
-    left: 100%;
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: white;
-    z-index: 99999;
-  }
-  #artist-info .go-home {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    opacity: 1;
-    background: url(../../images/close.gif) no-repeat center center;
-    background-size: 100%;
-  }
-  #artist-info .go-home:hover {
-    background: url(../../images/close-black.gif) no-repeat center center;
-    background-size: 100%;
-  }
-  #artist-info h1 {
-    position: relative;
-    top: 0;
-    padding-bottom: 0;
     color: black;
-    width: 100%;
-    font-size: 3em;
-    z-index: 4;
+  }
+  #info h2, #info h3 {
     text-transform: uppercase;
-    line-height: 1;
-    text-align: center;
   }
-  #artist-info p {
-    width: 70%;
-    margin-top: 0;
-    margin-left: 15%;
-    margin-bottom: 75px;
-    line-height: 1.75;
-    z-index: 3;
-    font-size: 1em;
-    font-family: 'Rail', helvetica, sans-serif;
+  #info h1 {
+    text-transform: none;
+    max-width: 48%;
+    margin-left: 26%;
+    margin-right: 26%;
+    border: 2px solid white;
+    font-size: 3em;
+  }
+  #info h2 {
+    font-size: 2em;
+    line-height: 0.5;
+  }
+  #info h3 {
     font-weight: 100;
+    font-size: 1.2em;
+    line-height: 0.5;
   }
-  #artist-info .assets {
-    width: 70%;
-    max-height: 60%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 0;
-    margin-left: 15%;
-    text-align: center;
+  #info .release-info h1 {
+    margin-bottom: 100px;
+    margin-top: 100px;
   }
-  #artist-info .assets img {
-    margin: 0;
-    width: 100%;
-    height: auto;
+  #info .city-box {
+    width: 80%;
+    margin: 0 10% 100px 10%;
   }
-  #artist-info .links {
-    position: relative;
-    width: 100%;
-    right: 0;
-  }
-  #artist-info .links ul {
-    list-style-type: none;
-    text-align: left;
-    padding-top: 0;
-    margin-left: 7.5%;
-  }
-  #artist-info .links ul li {
+  #info .city-box .cities {
+    display: none;
+    text-transform: uppercase;
     font-size: 1em;
-    font-weight: bold;
-    display: block;
-  }
-  #artist-info .links ul li a {
-    color: black;
-  }
-  #artist-info .links ul li a:hover {
-    opacity: 0.6;
-  }
-  #artist-info .links ul li a img {
-    width: 25px;
-    height: auto;
-  }
-
-  #about {
-    position: absolute;
-    border-top: 1px solid white;
-    top: 400%;
-    width: 100%;
-    background-color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    word-spacing: 10px;
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
-    margin: 0;
+    letter-spacing: 3px;
   }
-  #about h1 {
+  #info .city-box .cities li {
+    list-style-type: none;
+    display: inline;
+    border: 1px solid transparent;
+  }
+  #info .city-box .cities li:hover {
+    border: 1px solid white;
+  }
+  #info .digital-box {
+    margin: 0 auto 100px auto;
+  }
+  #info .digital-box .digital {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: white;
+    margin-top: 0;
+    font-family: 'Rail', helvetica, sans-serif;
+  }
+  #info .artist-info {
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+  }
+  #info .artist-info h1 {
+    text-transform: none !important;
+    max-width: 70%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  #info .artist-info .featured-artists {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+  #info .artist-info .featured-artists:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+  }
+  #info .artist-info .cycle {
+    font-size: 4em;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  #info .about-section {
+    margin-top: 5%;
+  }
+  #info .about-section h1 {
     text-transform: none;
     max-width: 40%;
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 5%;
+    margin-bottom: 50px;
     border: 2px solid white;
     font-size: 3em;
-    text-align: center;
   }
-  #about p {
+  #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
-    width: 70%;
-    margin-right: 15%;
-    margin-left: 15%;
-    font-size: 1em;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 1.1em;
     text-align: left;
     font-weight: 100;
   }
-  #about p a {
+  #info .about-section p a {
     text-decoration: underline;
-    color: white;
   }
-  #about .logo {
+  #info .logo {
     width: 80%;
     margin: 0 10% auto 10%;
     text-align: center;
   }
-  #about .logo img {
+  #info .logo img {
     max-width: 80%;
     width: 20%;
     margin: 10% 40% 5% 40%;
   }
-  #about .logo img:hover {
+  #info .logo img:hover {
     opacity: 0.7;
   }
-  #about .social {
+  #info .social {
     margin-top: 2.5%;
     margin-bottom: 10%;
     width: 100%;
     height: 58px;
     text-align: center;
   }
-  #about .social img {
+  #info .social img {
     display: inline;
     width: 30px;
     height: auto;
   }
-  #about .social img.social-white {
+  #info .social img.social-white {
     display: inline-block;
   }
-  #about .social iframe {
+  #info .social iframe {
     display: none;
     width: 100px !important;
   }
 }
-@media only screen and (max-width: 568px), screen and (max-device-width: 568px), screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 568px), screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   #nav-burger {
     display: none !important;
   }
@@ -1627,33 +1577,6 @@ nav .nav-top-center li a.scroll:hover {
     margin: 0;
   }
 
-  #countdown-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    background: url(../../images/countdown-title.jpg) no-repeat center center;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-    border-top: 1px solid white;
-    text-align: center;
-  }
-  #countdown-container h1 {
-    margin-top: 10%;
-  }
-  #countdown-container #countdown {
-    width: 80%;
-    margin: 5% 10% 10% 10%;
-    font-size: 2em;
-    font-weight: bold;
-  }
-
   #title {
     position: absolute;
     z-index: -1;
@@ -1685,7 +1608,7 @@ nav .nav-top-center li a.scroll:hover {
 
   #film {
     position: absolute;
-    top: 200%;
+    top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1741,207 +1664,137 @@ nav .nav-top-center li a.scroll:hover {
     left: -50%;
   }
 
-  #artist {
-    position: absolute;
-    top: 300%;
-    height: 150%;
+  #info {
+    border-top: 2px solid white;
+    max-width: 100%;
+    height: auto;
     width: 100%;
+    margin: 0 0 0 0;
+    position: absolute;
+    top: 200%;
     background-color: black;
+    color: white;
+    text-align: center;
+  }
+  #info h1, #info h2, #info h3, #info p, #info a {
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
-    margin: 0;
   }
-  #artist h1, #artist h2, #artist h3, #artist h4, #artist a {
-    color: white;
-  }
-  #artist .artist-list {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    z-index: 2;
-  }
-  #artist .artist-list h1 {
-    text-align: center;
-    font-size: 1.5em;
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
+  #info a h1:hover {
     border: 2px solid white;
-  }
-  #artist .artist-list ul {
-    list-style-type: none;
-    color: white;
-  }
-  #artist .artist-list ul li {
-    display: inline;
-    padding: 2px;
-    line-height: 0.8;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    border: 2px solid transparent;
-  }
-  #artist .artist-list ul li:hover {
-    border: 2px solid white;
-    background-color: black;
-    color: white;
-  }
-  #artist .artist-images {
-    display: none !important;
-  }
-
-  #artist-info {
-    position: fixed;
-    left: 100%;
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: white;
-    z-index: 99999;
-  }
-  #artist-info .go-home {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 40px;
-    height: 40px;
-    opacity: 1;
-    background: url(../../images/close.gif) no-repeat center center;
-    background-size: 100%;
-  }
-  #artist-info .go-home:hover {
-    background: url(../../images/close-black.gif) no-repeat center center;
-    background-size: 100%;
-  }
-  #artist-info h1 {
-    position: relative;
-    top: 0;
-    padding-bottom: 0;
     color: black;
-    width: 100%;
-    font-size: 2em;
-    z-index: 4;
-    text-transform: uppercase;
-    line-height: 1;
-    text-align: center;
   }
-  #artist-info p {
-    width: 70%;
-    margin-top: 0;
-    margin-left: 15%;
-    margin-bottom: 75px;
-    line-height: 1.75;
-    z-index: 3;
-    font-size: 0.9em;
+  #info h2, #info h3 {
+    text-transform: uppercase;
+  }
+  #info h1 {
+    text-transform: none;
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid white;
+    font-size: 1.5em;
+  }
+  #info h2 {
+    font-size: 1.2em;
+    line-height: 0.5;
+  }
+  #info h3 {
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 0.5;
+  }
+  #info .release-info h1 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  #info .city-box {
+    width: 80%;
+    margin: 0 10% 60px 10%;
+  }
+  #info .city-box .cities {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    word-spacing: 1px;
+    color: white;
     font-family: 'Rail', helvetica, sans-serif;
     font-weight: 100;
+    letter-spacing: 3px;
   }
-  #artist-info .assets {
-    width: 70%;
-    max-height: 60%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 10px;
-    margin-left: 15%;
-    text-align: center;
-  }
-  #artist-info .assets img {
-    margin: 0;
-    width: 100%;
-    height: auto;
-  }
-  #artist-info .links {
-    position: relative;
-    width: 100%;
-    right: 0;
-  }
-  #artist-info .links ul {
+  #info .city-box .cities li {
     list-style-type: none;
-    text-align: left;
-    padding-top: 0;
+    display: inline;
+    border: none;
   }
-  #artist-info .links ul li {
-    font-size: 1em;
-    font-weight: bold;
-    display: block;
+  #info .city-box .cities li:hover {
+    border: none;
   }
-  #artist-info .links ul li a {
-    color: black;
+  #info .digital-box {
+    margin: 0 auto 50px auto;
   }
-  #artist-info .links ul li a:hover {
-    opacity: 0.6;
-  }
-  #artist-info .links ul li a img {
-    width: 25px;
-    height: auto;
-  }
-
-  #about {
-    position: absolute;
-    border-top: 1px solid white;
-    top: 450%;
-    width: 100%;
-    background-color: black;
+  #info .digital-box .digital {
+    display: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
     color: white;
+    margin-top: 0;
     font-family: 'Rail', helvetica, sans-serif;
-    margin: 0;
   }
-  #about h1 {
+  #info .artist-info {
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin-bottom: 5%;
+    padding-bottom: 50px;
+  }
+  #info .artist-info h1 {
+    text-transform: none !important;
+    max-width: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #info .artist-info .featured-artists {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    border: 2px solid white;
+  }
+  #info .artist-info .featured-artists:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+  }
+  #info .artist-info .cycle {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: -1px -1px 0 #fff,   1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  #info .about-section {
+    margin-top: 50px;
+  }
+  #info .about-section h1 {
     text-transform: none;
     max-width: 40%;
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 5%;
     border: 2px solid white;
     font-size: 1.5em;
-    text-align: center;
   }
-  #about p {
+  #info .about-section p {
     font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 0.8em;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 0.9em;
     text-align: left;
     font-weight: 100;
   }
-  #about p a {
+  #info .about-section p a {
     text-decoration: underline;
-    color: white;
-  }
-  #about .logo {
-    width: 80%;
-    margin: 0 10% auto 10%;
-    text-align: center;
-  }
-  #about .logo img {
-    max-width: 80%;
-    width: 20%;
-    margin: 10% 40% 5% 40%;
-  }
-  #about .logo img:hover {
-    opacity: 0.7;
-  }
-  #about .social {
-    margin-top: 2.5%;
-    margin-bottom: 10%;
-    width: 100%;
-    height: 58px;
-    text-align: center;
-  }
-  #about .social img {
-    display: inline;
-    width: 30px;
-    height: auto;
-  }
-  #about .social img.social-white {
-    display: inline-block;
-  }
-  #about .social iframe {
-    display: none;
-    width: 100px !important;
   }
 }
 /* ==========================================================================
