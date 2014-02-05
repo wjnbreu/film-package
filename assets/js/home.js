@@ -105,7 +105,7 @@ $(document).ready(function() {
 
 
 	//hide all main navigation items, replace with arrow.
-	//only fires when window width > 800
+	//only fires when window width > 1024
 	function navMin(item){
 		item.hide();
 		$('#nav-burger').fadeIn();
@@ -245,7 +245,7 @@ $(document).ready(function() {
 
 	//on scroll, change colors of nav items accordingly
 	$('#wrapper').scroll(function(){
-		if (win_width > 800){
+		if (win_width > 1024){
 			navColors();
 		}
 		else{
@@ -258,7 +258,7 @@ $(document).ready(function() {
 	$(window).resize(function(){
 		var windowsize = $(window).width();
 		removeVideo(windowsize);
-		if (windowsize > 800){
+		if (windowsize > 1024){
 			navColors();
 		}
 		
