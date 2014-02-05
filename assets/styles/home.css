@@ -866,6 +866,9 @@ nav .nav-top-center li a.scroll:hover {
   #info .about-section p a {
     text-decoration: underline;
   }
+  #info .about-section p a:hover {
+    opacity: 0.6;
+  }
   #info .logo {
     width: 80%;
     margin: 0 10% auto 10%;
