@@ -1594,6 +1594,21 @@ nav{
 //IPHONE
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px), screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
 
+.exit{
+    position: fixed;
+    display: none;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/close.gif) no-repeat center center;
+    background-size: 100%;
+    z-index: 9999999999;
+    &:hover{
+        background: url(../../images/close-black.gif) no-repeat center center;
+        background-size: 100%;
+    }
+}
 
    #nav-burger{
     display: none !important;
