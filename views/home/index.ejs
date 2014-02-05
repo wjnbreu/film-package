@@ -88,47 +88,46 @@
 
 
     <!-- Artist Box -->
-        <div id="artist-info">
+    <div id="artist-info">
+        <div class="go-home"></div>
 
-            <div class="go-home"></div>
+        <!-- Inject image -->
+        <div class='assets'><img src="#" /></div>
 
-            <!-- Inject image -->
-            <div class='assets'><img src="#" /></div>
+        <h1><span class="insert-name"></span></h1>
+        <!-- Insert Artist Bio-->
+        <% _.each(artists, function(artist){ %>
 
-            <h1><span class="insert-name"></span></h1>
-            <!-- Insert Artist Bio-->
-            <% _.each(artists, function(artist){ %>
+        <p class="bio <%= artist.nickname + '-bio' %>"><%- artist.bio %></p>
 
-            <p class="bio <%= artist.nickname + '-bio' %>"><%- artist.bio %></p>
+        <div class="links">
+            <ul class="<%= artist.nickname + '-links' %>">
+                <% if (artist.lecture){ %>
+                <li>
+                    <a href="<%= artist.lecture %>" target="blank"><img src="images/play.gif" /></a>
 
-            <div class="links">
-                <ul class="<%= artist.nickname + '-links' %>">
-                    <% if (artist.lecture){ %>
-                    <li>
-                        <a href="<%= artist.lecture %>" target="blank"><img src="images/play.gif" /></a>
-
-                        <a href="<%= artist.lecture %>" target="blank">Watch Lecture</a>
-                    </li>
-                    <% } if (artist.radio) { %>
-                    <li>
-                        <a href="<%= artist.radio %>" target="blank"><img src="images/play.gif" /></a>
-                        <a href="<%= artist.radio %>" target="blank">RBMA Radio Show</a>
-                    </li>
-                    <% } if (artist.magazine) { %>
-                    <li>
-                        <a href="<%= artist.magazine %>" target="blank"><img src="images/read.gif" /></a>
-                        <a href="<%= artist.magazine %>" target="blank">RBMA Feature</a>
-                    </li>
-                    <% } if (artist.website) { %>
-                    <li>
-                        <a href="<%= artist.website %>" target="blank"><img src="images/www.svg" /></a>
-                        <a href="<%= artist.website %>" target="blank">On The Web</a>
-                    </li>
-                    <% } %>
-                </ul>
-            </div> <!-- END LINKS -->
-            <% }) %> <!-- END EACH -->
-        </div><!-- End artist info -->
+                    <a href="<%= artist.lecture %>" target="blank">Watch Lecture</a>
+                </li>
+                <% } if (artist.radio) { %>
+                <li>
+                    <a href="<%= artist.radio %>" target="blank"><img src="images/play.gif" /></a>
+                    <a href="<%= artist.radio %>" target="blank">RBMA Radio Show</a>
+                </li>
+                <% } if (artist.magazine) { %>
+                <li>
+                    <a href="<%= artist.magazine %>" target="blank"><img src="images/read.gif" /></a>
+                    <a href="<%= artist.magazine %>" target="blank">RBMA Feature</a>
+                </li>
+                <% } if (artist.website) { %>
+                <li>
+                    <a href="<%= artist.website %>" target="blank"><img src="images/www.svg" /></a>
+                    <a href="<%= artist.website %>" target="blank">On The Web</a>
+                </li>
+                <% } %>
+            </ul>
+        </div> <!-- END LINKS -->
+        <% }) %> <!-- END EACH -->
+    </div><!-- End artist info -->
 
 
 
