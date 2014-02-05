@@ -516,6 +516,7 @@ nav .nav-top-center li a.scroll:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
   background-color: black;
   background: url(../../images/countdown-title.jpg) no-repeat top center;
   background-size: 100%;
