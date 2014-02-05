@@ -169,21 +169,25 @@ h1, h2, h3{
             width: 30%;
             margin-left: 35%;
             margin-right: 35%;
-            padding-top: 10%;
             padding-left: 0;
             text-align: center;
             a{
                 text-decoration: none;
                 text-transform: uppercase;
                 color: white;
-                font-size: 2em;
                 font-family: 'Rail', helvetica, sans-serif;
                 margin-bottom: 40px;
                 
                 li{
                     border: 3px solid transparent;
+                    font-size: 0.7em;
+                    -webkit-transition: all .2s ease-in-out;
+                    -moz-transition: all .2s ease-in-out;
+                    -o-transition: all .2s ease-in-out;
+                    -ms-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
                     &:hover{
-                        //font-size: 1.5em;
+                        font-size: 1.5em;
                         border: 3px solid white;
                         background-color: black;
                         color: white;
@@ -207,17 +211,7 @@ h1, h2, h3{
         }
     }
 
-    .film-title{
-        width: 15%;
-        height: auto;
-        position: fixed;
-        bottom: 10px;
-        left: 30px;
-        img{
-            max-width: 100%;
-        }
-    
-    }
+
 
 
 
@@ -267,7 +261,7 @@ h1, h2, h3{
         }
         .assets{
             width: 100%;
-            max-height: 60%;
+            max-height: 30%;
             overflow:hidden;
             position: relative;
             top: 0;

@@ -1,4 +1,6 @@
-<link type="text/css" rel="stylesheet" href="styles/home.css" />
+<div id="loading">
+  <img id="loading-image" src="images/loading.gif" alt="Loading..." />
+</div>
 
 <div id="wrapper">
     <div id="exit" class="exit hidden"></div>
@@ -36,9 +38,9 @@
     </div>
 
     <!-- HERO BACKGROUND PICTURE -->
-    <div id="title">
+    <section id="title">
         <img src="images/text.svg">
-    </div>
+    </section>
 
     <div id="pointer">
         <!-- CHANGE TO PNG FOR STATIC -->
@@ -46,8 +48,17 @@
         <!-- <a href="#"><img class="pointer" src="images/pointer.gif"/></a> -->
     </div>
 
+
+    <!-- COUNTDOWN -->
+    <section id="countdown-container">
+        <h1>Digital Release February 18 2014</h1>
+        <h2>Crappy Countdown Placeholder</h2>
+        <div id="countdown"></div>
+        <div id="player"></div>
+    </section>
+
     <!-- FILM SECTION -->
-    <div id="film">
+    <section id="film">
         <span id="filmlink"></span>
         <div class="text">
             <img src="images/play_w.png" id="play-button" />
@@ -67,104 +78,90 @@
         <div class="film-wrap" id="embed">
             <iframe frameborder="0" scrolling="no" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" id="rbmaplayer" width="640" height="360" src="http://www.youtube.com/embed/uVzx_p_DrL8?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;playsinline=1&amp;loop=1&amp;hd=1&amp;controls=0&amp;showinfo=1&amp;modestbranding=0&amp;iv_load_policy=3&amp;rel=0"></iframe>
         </div>
-    </div> <!-- END FILM -->
+    </section> <!-- END FILM -->
 
 
     <!-- OFF SCREEN BOOK IFRAME -->
-    <div id="bookframe">
+    <section id="bookframe">
         <iframe src="/book" width="100%" height="100%" border="0"></iframe>
-    </div>
+    </section>
+
+
+    <!-- Artist Box -->
+        <div id="artist-info">
+
+            <div class="go-home"></div>
+
+            <!-- Inject image -->
+            <div class='assets'><img src="#" /></div>
+
+            <h1><span class="insert-name"></span></h1>
+            <!-- Insert Artist Bio-->
+            <% _.each(artists, function(artist){ %>
+
+            <p class="bio <%= artist.nickname + '-bio' %>"><%- artist.bio %></p>
+
+            <div class="links">
+                <ul class="<%= artist.nickname + '-links' %>">
+                    <% if (artist.lecture){ %>
+                    <li>
+                        <a href="<%= artist.lecture %>" target="blank"><img src="images/play.gif" /></a>
+
+                        <a href="<%= artist.lecture %>" target="blank">Watch Lecture</a>
+                    </li>
+                    <% } if (artist.radio) { %>
+                    <li>
+                        <a href="<%= artist.radio %>" target="blank"><img src="images/play.gif" /></a>
+                        <a href="<%= artist.radio %>" target="blank">RBMA Radio Show</a>
+                    </li>
+                    <% } if (artist.magazine) { %>
+                    <li>
+                        <a href="<%= artist.magazine %>" target="blank"><img src="images/read.gif" /></a>
+                        <a href="<%= artist.magazine %>" target="blank">RBMA Feature</a>
+                    </li>
+                    <% } if (artist.website) { %>
+                    <li>
+                        <a href="<%= artist.website %>" target="blank"><img src="images/www.svg" /></a>
+                        <a href="<%= artist.website %>" target="blank">On The Web</a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div> <!-- END LINKS -->
+            <% }) %> <!-- END EACH -->
+        </div><!-- End artist info -->
 
 
 
-    <div id="info">
+
+    <!-- ARTIST SECTION -->
+    <div id="artist">
+        <span id="artistlink"></span>
+        
+        <div class="artist-list">
+            <h1>Cast</h1>
+            <ul>
+                <% _.each(artists, function(artist){ %>
+                <a data-name="<%= artist.name %>" href="#" data-pic="<%= artist.nickname %>">
+                    <li><%= artist.name %></li>
+                </a>
+                <% }) %>
+            </ul>
+        </div>
+
+        <!-- Picture on rollover -->
+        <div class="artist-images">
+            <% _.each(artists, function(artist){ %>
+            <img data-pic="<%= artist.nickname %>" class="<%= artist.nickname %>"src="<%='/images/artist/' + artist.nickname + '.jpg'%>" alt="<%= artist.name %>">
+            <% }) %>
+        </div>
+    </div> <!-- END ARTIST -->
+
+
+
+
+    <!-- ABOUT SECTION -->
+    <div id="about">
         <span id="infolink"></span>
-        <div class="release-info">
-            <a href="#" class="release-button"><h1>Release Info</h1></a>
-
-            <!-- CITIES -->
-            <h3><a href="#" class="citylink">World premiere</a></h3>
-            <h2><a href="#" class="citylink date">February 17 2014</a></h2>
-            <div class="city-box">
-                <span class="cities">
-                    <li>athens</li>
-                    <li>atlanta</li>
-                    <li>austin</li> 
-                    <li>barcelona</li> 
-                    <li>belfast</li> 
-                    <li>berlin</li> 
-                    <li>bogota</li>
-                    <li>bratislava</li>
-                    <li>brno</li>
-                    <li>brussels</li> 
-                    <li>buenos&nbsp;aires</li> 
-                    <li>cape&nbsp;town</li> 
-                    <li>chapel&nbsp;hill</li> 
-                    <li>chicago</li> 
-                    <li>dallas</li>
-                    <li>detroit</li> 
-                    <li>dublin</li> 
-                    <li>glasgow</li> 
-                    <li>houston</li> 
-                    <li>istanbul</li> 
-                    <li>johannesburg</li> 
-                    <li>kosice</li> 
-                    <li>lausanne</li> 
-                    <li>lisbon</li>
-                    <li>ljubljana</li> 
-                    <li>los&nbsp;angeles</li> 
-                    <li>madrid</li> 
-                    <li>manama</li> 
-                    <li>melbourne</li> 
-                    <li>mexico&nbsp;city</li> 
-                    <li>miami</li> 
-                    <li>montreal</li> 
-                    <li>moscow</li>
-                    <li>mumbai</li> 
-                    <li>nashville</li> 
-                    <li>new&nbsp;orleans</li> 
-                    <li>new&nbsp;york</li> 
-                    <li>oslo</li> 
-                    <li>paris</li> 
-                    <li>prague</li> 
-                    <li>rio&nbsp;de&nbsp;jaineiro</li> 
-                    <li>rome</li> 
-                    <li>saint&nbsp;petersburg</li> 
-                    <li>san&nbsp;francisco</li> 
-                    <li>santiago&nbsp;de&nbsp;chile</li> 
-                    <li>são&nbsp;paulo</li> 
-                    <li>sarajevo</li> 
-                    <li>seoul</li> 
-                    <li>sydney</li>
-                    <li>taipei</li> 
-                    <li>tampa</li> 
-                    <li>tbilisi</li>
-                    <li>tokyo</li> 
-                    <li>toronto</li>
-                    <li>vancouver</li> 
-                    <li>victoria</li> 
-                    <li>vienna</li> 
-                    <li>zagreb</li> 
-                    <li>zurich</li>
-                </span>
-            </div> <!-- END CITY BOX -->
-            
-            <!-- DIGITAL RELEASE -->
-            <h3><a href="#" class="digitallink digital-release">Digital release</a></h3>
-            <h2><a href="#" class="digitallink date">February 18 2014</a></h2>
-            <div class="digital-box">
-                <span class="digital">Stay tuned. Right here.</span>
-            </div>
-        </div> <!-- END RELEASE INFO -->
-
-        <!-- LINK TO ARIST PAGE -->
-        <a href="/artist">
-            <div class="artist-info">
-                <h1 class="featured-artists">Featured Artists</h1>
-                <span id="cycle" class="cycle"></span>
-            </div> <!-- END ARTIST INFO -->
-        </a>
-
         <!--  ABOUT TEXT -->
         <div class="about-section">
             <h1>About</h1>
@@ -192,7 +189,7 @@
         <!-- SOCIAL -->
         <div class="social">
             <!--TWITTER-->
-            <a href="http://twitter.com/home?status=What Difference Does It Make? A feature-length film about making music. Drops Feb 18th. Watch the trailer http://rbma15.com" target="blank"><img class="social-white" src="images/twitter-w.png"></a>
+            <a href="http://twitter.com/home?status=What Difference Does It Make? A feature-length film about making music. Play it. http://rbma15.com" target="blank"><img class="social-white" src="images/twitter-w.png"></a>
 
             <!--FACEBOOK-->
             <a href="#"><img class="social-white fb-button" src="images/facebook-w.png"></a>
@@ -201,10 +198,11 @@
             <!--GOOGLE-->
             <a href="https://plus.google.com/share?url=http://rbma15.com/" target="blank"><img class="social-white" src="images/google-w.png"></a>
         </div><!-- END SOCIAL -->
+    </div> <!-- END ABOUT ID -->
 
 
 
-    </div> <!-- END INFO ID -->
+
 </div> <!-- END WRAPPER -->
 
         
