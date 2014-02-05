@@ -734,7 +734,7 @@ nav{
         max-height: 60%;
         overflow: hidden;
         position: relative;
-        margin-top: 0;
+        margin-top: 20px;
         margin-left: 20%;
         text-align: center;
         img{
@@ -844,6 +844,231 @@ nav{
 
 
 @media only screen and (min-width: 1800px){
+    #artist{
+    position: absolute;
+    top: 300%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+
+    h1, h2, h3, h4, a{
+        color: white;
+    }
+    .artist-list{
+        width: 100%;
+        margin: 0;
+        left: 0;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        z-index: 9;
+        h1{
+            text-align: center;
+            font-size: 6em;
+            width: 30%;
+            margin-left: 35%;
+            margin-right: 35%;
+            border: 2px solid white;
+        }
+        ul{
+            margin: 0;
+            max-width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            list-style-type: none;
+            color: white;
+            padding: 0; 
+            text-align: center;
+            li{
+                display: inline-block;
+                line-height: 1.7;
+                font-size: 2em;
+                margin: 0;
+                padding: 4px;
+                text-transform: uppercase;
+                border: 2px solid transparent;
+                &:hover{
+                    border: 2px solid white;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+    .artist-images{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+#artist-info{
+    position: fixed;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 99999;
+    .go-home{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+        background: url(../../images/close.gif) no-repeat center center;
+        background-size: 100%;
+        &:hover{
+            background: url(../../images/close-black.gif) no-repeat center center;
+            background-size: 100%;
+        }
+    }
+    h1{
+        position: relative;
+        top: 0;
+        padding-bottom: 0;
+        color: black;
+        width: 100%;
+        font-size: 4em;
+        z-index: 4;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+    }
+    p{
+        width: 60%;
+        margin-top: 0;
+        margin-left: 20%;
+        margin-bottom: 75px;
+        line-height: 1.75;
+        z-index: 3;
+        font-family: 'Rail', helvetica, sans-serif;
+        font-weight: 100;
+    }
+    .assets{
+        width: 60%;
+        max-height: 60%;
+        overflow: hidden;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20%;
+        text-align: center;
+        img{
+            margin: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .links{
+        position: relative;
+        width: 100%;
+        right: 0;
+        bottom: 5%;
+        ul{
+            list-style-type: none;
+            text-align: center;
+            padding-top: 50px;
+            li{
+                font-size: 1em;
+                margin: 40px;
+                font-weight: bold;
+                display: inline;
+                a{
+                    color: black;
+                    &:hover{
+                        opacity: 0.6;
+                    }
+                    img{
+                        width: 25px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#about{
+    position: absolute;
+    border-top: 1px solid white;
+    top: 400%;
+    //height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+    h1{
+        text-transform: none;
+        max-width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 5%;
+        border: 2px solid white;
+        font-size: 6em;
+        text-align: center;
+        }
+    p{
+        font-family: 'Rail', helvetica, sans-serif;
+        line-height: 1.7;
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+        font-size: 1.5em;
+        text-align: left;
+        font-weight: 100;
+        a{
+            text-decoration: underline;
+            color: white;
+        }
+    }
+    .logo{
+        width: 80%;
+        margin: 0 10% auto 10%;
+        text-align: center;
+        img{
+            max-width: 80%;
+            width: 20%;
+            margin: 10% 40% 5% 40%;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+    .social{
+        margin-top: 2.5%;
+        margin-bottom: 10%;
+        width: 100%;
+        height: 58px;
+        text-align: center;
+        img{
+            display: inline;
+            width: 30px;
+            height: auto;
+            &.social-white{
+                display: inline-block;
+            }
+        }
+        iframe{
+            display: none;
+            width: 100px !important;
+        }
+    }
+}
    
 
 }
@@ -1029,7 +1254,7 @@ nav{
         max-height: 60%;
         overflow: hidden;
         position: relative;
-        margin-top: 0;
+        margin-top: 20px;
         margin-left: 15%;
         text-align: center;
         img{
@@ -1475,7 +1700,7 @@ nav{
         max-height: 60%;
         overflow: hidden;
         position: relative;
-        margin-top: 0;
+        margin-top: 20px;
         margin-left: 15%;
         text-align: center;
         img{
