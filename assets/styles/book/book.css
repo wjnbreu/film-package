@@ -1151,16 +1151,194 @@ footer {
 
   #tablet-foot {
     display: none; } }
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1025px) {
-  #slider-desk {
-    display: block; } }
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* STYLES GO HERE */ }
-/* iPhone 5 (portrait & landscape)----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-  /* STYLES GO HERE */ }
+
+
+
+@media only screen and (min-device-width : 569px) and (max-device-width : 1024px) and (orientation : landscape){
+  html {
+    overflow-x: hidden !important; }
+
+  body {
+    overflow-x: hidden !important;
+    max-width: 568px; }
+
+  #tablet-title {
+    display: none !important; }
+
+  #slider-desk, .owl-carousel {
+    display: none !important; }
+
+  #arrows {
+    display: none !important; }
+
+  #mobi-info {
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Clan', helvetica, sans-serif;
+    text-transform: uppercase;
+    z-index: 4;
+    display: block; }
+
+    #mobi-info h2{
+      display: none;
+      font-weight: 800;
+      border-bottom: 2px solid black;
+    }
+    #mobi-info .mobi-info {
+      position: absolute;
+      left: 0;
+      background: url(../../images/book/mobi-info.png) no-repeat center center;
+      background-size: 30%;
+      width: 100px;
+      height: 50px;
+      background-color: white; }
+
+    #mobi-info p {
+      display: none; }
+
+  .head-title {
+    font-family: 'Clan', helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold; }
+
+  #mobil-slider {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px; }
+    #mobil-slider img {
+      max-width: 30%;
+      height: auto; }
+    #mobil-slider h1 {
+      font-family: 'Clan', helvetica, sans-serif;
+      text-transform: uppercase;
+      font-weight: 800; }
+    #mobil-slider p {
+      color: black;
+      font-family: 'Clan', helvetica, sans-serif;
+      font-weight: normal;
+      margin: 5% 15% 5% 15%;
+      font-size: 1.2em;
+      text-transform: uppercase; }
+    #mobil-slider a {
+      text-align: center; }
+      #mobil-slider a button {
+        width: 50%;
+        border: 1px solid black;
+        color: black;
+        background-color: white;
+        font-family: 'Clan', helvetica, sans-serif;
+        font-size: 1.5em; }
+        #mobil-slider a button:hover {
+          color: white;
+          background-color: black; }
+
+  #mobil-conversations {
+    display: block;
+    font-family: 'Clan', helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    border-bottom: 1px solid black; }
+    #mobil-conversations h1 {
+      font-family: 'Clan', helvetica, sans-serif;
+      font-weight: 800;
+      font-size: 3em;
+      text-align: center; }
+    #mobil-conversations .mobi {
+      max-width: 80%;
+      margin: 10px 10% 40px 10%;
+      position: relative; }
+      #mobil-conversations .mobi img {
+        max-width: 100%;
+        padding-bottom: 5px; }
+      #mobil-conversations .mobi h1 {
+        font-family: 'Clan', helvetica, sans-serif;
+        font-weight: 800;
+        font-size: 1.5em;
+        width: 100%;
+        line-height: 1;
+        text-align: center;
+        margin: 0; }
+      #mobil-conversations .mobi p {
+        position: relative;
+        width: 100%;
+        line-height: 1.5;
+        background-color: white;
+        color: black;
+        text-align: center;
+        text-transform: none; }
+      #mobil-conversations .mobi.footer {
+        text-align: center; }
+        #mobil-conversations .mobi.footer a {
+          text-align: center; }
+          #mobil-conversations .mobi.footer a button {
+            width: 60%;
+            border: 1px solid black;
+            color: white;
+            background-color: black;
+            font-family: 'Clan', helvetica, sans-serif;
+            font-size: 2em; }
+            #mobil-conversations .mobi.footer a button:hover {
+              color: black;
+              background-color: white; }
+        #mobil-conversations .mobi.footer img {
+          max-width: 30%; }
+        #mobil-conversations .mobi.footer p {
+          font-family: 'Clan', helvetica, sans-serif;
+          border: none;
+          font-weight: 800;
+          font-size: 1.2em;
+          text-transform: uppercase;
+          margin-top: 5px;
+          margin-bottom: 10%;
+          background-color: transparent; }
+
+  #left-nav {
+    display: none !important; }
+
+  #center-nav {
+    display: none !important; }
+
+  #right-nav {
+    display: none !important; }
+
+  #tablet-foot {
+    display: none !important; }
+
+  footer {
+    display: none !important; }
+
+  .mobi-social {
+    text-align: center;
+    width: 100%;}
+    .mobi-social a img {
+      width: 30px;
+      padding-left: 10px;
+      padding-right: 10px; }
+    .mobi-social iframe {
+      display: none; }
+
+  #tablet-foot {
+    display: none; } }
+
+
+
+}
+
+
+
 /* ==========================================================================
   CAROUSEL EXTERNAL STYLES
   ========================================================================== */

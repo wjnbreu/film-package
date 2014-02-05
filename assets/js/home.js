@@ -88,10 +88,10 @@ $(document).ready(function() {
 
 	//REMOVES VIDEO BACKGROUND FOR MOBILE
 	function removeVideo(windowsize){
-		if (windowsize < 800){
+		if (windowsize <= 1024){
 			$('#film').find('#loop').hide();
 		}
-		if (windowsize > 800){
+		if (windowsize > 1024){
 			if ($('#loop').hasClass('video-playing')){
 				return;
 			}
