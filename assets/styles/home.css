@@ -464,6 +464,7 @@ nav .nav-top-center li a.scroll:hover {
   width: 40%;
   margin-left: 30%;
   margin-right: 30%;
+  margin-top: 10%;
 }
 #title #title-text {
   margin-top: 10%;
@@ -502,7 +503,7 @@ nav .nav-top-center li a.scroll:hover {
   text-align: center;
 }
 #pointer img {
-  width: 50%;
+  width: 40%;
   -webkit-animation: "shake" 0.5s ease 0 infinite alternate;
   -moz-animation: "shake" 0.5s ease 0 infinite alternate;
   -o-animation: shake 0.5s ease 0 infinite alternate;
@@ -1457,7 +1458,7 @@ nav .nav-top-center li a.scroll:hover {
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 25%;
+    margin-top: 30%;
   }
 
   #pointer {
@@ -2351,7 +2352,7 @@ nav .nav-top-center li a.scroll:hover {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 30%;
+    margin-top: 35%;
   }
 
   #pointer {

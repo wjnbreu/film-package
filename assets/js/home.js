@@ -180,7 +180,7 @@ $(document).ready(function() {
 	function smoothScroll(clk){
 		if (clk.hasClass('filmlink')){
 			$('#wrapper').animate({
-				scrollTop: win_height + 10
+				scrollTop: win_height
 			},scrollSpeed);
 		}
 
