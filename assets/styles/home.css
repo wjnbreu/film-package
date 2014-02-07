@@ -38,7 +38,7 @@
 
 @font-face {
   font-family: 'Rail';
-  src: url("../font/NewRailAlphabet-White.otf") format("opentype");
+  src: url("../font/NewRailAlphabet-Light.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
@@ -518,7 +518,6 @@ nav .nav-top-center li a.scroll:hover {
   height: 100%;
   border: 0;
   background-color: black;
-  background: url(../../images/countdown-title.jpg) no-repeat top center;
   background-size: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -650,15 +649,15 @@ nav .nav-top-center li a.scroll:hover {
   margin-right: 10%;
   list-style-type: none;
   color: white;
-  padding: 0;
   text-align: center;
 }
 #artist .artist-list ul li {
   display: inline-block;
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 1.4em;
   margin: 0;
-  padding: 2px;
+  padding-left: 9px;
+  padding-right: 9px;
   text-transform: uppercase;
   border: 2px solid transparent;
 }

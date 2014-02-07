@@ -41,7 +41,7 @@
 
 @font-face{
     font-family: 'Rail';
-    src: url("../font/NewRailAlphabet-White.otf") format("opentype");
+    src: url("../font/NewRailAlphabet-Light.otf") format("opentype");
     font-weight: 100;
     font-style: normal;
 }
@@ -514,7 +514,6 @@ nav{
     height: 100%;
     border: 0;
     background-color: black;
-    background: url(../../images/countdown-title.jpg) no-repeat top center;
     background-size: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -574,7 +573,6 @@ nav{
         }
         h3{
             margin-top: 2.5%;
-            //color: red;
             text-transform: uppercase;
         }
         img{
@@ -650,14 +648,15 @@ nav{
             margin-right: 10%;
             list-style-type: none;
             color: white;
-            padding: 0; 
+            //padding: 0; 
             text-align: center;
             li{
                 display: inline-block;
-                line-height: 1.7;
+                line-height: 1.6;
                 font-size: 1.4em;
                 margin: 0;
-                padding: 2px;
+                padding-left: 9px;
+                padding-right: 9px;
                 text-transform: uppercase;
                 border: 2px solid transparent;
                 &:hover{
