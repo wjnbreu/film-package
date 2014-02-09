@@ -115,6 +115,16 @@ h1, h2, h3{
     letter-spacing: 3px;
 }
 
+iframe{
+    .floodlight{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: none;
+        z-index: -1;
+    }
+}
+
    #wrapper{
     position: absolute;
     top: 0;
