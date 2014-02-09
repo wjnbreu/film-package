@@ -126,6 +126,14 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+iframe .floodlight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  z-index: -1;
+}
+
 a {
   outline: none;
 }
@@ -1490,7 +1498,6 @@ nav .nav-top-center li a.scroll:hover {
     -ms-background-size: cover;
     background-size: cover;
     color: white;
-    border-top: 1px solid white;
     text-align: center;
   }
   #countdown-container h1 {
@@ -2742,7 +2749,6 @@ nav .nav-top-center li a.scroll:hover {
     -o-background-size: cover;
     background-size: cover;
     color: white;
-    border-top: 1px solid white;
     text-align: center;
   }
   #countdown-container h1 {
