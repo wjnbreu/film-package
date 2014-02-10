@@ -634,6 +634,7 @@ nav .nav-top-center li a.scroll:hover {
 }
 #artist .artist-list {
   width: 100%;
+  max-width: 100%;
   margin: 0;
   left: 0;
   text-align: center;
@@ -650,10 +651,9 @@ nav .nav-top-center li a.scroll:hover {
   border: 2px solid white;
 }
 #artist .artist-list ul {
-  margin: 0;
-  max-width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  max-width: 100%;
+  width: 90%;
+  margin-left: 3%;
   list-style-type: none;
   color: white;
   text-align: center;
@@ -709,7 +709,9 @@ nav .nav-top-center li a.scroll:hover {
   background-size: 100%;
 }
 #artist-info .go-home:hover {
-  background: url(../../images/close-black.gif) no-repeat center center;
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  filter: invert(100%);
   background-size: 100%;
 }
 #artist-info h1 {
@@ -849,9 +851,6 @@ nav .nav-top-center li a.scroll:hover {
 @media only screen and (min-width: 1500px) {
   #artist {
     position: absolute;
-    top: 300%;
-    height: 100%;
-    width: 100%;
   }
   #artist .artist-list {
     width: 100%;
@@ -863,19 +862,6 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 1.6em;
     padding-left: 15px;
     padding-right: 15px;
-  }
-  #artist .artist-images {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    z-index: 0;
-  }
-  #artist .artist-images img {
-    width: 100%;
   }
 
   #artist-info {
@@ -1261,7 +1247,7 @@ nav .nav-top-center li a.scroll:hover {
     width: 100px !important;
   }
 }
-@media only screen and (max-width: 1000px), screen and (max-device-width: 1000px) {
+@media only screen and (max-width: 1280px), screen and (max-device-width: 1280px) {
   #title {
     position: fixed;
     z-index: -1;
@@ -1333,14 +1319,15 @@ nav .nav-top-center li a.scroll:hover {
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
+    overflow-y: hidden;
   }
   #artist h1, #artist h2, #artist h3, #artist h4, #artist a {
     color: white;
   }
   #artist .artist-list {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
     z-index: 2;
   }
@@ -1355,12 +1342,13 @@ nav .nav-top-center li a.scroll:hover {
   #artist .artist-list ul {
     list-style-type: none;
     color: white;
+    max-width: 100%;
   }
   #artist .artist-list ul li {
     display: inline;
     padding: 5px;
     line-height: 1.7;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-transform: uppercase;
     border: 2px solid transparent;
   }
@@ -1539,7 +1527,145 @@ nav .nav-top-center li a.scroll:hover {
     width: 100px !important;
   }
 }
-@media only screen and (max-width: 800px), screen and (max-device-width: 800px) {
+@media only screen and (max-width: 1050px) {
+  #artist {
+    position: absolute;
+    top: 300%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+  }
+  #artist h1, #artist h2, #artist h3, #artist h4, #artist a {
+    color: white;
+  }
+  #artist .artist-list {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    left: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+  }
+  #artist .artist-list h1 {
+    text-align: center;
+    font-size: 4em;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: 2px solid white;
+  }
+  #artist .artist-list ul {
+    margin: 0;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    list-style-type: none;
+    color: white;
+    text-align: center;
+  }
+  #artist .artist-list ul li {
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 1.1em;
+    margin: 0;
+    padding-left: 9px;
+    padding-right: 9px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+  }
+  #artist .artist-list ul li:hover {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+  }
+  #artist .artist-images {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+  #artist .artist-images img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  #artist {
+    position: absolute;
+    top: 300%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+  }
+  #artist h1, #artist h2, #artist h3, #artist h4, #artist a {
+    color: white;
+  }
+  #artist .artist-list {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    left: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+  }
+  #artist .artist-list h1 {
+    text-align: center;
+    font-size: 4em;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    border: 2px solid white;
+  }
+  #artist .artist-list ul {
+    margin: 0;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    list-style-type: none;
+    color: white;
+    text-align: center;
+  }
+  #artist .artist-list ul li {
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 1em;
+    margin: 0;
+    padding-left: 9px;
+    padding-right: 9px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+  }
+  #artist .artist-list ul li:hover {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+  }
+  #artist .artist-images {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+  #artist .artist-images img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
   #nav-burger {
     display: none !important;
   }
@@ -1788,6 +1914,7 @@ nav .nav-top-center li a.scroll:hover {
     border: 2px solid white;
   }
   #artist .artist-list ul {
+    text-align: center;
     list-style-type: none;
     color: white;
   }
@@ -1795,7 +1922,7 @@ nav .nav-top-center li a.scroll:hover {
     display: inline;
     padding: 5px;
     line-height: 1.7;
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-transform: uppercase;
     border: 2px solid transparent;
   }
@@ -2994,6 +3121,7 @@ nav .nav-top-center li a.scroll:hover {
   }
   #artist .artist-list {
     width: 100%;
+    max-width: 100%;
     margin: 0;
     margin-top: 0;
     text-align: center;
@@ -3003,6 +3131,7 @@ nav .nav-top-center li a.scroll:hover {
     text-align: center;
     font-size: 1.5em;
     width: 30%;
+    max-width: 100%;
     margin-left: 35%;
     margin-right: 35%;
     border: 2px solid white;
@@ -3011,13 +3140,18 @@ nav .nav-top-center li a.scroll:hover {
     list-style-type: none;
     color: white;
     max-width: 100%;
-    margin-left: 0;
+    margin: 0;
+    text-align: center;
   }
   #artist .artist-list ul li {
+    text-align: center;
     display: block;
     padding: 2px;
-    line-height: 0.8;
-    font-size: 1em;
+    max-width: 50%;
+    width: 50%;
+    margin-left: 16%;
+    line-height: 1;
+    font-size: 0.8em;
     text-transform: uppercase;
     border: 2px solid transparent;
   }

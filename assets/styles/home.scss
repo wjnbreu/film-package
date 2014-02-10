@@ -637,6 +637,7 @@ nav{
     }
     .artist-list{
         width: 100%;
+        max-width: 100%;
         margin: 0;
         left: 0;
         text-align: center;
@@ -652,10 +653,9 @@ nav{
             border: 2px solid white;
         }
         ul{
-            margin: 0;
-            max-width: 80%;
-            margin-left: 10%;
-            margin-right: 10%;
+            max-width: 100%;
+            width: 90%;
+            margin-left: 3%;
             list-style-type: none;
             color: white;
             //padding: 0; 
@@ -712,7 +712,9 @@ nav{
         background: url(../../images/close.gif) no-repeat center center;
         background-size: 100%;
         &:hover{
-            background: url(../../images/close-black.gif) no-repeat center center;
+            -webkit-filter: invert(100%);
+            -moz-filter: invert(100%);
+            filter: invert(100%);
             background-size: 100%;
         }
     }
@@ -856,10 +858,6 @@ nav{
 @media only screen and (min-width: 1500px){
     #artist{
     position: absolute;
-    top: 300%;
-    height: 100%;
-    width: 100%;
-
 
     .artist-list{
         width: 100%;
@@ -870,19 +868,6 @@ nav{
                 padding-left: 15px;
                 padding-right: 15px;
             }
-        }
-    }
-    .artist-images{
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        overflow: hidden;
-        z-index: 0;
-        img{
-            width: 100%;
         }
     }
 }
@@ -1046,6 +1031,14 @@ nav{
    
 
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -1287,7 +1280,7 @@ nav{
 
 
 
-@media only screen and (max-width: 1000px), screen and (max-device-width: 1000px){
+@media only screen and (max-width: 1280px), screen and (max-device-width: 1280px){
  #title{
     position: fixed;
     z-index: -1;
@@ -1361,13 +1354,14 @@ nav{
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
+    overflow-y: hidden;
     h1, h2, h3, h4, a{
         color: white;
     }
     .artist-list{
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
         text-align: center;
         z-index: 2;
         h1{
@@ -1381,11 +1375,12 @@ nav{
         ul{
             list-style-type: none;
             color: white;
+            max-width: 100%;
             li{
                 display: inline;
                 padding: 5px;
                 line-height: 1.7;
-                font-size: 1.2em;
+                font-size: 1.3em;
                 text-transform: uppercase;
                 border: 2px solid transparent;
                 &:hover{
@@ -1575,7 +1570,160 @@ nav{
 
 
 
-@media only screen and (max-width: 800px), screen and (max-device-width: 800px){
+
+
+@media only screen and (max-width: 1050px){
+    #artist{
+    position: absolute;
+    top: 300%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+
+    h1, h2, h3, h4, a{
+        color: white;
+    }
+    .artist-list{
+        width: 90%;
+        margin: 0 5% 0 5%;
+        left: 0;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        z-index: 9;
+        h1{
+            text-align: center;
+            font-size: 4em;
+            width: 30%;
+            margin-left: 35%;
+            margin-right: 35%;
+            border: 2px solid white;
+        }
+        ul{
+            margin: 0;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            list-style-type: none;
+            color: white;
+            //padding: 0; 
+            text-align: center;
+            li{
+                display: inline-block;
+                line-height: 1.2;
+                font-size: 1.1em;
+                margin: 0;
+                padding-left: 9px;
+                padding-right: 9px;
+                text-transform: uppercase;
+                border: 2px solid transparent;
+                &:hover{
+                    border: 2px solid white;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+    .artist-images{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+}
+
+
+@media only screen and (max-width: 950px){
+    #artist{
+    position: absolute;
+    top: 300%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Rail', helvetica, sans-serif;
+    margin: 0;
+
+    h1, h2, h3, h4, a{
+        color: white;
+    }
+    .artist-list{
+        width: 90%;
+        margin: 0 5% 0 5%;
+        left: 0;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        z-index: 9;
+        h1{
+            text-align: center;
+            font-size: 4em;
+            width: 30%;
+            margin-left: 35%;
+            margin-right: 35%;
+            border: 2px solid white;
+        }
+        ul{
+            margin: 0;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            list-style-type: none;
+            color: white;
+            //padding: 0; 
+            text-align: center;
+            li{
+                display: inline-block;
+                line-height: 1.2;
+                font-size: 1em;
+                margin: 0;
+                padding-left: 9px;
+                padding-right: 9px;
+                text-transform: uppercase;
+                border: 2px solid transparent;
+                &:hover{
+                    border: 2px solid white;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+    .artist-images{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+}
+
+
+
+
+
+@media only screen and (max-width: 800px){
     #nav-burger{
     display: none !important;
    }
@@ -1834,13 +1982,14 @@ nav{
             border: 2px solid white;
         }
         ul{
+            text-align: center;
             list-style-type: none;
             color: white;
             li{
                 display: inline;
                 padding: 5px;
                 line-height: 1.7;
-                font-size: 1.3em;
+                font-size: 1.1em;
                 text-transform: uppercase;
                 border: 2px solid transparent;
                 &:hover{
@@ -2913,13 +3062,6 @@ nav{
 
 
 
-
-
-
-
-
-
-
 //IPHONE
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px), screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
 
@@ -3173,6 +3315,7 @@ nav{
     }
     .artist-list{
         width: 100%;
+        max-width: 100%;
         margin: 0;
         margin-top: 0;
         text-align: center;
@@ -3182,6 +3325,7 @@ nav{
             text-align: center;
             font-size:1.5em;
             width: 30%;
+            max-width: 100%;
             margin-left: 35%;
             margin-right: 35%;
             border: 2px solid white;
@@ -3190,12 +3334,17 @@ nav{
             list-style-type: none;
             color: white;
             max-width: 100%;
-            margin-left: 0;
+            margin: 0;
+            text-align: center;
             li{
+                text-align: center;
                 display: block;
                 padding: 2px;
-                line-height: 0.8;
-                font-size: 1em;
+                max-width: 50%;
+                width: 50%;
+                margin-left: 16%;
+                line-height: 1;
+                font-size: 0.8em;
                 text-transform: uppercase;
                 border: 2px solid transparent;
                 &:hover{
