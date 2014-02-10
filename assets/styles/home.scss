@@ -2335,7 +2335,6 @@ nav{
     z-index: 99;
     font-size: 1em;
     text-transform: uppercase;
-    color: red;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -2414,6 +2413,7 @@ nav{
 }
 
 #countdown-container{
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
