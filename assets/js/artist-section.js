@@ -11,10 +11,12 @@ var links = $('#artist-info').find('.links ul');
 var cast = $('#insert-name').text();
 var title = $('#insert-name');
 
-// 	images.imagesLoaded( function() {
-// 		alert('loade');
-// });
-
+images.imagesLoaded(function(){
+	images.each(function(){
+		$(this).removeClass('hidden');
+	});
+	setDisplayOn();
+});
 
 
 function setDisplayOn(){
@@ -24,12 +26,12 @@ function setDisplayOn(){
 }
 
 
+
 function hideImages(){
 	images.each(function(){
 		$(this).addClass('hidden');
 	});
 	//get images ready to load
-	setDisplayOn();
 }
 
 
