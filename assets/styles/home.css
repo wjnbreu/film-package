@@ -744,6 +744,7 @@ nav .nav-top-center li a.scroll:hover {
   text-align: center;
   background-color: black;
   background: url(../../images/loader.gif) no-repeat top center;
+  background-size: 50%;
 }
 #artist-info .assets img {
   margin: 0;
