@@ -32,7 +32,6 @@ $(document).ready(function() {
 	'Young Guru'];
 
 
-
 	//change out autoplay=none to autoplay=1 on click
 	function swapVideo(vid){
 		var height = measureVideo();

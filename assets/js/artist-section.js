@@ -11,6 +11,11 @@ var links = $('#artist-info').find('.links ul');
 var cast = $('#insert-name').text();
 var title = $('#insert-name');
 
+// 	images.imagesLoaded( function() {
+// 		alert('loade');
+// });
+
+
 
 function setDisplayOn(){
 	$('#artist').find('.artist-images').css({
