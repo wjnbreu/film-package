@@ -2332,10 +2332,10 @@ nav .nav-top-center li a.scroll:hover {
     background-size: cover;
   }
   #title img {
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 35%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30%;
   }
 
   #pointer {
