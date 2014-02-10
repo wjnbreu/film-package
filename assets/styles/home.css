@@ -743,6 +743,7 @@ nav .nav-top-center li a.scroll:hover {
   margin-left: 20%;
   text-align: center;
   background-color: black;
+  background: url(../../images/loading.gif) no-repeat center center;
 }
 #artist-info .assets img {
   margin: 0;
