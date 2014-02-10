@@ -646,6 +646,7 @@ nav .nav-top-center li a.scroll:hover {
   text-align: center;
   font-size: 4em;
   width: 30%;
+  text-transform: none;
   margin-left: 35%;
   margin-right: 35%;
   border: 2px solid white;
@@ -1232,13 +1233,7 @@ nav .nav-top-center li a.scroll:hover {
     top: 300%;
     height: 100%;
     width: 100%;
-    background-color: black;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
-  }
-  #artist h1, #artist h2, #artist h3, #artist h4, #artist a {
-    color: white;
   }
   #artist .artist-list {
     width: 100%;
@@ -1247,82 +1242,34 @@ nav .nav-top-center li a.scroll:hover {
     z-index: 2;
   }
   #artist .artist-list h1 {
-    text-align: center;
     font-size: 3em;
     width: 30%;
     margin-left: 35%;
     margin-right: 35%;
-    border: 2px solid white;
-  }
-  #artist .artist-list ul {
-    text-align: center;
-    list-style-type: none;
-    color: white;
   }
   #artist .artist-list ul li {
     display: inline;
     padding: 5px;
     line-height: 1.7;
     font-size: 1.1em;
-    text-transform: uppercase;
-    border: 2px solid transparent;
-  }
-  #artist .artist-list ul li:hover {
-    border: 2px solid white;
-    background-color: black;
-    color: white;
   }
   #artist .artist-images {
     display: none !important;
   }
 
-  #artist-info {
-    position: fixed;
-    left: 100%;
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: white;
-    z-index: 99999;
-  }
-  #artist-info .go-home {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    opacity: 1;
-    background: url(../../images/close.gif) no-repeat center center;
-    background-size: 100%;
-  }
   #artist-info .go-home:hover {
-    background: url(../../images/close-black.gif) no-repeat center center;
-    background-size: 100%;
+    -webkit-filter: invert(100%);
   }
   #artist-info h1 {
-    position: relative;
-    top: 0;
-    padding-bottom: 0;
-    color: black;
     width: 100%;
     font-size: 3em;
-    z-index: 4;
-    text-transform: uppercase;
-    line-height: 1;
-    text-align: center;
   }
   #artist-info p {
     width: 70%;
-    margin-top: 0;
     margin-left: 15%;
     margin-bottom: 75px;
     line-height: 1.75;
-    z-index: 3;
     font-size: 1em;
-    font-family: 'Rail', helvetica, sans-serif;
-    font-weight: 100;
   }
   #artist-info .assets {
     width: 70%;
@@ -1331,12 +1278,6 @@ nav .nav-top-center li a.scroll:hover {
     position: relative;
     margin-top: 20px;
     margin-left: 15%;
-    text-align: center;
-  }
-  #artist-info .assets img {
-    margin: 0;
-    width: 100%;
-    height: auto;
   }
   #artist-info .links {
     position: relative;
@@ -1370,66 +1311,20 @@ nav .nav-top-center li a.scroll:hover {
     border-top: 1px solid white;
     top: 400%;
     width: 100%;
-    background-color: black;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
   }
   #about h1 {
-    text-transform: none;
     max-width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 5%;
-    border: 2px solid white;
+    margin: 5% 30% auto 30%;
     font-size: 3em;
-    text-align: center;
   }
   #about p {
-    font-family: 'Rail', helvetica, sans-serif;
     line-height: 1.7;
     width: 80%;
     margin-right: 10%;
     margin-left: 10%;
     font-size: 1.2em;
     text-align: left;
-    font-weight: 100;
-  }
-  #about p a {
-    text-decoration: underline;
-    color: white;
-  }
-  #about .logo {
-    width: 80%;
-    margin: 0 10% auto 10%;
-    text-align: center;
-  }
-  #about .logo img {
-    max-width: 80%;
-    width: 20%;
-    margin: 10% 40% 5% 40%;
-  }
-  #about .logo img:hover {
-    opacity: 0.7;
-  }
-  #about .social {
-    margin-top: 2.5%;
-    margin-bottom: 10%;
-    width: 100%;
-    height: 58px;
-    text-align: center;
-  }
-  #about .social img {
-    display: inline;
-    width: 30px;
-    height: auto;
-  }
-  #about .social img.social-white {
-    display: inline-block;
-  }
-  #about .social iframe {
-    display: none;
-    width: 100px !important;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1448,14 +1343,6 @@ nav .nav-top-center li a.scroll:hover {
     height: 100px;
     z-index: 99;
     font-size: 1.5em;
-    text-transform: uppercase;
-    color: red;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -ms-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    letter-spacing: 3px;
   }
   nav .nav-top-left {
     width: 33.3333%;
@@ -1466,24 +1353,11 @@ nav .nav-top-center li a.scroll:hover {
   }
   nav .nav-top-left li {
     float: left;
-    font-family: 'Clan', helvetica, sans-serif;
     font-weight: 800;
     text-transform: uppercase;
     padding-left: 20px;
     padding-top: 15px;
     list-style-type: none;
-  }
-  nav .nav-top-left li a.scroll {
-    text-decoration: none;
-    color: white;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -ms-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-  }
-  nav .nav-top-left li a.scroll:hover {
-    color: gray;
   }
   nav .nav-top-center {
     width: 33.3333%;
@@ -2481,6 +2355,7 @@ nav .nav-top-center li a.scroll:hover {
     list-style-type: none;
     color: white;
     max-width: 100%;
+    width: 100%;
     margin: 0;
     text-align: center;
   }
@@ -2488,9 +2363,9 @@ nav .nav-top-center li a.scroll:hover {
     text-align: center;
     display: block;
     padding: 2px;
-    max-width: 50%;
-    width: 50%;
-    margin-left: 16%;
+    max-width: 60%;
+    width: 60%;
+    margin-left: 20%;
     line-height: 1;
     font-size: 0.8em;
     text-transform: uppercase;

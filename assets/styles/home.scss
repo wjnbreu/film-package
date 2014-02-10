@@ -652,6 +652,7 @@ nav{
             text-align: center;
             font-size: 4em;
             width: 30%;
+            text-transform: none;
             margin-left: 35%;
             margin-right: 35%;
             border: 2px solid white;
@@ -1300,42 +1301,24 @@ nav{
     top: 300%;
     height: 100%;
     width: 100%;
-    background-color: black;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
-    h1, h2, h3, h4, a{
-        color: white;
-    }
     .artist-list{
         width: 100%;
         margin: 0;
         text-align: center;
         z-index: 2;
         h1{
-            text-align: center;
             font-size: 3em;
             width: 30%;
             margin-left: 35%;
             margin-right: 35%;
-            border: 2px solid white;
         }
         ul{
-            text-align: center;
-            list-style-type: none;
-            color: white;
             li{
                 display: inline;
                 padding: 5px;
                 line-height: 1.7;
-                font-size: 1.1em;
-                text-transform: uppercase;
-                border: 2px solid transparent;
-                &:hover{
-                    border: 2px solid white;
-                    background-color: black;
-                    color: white;
-                }
+                font-size: 1.1em;   
             }
         }
     }
@@ -1345,52 +1328,24 @@ nav{
 }
 
 #artist-info{
-    position: fixed;
-    left: 100%;
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: white;
-    z-index: 99999;
     .go-home{
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 50px;
-        height: 50px;
-        opacity: 1;
-        background: url(../../images/close.gif) no-repeat center center;
-        background-size: 100%;
         &:hover{
-            background: url(../../images/close-black.gif) no-repeat center center;
-            background-size: 100%;
+            -webkit-filter: invert(100%);
         }
     }
+
     h1{
-        position: relative;
-        top: 0;
-        padding-bottom: 0;
-        color: black;
         width: 100%;
         font-size: 3em;
-        z-index: 4;
-        text-transform: uppercase;
-        line-height: 1;
-        text-align: center;
     }
     p{
         width: 70%;
-        margin-top: 0;
         margin-left: 15%;
         margin-bottom: 75px;
         line-height: 1.75;
-        z-index: 3;
         font-size: 1em;
-        font-family: 'Rail', helvetica, sans-serif;
-        font-weight: 100;
     }
+    //IMAGE
     .assets{
         width: 70%;
         max-height: 60%;
@@ -1398,13 +1353,8 @@ nav{
         position: relative;
         margin-top: 20px;
         margin-left: 15%;
-        text-align: center;
-        img{
-            margin: 0;
-            width: 100%;
-            height: auto;
-        }
     }
+    //CHANGE FROM INLINE TO BLOCK
     .links{
         position: relative;
         width: 100%;
@@ -1434,75 +1384,28 @@ nav{
     }
 }
 
+
+
 #about{
     position: absolute;
     border-top: 1px solid white;
     top: 400%;
-    //height: 100%;
     width: 100%;
-    background-color: black;
-    color: white;
-    font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
     h1{
-        text-transform: none;
         max-width: 40%;
-        margin-left: 30%;
-        margin-right: 30%;
-        margin-top: 5%;
-        border: 2px solid white;
+        margin: 5% 30% auto 30%;
         font-size: 3em;
-        text-align: center;
         }
     p{
-        font-family: 'Rail', helvetica, sans-serif;
         line-height: 1.7;
         width: 80%;
         margin-right: 10%;
         margin-left: 10%;
         font-size: 1.2em;
         text-align: left;
-        font-weight: 100;
-        a{
-            text-decoration: underline;
-            color: white;
-        }
-    }
-    .logo{
-        width: 80%;
-        margin: 0 10% auto 10%;
-        text-align: center;
-        img{
-            max-width: 80%;
-            width: 20%;
-            margin: 10% 40% 5% 40%;
-            &:hover{
-                opacity: 0.7;
-            }
-        }
-    }
-    .social{
-        margin-top: 2.5%;
-        margin-bottom: 10%;
-        width: 100%;
-        height: 58px;
-        text-align: center;
-        img{
-            display: inline;
-            width: 30px;
-            height: auto;
-            &.social-white{
-                display: inline-block;
-            }
-        }
-        iframe{
-            display: none;
-            width: 100px !important;
-        }
     }
 }
-
-
 
 }
 
@@ -1533,14 +1436,6 @@ nav{
     height: 100px;
     z-index: 99;
     font-size: 1.5em;
-    text-transform: uppercase;
-    color: red;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -ms-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    letter-spacing: 3px;
     .nav-top-left{
         width: 33.3333%;
         height: 100px;
@@ -1549,24 +1444,11 @@ nav{
         top: 0;
         li{
             float: left;
-            font-family: 'Clan', helvetica, sans-serif;
             font-weight: 800;
             text-transform: uppercase;
             padding-left: 20px;
             padding-top: 15px;
             list-style-type: none;
-            a.scroll{
-                text-decoration: none;
-                color: white;
-                -webkit-transition: all .2s ease-in-out;
-                -moz-transition: all .2s ease-in-out;
-                -o-transition: all .2s ease-in-out;
-                -ms-transition: all .2s ease-in-out;
-                transition: all .2s ease-in-out;
-                &:hover{
-                    color: gray;
-                }
-            }
 
         }
     }
@@ -2673,15 +2555,17 @@ nav{
             list-style-type: none;
             color: white;
             max-width: 100%;
+            width: 100%;
             margin: 0;
             text-align: center;
+
             li{
                 text-align: center;
                 display: block;
                 padding: 2px;
-                max-width: 50%;
-                width: 50%;
-                margin-left: 16%;
+                max-width: 60%;
+                width: 60%;
+                margin-left: 20%;
                 line-height: 1;
                 font-size: 0.8em;
                 text-transform: uppercase;
