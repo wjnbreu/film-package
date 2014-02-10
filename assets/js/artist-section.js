@@ -21,12 +21,12 @@ function setDisplayOn(){
 }
 
 
-
 function hideImages(){
 	images.each(function(){
 		$(this).addClass('hidden');
 	});
-	
+	//get images ready to load
+	setDisplayOn();
 }
 
 
@@ -125,14 +125,6 @@ artist.on('mouseleave', function(){
 
 //hide all images on load, makes callback to set images to display block
 hideImages();
-
-//TURN IMAGES BACK ON
-images.imagesLoaded(function(){
-	images.each(function(){
-		$(this).removeClass('hidden');
-	});
-	setDisplayOn();
-});
 
 
 });
