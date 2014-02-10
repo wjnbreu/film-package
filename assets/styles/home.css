@@ -126,14 +126,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-iframe .floodlight {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: none;
-  z-index: -1;
-}
-
 a {
   outline: none;
 }
