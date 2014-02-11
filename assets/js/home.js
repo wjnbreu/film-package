@@ -101,6 +101,19 @@ $(document).ready(function() {
 		}
 	}
 
+	//only appends iframe okfocus animation when device is not mobile
+	function insertAnimation(){
+		//dont insert animation on mobile devices
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			return;
+		}
+		//only insert on desktop
+		else{
+			$('#countdown-container').html('<iframe src="http://okfoc.us/rbma-countdown/dist/index-unbranded.html" frameBorder="0" border="0" width="100%" height="100%"></iframe>');
+		}
+		
+	}
+
 
 
 	//hide all main navigation items, replace with arrow.
@@ -176,6 +189,7 @@ $(document).ready(function() {
 		}
 	}
 	
+	//grabs class of link and scrolls accordingly
 	function smoothScroll(clk){
 		if (clk.hasClass('filmlink')){
 			$('#wrapper').animate({
@@ -209,60 +223,11 @@ $(document).ready(function() {
 	}
 
 
-
+	//used for video
 	function getElementLeftTop(thiselement){
 		var rect = thiselement.getBoundingClientRect();
 		return [rect.left];
 	}
-
-
-
-
-	//STARTUP EVENT LISTENERS AND FUNCTIONS
-	
-	//slide out facebook like button on click
-	$('#about').find('.social .fb-button').on('click', function(e){
-		e.preventDefault();
-		$(this).parent().parent().find('iframe').slideToggle('slow');
-	});
-
-	//make sure youtube html is empty on page load
-	$('#film').find('#embed').empty();
-
-
-	//on nav bar click, grab link class and pass to smooth scroll
-	$('nav').on('click', 'a.scroll', function(){
-		smoothScroll($(this));
-	});
-
-	$('#nav-bottom').on('click', 'a.scroll', function(){
-		smoothScroll($(this));
-	});
-
-	//call remove video function. will only remove loop if on device
-	removeVideo(win_width);
-
-	//on scroll, change colors of nav items accordingly
-	$('#wrapper').scroll(function(){
-		if (win_width > 1024){
-			navColors();
-		}
-		else{
-			return;
-		}
-		
-	});
-
-	//retrigger scroll position colors on resize
-	$(window).resize(function(){
-		var windowsize = $(window).width();
-		removeVideo(windowsize);
-		if (windowsize > 1024){
-			navColors();
-		}
-		
-	});
-
 
 	function scrollDown(){
 		var scrolltop = $('#wrapper').scrollTop();
@@ -332,6 +297,58 @@ $(document).ready(function() {
 		}
 	}
 
+
+
+
+
+
+	//STARTUP EVENT LISTENERS AND FUNCTIONS
+	
+	//slide out facebook like button on click
+	$('#about').find('.social .fb-button').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().parent().find('iframe').slideToggle('slow');
+	});
+
+	//make sure youtube html is empty on page load
+	$('#film').find('#embed').empty();
+
+
+	//on nav bar click, grab link class and pass to smooth scroll
+	$('nav').on('click', 'a.scroll', function(){
+		smoothScroll($(this));
+	});
+
+	$('#nav-bottom').on('click', 'a.scroll', function(){
+		smoothScroll($(this));
+	});
+
+	//call remove video function. will only remove loop if on device
+	removeVideo(win_width);
+
+	//on scroll, change colors of nav items accordingly
+	$('#wrapper').scroll(function(){
+		if (win_width > 1024){
+			navColors();
+		}
+		else{
+			return;
+		}
+		
+	});
+
+	//retrigger scroll position colors on resize
+	$(window).resize(function(){
+		var windowsize = $(window).width();
+		removeVideo(windowsize);
+		if (windowsize > 1024){
+			navColors();
+		}
+		
+	});
+
+
+
 	//scroll up one screen on nav burger up click
 	$('#nav-burger').on('click', scrollUp);
 
@@ -382,5 +399,7 @@ $(document).ready(function() {
 			
 		}
 	});
+
+	insertAnimation();
 
 });
