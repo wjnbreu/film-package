@@ -1732,7 +1732,7 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 1.2em;
   }
 }
-@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 360px) and (device-aspect-ratio: 9 / 16) {
   #artist {
     top: 200%;
     height: 385%;
@@ -1765,6 +1765,21 @@ nav .nav-top-center li a.scroll:hover {
   }
   #artist .artist-images {
     display: none !important;
+  }
+
+  #about {
+    top: 585%;
+    width: 100%;
+  }
+  #about h1 {
+    font-size: 1.5em;
+  }
+  #about p {
+    line-height: 1.7;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 0.8em;
   }
 }
 /************************ PHONE ******************************/
