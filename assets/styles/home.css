@@ -1930,6 +1930,41 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 0.8em;
   }
 }
+@media only screen and (max-width: 641px), screen and (max-device-width: 641px), screen and (min-device-width: 320px) and (max-device-width: 641px) and (-webkit-min-device-pixel-ratio: 2) {
+  #title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 200% !important;
+    background-size: bottom center;
+    background: url(../../images/title-image.jpg) no-repeat bottom center;
+  }
+  #title img {
+    width: 100%;
+    margin: 25% 0 auto 0;
+  }
+
+  #artist {
+    top: 200%;
+    height: 385%;
+    width: 100%;
+  }
+  #artist .artist-list {
+    max-width: 100%;
+    overflow-y: hidden;
+  }
+  #artist .artist-list ul {
+    max-width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    padding-left: 0;
+  }
+  #artist .artist-list ul li {
+    display: block;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+}
 /************************ IPHONE 5 ******************************/
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71) {
   #title {
