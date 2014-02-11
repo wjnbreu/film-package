@@ -1732,7 +1732,7 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 1.2em;
   }
 }
-@media screen and (max-device-width: 360px) and (device-aspect-ratio: 9 / 16) {
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) and (device-width: 1080px) {
   #artist {
     top: 200%;
     height: 285%;
