@@ -1732,56 +1732,6 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 1.2em;
   }
 }
-@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) and (device-width: 1080px) {
-  #artist {
-    top: 200%;
-    height: 285%;
-    width: 100%;
-    margin: 0;
-  }
-  #artist .artist-list {
-    width: 100%;
-    max-width: 100%;
-    overflow-y: hidden;
-  }
-  #artist .artist-list h1 {
-    font-size: 1.5em;
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
-  }
-  #artist .artist-list ul {
-    max-width: 100%;
-    width: 80%;
-    margin-left: 10%;
-    padding-left: 0;
-  }
-  #artist .artist-list ul li {
-    text-align: center;
-    display: block;
-    padding: 2px;
-    line-height: 1;
-    font-size: 1em;
-  }
-  #artist .artist-images {
-    display: none !important;
-  }
-
-  #about {
-    top: 485%;
-    width: 100%;
-  }
-  #about h1 {
-    font-size: 1.5em;
-  }
-  #about p {
-    line-height: 1.7;
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
-    font-size: 0.8em;
-  }
-}
 /************************ PHONE ******************************/
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px), screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .exit {
