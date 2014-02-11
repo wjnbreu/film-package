@@ -1856,6 +1856,48 @@ nav{
 
 
 
+
+
+@media only screen and (max-width: 641px), screen and (max-device-width: 641px), screen and (min-device-width: 320px) and (max-device-width: 641px) and (-webkit-min-device-pixel-ratio: 2){
+  #title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: 200% !important;
+        background-size: bottom center;
+        background: url(../../images/title-image.jpg) no-repeat bottom center;
+        img{
+            width: 100%;
+            margin: 25% 0 auto 0;
+        }
+    }
+
+    #artist{
+        top: 200%;
+        height: 300%;
+        width: 100%;
+        .artist-list{
+            max-width: 100%;
+            overflow-y: hidden;
+            ul{
+                max-width: 100%;
+                width: 80%;
+                margin-left: 10%;
+                padding-left: 0;
+                li{
+                    display: block;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    #about{
+        top: 500%;
+    }
+}
+
 /************************ PHONE ******************************/
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px), screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
 
@@ -2068,46 +2110,6 @@ nav{
     }
 }
 
-
-@media only screen and (max-width: 641px), screen and (max-device-width: 641px), screen and (min-device-width: 320px) and (max-device-width: 641px) and (-webkit-min-device-pixel-ratio: 2){
-  #title{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: 200% !important;
-        background-size: bottom center;
-        background: url(../../images/title-image.jpg) no-repeat bottom center;
-        img{
-            width: 100%;
-            margin: 25% 0 auto 0;
-        }
-    }
-
-    #artist{
-        top: 200%;
-        height: 300%;
-        width: 100%;
-        .artist-list{
-            max-width: 100%;
-            overflow-y: hidden;
-            ul{
-                max-width: 100%;
-                width: 80%;
-                margin-left: 10%;
-                padding-left: 0;
-                li{
-                    display: block;
-                    font-size: 1em;
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
-
-    #about{
-        top: 500%;
-    }
-}
 
 
 /************************ IPHONE 5 ******************************/
