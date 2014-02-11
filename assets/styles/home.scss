@@ -175,6 +175,11 @@ textarea {
     100%{margin-top: 5%;}
 }
 
+@-webkit-keyframes fade{
+    0%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+
 
 h1, h2{
     text-transform: uppercase;
@@ -249,38 +254,6 @@ a{
     }
 }
 
-#nav-burger{
-    position: fixed;
-    left: 20px;
-    top: 15px;
-    width: 40px;
-    height: 40px;
-    z-index: 999;
-    opacity: 1;
-    display: none;
-    img{
-        max-width: 100%;
-        &:hover{
-            opacity: 0.6;
-        }
-    }
-}
-
-#nav-down{
-    position: fixed;
-    left: 20px;
-    bottom: 15px;
-    width: 40px;
-    height: 40px;
-    z-index: 999;
-    display: none;
-    img{
-        max-width: 100%;
-        &:hover{
-            opacity: 0.6;
-        }
-    }
-}
 
 nav{
     position: fixed;
@@ -505,17 +478,27 @@ nav{
     width: 10%;
     height: 5%;
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     left: 45%;
     right: 45%;
     z-index: 999;
     text-align: center;
+    p{
+        color: white;
+        font-family: 'Rail', helvetica, sans-serif;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: bold;
+    }
     img{
-        width: 40%;
-        -webkit-animation: "shake" 0.5s ease 0 infinite alternate;
-        -moz-animation: "shake" 0.5s ease 0 infinite alternate;
-        -o-animation: shake 0.5s ease 0 infinite alternate;
-        animation: shake 0.5s ease 0 infinite alternate;
+        width: 60px;
+        height: auto;
+        margin: 0;
+        max-width: 100%;
+        -webkit-animation: "fade" 0.7s ease 0 infinite alternate;
+        -moz-animation: "fade" 0.7s ease 0 infinite alternate;
+        -o-animation: fade 0.7s ease 0 infinite alternate;
+        animation: fade 0.7s ease 0 infinite alternate;
         animation-delay: 0s;
     }
 }
@@ -1163,13 +1146,7 @@ nav{
 /************************ SMALL LAPTOP VIEWPORT ******************************/
 
 @media only screen and (max-width: 800px){
-    #nav-burger{
-    display: none !important;
-   }
 
-   #nav-down{
-    display: none !important;
-   }
 
    nav{
     position: absolute;
@@ -1453,13 +1430,7 @@ nav{
 /************************ TABLET ******************************/
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
-    #nav-burger{
-    display: none !important;
-   }
 
-   #nav-down{
-    display: none !important;
-   }
 
    nav{
     position: absolute;
@@ -1659,13 +1630,7 @@ nav{
         overflow-x: hidden !important;
     }
 
-    #nav-burger{
-    display: none !important;
-   }
 
-   #nav-down{
-    display: none !important;
-   }
 
    nav{
     position: absolute;
@@ -1912,13 +1877,6 @@ nav{
     z-index: 9999999999;
 }
 
-   #nav-burger{
-    display: none !important;
-   }
-
-   #nav-down{
-    display: none !important;
-   }
 
    nav{
     position: absolute;
@@ -2162,15 +2120,6 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
 /************************ PHONE LANDSCAPE ******************************/
 
 @media only screen and (max-device-width: 568px) and (orientation: landscape){
-
-
-   #nav-burger{
-    display: none !important;
-   }
-
-   #nav-down{
-    display: none !important;
-   }
 
 
 

@@ -1,12 +1,10 @@
 $(document).ready(function() {
 
-//DOUBLE CHECK BURGER DOWN FUNCTIONS
+
 
  //GLOBAL VARIABLES
 	var nav = $('nav a');
 	var bottom = $('#nav-bottom a');
-	var burgerWhite = $('#nav-burger .white');
-	var burgerDown = $('#nav-down');
 	var win_height = $(window).height();
 	var win_width = $(window).width();
 	var elementHeight = 0; //used for call bounding rect to measure element
@@ -120,12 +118,10 @@ $(document).ready(function() {
 	//only fires when window width > 1024
 	function navMin(item){
 		item.hide();
-		$('#nav-burger').fadeIn();
 	}
 
 	//show all main navigation items, hide arrows
 	function navMax(item){
-		$('#nav-burger').hide();
 		item.fadeIn();
 	}
 
@@ -138,23 +134,12 @@ $(document).ready(function() {
 
 		//used to track buy book image
 		if (top < 58){
-			//make sure nav arrow is hidden
-			burgerWhite.css({
-				display: 'none'
-			});
-
 			//make sure nav links display
 			navMax(nav);
 			navMax(bottom);
 
 		}
 
-		//make sure down burger is hidden 
-		if (top > 0 && top < win_height){
-				burgerDown.css({
-				display: 'none'
-			});
-		}
 
 		// LOSE POINTER ONCE SCROLL BEGINS
 		if (top >= 58){
@@ -165,12 +150,6 @@ $(document).ready(function() {
 		//SECOND SCREEN
 		if (top >= win_height - 35){
 			//add nav pointer
-			burgerWhite.css({
-				display: 'block'
-			});
-			burgerDown.css({
-				display: 'block'
-			});
 
 			//CLOSE ALL NAVIGATION
 			navMin(nav);
@@ -183,9 +162,7 @@ $(document).ready(function() {
 			navMax(nav);
 			navMax(bottom);
 			//lose nav pointer
-			burgerWhite.css({
-				display: 'none'
-			});
+
 		}
 	}
 	
@@ -193,7 +170,7 @@ $(document).ready(function() {
 	function smoothScroll(clk){
 		if (clk.hasClass('filmlink')){
 			$('#wrapper').animate({
-				scrollTop: win_height
+				scrollTop: (win_height * 2)
 			},scrollSpeed);
 		}
 
@@ -232,6 +209,12 @@ $(document).ready(function() {
 	function scrollDown(){
 		var scrolltop = $('#wrapper').scrollTop();
 		winheight = $(window).height();
+
+		if (scrolltop < (winheight / 2)){
+			$('#wrapper').animate({
+				scrollTop: (win_height)
+			}, scrollSpeed);
+		}
 
 		//if between first and third screen (countdown screen)
 		if (scrolltop >= (winheight / 2) && scrolltop < (winheight * 2)){
@@ -348,13 +331,14 @@ $(document).ready(function() {
 	});
 
 
-
-	//scroll up one screen on nav burger up click
-	$('#nav-burger').on('click', scrollUp);
-
-
-	//scroll down exactly on screen on nav down click
-	$('#nav-down').on('click', scrollDown);
+	$(document).keydown(function(e) {
+		e.stopPropagation();
+		if (e.keyCode === 40) {
+        scrollDown();
+    } else if (e.keyCode === 38) {
+        scrollUp();
+    }
+});
 
 
 	//change video background on play button click
@@ -367,8 +351,8 @@ $(document).ready(function() {
 	$('#pointer').on('click', function(){
 		var scrollAmount = $(window).height();
 		$('#wrapper').animate({
-				scrollTop: scrollAmount
-			}, 500);
+				scrollTop: (scrollAmount * 2)
+			}, 700);
 	});
 
 	//if book iframe is open, allow exit button to close iframe
