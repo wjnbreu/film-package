@@ -1946,7 +1946,7 @@ nav .nav-top-center li a.scroll:hover {
 
   #artist {
     top: 200%;
-    height: 385%;
+    height: 300%;
     width: 100%;
   }
   #artist .artist-list {
@@ -1963,6 +1963,10 @@ nav .nav-top-center li a.scroll:hover {
     display: block;
     font-size: 1em;
     text-transform: uppercase;
+  }
+
+  #about {
+    top: 500%;
   }
 }
 /************************ IPHONE 5 ******************************/
