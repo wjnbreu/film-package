@@ -1658,6 +1658,34 @@ nav{
             line-height: 1.75;
             font-size: 1.1em;
         }
+
+        .next-artist{
+        position: absolute;
+        top: 20%;
+        right: 50px;
+        &:hover{
+                right: 45px;
+            }
+        img{
+            max-width: 100%;
+            width: 30px;
+        }
+    }
+
+    .prev-artist{
+        position: absolute;
+        top: 20%;
+        left: 50px;
+        &:hover{
+                left: 45px;
+            }
+        img{
+            max-width: 100%;
+            width: 30px;
+        }
+    }
+
+
         .assets{
             width: 70%;
             max-height: 60%;

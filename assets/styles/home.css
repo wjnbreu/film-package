@@ -1552,6 +1552,30 @@ nav .nav-top-center li a.scroll:hover {
     line-height: 1.75;
     font-size: 1.1em;
   }
+  #artist-info .next-artist {
+    position: absolute;
+    top: 20%;
+    right: 50px;
+  }
+  #artist-info .next-artist:hover {
+    right: 45px;
+  }
+  #artist-info .next-artist img {
+    max-width: 100%;
+    width: 30px;
+  }
+  #artist-info .prev-artist {
+    position: absolute;
+    top: 20%;
+    left: 50px;
+  }
+  #artist-info .prev-artist:hover {
+    left: 45px;
+  }
+  #artist-info .prev-artist img {
+    max-width: 100%;
+    width: 30px;
+  }
   #artist-info .assets {
     width: 70%;
     max-height: 60%;
