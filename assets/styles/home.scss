@@ -457,7 +457,7 @@ nav{
     background-size: bottom center;
     min-width: 100%;
     min-height: 100%;
-    background: url(../../images/title-image.jpg) no-repeat center center;
+    background: url(../../images/title-image.jpg) no-repeat bottom center;
     background-size: 120%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1124,6 +1124,26 @@ nav{
 
 /************************ MEDIUM LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 1100px){
+
+   #film{
+    position: absolute;
+    top: 200%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
+    background-size: 155%;
+    background-color: black;
+    video{
+            display: none;
+
+    }
+
+}
+
+
+
 #artist{
     position: absolute;
     top: 300%;
@@ -1161,6 +1181,9 @@ nav{
 /************************ MEDIUM (AGAIN) LAPTOP VIEWPORT ******************************/
 
 @media only screen and (max-width: 1000px){
+
+
+
 #artist{
     position: absolute;
     top: 300%;
@@ -1314,8 +1337,8 @@ nav{
     width: 100%;
     height: 100%;
     background-color: black;
-    background: url(../../images/artist/eno.jpg) no-repeat top center;
-    background-size: 200%;
+    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
+    background-size: 125%;
     video{
             display: none;
 
@@ -1501,6 +1524,16 @@ nav{
 @media only screen and (max-width: 700px){
 
 
+    #film{
+    position: absolute;
+    top: 200%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
+    background-size: 175%;
+    background-color: black;
+}
     #artist{
     position: absolute;
     top: 300%;
@@ -1606,7 +1639,7 @@ nav{
         left: 0;
         width: 100%;
         height: 100%;
-        background: url(../../images/artist/eno.jpg) no-repeat top center;
+        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
         background-size: 200%;
         video{
             display: none;
@@ -1836,7 +1869,7 @@ nav{
     position: absolute;
     top: 100%;
     left: 0;
-    background: url(../../images/artist/eno.jpg) no-repeat top center;
+    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
     background-size: 200%;
     video{
         display: none;
@@ -1976,6 +2009,22 @@ nav{
         }
     }
 
+    #countdown-container{
+        display: none !important;
+    }
+
+    #film{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
+        background-size: 200%;
+    }
+
+
+
     #artist{
         top: 200%;
         height: 300%;
@@ -1985,8 +2034,8 @@ nav{
             overflow-y: hidden;
             ul{
                 max-width: 100%;
-                width: 80%;
-                margin-left: 10%;
+                width: 60%;
+                margin-left: 20%;
                 padding-left: 0;
                 li{
                     display: block;
@@ -2099,7 +2148,7 @@ nav{
 
     #film{
         top: 100%;
-        background: url(../../images/artist/eno.jpg) no-repeat top center;
+        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
         background-size: 200%;
         video{
             display: none;
@@ -2148,8 +2197,8 @@ nav{
             }
             ul{
                 max-width: 100%;
-                width: 80%;
-                margin-left: 10%;
+                width: 60%;
+                margin-left: 20%;
                 padding-left: 0;
                 li{
                     text-align: center;
@@ -2351,7 +2400,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../../images/artist/eno.jpg) no-repeat top center;
+    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
     background-size: 200%;
     video{
             display: none;
