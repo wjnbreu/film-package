@@ -675,6 +675,25 @@ nav .nav-top-center li a.scroll:hover {
   width: 100%;
 }
 
+#go-home {
+  position: fixed;
+  display: none;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  background: url(../../images/close.gif) no-repeat center center;
+  background-size: 100%;
+  z-index: 99999999999999999999999999;
+}
+#go-home:hover {
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  filter: invert(100%);
+  background-size: 100%;
+}
+
 #artist-info {
   position: fixed;
   left: 100%;
@@ -685,22 +704,6 @@ nav .nav-top-center li a.scroll:hover {
   overflow-y: auto;
   background-color: white;
   z-index: 99999;
-}
-#artist-info .go-home {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  opacity: 1;
-  background: url(../../images/close.gif) no-repeat center center;
-  background-size: 100%;
-}
-#artist-info .go-home:hover {
-  -webkit-filter: invert(100%);
-  -moz-filter: invert(100%);
-  filter: invert(100%);
-  background-size: 100%;
 }
 #artist-info h1 {
   position: relative;
@@ -726,8 +729,8 @@ nav .nav-top-center li a.scroll:hover {
 }
 #artist-info .next-artist {
   position: absolute;
-  top: 175px;
-  right: 60px;
+  top: 30%;
+  right: 90px;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
@@ -735,7 +738,7 @@ nav .nav-top-center li a.scroll:hover {
   transition: all .2s ease-in-out;
 }
 #artist-info .next-artist:hover {
-  right: 55px;
+  right: 85px;
 }
 #artist-info .next-artist img {
   max-width: 100%;
@@ -743,8 +746,8 @@ nav .nav-top-center li a.scroll:hover {
 }
 #artist-info .prev-artist {
   position: absolute;
-  top: 175px;
-  left: 60px;
+  top: 30%;
+  left: 90px;
   -webkit-transition: all .1s ease-in-out;
   -moz-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
@@ -752,7 +755,7 @@ nav .nav-top-center li a.scroll:hover {
   transition: all .1s ease-in-out;
 }
 #artist-info .prev-artist:hover {
-  left: 55px;
+  left: 85px;
 }
 #artist-info .prev-artist img {
   max-width: 100%;
@@ -1124,6 +1127,29 @@ nav .nav-top-center li a.scroll:hover {
     line-height: 1.2;
     font-size: 1em;
   }
+
+  #artist-info .next-artist {
+    top: 25%;
+    right: 90px;
+  }
+  #artist-info .next-artist:hover {
+    right: 85px;
+  }
+  #artist-info .next-artist img {
+    max-width: 100%;
+    width: 50px;
+  }
+  #artist-info .prev-artist {
+    top: 25%;
+    left: 90px;
+  }
+  #artist-info .prev-artist:hover {
+    left: 85px;
+  }
+  #artist-info .prev-artist img {
+    max-width: 100%;
+    width: 50px;
+  }
 }
 /************************ SMALL LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 800px) {
@@ -1240,6 +1266,15 @@ nav .nav-top-center li a.scroll:hover {
     display: none;
   }
 
+  #go-home {
+    display: none;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
   #artist {
     position: absolute;
     top: 300%;
@@ -1269,9 +1304,6 @@ nav .nav-top-center li a.scroll:hover {
     display: none !important;
   }
 
-  #artist-info .go-home:hover {
-    -webkit-filter: invert(100%);
-  }
   #artist-info h1 {
     width: 100%;
     font-size: 3em;
@@ -1282,6 +1314,30 @@ nav .nav-top-center li a.scroll:hover {
     margin-bottom: 75px;
     line-height: 1.75;
     font-size: 1em;
+  }
+  #artist-info .next-artist {
+    position: absolute;
+    top: 25%;
+    right: 50px;
+  }
+  #artist-info .next-artist:hover {
+    right: 45px;
+  }
+  #artist-info .next-artist img {
+    max-width: 100%;
+    width: 30px;
+  }
+  #artist-info .prev-artist {
+    position: absolute;
+    top: 25%;
+    left: 50px;
+  }
+  #artist-info .prev-artist:hover {
+    left: 45px;
+  }
+  #artist-info .prev-artist img {
+    max-width: 100%;
+    width: 30px;
   }
   #artist-info .assets {
     width: 70%;
@@ -1763,6 +1819,31 @@ nav .nav-top-center li a.scroll:hover {
     text-transform: uppercase;
   }
 
+  #artist-info .next-artist {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+  }
+  #artist-info .next-artist:hover {
+    right: 15px;
+  }
+  #artist-info .next-artist img {
+    max-width: 100%;
+    width: 20px;
+  }
+  #artist-info .prev-artist {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+  }
+  #artist-info .prev-artist:hover {
+    left: 15px;
+  }
+  #artist-info .prev-artist img {
+    max-width: 100%;
+    width: 20px;
+  }
+
   #about {
     top: 500%;
   }
@@ -1893,12 +1974,6 @@ nav .nav-top-center li a.scroll:hover {
     display: none !important;
   }
 
-  #artist-info .go-home {
-    top: 10px;
-    left: 10px;
-    width: 30px;
-    height: 30px;
-  }
   #artist-info h1 {
     width: 90%;
     margin-left: 5%;
@@ -1992,6 +2067,31 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 1em;
     text-transform: uppercase;
   }
+
+  #artist-info .next-artist {
+    position: absolute;
+    top: 17.5%;
+    right: 17px;
+  }
+  #artist-info .next-artist:hover {
+    right: 17px;
+  }
+  #artist-info .next-artist img {
+    max-width: 100%;
+    width: 20px;
+  }
+  #artist-info .prev-artist {
+    position: absolute;
+    top: 17.5%;
+    left: 17px;
+  }
+  #artist-info .prev-artist:hover {
+    left: 17px;
+  }
+  #artist-info .prev-artist img {
+    max-width: 100%;
+    width: 20px;
+  }
 }
 /************************ PHONE LANDSCAPE ******************************/
 @media only screen and (max-device-width: 568px) and (orientation: landscape) {
@@ -2078,13 +2178,6 @@ nav .nav-top-center li a.scroll:hover {
     font-size: 0.9em;
   }
 
-  #artist-info .go-home {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 30px;
-    height: 30px;
-  }
   #artist-info h1 {
     width: 100%;
     font-size: 2em;

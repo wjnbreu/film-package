@@ -70,7 +70,9 @@ artist.on('click', function(){
 	addInfo(name, pic);
 	$('#artist-info').transition({
 		left: 0
-	}, 500, "ease");
+	}, 500, "ease", function(){
+		$('#go-home').fadeIn(100);
+	});
 
 	//change class of next artist link
 	updateNextArtistLink(nextId, currentPos);
@@ -79,10 +81,11 @@ artist.on('click', function(){
 
 
 //EXIT INFO BOX
-artistBox.find('.go-home').on('click', function(){
+$('#go-home').on('click', function(){
 	artistBox.transition({
 		left: '100%'
 	}, 500, "ease");
+	$(this).hide();
 });
 
 //ADD INFO TO SLIDE BOX

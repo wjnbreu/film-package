@@ -679,6 +679,25 @@ nav{
     }
 }
 
+#go-home{
+        position: fixed;
+        display: none;
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+        background: url(../../images/close.gif) no-repeat center center;
+        background-size: 100%;
+        z-index: 99999999999999999999999999;
+        &:hover{
+            -webkit-filter: invert(100%);
+            -moz-filter: invert(100%);
+            filter: invert(100%);
+            background-size: 100%;
+        }
+    }
+
 #artist-info{
     position: fixed;
     left: 100%;
@@ -689,22 +708,6 @@ nav{
     overflow-y: auto;
     background-color: white;
     z-index: 99999;
-    .go-home{
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 50px;
-        height: 50px;
-        opacity: 1;
-        background: url(../../images/close.gif) no-repeat center center;
-        background-size: 100%;
-        &:hover{
-            -webkit-filter: invert(100%);
-            -moz-filter: invert(100%);
-            filter: invert(100%);
-            background-size: 100%;
-        }
-    }
     h1{
         position: relative;
         top: 0;
@@ -729,15 +732,15 @@ nav{
     }
     .next-artist{
         position: absolute;
-        top: 175px;
-        right: 60px;
+        top: 30%;
+        right: 90px;
         -webkit-transition: all .2s ease-in-out;
         -moz-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
         -ms-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
         &:hover{
-                right: 55px;
+                right: 85px;
             }
         img{
             max-width: 100%;
@@ -747,15 +750,15 @@ nav{
 
     .prev-artist{
         position: absolute;
-        top: 175px;
-        left: 60px;
+        top: 30%;
+        left: 90px;
         -webkit-transition: all .1s ease-in-out;
         -moz-transition: all .1s ease-in-out;
         -o-transition: all .1s ease-in-out;
         -ms-transition: all .1s ease-in-out;
         transition: all .1s ease-in-out;
         &:hover{
-                left: 55px;
+                left: 85px;
             }
         img{
             max-width: 100%;
@@ -1174,6 +1177,32 @@ nav{
     }
 }
 
+#artist-info{
+   .next-artist{
+        top: 25%;
+        right: 90px;
+        &:hover{
+                right: 85px;
+            }
+        img{
+            max-width: 100%;
+            width: 50px;
+        }
+    }
+
+    .prev-artist{
+        top: 25%;
+        left: 90px;
+        &:hover{
+                left: 85px;
+            }
+        img{
+            max-width: 100%;
+            width: 50px;
+        }
+    }
+}
+
 }
 
 
@@ -1307,6 +1336,15 @@ nav{
 
 }
 
+#go-home{
+        display: none;
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
 #artist{
     position: absolute;
     top: 300%;
@@ -1339,11 +1377,6 @@ nav{
 }
 
 #artist-info{
-    .go-home{
-        &:hover{
-            -webkit-filter: invert(100%);
-        }
-    }
 
     h1{
         width: 100%;
@@ -1355,6 +1388,31 @@ nav{
         margin-bottom: 75px;
         line-height: 1.75;
         font-size: 1em;
+    }
+    .next-artist{
+        position: absolute;
+        top: 25%;
+        right: 50px;
+        &:hover{
+                right: 45px;
+            }
+        img{
+            max-width: 100%;
+            width: 30px;
+        }
+    }
+
+    .prev-artist{
+        position: absolute;
+        top: 25%;
+        left: 50px;
+        &:hover{
+                left: 45px;
+            }
+        img{
+            max-width: 100%;
+            width: 30px;
+        }
     }
     //IMAGE
     .assets{
@@ -1424,6 +1482,8 @@ nav{
 
 /************************ TINY LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 700px){
+
+
     #artist{
     position: absolute;
     top: 300%;
@@ -1892,6 +1952,34 @@ nav{
         }
     }
 
+    #artist-info{
+        .next-artist{
+        position: absolute;
+        top: 20%;
+        right: 20px;
+        &:hover{
+                right: 15px;
+            }
+        img{
+            max-width: 100%;
+            width: 20px;
+        }
+    }
+
+    .prev-artist{
+        position: absolute;
+        top: 20%;
+        left: 20px;
+        &:hover{
+                left: 15px;
+            }
+        img{
+            max-width: 100%;
+            width: 20px;
+        }
+    }
+    }
+
     #about{
         top: 500%;
     }
@@ -2033,12 +2121,6 @@ nav{
     }
 
     #artist-info{
-        .go-home{
-            top: 10px;
-            left: 10px;
-            width: 30px;
-            height: 30px;
-        }
         h1{
             width: 90%;
             margin-left: 5%;
@@ -2143,6 +2225,34 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
                 }
             }
         }
+    }
+
+        #artist-info{
+        .next-artist{
+        position: absolute;
+        top: 17.5%;
+        right: 17px;
+        &:hover{
+                right: 17px;
+            }
+        img{
+            max-width: 100%;
+            width: 20px;
+        }
+    }
+
+    .prev-artist{
+        position: absolute;
+        top: 17.5%;
+        left: 17px;
+        &:hover{
+                left: 17px;
+            }
+        img{
+            max-width: 100%;
+            width: 20px;
+        }
+    }
     }
 
 
@@ -2257,13 +2367,6 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
 }
 
 #artist-info{
-    .go-home{
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 30px;
-        height: 30px;
-    }
     h1{
         width: 100%;
         font-size: 2em;
