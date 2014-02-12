@@ -38,6 +38,8 @@ function hideImages(){
 //SLIDE UP INFO WHEN CLICKED
 artist.on('click', function(){
 	currentPos = artist.index( this );
+
+	currentPos = currentPos + 1;
 	//zero indexed, so we add 2
 	nextPos = currentPos + 2;
 
@@ -156,10 +158,18 @@ function updateNextArtistLink(next, currentPos){
 
 
 $('#next-artist').on('click', function(){
+
+	var ogId = $("#artist").find('ul :nth-child(' + currentPos + ')').data('pic');
+	var ogName = $("#artist").find('ul :nth-child(' + currentPos + ')').data('name');
+	var nextId = $('#artist').find('ul :nth-child(' + (currentPos + 1) + ')').data('pic');
+	var nextName = $('#artist').find('ul :nth-child(' + (currentPos + 1) + ')').data('name');
+
+
 	//turn into object, so both parameters can be passed
-	addInfo(nextArtist, nextId);
-	alert(currentPos);
-	updateNextArtistLink(nextArtist);
+	addInfo(nextName, nextId);
+	updateNextArtistLink(nextId);
+
+	currentPos++;
 
 
 });
