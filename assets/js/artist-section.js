@@ -44,7 +44,6 @@ artist.on('click', function(){
 	nextPos = currentPos + 2;
 	prevPos = currentPos - 1;
 
-	alert(currentPos);
 
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
