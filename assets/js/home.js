@@ -142,9 +142,9 @@ $(document).ready(function() {
 
 
 		// LOSE POINTER ONCE SCROLL BEGINS
-		if (top >= 58){
+		if (top >= 38){
 			//lose css animation
-			$('#pointer').fadeOut();
+			$('#pointer').fadeOut(200);
 		}
 
 		//SECOND SCREEN
