@@ -667,6 +667,7 @@ nav{
         ul{
             max-width: 100%;
             width: 90%;
+            margin-left: 5%;
             list-style-type: none;
             color: white;
             padding-left: 0;
@@ -994,7 +995,6 @@ nav{
     position: absolute;
 
     .artist-list{
-        width: 100%;
         ul{
             text-align: center;
             li{
@@ -1098,7 +1098,6 @@ nav{
     overflow-y: hidden;
 
     .artist-list{
-        width: 100%;
         h1{
             text-align: center;
             font-size: 4em;
@@ -1107,9 +1106,6 @@ nav{
             margin-right: 35%;
         }
         ul{
-            max-width: 100%;
-            width: 80%;
-            margin-left: 10%;
             padding-left: 0;
             text-align: center;
             li{
@@ -1146,9 +1142,6 @@ nav{
             margin-right: 35%;
         }
         ul{
-            max-width: 100%;
-            width: 80%;
-            margin-left: 10%;
             padding-left: 0;
             text-align: center;
             li{
