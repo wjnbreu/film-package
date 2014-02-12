@@ -499,20 +499,32 @@ nav{
 }
 
 #pointer{
-    width: 20%;
+    width: 70%;
     height: 5%;
     position: absolute;
-    bottom: 50px;
-    left: 40%;
-    right: 40%;
+    bottom: 60px;
+    left: 15%;
+    right: 15%;
     z-index: 999;
     text-align: center;
-    p{
+    p, span{
         color: white;
         font-family: 'Rail', helvetica, sans-serif;
         text-transform: uppercase;
         margin: 0;
+    }
+    p{
+        width: 30%;
+        margin-left: 35%;
+        border: 2px solid white;
+        line-height: 1.5;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    span{
         font-weight: bold;
+        display: block;
     }
     img{
         width: 60px;
@@ -1087,7 +1099,24 @@ nav{
 
 @media only screen and (max-width: 1280px), screen and (max-device-width: 1280px){
 
-
+#pointer{
+    width: 70%;
+    height: 5%;
+    position: absolute;
+    bottom: 70px;
+    left: 15%;
+    right: 15%;
+    z-index: 999;
+    text-align: center;
+    p{
+        width: 40%;
+        margin-left: 30%;
+        margin-bottom: 10px;
+        border: 2px solid white;
+        line-height: 1.5;
+       
+    }
+}
 
 #artist{
     position: absolute;
@@ -1243,6 +1272,26 @@ nav{
     }
 }
 
+#pointer{
+    width: 70%;
+    height: 5%;
+    position: absolute;
+    bottom: 70px;
+    left: 15%;
+    right: 15%;
+    z-index: 999;
+    text-align: center;
+    p{
+        width: 50%;
+        margin-left: 25%;
+        border: 2px solid white;
+        line-height: 1.5;
+       }
+    span{
+        line-height: 1;
+    }
+}
+
 }
 
 
@@ -1321,11 +1370,7 @@ nav{
 }
 
    #pointer{
-        width: 10%;
-        position: absolute;
-        bottom: 80px;
-        left: 45%;
-        right: 45%;
+        display: none;
             
    }
 

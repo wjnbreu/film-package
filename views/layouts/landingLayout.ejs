@@ -67,8 +67,49 @@ scriptNode.parentNode.insertBefore(newIFrame,scriptNode);
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/js/jquery.transit.min.js"></script>
+    <script src="/js/countdown.js"></script>
     <script type="text/javascript" src="/js/home.js"></script>
     <script type="text/javascript" src="/js/artist-section.js"></script>
+    <script type="text/javascript">
+    function countdown_load5(){
+      var yr=2014;
+      var mo=02;
+      var da=18;
+      var hr=15;
+      var min=0;
+      var sec=0;
+      var month='';
+      var month=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+      var bottom_event="";
+      var now_d=new Date();
+      var now_year=now_d.getYear();
+      if (now_year < 1000)now_year+=1900;
+      var now_month=now_d.getMonth();
+      var now_day=now_d.getDate();
+      var now_hour=now_d.getHours();
+      var now_min=now_d.getMinutes();
+      var now_sec=now_d.getSeconds();
+      var now_val=month[now_month]+" "+now_day+", "+now_year+" "+now_hour+":"+now_min+":"+now_sec;
+      event_val=month[mo-1]+" "+da+", "+yr+" "+hr+":"+min+":"+sec;
+      difference=Date.parse(event_val)-Date.parse(now_val);
+      differenceday=Math.floor(difference/(60*60*1000*24)*1);
+      differencehour=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);differencemin=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
+      differencesec=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+      if(document.getElementById('timer')){
+        if(differenceday<=0&&differencehour<=0&&differencemin<=0&&differencesec<=1&&now_day==da){
+          document.getElementById('timer').innerHTML=on_event;
+        }else if (differenceday<=-1){
+          document.getElementById('timer').innerHTML="Event : "+on_event+" : passed";}
+          else {
+            document.getElementById('timer').innerHTML=differenceday+"d "+differencehour+"h "+differencemin+"m "+differencesec+"s "+bottom_event;
+          } 
+        }
+        setTimeout("countdown_load5()",1000);
+      }
+      countdown_load5();
+        </script>
+
+
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -78,8 +119,6 @@ scriptNode.parentNode.insertBefore(newIFrame,scriptNode);
     ga('create', 'UA-45276832-1', 'rbma15.com');
     ga('send', 'pageview');
     </script>
-
-    
 
 
 

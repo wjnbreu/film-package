@@ -350,7 +350,7 @@ $(document).ready(function() {
 	$('#pointer').on('click', function(){
 		var scrollAmount = $(window).height();
 		$('#wrapper').animate({
-				scrollTop: (scrollAmount * 2)
+				scrollTop: (scrollAmount)
 			}, 700);
 	});
 
