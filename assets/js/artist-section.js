@@ -222,16 +222,14 @@ $('#prev-artist').on('click', function(){
 
 
 	} else{
-		ogId = $("#artist").find('ul :nth-child('+ artistLength + ')').data('pic');
-		ogName = $("#artist").find('ul :nth-child('+ artistLength + ')').data('name');
-		prevId = $('#artist').find('ul :nth-child('+ (artistLength - 1) + ')').data('pic');
-		prevName = $('#artist').find('ul :nth-child('+ (artistLength - 1) + ')').data('name');
+		prevId = $("#artist").find('ul :nth-child('+ artistLength + ')').data('pic');
+		prevName = $("#artist").find('ul :nth-child('+ artistLength + ')').data('name');
 
-		//reset currentPos
-		currentPos = artistLength;
+		//reset currentPos. adding one to account for decrement later in function
+		currentPos = artistLength + 1;
 	}
 
-	//turn into object, so both parameters can be passed
+		//pass in last artist, since they will be previous in this case
 		addInfo(prevName, prevId);
 		updateNextArtistLink(prevId);
 
