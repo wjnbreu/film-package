@@ -7,7 +7,7 @@ var artist = $('#artist').find('.artist-list ul a');
 var artistList = $('#artist').find('.artist-list ul');
 var artistLength = artist.length;
 var nextArtist, next, nextId;
-var prevArtist, prev;
+var prevArtist, prev, prevId, prevPic;
 var currentPos, nextPos;
 var images = $('#artist').find('.artist-images img');
 var imageBlock = $('#artist').find('.artist-images');
@@ -38,16 +38,32 @@ function hideImages(){
 //SLIDE UP INFO WHEN CLICKED
 artist.on('click', function(){
 	currentPos = artist.index( this );
-
+	//account for zero indexing
 	currentPos = currentPos + 1;
 	//zero indexed, so we add 2
 	nextPos = currentPos + 2;
+	prevPos = currentPos - 1;
+
+	alert(currentPos);
 
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
 
+	//grab initial values on artist selection
 	nextArtist = $("#artist").find('ul :nth-child(' + nextPos + ')').data('name');
 	nextId = $("#artist").find('ul :nth-child(' + nextPos + ')').data('pic');
+
+	prevArtist = $("#artist").find('ul :nth-child(' + prevPos + ')').data('name');
+	prevId = $("#artist").find('ul :nth-child(' + prevPos + ')').data('pic');
+
+	//set values
+	//empty class
+	$('#next-artist').removeClass();
+	//append NEXT artist name
+	$('#next-artist').addClass(nextId);
+
+	$('#prev-artist').removeClass();
+	$('#prev-artist').addClass(prevId);
 
 	//empty out default picture
 	$('#artist-info').find('.assets img').empty();
@@ -158,19 +174,66 @@ function updateNextArtistLink(next, currentPos){
 
 
 $('#next-artist').on('click', function(){
+	var ogId,
+		ogName,
+		nextId,
+		nextName;
 
-	var ogId = $("#artist").find('ul :nth-child(' + currentPos + ')').data('pic');
-	var ogName = $("#artist").find('ul :nth-child(' + currentPos + ')').data('name');
-	var nextId = $('#artist').find('ul :nth-child(' + (currentPos + 1) + ')').data('pic');
-	var nextName = $('#artist').find('ul :nth-child(' + (currentPos + 1) + ')').data('name');
+	if (currentPos < artistLength){
+		ogId = $("#artist").find('ul :nth-child(' + currentPos + ')').data('pic');
+		ogName = $("#artist").find('ul :nth-child(' + currentPos + ')').data('name');
+		nextId = $('#artist').find('ul :nth-child(' + (currentPos + 1) + ')').data('pic');
+		nextName = $('#artist').find('ul :nth-child(' + (currentPos + 1) + ')').data('name');
 
+
+	} else{
+		ogId = $("#artist").find('ul :nth-child(0)').data('pic');
+		ogName = $("#artist").find('ul :nth-child(0)').data('name');
+		nextId = $('#artist').find('ul :nth-child(1)').data('pic');
+		nextName = $('#artist').find('ul :nth-child(1)').data('name');
+
+		//reset currentPos
+		currentPos = 0;
+	}
 
 	//turn into object, so both parameters can be passed
-	addInfo(nextName, nextId);
-	updateNextArtistLink(nextId);
+		addInfo(nextName, nextId);
+		updateNextArtistLink(nextId);
 
-	currentPos++;
+		currentPos++;
 
+});
+
+
+
+$('#prev-artist').on('click', function(){
+	var ogId,
+		ogName,
+		prevId,
+		prevName;
+
+	if (currentPos > 1){
+		ogId = $("#artist").find('ul :nth-child(' + currentPos + ')').data('pic');
+		ogName = $("#artist").find('ul :nth-child(' + currentPos + ')').data('name');
+		prevId = $('#artist').find('ul :nth-child(' + (currentPos - 1) + ')').data('pic');
+		prevName = $('#artist').find('ul :nth-child(' + (currentPos - 1) + ')').data('name');
+
+
+	} else{
+		ogId = $("#artist").find('ul :nth-child('+ artistLength + ')').data('pic');
+		ogName = $("#artist").find('ul :nth-child('+ artistLength + ')').data('name');
+		prevId = $('#artist').find('ul :nth-child('+ (artistLength - 1) + ')').data('pic');
+		prevName = $('#artist').find('ul :nth-child('+ (artistLength - 1) + ')').data('name');
+
+		//reset currentPos
+		currentPos = artistLength;
+	}
+
+	//turn into object, so both parameters can be passed
+		addInfo(prevName, prevId);
+		updateNextArtistLink(prevId);
+
+		currentPos--;
 
 });
 

@@ -729,8 +729,38 @@ nav{
     }
     .next-artist{
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 175px;
+        right: 60px;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        &:hover{
+                right: 55px;
+            }
+        img{
+            max-width: 100%;
+            width: 50px;
+        }
+    }
+
+    .prev-artist{
+        position: absolute;
+        top: 175px;
+        left: 60px;
+        -webkit-transition: all .1s ease-in-out;
+        -moz-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        -ms-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+        &:hover{
+                left: 55px;
+            }
+        img{
+            max-width: 100%;
+            width: 50px;
+        }
     }
     .assets{
         width: 60%;

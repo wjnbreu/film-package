@@ -726,8 +726,37 @@ nav .nav-top-center li a.scroll:hover {
 }
 #artist-info .next-artist {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 175px;
+  right: 60px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+#artist-info .next-artist:hover {
+  right: 55px;
+}
+#artist-info .next-artist img {
+  max-width: 100%;
+  width: 50px;
+}
+#artist-info .prev-artist {
+  position: absolute;
+  top: 175px;
+  left: 60px;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+#artist-info .prev-artist:hover {
+  left: 55px;
+}
+#artist-info .prev-artist img {
+  max-width: 100%;
+  width: 50px;
 }
 #artist-info .assets {
   width: 60%;
