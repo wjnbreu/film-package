@@ -187,6 +187,46 @@ a {
   }
 }
 
+@-moz-keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 h1, h2 {
   text-transform: uppercase;
 }
@@ -497,10 +537,10 @@ nav .nav-top-center li a.scroll:hover {
   height: auto;
   margin: 0;
   max-width: 100%;
-  -webkit-animation: "fade" 0.7s ease 0 infinite alternate;
-  -moz-animation: "fade" 0.7s ease 0 infinite alternate;
-  -o-animation: fade 0.7s ease 0 infinite alternate;
-  animation: fade 0.7s ease 0 infinite alternate;
+  -webkit-animation: "fade" 0.7s ease 0s infinite alternate;
+  -moz-animation: "fade" 0.7s ease 0s infinite alternate;
+  -o-animation: fade 0.7s ease 0s infinite alternate;
+  animation: fade 0.7s ease 0s infinite alternate;
   animation-delay: 0s;
 }
 
