@@ -187,7 +187,6 @@ $(document).ready(function() {
 		}
 
 		else if(clk.hasClass('aboutlink')){
-
 			$('#wrapper').animate({
 				scrollTop: $('#aboutlink').offset().top
 			}, scrollSpeed);
