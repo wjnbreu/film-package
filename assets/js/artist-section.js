@@ -4,6 +4,11 @@ $(document).ready(function(){
 // ARTIST SECTION
 
 var artist = $('#artist').find('.artist-list ul a');
+var artistList = $('#artist').find('.artist-list ul');
+var artistLength = artist.length;
+var nextArtist, next, nextId;
+var prevArtist, prev;
+var currentPos, nextPos;
 var images = $('#artist').find('.artist-images img');
 var imageBlock = $('#artist').find('.artist-images');
 var artistBox = $('#artist-info');
@@ -32,14 +37,26 @@ function hideImages(){
 
 //SLIDE UP INFO WHEN CLICKED
 artist.on('click', function(){
+	currentPos = artist.index( this );
+	//zero indexed, so we add 2
+	nextPos = currentPos + 2;
+
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
+
+	nextArtist = $("#artist").find('ul :nth-child(' + nextPos + ')').data('name');
+	nextId = $("#artist").find('ul :nth-child(' + nextPos + ')').data('pic');
+
 	//empty out default picture
 	$('#artist-info').find('.assets img').empty();
 	addInfo(name, pic);
 	$('#artist-info').transition({
 		left: 0
 	}, 500, "ease");
+
+	//change class of next artist link
+	updateNextArtistLink(nextId, currentPos);
+	return currentPos;
 });
 
 
@@ -51,7 +68,7 @@ artistBox.find('.go-home').on('click', function(){
 });
 
 //ADD INFO TO SLIDE BOX
-function addInfo(name, pic, nickname){
+function addInfo(name, pic){
 	artistBox.find('.insert-name').text(name);
 	artistBox.find('.exit').removeClass('hidden');
 	artistBox.find('.assets img').attr('src', '../images/artist/' + pic + '.jpg');
@@ -83,6 +100,7 @@ function addInfo(name, pic, nickname){
 		}
 	});
 }
+
 
 //GET NAME TITLES
 artist.on('mouseenter', function(){
@@ -125,6 +143,26 @@ artist.on('mouseleave', function(){
 
 //hide all images on load, makes callback to set images to display block
 hideImages();
+
+function updateNextArtistLink(next, currentPos){
+	
+	//currentPos += 1;
+
+	//empty class
+	$('#next-artist').removeClass();
+	//append NEXT artist name
+	$('#next-artist').addClass(next);
+}
+
+
+$('#next-artist').on('click', function(){
+	//turn into object, so both parameters can be passed
+	addInfo(nextArtist, nextId);
+	alert(currentPos);
+	updateNextArtistLink(nextArtist);
+
+
+});
 
 
 });
