@@ -370,7 +370,7 @@ nav .nav-top-center li a.scroll {
   transition: all .2s ease-in-out;
 }
 nav .nav-top-center li a.scroll:hover {
-  color: gray;
+  color: yellow;
 }
 
 #nav-bottom {
