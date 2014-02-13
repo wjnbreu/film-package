@@ -476,6 +476,7 @@ nav .nav-top-center li a.scroll:hover {
   min-height: 100%;
   background: url(../../images/title-image.jpg) no-repeat bottom left;
   background-size: 80%;
+  text-align: center;
   color: white;
 }
 #title img {
@@ -540,7 +541,7 @@ nav .nav-top-center li a.scroll:hover {
   display: block;
 }
 #pointer img {
-  width: 60px;
+  width: 9%;
   height: auto;
   margin: 0;
   max-width: 100%;
