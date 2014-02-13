@@ -142,9 +142,10 @@ $(document).ready(function() {
 
 
 		// LOSE POINTER ONCE SCROLL BEGINS
-		if (top >= 38){
+		if (top >= 58){
 			//lose css animation
 			$('#pointer').fadeOut(200);
+			navMin(bottom);
 		}
 
 		//SECOND SCREEN
@@ -153,14 +154,14 @@ $(document).ready(function() {
 
 			//CLOSE ALL NAVIGATION
 			navMin(nav);
-			navMin(bottom);
+			
 		}
 
+		
 		//IF BACK ON HERO PAGE
 		if (top < (win_height - 58)){
 			//re-add navigation links
 			navMax(nav);
-			navMax(bottom);
 			//lose nav pointer
 
 		}
