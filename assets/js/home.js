@@ -293,6 +293,12 @@ $(document).ready(function() {
 		$(this).parent().parent().find('iframe').slideToggle('slow');
 	});
 
+	//and
+	$('#download').find('.fb-button').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().parent().find('iframe').slideToggle('slow');
+	});
+
 	//make sure youtube html is empty on page load
 	$('#film').find('#embed').empty();
 
