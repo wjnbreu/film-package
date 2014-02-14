@@ -23,36 +23,24 @@ $(document).ready(function() {
 	var hd = "https://s3.amazonaws.com/RBMAFilm/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
 	var sd = "https://s3.amazonaws.com/RBMAFilm/What+Difference+Does+It+Make%3F+A+Film+About+Making+Music+SD";
 	
-	var hd_jp = "http://weird.stareastasia.com/wp-content/uploads/2009/03/weird-japan-016.jpg";
-	var sd_jp = "http://weird.stareastasia.com/wp-content/uploads/2009/03/weird-japan-016.jpg";
+	var hd_jp = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
+	var sd_jp = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
 	
-	var hd_ger = "http://www.costumecollection.com.au/img/0/2/oktoberfest-costume-german-beer-maid-44496925.jpg";
-	var sd_ger = "http://www.costumecollection.com.au/img/0/2/oktoberfest-costume-german-beer-maid-44496925.jpg";
 
-	var hd_aus = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
-	var sd_aus = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
 
-	
+
 	function findLocation(){
 		try{
 			//get ip for japan and choose links
 			$.getJSON("http://freegeoip.net/json/",function(data){
 				country = data.country_name;
 
-				if (country === 'Germany'){
-					sd_download.attr('href', sd_ger);
-					hd_download.attr('href', hd_ger);
-				}
-
-				else if (country === 'Japan'){
+				
+				if (country === 'Japan'){
 					sd_download.attr('href', sd_jp);
 					hd_download.attr('href', hd_jp);
 				}
 
-				else if (country === 'Austria'){
-					sd_download.attr('href', sd_aus);
-					hd_download.attr('href', hd_aus);
-				}
 				else {
 					sd_download.attr('href', sd);
 					hd_download.attr('href', hd);
@@ -67,80 +55,7 @@ $(document).ready(function() {
 		}
 	}
 
-	
 
-
-
-
-
-	//change out autoplay=none to autoplay=1 on click
-	function swapVideo(vid){
-		var height = measureVideo();
-		var width = $(window).width();
-		var target = vid.parent().parent();
-		target.find('.text').hide();
-		target.find('#loop').addClass('video-playing').fadeOut();
-
-
-
-		//display controls on mobile video
-		
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			$('#film').find('#embed').html('<iframe frameborder="0" scrolling="no" ' +
-										'seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" ' +
-										'mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" ' +
-										'id="rbmaplayer" width="' + width + '" height="' + height + '" ' +
-										'src="http://www.youtube.com/embed/uVzx_p_DrL8?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;' +
-										'controls=1&amp;showinfo=1&amp;modestbranding=0&amp;iv_load_policy=3&amp;' +
-										'rel=0"></iframe>');
-		}
-
-		else {
-			$('#film').find('#embed').html('<iframe frameborder="0" scrolling="no" ' +
-										'seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" ' +
-										'mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" ' +
-										'id="rbmaplayer" width="' + width + '" height="' + height + '" ' +
-										'src="http://www.youtube.com/embed/uVzx_p_DrL8?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;' +
-										'controls=0&amp;showinfo=1&amp;modestbranding=0&amp;iv_load_policy=3&amp;' +
-										'rel=0"></iframe>');
-		}
-		
-		target.find('iframe').show();
-		$('#film').find('#embed').css({
-			zIndex: '9'
-		});
-	}
-
-	//USED TO MESAURE SCREEN SIZE TO BE USED FOR VIDEO SIZE
-	function measureVideo(){
-		var rect = document.getElementById("film").getBoundingClientRect();
-		if (rect.height){
-			elementHeight = rect.height;
-		}
-		else{
-			elementHeight = rect.bottom - rect.height; //derive height
-		}
-
-		return elementHeight;
-	}
-
-
-
-	//REMOVES VIDEO BACKGROUND FOR MOBILE
-	function removeVideo(windowsize){
-		if (windowsize <= 1024){
-			$('#film').find('#loop').hide();
-		}
-		if (windowsize > 1024){
-			if ($('#loop').hasClass('video-playing')){
-				return;
-			}
-			else{
-				$('#film').find('#loop').show();
-			}
-			
-		}
-	}
 
 	//only appends iframe okfocus animation when device is not mobile
 	function insertAnimation(){
@@ -327,8 +242,25 @@ $(document).ready(function() {
 
 
 
-
 	//STARTUP EVENT LISTENERS AND FUNCTIONS
+
+		//REFACTOR TO FUNCTIONS!!!	
+	$('#download').find('.download-left img').on('mouseenter', function(){
+		$(this).attr('src', 'images/standard_def_b.svg');
+	});
+
+	$('#download').find('.download-left img').on('mouseleave', function(){
+		$(this).attr('src', 'images/standard_def.svg');
+	});
+
+	$('#download').find('.download-right img').on('mouseenter', function(){
+		$(this).attr('src', 'images/high_def_b.svg');
+	});
+
+	$('#download').find('.download-right img').on('mouseleave', function(){
+		$(this).attr('src', 'images/high_def.svg');
+	});
+
 	
 	//slide out facebook like button on click
 	$('#about').find('.social .fb-button').on('click', function(e){
@@ -342,8 +274,6 @@ $(document).ready(function() {
 		$(this).parent().parent().find('iframe').slideToggle('slow');
 	});
 
-	//make sure youtube html is empty on page load
-	$('#film').find('#embed').empty();
 
 
 	//on nav bar click, grab link class and pass to smooth scroll
@@ -355,8 +285,6 @@ $(document).ready(function() {
 		smoothScroll($(this));
 	});
 
-	//call remove video function. will only remove loop if on device
-	removeVideo(win_width);
 
 	//on scroll, change colors of nav items accordingly
 	$('#wrapper').scroll(function(){
@@ -369,15 +297,6 @@ $(document).ready(function() {
 		
 	});
 
-	//retrigger scroll position colors on resize
-	$(window).resize(function(){
-		var windowsize = $(window).width();
-		removeVideo(windowsize);
-		if (windowsize > 1024){
-			navColors();
-		}
-		
-	});
 
 
 	$(document).keydown(function(e) {
@@ -389,12 +308,6 @@ $(document).ready(function() {
     }
 });
 
-
-	//change video background on play button click
-	$('#play-button').on('click', function(){
-		swapVideo($(this));
-
-	});
 
 	//use css animated arrow on hero page to scroll down one page
 	$('#pointer').on('click', function(){
