@@ -27,8 +27,6 @@ $(document).ready(function() {
 	var sd_jp = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
 	
 
-
-
 	function findLocation(){
 		try{
 			//get ip for japan and choose links
