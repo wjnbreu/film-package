@@ -620,7 +620,7 @@ nav{
     }
     .download-share{
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         height: 10%;
         width: 100%;
         left: 0;
@@ -906,7 +906,7 @@ nav{
         text-align: center;
         img{
             display: inline;
-            width: 30px;
+            max-width: 32px;
             height: auto;
             &.social-white{
                 display: inline-block;
