@@ -466,10 +466,16 @@ nav{
     // background-size: cover;
     color: white;
     img{
+
         width: 40%;
         margin-left: 30%;
         margin-right: 30%;
         margin-top: 5%;
+
+        width: 60%;
+        margin-left: 19%;
+        margin-right: 21%;
+
     }
     #title-text{
         margin-top: 10%;
@@ -567,6 +573,7 @@ nav{
     }
 }
 
+
 #video{
     position: absolute;
     top: 100% !important;
@@ -658,85 +665,6 @@ nav{
     }
 }
 
-
-
-// #film{
-//     position: absolute;
-//     top: 200%;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: black;
-//     color: white;
-//     video{
-//         max-width: 100%;
-//         opacity: 1;
-//     }
-//     .text{
-//         margin-top: 5%;
-//         text-align: center;
-//         width: 80%;
-//         left: 10%;
-//         right: 10%;
-//         position: absolute;
-//         z-index: 2;
-//         h1{
-//             text-transform: none;
-//             font-size: 4em;
-//             line-height: 1;
-//             width: 80%;
-//             text-align: center;
-//             margin: 10px 10% 0 10%;
-//             font-weight: 100;
-//         }
-//         h2{
-//             text-align: center;
-//             text-transform: uppercase;
-//             font-size: 2.5em;
-//             width: 60%;
-//             margin: 10% 20% 0 20%;
-//             line-height: 1;
-            
-//         }
-//         h3{
-//             margin-top: 2.5%;
-//             text-transform: uppercase;
-//         }
-//         img{
-//             max-width: 15%;
-//             margin-top: 15%;
-//             -webkit-transition: all .2s ease-in-out;
-//             -moz-transition: all .2s ease-in-out;
-//             -o-transition: all .2s ease-in-out;
-//             -ms-transition: all .2s ease-in-out;
-//             transition: all .2s ease-in-out;
-//             &:hover{
-//                 opacity: 0.5;
-//             }
-//         }
-//     } 
-//     .film-wrap{
-//         max-width: 100%;
-//         max-height: 100%;
-//         height: 100%;
-//         width: 100%;
-//         margin: 0 0 0 0;
-//         position: absolute;
-//         iframe{
-//             opacity: 1;
-//             width: 100%;
-//             display: none;
-            
-//         }
-//         video{
-//             display: block;
-//             max-width: 200%;
-//             width: 200%;
-//             left: -50%;
-//             //z-index: 9;
-//         }
-//     }
-// } 
 
 
 #artist{
@@ -1249,22 +1177,6 @@ nav{
 /************************ MEDIUM LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 1100px){
 
-   #film{
-    position: absolute;
-    top: 200%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 155%;
-    background-color: black;
-    video{
-            display: none;
-
-    }
-
-}
 
 
 
@@ -1470,51 +1382,6 @@ nav{
    }
 
 
-   #film{
-    position: absolute;
-    top: 200%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 125%;
-    video{
-            display: none;
-
-    }
-    .text{
-        margin-top: 30%;
-        width: 80%;
-        left: 10%;
-        right: 10%;
-
-        h1{
-            font-size: 2em;
-            line-height: 1;
-            width: 80%;
-            text-align: center;
-            margin: 30px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-
-    .film-wrap{
-        iframe{
-            opacity: 1;
-            width: 100%;
-            display: none;  
-        }
-        video{
-            display: none;
-        }
-    }
-
-}
 
 #go-home{
         display: none;
@@ -1664,16 +1531,6 @@ nav{
 @media only screen and (max-width: 700px){
 
 
-    #film{
-    position: absolute;
-    top: 200%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 175%;
-    background-color: black;
-}
     #artist{
     position: absolute;
     top: 300%;
@@ -1773,43 +1630,7 @@ nav{
         display: none !important;
     }
 
-    #film{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-        background-size: 200%;
-        video{
-            display: none;
-        }
-        .text{
-            margin-top: 30%;
-            width: 80%;
-            left: 10%;
-            right: 10%;
 
-        h1{
-            font-size: 2em;
-            width: 80%;
-            margin: 30px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-
-    .film-wrap{
-        margin: 0 0 0 0;
-        z-index: 0;
-        video{
-            display: none;
-        }
-    }
-}
 
     #artist{
         position: absolute;
@@ -1998,31 +1819,7 @@ nav{
         display: none;
     }
 
-   #film{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 200%;
-    video{
-        display: none;
-    }
-    .text{
-        margin-top: 10%;
-        width: 80%;
-        left: 10%;
-        right: 10%;
-        h1{
-            font-size: 2em;
-            width: 80%;
-            margin: 30px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    }
-}
+
 
 #artist{
     top: 200%;
@@ -2144,16 +1941,6 @@ nav{
 
     #countdown-container{
         display: none !important;
-    }
-
-    #film{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-        background-size: 200%;
     }
 
 
@@ -2279,39 +2066,6 @@ nav{
         display: none !important;
     }         
 
-    #film{
-        top: 100%;
-        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-        background-size: 200%;
-        video{
-            display: none;
-        }
-    .text{
-        margin-top: 30%;
-        z-index: 9;
-
-        h1{
-            font-size: 2em;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-    .film-wrap{
-        iframe{
-            opacity: 1;
-            width: 100%;
-            display: none;
-            
-        }
-        video{
-            display: none;
-        }
-    }
-
-}
 
     #artist{
         top: 200%;
@@ -2527,47 +2281,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
         display: none !important;
     }         
 
-   #film{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 200%;
-    video{
-            display: none;
 
-    }
-    .text{
-        margin-top: 5%;
-
-        h1{
-            font-size: 2em;
-            line-height: 1;
-            width: 80%;
-            margin: 10px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-
-    .film-wrap{
-        iframe{
-            opacity: 1;
-            width: 100%;
-            display: none;
-            
-        }
-        video{
-            display: none;
-        }
-    }
-
-}
 
 #artist{
     top: 200%;
