@@ -551,12 +551,13 @@ nav{
 
 #download{
     position: absolute;
+    border-top: 1px solid white;
     top: 200%;
     left: 0;
     width: 100%;
     height: 50%;
-    background-color: white;
-    color: color;
+    background-color: black;
+    color: white;
     font-family: 'Rail', helvetica, sans-serif;
     h1{
         text-align: center;
@@ -565,15 +566,15 @@ nav{
         text-transform: none;
         margin-left: 20%;
         margin-right: 20%;
-        border: 2px solid black;
-        background-color: white;
+        border: 2px solid white;
+        background-color: black;
     }
     
     .instructions{
         position: absolute;
         left: 0;
         height: 10%;
-        top: 60%;
+        top: 65%;
         width: 100%;
         h3{
             font-weight: 100;
@@ -585,7 +586,7 @@ nav{
     }
     .download-left{
         position: absolute;
-        top: 45%;
+        top: 50%;
         width: 50%;
         left: 0;
         height: 15%;
@@ -606,7 +607,7 @@ nav{
     }
     .download-right{
         position: absolute;
-        top: 45%;
+        top: 50%;
         right: 0;
         width: 50%;
         height: 15%;
@@ -683,6 +684,7 @@ nav{
             margin-left: 35%;
             margin-right: 35%;
             border: 2px solid white;
+            background-color: black;
         }
         ul{
             max-width: 100%;

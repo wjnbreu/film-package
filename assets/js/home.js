@@ -244,19 +244,19 @@ $(document).ready(function() {
 
 		//REFACTOR TO FUNCTIONS!!!	
 	$('#download').find('.download-left img').on('mouseenter', function(){
-		$(this).attr('src', 'images/standard_def_b.svg');
+		$(this).attr('src', 'images/standard_def_invert.svg');
 	});
 
 	$('#download').find('.download-left img').on('mouseleave', function(){
-		$(this).attr('src', 'images/standard_def.svg');
+		$(this).attr('src', 'images/standard_def_b.svg');
 	});
 
 	$('#download').find('.download-right img').on('mouseenter', function(){
-		$(this).attr('src', 'images/high_def_b.svg');
+		$(this).attr('src', 'images/high_def_invert.svg');
 	});
 
 	$('#download').find('.download-right img').on('mouseleave', function(){
-		$(this).attr('src', 'images/high_def.svg');
+		$(this).attr('src', 'images/high_def_b.svg');
 	});
 
 	
