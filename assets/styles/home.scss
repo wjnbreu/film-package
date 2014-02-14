@@ -992,6 +992,12 @@ nav{
             }
         }
     }
+
+    #about{
+        h1{
+            font-size: 6em;
+        }
+    }
 }
 
 
@@ -1001,7 +1007,7 @@ nav{
 
 /************************ SEMI-WIDESCREEN ******************************/
 
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 1500px) and (max-width: 1799px){
     #artist{
     position: absolute;
 
@@ -1035,7 +1041,7 @@ nav{
         margin-right: 30%;
         margin-top: 5%;
         border: 2px solid white;
-        font-size: 6em;
+        font-size: 4em;
         text-align: center;
         }
     p{
