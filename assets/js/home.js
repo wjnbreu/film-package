@@ -16,18 +16,48 @@ $(document).ready(function() {
 	var counter = 1;
 	var background_counter = 0; //used to make sure backgrounds only change once
 	var scrollSpeed = 500;
+	var country;
+	var sd_download = $('#download').find('.download-left a');
+	var hd_download = $('#download').find('.download-right a');
+	
+	var hd = "https://s3.amazonaws.com/RBMAFilm/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
+	var sd = "https://s3.amazonaws.com/RBMAFilm/What+Difference+Does+It+Make%3F+A+Film+About+Making+Music+SD";
+	
+	var hd_jp = "http://weird.stareastasia.com/wp-content/uploads/2009/03/weird-japan-016.jpg";
+	var sd_jp = "http://weird.stareastasia.com/wp-content/uploads/2009/03/weird-japan-016.jpg";
+	
+	var hd_ger = "http://www.costumecollection.com.au/img/0/2/oktoberfest-costume-german-beer-maid-44496925.jpg";
+	var sd_ger = "http://www.costumecollection.com.au/img/0/2/oktoberfest-costume-german-beer-maid-44496925.jpg";
 
-	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
-	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Trancemicsoul', 'Jimi Nxir', 'Quietdust',
-	'Ale Hop', 'Koreless', 'Kraftmatiks', 'Lee Perry', 'Thundercat', 'Leo Aldrey',
-	'Nile Rodgers', 'Philip Glass', 'Deborah Harry', 'De La Montagne', 'Mr. Selfish',
-	'Ken Scott', 'Malcolm Cecil', 'Melmann', 'Ale Hop', 'Julian Love',
-	'Falty DL', 'Orlando Volcano', 'Benjamin Damage', 'Nick Hook', 'François K',
-	'James Murphy', 'Skream', 'Jamie Jupiter', 'Egyptian Lover', 'Richie Hawtin',
-	'Seth Troxler', 'Steve Arrington', 'Todd Edwards', 'Easton West',
-	'Giorgio Moroder', 'Q-Tip', 'Mathew Jonson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
-	'Flying Lotus', 'Gaslamp Killer', 'Louis Baker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
-	'Young Guru'];
+	var hd_aus = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
+	var sd_aus = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
+
+	//get ip for japan and choose links
+	$.getJSON("http://freegeoip.net/json/",function(data){
+		country = data.country_name;
+		if (country === 'Germany'){
+			sd_download.attr('href', sd_ger);
+			hd_download.attr('href', hd_ger);
+		}
+
+		else if (country === 'Japan'){
+			sd_download.attr('href', sd_jp);
+			hd_download.attr('href', hd_jp);
+		}
+
+		else if (country === 'Austria'){
+			sd_download.attr('href', sd_aus);
+			hd_download.attr('href', hd_aus);
+		}
+		else {
+			sd_download.attr('href', sd);
+			hd_download.attr('href', hd);
+		}
+		
+	});
+
+
+
 
 
 	//change out autoplay=none to autoplay=1 on click
