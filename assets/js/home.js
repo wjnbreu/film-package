@@ -17,18 +17,6 @@ $(document).ready(function() {
 	var background_counter = 0; //used to make sure backgrounds only change once
 	var scrollSpeed = 500;
 
-	var artists = ['Afrika Bambaataa', 'DJ Assault', 'Brian Eno', 'Van Dyke Parks',
-	'Rakim', 'Bernie Worrell', 'Stephen O’Malley', 'Trancemicsoul', 'Jimi Nxir', 'Quietdust',
-	'Ale Hop', 'Koreless', 'Kraftmatiks', 'Lee Perry', 'Thundercat', 'Leo Aldrey',
-	'Nile Rodgers', 'Philip Glass', 'Deborah Harry', 'De La Montagne', 'Mr. Selfish',
-	'Ken Scott', 'Malcolm Cecil', 'Melmann', 'Ale Hop', 'Julian Love',
-	'Falty DL', 'Orlando Volcano', 'Benjamin Damage', 'Nick Hook', 'François K',
-	'James Murphy', 'Skream', 'Jamie Jupiter', 'Egyptian Lover', 'Richie Hawtin',
-	'Seth Troxler', 'Steve Arrington', 'Todd Edwards', 'Easton West',
-	'Giorgio Moroder', 'Q-Tip', 'Mathew Jonson', 'Erykah Badu', 'Tom Moulton', 'Pantha Du Prince',
-	'Flying Lotus', 'Gaslamp Killer', 'Louis Baker', 'Big Freedia', 'Star Eyes', 'Just Blaze',
-	'Young Guru'];
-
 
 	//change out autoplay=none to autoplay=1 on click
 	function swapVideo(vid){
