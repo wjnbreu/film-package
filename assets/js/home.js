@@ -32,29 +32,42 @@ $(document).ready(function() {
 	var hd_aus = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
 	var sd_aus = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
 
-	//get ip for japan and choose links
-	$.getJSON("http://freegeoip.net/json/",function(data){
-		country = data.country_name;
-		if (country === 'Germany'){
-			sd_download.attr('href', sd_ger);
-			hd_download.attr('href', hd_ger);
+	
+	function findLocation(){
+		try{
+			//get ip for japan and choose links
+			$.getJSON("http://freegeoip.net/json/",function(data){
+				country = data.country_name;
+
+				if (country === 'Germany'){
+					sd_download.attr('href', sd_ger);
+					hd_download.attr('href', hd_ger);
+				}
+
+				else if (country === 'Japan'){
+					sd_download.attr('href', sd_jp);
+					hd_download.attr('href', hd_jp);
+				}
+
+				else if (country === 'Austria'){
+					sd_download.attr('href', sd_aus);
+					hd_download.attr('href', hd_aus);
+				}
+				else {
+					sd_download.attr('href', sd);
+					hd_download.attr('href', hd);
+				}
+			});
 		}
 
-		else if (country === 'Japan'){
-			sd_download.attr('href', sd_jp);
-			hd_download.attr('href', hd_jp);
-		}
-
-		else if (country === 'Austria'){
-			sd_download.attr('href', sd_aus);
-			hd_download.attr('href', hd_aus);
-		}
-		else {
+		//defaults to OG video if country can't be detected
+		catch (error){
 			sd_download.attr('href', sd);
 			hd_download.attr('href', hd);
 		}
-		
-	});
+	}
+
+	
 
 
 
@@ -421,5 +434,6 @@ $(document).ready(function() {
 	});
 
 	insertAnimation();
+	findLocation();
 
 });

@@ -590,11 +590,21 @@ nav{
         left: 0;
         height: 15%;
         float: left;
-        text-align: center;
+        text-align: right;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
         img{
             max-width: 100%;
-            width: 70%;
+            width: 50%;
             height: auto;
+            margin-right: 5%;
+
+            &:hover{
+                opacity: 0.8;
+            }
         }
 
     }
@@ -605,11 +615,19 @@ nav{
         width: 50%;
         height: 15%;
         float: right;
-        text-align: center;
-        img{
-            max-width: 100%;
-            width: 70%;
-            height: auto;
+        text-align: left;
+
+        a{
+            img{
+                max-width: 100%;
+                width: 50%;
+                height: auto;
+                margin-left: 5%;
+                &:hover{
+                    opacity: 0.8;
+                }
+        }
+
         }
     }
     .download-share{
@@ -624,6 +642,9 @@ nav{
             img{
                 max-width: 32px;
                 height: auto;
+                &:hover{
+                    width: 51%;
+                }
             }
         }
         iframe{
