@@ -35,7 +35,7 @@ if (typeof(BackColor)=="undefined")
 if (typeof(ForeColor)=="undefined")
   ForeColor= "black";
 if (typeof(TargetDate)=="undefined")
-  TargetDate = "02/18/2014 3:00 PM UTC+0000";
+  TargetDate = "02/18/2014 3:00 PM UTC+0100";
 if (typeof(DisplayFormat)=="undefined")
   DisplayFormat = "%%D%%D, %%H%%H, %%M%%M, %%S%%S";
 if (typeof(CountActive)=="undefined")
