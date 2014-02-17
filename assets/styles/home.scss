@@ -549,44 +549,25 @@ nav{
         position: absolute;
         bottom: 30px;
         width: 30%;
+        height: 100px;
         left: 35%;
         right: 35%;
         text-align: center;
-        button{
-            width: 100%;
-            height: auto;
-            background-color: black;
-            color: white;
-            border: 2px solid white;
-            text-transform: none;
-            font-weight: bold;
-            font-size: 3em;
-            vertical-align: middle;
-            
-            &:hover{
-                -webkit-transform: translate(2px, 2px);
-                -moz-transform: translate(2px, 2px);
-                -o-transform: translate(2px, 2px);
-                -ms-transform: translate(2px, 2px);
-                transform: translate(2px, 2px);
-
-            }
-            img{
-                max-width: 15%;
-                height: auto;
-            }
+        background: url(../../images/play_w.svg) no-repeat center center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -ms-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        &:hover{
+           background: url(../../images/play_b.svg) no-repeat center center;
+           background-size: contain;
+           -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -ms-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain; 
         }
-
-        h1{
-            border: 2px solid white;
-            color: white;
-            text-transform: none;
-            &:hover{
-                opacity: 0.6;
-            }
-        }
-        
-
     }
     #embed{
         z-index: 99;
