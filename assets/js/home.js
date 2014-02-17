@@ -277,7 +277,7 @@ $(document).ready(function() {
 
 		//REFACTOR TO FUNCTIONS!!!	
 	$('#download').find('.download-left img').on('mouseenter', function(){
-		$(this).attr('src', 'images/standard_def_invert.svg');
+		$(this).attr('src', 'images/standard_def_back.svg');
 	});
 
 	$('#download').find('.download-left img').on('mouseleave', function(){
@@ -285,7 +285,7 @@ $(document).ready(function() {
 	});
 
 	$('#download').find('.download-right img').on('mouseenter', function(){
-		$(this).attr('src', 'images/high_def_invert.svg');
+		$(this).attr('src', 'images/high_def_back.svg');
 	});
 
 	$('#download').find('.download-right img').on('mouseleave', function(){
