@@ -560,8 +560,7 @@ nav{
             border: 2px solid white;
             color: white;
             &:hover{
-                background-color: white;
-                color: black;
+                opacity: 0.6;
             }
         }
         
@@ -665,6 +664,9 @@ nav{
             img{
                 max-width: 32px;
                 height: auto;
+                &:hover{
+                    opacity: 0.6;
+                }
             }
         }
         iframe{
@@ -677,6 +679,7 @@ nav{
             display: inline-block;
 
         }
+
     }
 }
 
@@ -947,6 +950,9 @@ nav{
             &.social-white{
                 display: inline-block;
             }
+            &:hover{
+                    opacity: 0.6;
+                }
         }
         iframe{
             display: none;
