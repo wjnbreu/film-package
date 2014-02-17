@@ -53,6 +53,39 @@ $(document).ready(function() {
 		}
 	}
 
+	//change out autoplay=none to autoplay=1 on click
+	function swapVideo(vid){
+		var height = (measureVideo());
+		var width = ($(window).width());
+		var target = vid.parent().parent();
+
+		//display controls on mobile video
+		
+			target.find('#embed').html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
+		
+		target.find('.play').hide();
+		target.find('#embed').show();
+		target.find('.cover').hide();
+		target.find('#embed').css({
+			zIndex: '99'
+		});
+	}
+
+		//USED TO MESAURE SCREEN SIZE TO BE USED FOR VIDEO SIZE
+	function measureVideo(){
+		var rect = document.getElementById("stream").getBoundingClientRect();
+		if (rect.height){
+			elementHeight = rect.height;
+		}
+		else{
+			elementHeight = rect.bottom - rect.height; //derive height
+		}
+
+		return elementHeight;
+	}
+
+
+
 
 
 	//only appends iframe okfocus animation when device is not mobile
@@ -343,6 +376,14 @@ $(document).ready(function() {
 			
 		}
 	});
+
+	//change video background on play button click
+	$('#play-button').on('click', function(){
+		swapVideo($(this));
+
+	});
+
+
 
 	insertAnimation();
 	findLocation();
