@@ -24,7 +24,7 @@ $(document).ready(function() {
 	var hd_download = $('#download').find('.download-right a');
 	
 	var hd = "https://s3.amazonaws.com/RBMAFilm/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
-	var sd = "https://s3.amazonaws.com/RBMAFilm/What+Difference+Does+It+Make%3F+A+Film+About+Making+Music+SD";
+	var sd = "https://s3.amazonaws.com/RBMAFilm/SD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
 	
 	var hd_jp = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
 	var sd_jp = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
@@ -330,6 +330,7 @@ $(document).ready(function() {
 		//change video background on play button click
 		$('#play-button').on('click', function(){
 			swapVideo($(this));
+			$(this).fadeOut();
 
 		});
 

@@ -256,9 +256,6 @@ a{
     -o-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    &:hover{
-        color: gray;
-    }
 }
 
 
@@ -303,7 +300,7 @@ nav{
                 -ms-transition: all .2s ease-in-out;
                 transition: all .2s ease-in-out;
                 &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             }
         }
@@ -329,7 +326,7 @@ nav{
                 -ms-transition: all .2s ease-in-out;
                 transition: all .2s ease-in-out;
                 &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             }
         }
@@ -372,7 +369,7 @@ nav{
                 -ms-transition: all .2s ease-in-out;
                 transition: all .2s ease-in-out;
                 &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             }
         }
@@ -388,7 +385,7 @@ nav{
             float: right;
             color: white;
             &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             img{
                 width: 30%;
@@ -483,29 +480,27 @@ nav{
     width: 70%;
     height: 5%;
     position: fixed;
-    bottom: 60px;
+    bottom: 70px;
     left: 15%;
     right: 15%;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
-    p, span{
-        color: white;
+    p{
         font-family: 'Rail', helvetica, sans-serif;
         text-transform: uppercase;
-        margin: 0;
-    }
-    p{
         width: 30%;
         margin-left: 35%;
+        margin-bottom: 0;
+        color: white;
         border: 2px solid white;
         line-height: 1.5;
         &:hover{
-            opacity: 0.6;
+            -webkit-transform: translate(1px, 1px);
+            -moz-transform: translate(1px, 1px);
+            -ms-transform: translate(1px, 1px);
+            -o-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
         }
-    }
-    span{
-        font-weight: bold;
-        display: block;
     }
     img{
         width: 9%;
@@ -523,12 +518,20 @@ nav{
 
 
 #stream{
+    border-top: 1px solid white;
     display: block;
     position: absolute;
     top: 100%;
     left: 0;
     height: 100%;
     width: 100%;
+    background: url(../../images/ice.gif) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    //background-size: 100%;
     background-color: black;
     text-align: center;
     z-index: 2;
@@ -545,18 +548,47 @@ nav{
     .play{
         z-index: 98;
         position: absolute;
-        top: 30%;
-        width: 20%;
-        height: 20%;
-        left: 40%;
-        right: 40%;
+        top: 40%;
+        width: 30%;
+        left: 35%;
+        right: 35%;
         text-align: center;
-        img{
-            max-width: 100%;
+        button{
+            width: 100%;
+            height: auto;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            -webkit-box-shadow: 5px 5px white;
+            -moz-box-shadow: 5px 5px white;
+            -ms-box-shadow: 5px 5px white;
+            -o-box-shadow: 5px 5px white;
+            box-shadow: 5px 5px white;
+            text-transform: none;
+            font-weight: bold;
+            font-size: 3em;
+            vertical-align: middle;
+            
             &:hover{
-                opacity: 0.6;
+                -webkit-box-shadow: 2px 2px black;
+                -moz-box-shadow: 2px 2px black;
+                -o-box-shadow: 2px 2px black;
+                -ms-box-shadow: 2px 2px black;
+                box-shadow: 2px 2px black;
+                -webkit-transform: translate(2px, 2px);
+                -moz-transform: translate(2px, 2px);
+                -o-transform: translate(2px, 2px);
+                -ms-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+
+            }
+            img{
+                max-width: 15%;
+                height: auto;
+                padding-bottom: 10px;
             }
         }
+
         h1{
             border: 2px solid white;
             color: white;
@@ -633,6 +665,14 @@ nav{
             width: 50%;
             height: auto;
             margin-right: 5%;
+            &:hover{
+                -webkit-box-shadow: 2px 2px white;
+                -moz-box-shadow: 2px 2px white;
+                -o-box-shadow: 2px 2px white;
+                -ms-box-shadow: 2px 2px white;
+                box-shadow: 2px 2px white;
+
+            }
         }
 
     }
@@ -651,6 +691,13 @@ nav{
                 width: 50%;
                 height: auto;
                 margin-left: 5%;
+                &:hover{
+                    -webkit-box-shadow: 2px 2px white;
+                    -moz-box-shadow: 2px 2px white;
+                    -o-box-shadow: 2px 2px white;
+                    -ms-box-shadow: 2px 2px white;
+                    box-shadow: 2px 2px white;
+                }
         }
 
         }
@@ -743,6 +790,12 @@ nav{
                     border: 2px solid white;
                     background-color: black;
                     color: white;
+                    -webkit-box-shadow: 1px 1px white;
+                    -moz-box-shadow: 1px 1px white;
+                    -o-box-shadow: 1px 1px white;
+                    -ms-box-shadow: 1px 1px white;
+                    box-shadow: 1px 1px white;
+                
                 }
             }
         }
@@ -778,6 +831,11 @@ nav{
             -moz-filter: invert(100%);
             filter: invert(100%);
             background-size: 100%;
+            -webkit-box-shadow: 1px 1px black;
+                    -moz-box-shadow: 1px 1px black;
+                    -o-box-shadow: 1px 1px black;
+                    -ms-box-shadow: 1px 1px black;
+                    box-shadow: 1px 1px black;
         }
     }
 
@@ -927,6 +985,9 @@ nav{
         a{
             text-decoration: underline;
             color: white;
+            &:hover{
+                opacity: 0.6;
+            }
         }
     }
     .logo{
@@ -1460,6 +1521,27 @@ nav{
             
    }
 
+   .play{
+        z-index: 98;
+        position: absolute;
+        top: 40%;
+        width: 30%;
+        left: 35%;
+        right: 35%;
+        text-align: center;
+        button{
+            width: 100%;
+            font-size: 1.5em;
+
+
+            img{
+                max-width: 20%;
+                height: auto;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
 
 
 #go-home{
@@ -1615,16 +1697,7 @@ nav{
 /************************ TINY LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 700px){
 
-#stream{
-    .play{
-        width: 50%;
-        left: 25%;
-        right: 25%;
-        img{
-            width: 100%;
-        }
-    }
-}
+
 
     #artist{
     position: absolute;
@@ -2060,7 +2133,7 @@ nav{
 
     #artist{
         top: 200%;
-        height: 200%;
+        height: 300%;
         width: 100%;
         .artist-list{
             max-width: 100%;
@@ -2108,7 +2181,7 @@ nav{
     }
 
     #about{
-        top: 400%;
+        top: 500%;
     }
 }
 
