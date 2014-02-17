@@ -2093,7 +2093,7 @@ nav{
 
 
 
-@media only screen and (min-device-width : 719px) and (max-device-width : 721px) and (-webkit-min-device-pixel-ratio : 2) and (orientation : portrait) { 
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) { 
   #title{
         position: absolute;
         top: 0;
