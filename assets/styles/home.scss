@@ -268,7 +268,7 @@ nav{
     left: 0;
     width: 100%;
     height: 58px;
-    z-index: 98;
+    z-index: 1;
     background-color: transparent;
     opacity: 1;
     font-family: 'Clan', helvetica, sans-serif;
@@ -347,7 +347,7 @@ nav{
     font-weight: 800;
     font-size: 1.5em;
     text-transform: uppercase;
-    z-index: 98;
+    z-index: 1;
     color: white;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -482,11 +482,11 @@ nav{
 #pointer{
     width: 70%;
     height: 5%;
-    position: absolute;
+    position: fixed;
     bottom: 60px;
     left: 15%;
     right: 15%;
-    z-index: 999;
+    z-index: 1;
     text-align: center;
     p, span{
         color: white;
@@ -531,6 +531,7 @@ nav{
     width: 100%;
     background-color: black;
     text-align: center;
+    z-index: 2;
     .cover{
         z-index: 9;
         height: 100%;
@@ -542,7 +543,7 @@ nav{
         }
     }
     .play{
-        z-index: 99;
+        z-index: 98;
         position: absolute;
         top: 30%;
         width: 20%;
@@ -587,6 +588,7 @@ nav{
     height: 50%;
     background-color: black;
     color: white;
+    z-index: 2;
     font-family: 'Rail', helvetica, sans-serif;
     h1{
         text-align: center;
@@ -694,6 +696,7 @@ nav{
     border-top: 1px solid white;
     background-color: black;
     color: white;
+    z-index: 2;
     font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
 
@@ -901,6 +904,7 @@ nav{
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
+    z-index: 2;
     h1{
         text-transform: none;
         max-width: 40%;
@@ -1204,11 +1208,10 @@ nav{
 #pointer{
     width: 70%;
     height: 5%;
-    position: absolute;
+    position: fixed;
     bottom: 70px;
     left: 15%;
     right: 15%;
-    z-index: 999;
     text-align: center;
     p{
         width: 40%;
