@@ -27,7 +27,7 @@ $(document).ready(function() {
 	var sd = "https://s3.amazonaws.com/RBMAFilm/SD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
 	
 	var hd_jp = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
-	var sd_jp = "http://www.rgbpicture.com/img/weird/japan/japan36.jpg";
+	var sd_jp = "https://s3.amazonaws.com/RBMAFilm/SD+JP+What+Difference+Does+It+Make%3F";
 
 
 

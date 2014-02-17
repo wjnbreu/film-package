@@ -518,14 +518,13 @@ nav{
 
 
 #stream{
-    border-top: 1px solid white;
     display: block;
     position: absolute;
     top: 100%;
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../../images/ice.gif) no-repeat center center;
+    background: url(../../images/cecil.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -548,7 +547,7 @@ nav{
     .play{
         z-index: 98;
         position: absolute;
-        top: 40%;
+        bottom: 30px;
         width: 30%;
         left: 35%;
         right: 35%;
@@ -559,22 +558,12 @@ nav{
             background-color: black;
             color: white;
             border: 2px solid white;
-            -webkit-box-shadow: 5px 5px white;
-            -moz-box-shadow: 5px 5px white;
-            -ms-box-shadow: 5px 5px white;
-            -o-box-shadow: 5px 5px white;
-            box-shadow: 5px 5px white;
             text-transform: none;
             font-weight: bold;
             font-size: 3em;
             vertical-align: middle;
             
             &:hover{
-                -webkit-box-shadow: 2px 2px black;
-                -moz-box-shadow: 2px 2px black;
-                -o-box-shadow: 2px 2px black;
-                -ms-box-shadow: 2px 2px black;
-                box-shadow: 2px 2px black;
                 -webkit-transform: translate(2px, 2px);
                 -moz-transform: translate(2px, 2px);
                 -o-transform: translate(2px, 2px);
@@ -585,7 +574,6 @@ nav{
             img{
                 max-width: 15%;
                 height: auto;
-                padding-bottom: 10px;
             }
         }
 
@@ -613,7 +601,6 @@ nav{
 
 #download{
     position: absolute;
-    border-top: 1px solid white;
     top: 200%;
     left: 0;
     width: 100%;
@@ -665,14 +652,6 @@ nav{
             width: 50%;
             height: auto;
             margin-right: 5%;
-            &:hover{
-                -webkit-box-shadow: 2px 2px white;
-                -moz-box-shadow: 2px 2px white;
-                -o-box-shadow: 2px 2px white;
-                -ms-box-shadow: 2px 2px white;
-                box-shadow: 2px 2px white;
-
-            }
         }
 
     }
@@ -691,14 +670,7 @@ nav{
                 width: 50%;
                 height: auto;
                 margin-left: 5%;
-                &:hover{
-                    -webkit-box-shadow: 2px 2px white;
-                    -moz-box-shadow: 2px 2px white;
-                    -o-box-shadow: 2px 2px white;
-                    -ms-box-shadow: 2px 2px white;
-                    box-shadow: 2px 2px white;
-                }
-        }
+            }
 
         }
     }
@@ -789,13 +761,7 @@ nav{
                 &:hover{
                     border: 2px solid white;
                     background-color: black;
-                    color: white;
-                    -webkit-box-shadow: 1px 1px white;
-                    -moz-box-shadow: 1px 1px white;
-                    -o-box-shadow: 1px 1px white;
-                    -ms-box-shadow: 1px 1px white;
-                    box-shadow: 1px 1px white;
-                
+                    color: white;                
                 }
             }
         }
@@ -1355,13 +1321,26 @@ nav{
 
 #stream{
     .play{
-        width: 20%;
-        left: 40%;
-        right: 40%;
-        img{
-            width: 80%;
+        z-index: 98;
+        position: absolute;
+        top: 40%;
+        width: 30%;
+        left: 35%;
+        right: 35%;
+        text-align: center;
+        button{
+            width: 100%;
+            font-size: 2em;
+
+
+            img{
+                max-width: 20%;
+                height: auto;
+                padding-bottom: 10px;
+            }
         }
     }
+
 }
 
 
@@ -1419,25 +1398,7 @@ nav{
     }
 }
 
-#pointer{
-    width: 70%;
-    height: 5%;
-    position: absolute;
-    bottom: 70px;
-    left: 15%;
-    right: 15%;
-    z-index: 999;
-    text-align: center;
-    p{
-        width: 50%;
-        margin-left: 25%;
-        border: 2px solid white;
-        line-height: 1.5;
-       }
-    span{
-        line-height: 1;
-    }
-}
+
 
 }
 
@@ -1521,7 +1482,8 @@ nav{
             
    }
 
-   .play{
+#stream{
+    .play{
         z-index: 98;
         position: absolute;
         top: 40%;
@@ -1531,17 +1493,18 @@ nav{
         text-align: center;
         button{
             width: 100%;
-            font-size: 1.5em;
+            font-size: 2em;
 
 
             img{
-                max-width: 20%;
+                max-width: 30%;
                 height: auto;
                 padding-bottom: 10px;
             }
         }
     }
 
+}
 
 
 #go-home{
