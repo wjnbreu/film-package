@@ -530,7 +530,7 @@ nav{
     -o-background-size: cover;
     -ms-background-size: cover;
     background-size: cover;
-    //background-size: 100%;
+    background-size: 100%;
     background-color: black;
     text-align: center;
     z-index: 2;
@@ -2060,7 +2060,7 @@ nav{
         background: url(../../images/title-image.jpg) no-repeat bottom center;
         img{
             width: 60%;
-            margin: 25% 20% auto 20%;
+            margin: 35% 20% auto 20%;
         }
     }
 
@@ -2289,6 +2289,12 @@ nav{
             margin-right: 5%;
             margin-left: 5%;
             font-size: 0.8em;
+        }
+        .logo{
+            img{
+                width: 30%;
+                margin-left: 35%;
+            }
         }
     }
 }
