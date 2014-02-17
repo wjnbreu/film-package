@@ -2093,86 +2093,6 @@ nav{
 
 
 
-@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) { 
-  #title{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: 200% !important;
-        background-size: bottom center;
-        background: url(../../images/title-image.jpg) no-repeat bottom center;
-        img{
-            width: 60%;
-            margin: 35% 20% auto 20%;
-        }
-    }
-
-
-#stream{
-    .play{
-        width: 50%;
-        left: 25%;
-        right: 25%;
-        img{
-            width: 100%;
-        }
-    }
-}
-
-    #artist{
-        top: 200%;
-        height: 200%;
-        width: 100%;
-        .artist-list{
-            max-width: 100%;
-            overflow-y: hidden;
-            ul{
-                max-width: 100%;
-                width: 60%;
-                margin-left: 20%;
-                padding-left: 0;
-                li{
-                    display: block;
-                    font-size: 1em;
-                    text-transform: uppercase;
-                }
-            }
-        }
-    }
-
-    #artist-info{
-        .next-artist{
-        position: absolute;
-        top: 20%;
-        right: 20px;
-        &:hover{
-                right: 15px;
-            }
-        img{
-            max-width: 100%;
-            width: 20px;
-        }
-    }
-
-    .prev-artist{
-        position: absolute;
-        top: 20%;
-        left: 20px;
-        &:hover{
-                left: 15px;
-            }
-        img{
-            max-width: 100%;
-            width: 20px;
-        }
-    }
-    }
-
-    #about{
-        top: 400%;
-    }
-}
-
 /************************ PHONE ******************************/
 @media only screen and (max-width: 568px), screen and (max-device-width: 568px), screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
 
@@ -2228,7 +2148,7 @@ nav{
         background-size: bottom center;
         background: url(../../images/title-image.jpg) no-repeat bottom center;
         img{
-            width: 70%;
+            width: 20%;
             margin: 20% 15% auto 15%;
         }
     }
