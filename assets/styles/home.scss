@@ -1741,21 +1741,65 @@ nav{
 
 
 
-    #stream{
-        display: block !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+#stream{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../../images/cecil.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    background-size: 200%;
+    background-color: black;
+    text-align: center;
+    z-index: 2;
+    .cover{
+        z-index: 9;
         height: 100%;
-        iframe{
-            border: 0;
-            margin: 0;
-            width: 100%;
-            height: 100%;
+        width: 100%;
+        overflow: hidden;
+        img{
+            min-height: 100%;
+            width: auto;
         }
-
     }
+    .play{
+        z-index: 98;
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        height: 100px;
+        left: 35%;
+        right: 35%;
+        text-align: center;
+        background: url(../../images/play_b.svg) no-repeat center center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -ms-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        &:hover{
+           background: url(../../images/play_w.svg) no-repeat center center;
+           background-size: contain;
+           -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -ms-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain; 
+        }
+    }
+    #embed{
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+    }
+}
+
 
     #download{
         display: none !important;
@@ -2192,7 +2236,58 @@ nav{
 
    #pointer{
         display: none !important;
-    }         
+    }
+
+    #stream{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../../images/cecil.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    background-size: 200%;
+    background-color: black;
+    text-align: center;
+    z-index: 2;
+    .cover{
+        z-index: 9;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        img{
+            min-height: 100%;
+            width: auto;
+        }
+    }
+    .play{
+        z-index: 98;
+        position: absolute;
+        bottom: 0;
+        width: 40%;
+        height: 100px;
+        left: 30%;
+        right: 30%;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -ms-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+      
+    }
+    #embed{
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+         
 
 
     #artist{

@@ -2,9 +2,6 @@ $(document).ready(function() {
 
 
 
-
-
-
  //GLOBAL VARIABLES
 	var nav = $('nav a');
 	var bottom = $('#nav-bottom a');
@@ -16,8 +13,6 @@ $(document).ready(function() {
 	//number of content screens - 1
 	var scrollBottom = $(window).scrollTop() + (win_height * 4.5);
 	var backgrounds = ['top'];
-	var counter = 1;
-	var background_counter = 0; //used to make sure backgrounds only change once
 	var scrollSpeed = 500;
 	var country;
 	var sd_download = $('#download').find('.download-left a');
@@ -66,7 +61,6 @@ $(document).ready(function() {
 
 	function init(){
 
-		//change out autoplay=none to autoplay=1 on click
 		function swapVideo(vid){
 			var height = (measureVideo());
 			var width = ($(window).width());
@@ -227,7 +221,7 @@ $(document).ready(function() {
 
 		//STARTUP EVENT LISTENERS AND FUNCTIONS
 
-			//REFACTOR TO FUNCTIONS!!!	
+		//REFACTOR TO FUNCTIONS!!!	
 		$('#download').find('.download-left img').on('mouseenter', function(){
 			$(this).attr('src', 'images/standard_def_back.svg');
 		});
@@ -274,15 +268,15 @@ $(document).ready(function() {
 
 
 
-
-		$(document).keydown(function(e) {
+		//slide to next screen with arrow up/down
+		$(document).keydown(function(e){
 			e.stopPropagation();
 			if (e.keyCode === 40) {
-	        scrollDown();
-	    } else if (e.keyCode === 38) {
-	        scrollUp();
-	    }
-	});
+				scrollDown();
+			} else if (e.keyCode === 38) {
+				scrollUp();
+			}
+		});
 
 
 		//use css animated arrow on hero page to scroll down one page
@@ -334,18 +328,7 @@ $(document).ready(function() {
 
 
 } //end init
-
-
-
-
-
-
-
-
-
-
-
-});
+}); //end doc readyu
 
 
 
