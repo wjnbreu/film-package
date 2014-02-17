@@ -1676,47 +1676,6 @@ nav{
 }
 }
 
-@media only screen and (max-width: 640px){
-
-
-
-    #artist{
-    position: absolute;
-    top: 250%;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    .artist-list{
-        width: 100%;
-        margin: 0;
-        text-align: center;
-        z-index: 2;
-        h1{
-            font-size: 2.5em;
-            width: 30%;
-            margin-left: 35%;
-            margin-right: 35%;
-        }
-        ul{
-            li{
-                display: inline;
-                padding: 5px;
-                line-height: 2;
-                font-size: 2em;   
-            }
-        }
-    }
-    .artist-images{
-        display: none !important;
-    }
-}
-}
-
-
-
-
-
-
 
 
 
@@ -2127,6 +2086,49 @@ nav{
 
 
 }
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 720px){
+
+
+
+    #artist{
+    position: absolute;
+    top: 250%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    .artist-list{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        z-index: 2;
+        h1{
+            font-size: 2.5em;
+            width: 30%;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+        ul{
+            li{
+                display: inline;
+                padding: 5px;
+                line-height: 2;
+                font-size: 2em;   
+            }
+        }
+    }
+    .artist-images{
+        display: none !important;
+    }
+}
+}
+
+
+
+
+
+
 
 
 
