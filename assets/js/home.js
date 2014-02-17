@@ -383,6 +383,16 @@ $(document).ready(function() {
 
 	});
 
+	//retrigger scroll position colors on resize
+	$(window).resize(function(){
+		var windowsize = $(window).width();
+		removeVideo(windowsize);
+		if (windowsize > 1024){
+			navColors();
+		}
+		
+	});
+
 
 
 	insertAnimation();
