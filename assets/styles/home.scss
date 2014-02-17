@@ -559,6 +559,7 @@ nav{
         h1{
             border: 2px solid white;
             color: white;
+            text-transform: none;
             &:hover{
                 opacity: 0.6;
             }
@@ -1250,7 +1251,9 @@ nav{
 /************************ MEDIUM LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 1100px){
 
-
+#nav-bottom{
+    display: none;
+}
 
 
 #artist{
@@ -1286,6 +1289,16 @@ nav{
 
 @media only screen and (max-width: 1000px){
 
+#stream{
+    .play{
+        width: 20%;
+        left: 40%;
+        right: 40%;
+        img{
+            width: 80%;
+        }
+    }
+}
 
 
 #artist{
@@ -1599,6 +1612,16 @@ nav{
 /************************ TINY LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 700px){
 
+#stream{
+    .play{
+        width: 50%;
+        left: 25%;
+        right: 25%;
+        img{
+            width: 100%;
+        }
+    }
+}
 
     #artist{
     position: absolute;
@@ -2006,7 +2029,7 @@ nav{
 
 
 
-@media only screen and (max-width: 641px), screen and (max-device-width: 641px), screen and (min-device-width: 320px) and (max-device-width: 641px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (max-device-width: 641px), screen and (min-device-width: 320px) and (max-device-width: 641px) and (-webkit-min-device-pixel-ratio: 2){
   #title{
         position: absolute;
         top: 0;
@@ -2021,7 +2044,16 @@ nav{
     }
 
 
-
+#stream{
+    .play{
+        width: 50%;
+        left: 25%;
+        right: 25%;
+        img{
+            width: 100%;
+        }
+    }
+}
 
     #artist{
         top: 200%;
