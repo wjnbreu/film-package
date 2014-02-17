@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+
+<html>
+
 <html itemscope itemtype="http://schema.org/Movie">
+
 <!--
 |\  ___ \  |\   ___ \ |\  \     |\  \ |\  ___ \  |\  ___ \  |\   ___  \ |\   __  \    
 \ \   __/| \ \  \_|\ \\ \  \    \ \  \\ \   __/| \ \   __/| \ \  \\ \  \\ \  \|\  \   
@@ -23,7 +27,9 @@
 
 
 
-    <meta name="description" content="Stream and download the feature length film from Red Bull Music Academy">
+
+    <meta name="description" content="Red Bull Music Academy's feature length film. Download and stream it here.">
+
 
 
       <!-- Google Authorship and Publisher Markup -->
@@ -32,7 +38,7 @@
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="What Difference Does It Make? A Film About Making Music">
-    <meta itemprop="description" content="Counting down until the world premiere.">
+    <meta itemprop="description" content="Red Bull Music Academy's feature length film. Download and stream it here.">
     <meta itemprop="image" content="http://www.rbma15.com/images/key-title.jpg">
 
 
@@ -40,7 +46,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rbma">
     <meta name="twitter:title" content="What Difference Does It Make? A Film About Making Music">
-    <meta name="twitter:description" content="Counting down until the world premiere.">
+    <meta name="twitter:description" content="Red Bull Music Academy's feature length film. Download and stream it here.">
     <meta name="twitter:creator" content="@rbma">
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:image:src" content="http://www.rbma15.com/images/key-title.jpg">
@@ -49,20 +55,23 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta property="fb:admins" content="100006789941377" />
+
+    <meta property="og:title" content="What Difference Does It Make? A Film About Making Music"/>
+    <meta property="og:url" content="http://rbma15.com"/>
+
     <meta property="og:title" content="RBMA presents What Difference Does It Make? A Film About Making Music"/>
     <meta property="og:url" content="http://www.rbma15.com"/>
+
     <meta property="og:site_name" content="Red Bull Music Academy 15"/>
     <meta property="og:image" content="http://www.rbma15.com/images/key-title.jpg"/>
-    <meta property="og:description" content="Counting down to the premiere of Red Bull Music Academy's first feature length film" />
+    <meta property="og:description" content="Red Bull Music Academy's feature length film. Download and stream it here." />
     <meta property="og:type" content="website"/>
+
+    
     <link rel="shortcut icon" href="public/images/favicon.ico">
     <link rel="shortcut icon" href=".\favicon.ico">
     <link type="text/css" rel="stylesheet" href="styles/normalize.css" />
     <link type="text/css" rel="stylesheet" href="styles/home.css" />
-
-
-
- 
 
   </head>
 
@@ -93,7 +102,6 @@ scriptNode.parentNode.insertBefore(newIFrame,scriptNode);
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
 
 
-
 <!-- Include the view file for the current controller/route -->
 <%- body %>
 
@@ -104,9 +112,21 @@ scriptNode.parentNode.insertBefore(newIFrame,scriptNode);
     <script type="text/javascript" src="/js/countdown.js"></script>
     <script type="text/javascript" src="/js/home.js"></script>
     <script type="text/javascript" src="/js/artist-section.js"></script>
+
+    <!--STAGING GA-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48108855-1', 'rbma15-stage.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
     
-
-
+<!--MASTER GA-->
+<!--
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -116,6 +136,51 @@ scriptNode.parentNode.insertBefore(newIFrame,scriptNode);
     ga('create', 'UA-45276832-1', 'rbma15.com');
     ga('send', 'pageview');
     </script>
+  -->
+    <!-- RBMH WRAPPER START -->
+<script type="text/javascript">
+
+  var edWrapperNameSpace = {};
+
+  edWrapperNameSpace.aGTM = [
+    "GTM-LVJ5",   // hq
+    "GTM-7W7M",   // hq
+    "GTM-HPZK",   // hq
+    "GTM-NTTRSC"  // property
+  ];    
+  
+  var edWrapper = [];
+
+</script>
+
+<script type="text/javascript">
+
+  edWrapperNameSpace.sVers = -1; 
+  edWrapperNameSpace.aInitialInnerWrapper = [["downloads.redbull.com/webtrekk/innereWrapper/gtm/innerWrapper_gtm.js",false]];
+  edWrapperNameSpace.sWrapperSrc = ["downloads.redbull.com/webtrekk/edAnalyticsWrapper.js","downloads.redbull.com/webtrekk/confWrapper.js"];
+
+  (function (sVarName) {
+    window.edWrapperNameSpace.sEdWrapperObjectName = sVarName; window[sVarName] = window[sVarName] || [];
+    var script = document.createElement('script'); script.type = 'text/javascript'; script.asyn = false; 
+    script.src = ('https:' == document.location.protocol ? 'https://' : 'http://')+edWrapperNameSpace.sWrapperSrc[0] + "?v=" + edWrapperNameSpace.sVers;
+    var script2 = document.getElementsByTagName('script')[0]; script2.parentNode.insertBefore(script, script2);
+  })("edWrapper");
+
+</script>
+<!-- RBMH WRAPPER END -->
+
+<script type="text/javascript">
+    
+  edWrapper.push( [ 'trackPageView' , false , {1:'IntMS' , 2:'IntMS - int' , 3:'IntMS - int - www.rbma15.com'} , true ] );
+
+  edWrapper.push( [ 'trackPageVar' , 'Language' , 'en'] );
+  edWrapper.push( [ 'trackPageVar' , 'Domain incl. Subdomain' , window.location.hostname] );
+  edWrapper.push( [ 'trackPageVar' , 'Type' , 'IntMS'] );
+
+  edWrapper.push(['submit']);   
+  
+</script>
+
     <!-- RBMH WRAPPER START -->
 <script type="text/javascript">
 

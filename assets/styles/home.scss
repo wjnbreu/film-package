@@ -217,23 +217,6 @@ h1, h2, h3, h4{
     font-family: 'Rail', helvetica, sans-serif;
 }
 
-#loading {
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  position: fixed;
-  display: block;
-  background-color: black;
-  z-index: 99999999999999999999;
-  text-align: center;
-}
-
-#loading-image {
-  margin-top: 25%;
-  width: 30px;
-  height: 30px;
-}
 
 .exit{
     position: fixed;
@@ -273,9 +256,6 @@ a{
     -o-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    &:hover{
-        color: gray;
-    }
 }
 
 
@@ -285,7 +265,7 @@ nav{
     left: 0;
     width: 100%;
     height: 58px;
-    z-index: 99;
+    z-index: 1;
     background-color: transparent;
     opacity: 1;
     font-family: 'Clan', helvetica, sans-serif;
@@ -320,7 +300,7 @@ nav{
                 -ms-transition: all .2s ease-in-out;
                 transition: all .2s ease-in-out;
                 &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             }
         }
@@ -346,7 +326,7 @@ nav{
                 -ms-transition: all .2s ease-in-out;
                 transition: all .2s ease-in-out;
                 &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             }
         }
@@ -364,7 +344,7 @@ nav{
     font-weight: 800;
     font-size: 1.5em;
     text-transform: uppercase;
-    z-index: 99;
+    z-index: 1;
     color: white;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -389,7 +369,7 @@ nav{
                 -ms-transition: all .2s ease-in-out;
                 transition: all .2s ease-in-out;
                 &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             }
         }
@@ -405,7 +385,7 @@ nav{
             float: right;
             color: white;
             &:hover{
-                    color: gray;
+                    text-decoration: underline;
                 }
             img{
                 width: 30%;
@@ -458,16 +438,15 @@ nav{
     min-height: 100%;
     background: url(../../images/title-image.jpg) no-repeat bottom left;
     background-size: 80%;
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // -ms-background-size: cover;
-    // background-size: cover;
+    text-align: center;
     color: white;
     img{
-        width: 60%;
-        margin-left: 19%;
-        margin-right: 21%;
+
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 5%;
+
     }
     #title-text{
         margin-top: 10%;
@@ -500,33 +479,31 @@ nav{
 #pointer{
     width: 70%;
     height: 5%;
-    position: absolute;
-    bottom: 60px;
+    position: fixed;
+    bottom: 70px;
     left: 15%;
     right: 15%;
-    z-index: 999;
+    z-index: 2;
     text-align: center;
-    p, span{
-        color: white;
+    p{
         font-family: 'Rail', helvetica, sans-serif;
         text-transform: uppercase;
-        margin: 0;
-    }
-    p{
         width: 30%;
         margin-left: 35%;
+        margin-bottom: 0;
+        color: white;
         border: 2px solid white;
         line-height: 1.5;
         &:hover{
-            opacity: 0.6;
+            -webkit-transform: translate(1px, 1px);
+            -moz-transform: translate(1px, 1px);
+            -ms-transform: translate(1px, 1px);
+            -o-transform: translate(1px, 1px);
+            transform: translate(1px, 1px);
         }
     }
-    span{
-        font-weight: bold;
-        display: block;
-    }
     img{
-        width: 60px;
+        width: 9%;
         height: auto;
         margin: 0;
         max-width: 100%;
@@ -538,119 +515,186 @@ nav{
     }
 }
 
-#countdown-container{
+
+
+#stream{
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
     height: 100%;
-    border: 0;
-    background-color: black;
-    background-size: 100%;
+    width: 100%;
+    background: url(../../images/cecil.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -ms-background-size: cover;
     -o-background-size: cover;
+    -ms-background-size: cover;
     background-size: cover;
-    color: white;
+    //background-size: 100%;
+    background-color: black;
     text-align: center;
-    h1{
-        margin-top: 10%;
+    z-index: 2;
+    .cover{
+        z-index: 9;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        img{
+            min-height: 100%;
+            width: auto;
+        }
     }
-    #countdown{
-        width: 80%;
-        margin: 5% 10% 10% 10%;
-        font-size: 6em;
-        font-weight: bold;
+    .play{
+        z-index: 98;
+        position: absolute;
+        bottom: 30px;
+        width: 30%;
+        height: 100px;
+        left: 35%;
+        right: 35%;
+        text-align: center;
+        background: url(../../images/play_b.svg) no-repeat center center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -ms-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        &:hover{
+           background: url(../../images/play_w.svg) no-repeat center center;
+           background-size: contain;
+           -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -ms-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain; 
+        }
+    }
+    #embed{
+        z-index: 99;
+        height: 100%;
+        width: 100%;
     }
 }
 
-#film{
+
+
+#download{
     position: absolute;
     top: 200%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background-color: black;
     color: white;
-    video{
-        max-width: 100%;
-        opacity: 1;
-    }
-    .text{
-        margin-top: 5%;
+    z-index: 2;
+    font-family: 'Rail', helvetica, sans-serif;
+    h1{
         text-align: center;
-        width: 80%;
-        left: 10%;
-        right: 10%;
+        font-size: 3em;
+        width: 60%;
+        text-transform: none;
+        margin-left: 20%;
+        margin-right: 20%;
+        border: 2px solid white;
+        background-color: black;
+    }
+    
+    .instructions{
         position: absolute;
-        z-index: 2;
-        h1{
-            text-transform: none;
-            font-size: 4em;
-            line-height: 1;
-            width: 80%;
-            text-align: center;
-            margin: 10px 10% 0 10%;
-            font-weight: 100;
-        }
-        h2{
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 2.5em;
-            width: 60%;
-            margin: 10% 20% 0 20%;
-            line-height: 1;
-            
-        }
+        left: 0;
+        height: 10%;
+        top: 65%;
+        width: 100%;
         h3{
-            margin-top: 2.5%;
-            text-transform: uppercase;
+            font-weight: 100;
+            text-align: center;
+            width: 60%;
+            margin-left: 20%;
+            font-size: 1em;
         }
+    }
+    .download-left{
+        position: absolute;
+        top: 50%;
+        width: 50%;
+        left: 0;
+        height: 15%;
+        float: left;
+        text-align: right;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
         img{
-            max-width: 15%;
-            margin-top: 15%;
-            -webkit-transition: all .2s ease-in-out;
-            -moz-transition: all .2s ease-in-out;
-            -o-transition: all .2s ease-in-out;
-            -ms-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-            &:hover{
-                opacity: 0.5;
+            max-width: 100%;
+            width: 50%;
+            height: auto;
+            margin-right: 5%;
+        }
+
+    }
+    .download-right{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 50%;
+        height: 15%;
+        float: right;
+        text-align: left;
+
+        a{
+            img{
+                max-width: 100%;
+                width: 50%;
+                height: auto;
+                margin-left: 5%;
+            }
+
+        }
+    }
+    .download-share{
+        position: absolute;
+        bottom: 10px;
+        height: 10%;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        display: inline;
+        a{
+            img{
+                max-width: 32px;
+                height: auto;
+                &:hover{
+                    opacity: 0.6;
+                }
             }
         }
-    } 
-    .film-wrap{
-        max-width: 100%;
-        max-height: 100%;
-        height: 100%;
-        width: 100%;
-        margin: 0 0 0 0;
-        position: absolute;
         iframe{
-            opacity: 1;
-            width: 100%;
             display: none;
-            
+            width: 100px !important;
+            padding-top: 5px;
         }
-        video{
-            display: block;
-            max-width: 200%;
-            width: 200%;
-            left: -50%;
-            //z-index: 9;
+        .addthis_toolbox{
+            margin-left: 10px;
+            display: inline-block;
+
         }
+
     }
-} 
+}
+
 
 
 #artist{
     position: absolute;
-    top: 300%;
+    top: 250%;
     height: 100%;
     width: 100%;
+    border-top: 1px solid white;
     background-color: black;
     color: white;
+    z-index: 2;
     font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
 
@@ -668,12 +712,13 @@ nav{
         z-index: 9;
         h1{
             text-align: center;
-            font-size: 4em;
+            font-size: 3em;
             width: 30%;
             text-transform: none;
             margin-left: 35%;
             margin-right: 35%;
             border: 2px solid white;
+            background-color: black;
         }
         ul{
             max-width: 100%;
@@ -695,7 +740,7 @@ nav{
                 &:hover{
                     border: 2px solid white;
                     background-color: black;
-                    color: white;
+                    color: white;                
                 }
             }
         }
@@ -731,6 +776,11 @@ nav{
             -moz-filter: invert(100%);
             filter: invert(100%);
             background-size: 100%;
+            -webkit-box-shadow: 1px 1px black;
+                    -moz-box-shadow: 1px 1px black;
+                    -o-box-shadow: 1px 1px black;
+                    -ms-box-shadow: 1px 1px black;
+                    box-shadow: 1px 1px black;
         }
     }
 
@@ -750,7 +800,7 @@ nav{
         padding-bottom: 0;
         color: black;
         width: 100%;
-        font-size: 4em;
+        font-size: 3em;
         z-index: 4;
         text-transform: uppercase;
         line-height: 1;
@@ -850,13 +900,14 @@ nav{
 #about{
     position: absolute;
     border-top: 1px solid white;
-    top: 400%;
+    top: 350%;
     //height: 100%;
     width: 100%;
     background-color: black;
     color: white;
     font-family: 'Rail', helvetica, sans-serif;
     margin: 0;
+    z-index: 2;
     h1{
         text-transform: none;
         max-width: 40%;
@@ -864,7 +915,7 @@ nav{
         margin-right: 30%;
         margin-top: 5%;
         border: 2px solid white;
-        font-size: 4em;
+        font-size: 3em;
         text-align: center;
         }
     p{
@@ -879,6 +930,9 @@ nav{
         a{
             text-decoration: underline;
             color: white;
+            &:hover{
+                opacity: 0.6;
+            }
         }
     }
     .logo{
@@ -902,15 +956,23 @@ nav{
         text-align: center;
         img{
             display: inline;
-            width: 30px;
+            max-width: 32px;
             height: auto;
             &.social-white{
                 display: inline-block;
             }
+            &:hover{
+                    opacity: 0.6;
+                }
         }
         iframe{
             display: none;
             width: 100px !important;
+        }
+        .addthis_toolbox{
+            margin-left: 10px;
+            display: inline-block;
+
         }
     }
 }
@@ -922,9 +984,34 @@ nav{
 /************************ WIDESCREEN ******************************/
 
 @media only screen and (min-width: 1800px){
+    #download{
+
+    h1{
+        font-size: 6em;
+    }
+    
+    .instructions{
+        position: absolute;
+        left: 0;
+        height: 10%;
+        top: 70%;
+        width: 100%;
+        h3{
+            font-weight: 100;
+            text-align: center;
+            width: 60%;
+            margin-left: 20%;
+            font-size: 1em;
+        }
+    }
+    
+}
+
+
+
     #artist{
         position: absolute;
-        top: 300%;
+        top: 250%;
         height: 100%;
         width: 100%;
         background-color: black;
@@ -1023,11 +1110,32 @@ nav{
     }
 }
 
+#download{
+
+    
+    .instructions{
+        position: absolute;
+        left: 0;
+        height: 10%;
+        top: 65%;
+        width: 100%;
+        h3{
+            font-weight: 100;
+            text-align: center;
+            width: 60%;
+            margin-left: 20%;
+            font-size: 1em;
+        }
+    }
+    
+}
+
+
 
 #about{
     position: absolute;
     border-top: 1px solid white;
-    top: 400%;
+    top: 350%;
     //height: 100%;
     width: 100%;
     background-color: black;
@@ -1041,7 +1149,9 @@ nav{
         margin-right: 30%;
         margin-top: 5%;
         border: 2px solid white;
-        font-size: 4em;
+
+        font-size: 3em;
+
         text-align: center;
         }
     p{
@@ -1107,11 +1217,10 @@ nav{
 #pointer{
     width: 70%;
     height: 5%;
-    position: absolute;
+    position: fixed;
     bottom: 70px;
     left: 15%;
     right: 15%;
-    z-index: 999;
     text-align: center;
     p{
         width: 40%;
@@ -1124,17 +1233,12 @@ nav{
 }
 
 #artist{
-    position: absolute;
-    top: 300%;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    overflow-y: hidden;
+
 
     .artist-list{
         h1{
             text-align: center;
-            font-size: 4em;
+            font-size: 3em;
             width: 30%;
             margin-left: 35%;
             margin-right: 35%;
@@ -1159,38 +1263,19 @@ nav{
 /************************ MEDIUM LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 1100px){
 
-   #film{
-    position: absolute;
-    top: 200%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 155%;
-    background-color: black;
-    video{
-            display: none;
-
-    }
-
+#nav-bottom{
+    display: none;
 }
 
 
-
 #artist{
-    position: absolute;
-    top: 300%;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    overflow-y: hidden;
+
 
     .artist-list{
         width: 100%;
         h1{
             text-align: center;
-            font-size: 4em;
+            font-size: 3em;
             width: 30%;
             margin-left: 35%;
             margin-right: 35%;
@@ -1216,21 +1301,39 @@ nav{
 
 @media only screen and (max-width: 1000px){
 
+#stream{
+    .play{
+        z-index: 98;
+        position: absolute;
+        top: 40%;
+        width: 30%;
+        left: 35%;
+        right: 35%;
+        text-align: center;
+        button{
+            width: 100%;
+            font-size: 2em;
+
+
+            img{
+                max-width: 20%;
+                height: auto;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+}
 
 
 #artist{
-    position: absolute;
-    top: 300%;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    overflow-y: hidden;
+
 
     .artist-list{
         width: 100%;
         h1{
             text-align: center;
-            font-size: 4em;
+            font-size: 3em;
             width: 30%;
             margin-left: 35%;
             margin-right: 35%;
@@ -1277,25 +1380,7 @@ nav{
     }
 }
 
-#pointer{
-    width: 70%;
-    height: 5%;
-    position: absolute;
-    bottom: 70px;
-    left: 15%;
-    right: 15%;
-    z-index: 999;
-    text-align: center;
-    p{
-        width: 50%;
-        margin-left: 25%;
-        border: 2px solid white;
-        line-height: 1.5;
-       }
-    span{
-        line-height: 1;
-    }
-}
+
 
 }
 
@@ -1367,9 +1452,9 @@ nav{
     -ms-background-size: cover;
     background-size: cover;
     img{
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
         margin-top: 25%;
     }
 }
@@ -1379,52 +1464,30 @@ nav{
             
    }
 
-
-   #film{
-    position: absolute;
-    top: 200%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 125%;
-    video{
-            display: none;
-
-    }
-    .text{
-        margin-top: 30%;
-        width: 80%;
-        left: 10%;
-        right: 10%;
-
-        h1{
-            font-size: 2em;
-            line-height: 1;
-            width: 80%;
-            text-align: center;
-            margin: 30px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-
-    .film-wrap{
-        iframe{
-            opacity: 1;
+#stream{
+    .play{
+        z-index: 98;
+        position: absolute;
+        top: 40%;
+        width: 30%;
+        left: 35%;
+        right: 35%;
+        text-align: center;
+        button{
             width: 100%;
-            display: none;  
-        }
-        video{
-            display: none;
+            font-size: 2em;
+
+
+            img{
+                max-width: 30%;
+                height: auto;
+                padding-bottom: 10px;
+            }
         }
     }
 
 }
+
 
 #go-home{
         display: none;
@@ -1435,9 +1498,15 @@ nav{
         opacity: 1;
     }
 
+#download{
+    h1{
+        font-size: 2.5em;
+    }
+}
+
 #artist{
     position: absolute;
-    top: 300%;
+    top: 250%;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -1447,7 +1516,7 @@ nav{
         text-align: center;
         z-index: 2;
         h1{
-            font-size: 3em;
+            font-size: 2.5em;
             width: 30%;
             margin-left: 35%;
             margin-right: 35%;
@@ -1470,7 +1539,7 @@ nav{
 
     h1{
         width: 100%;
-        font-size: 3em;
+        font-size: 2.5em;
     }
     p{
         width: 70%;
@@ -1554,7 +1623,7 @@ nav{
     h1{
         max-width: 40%;
         margin: 5% 30% auto 30%;
-        font-size: 3em;
+        font-size: 2.5em;
         }
     p{
         line-height: 1.7;
@@ -1574,19 +1643,10 @@ nav{
 @media only screen and (max-width: 700px){
 
 
-    #film{
-    position: absolute;
-    top: 200%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 175%;
-    background-color: black;
-}
+
     #artist{
     position: absolute;
-    top: 300%;
+    top: 250%;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -1596,7 +1656,7 @@ nav{
         text-align: center;
         z-index: 2;
         h1{
-            font-size: 3em;
+            font-size: 2.5em;
             width: 30%;
             margin-left: 35%;
             margin-right: 35%;
@@ -1679,47 +1739,27 @@ nav{
         }
     }
 
-    #countdown-container{
-        display: none !important;
-    }
 
-    #film{
+
+    #stream{
+        display: block !important;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         height: 100%;
-        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-        background-size: 200%;
-        video{
-            display: none;
+        iframe{
+            border: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
         }
-        .text{
-            margin-top: 30%;
-            width: 80%;
-            left: 10%;
-            right: 10%;
 
-        h1{
-            font-size: 2em;
-            width: 80%;
-            margin: 30px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-
-    .film-wrap{
-        margin: 0 0 0 0;
-        z-index: 0;
-        video{
-            display: none;
-        }
     }
-}
+
+    #download{
+        display: none !important;
+    }
 
     #artist{
         position: absolute;
@@ -1901,45 +1941,10 @@ nav{
 }
 
     #pointer{
-        width: 10%;
-        position: absolute;
-        bottom: 80px;
-        left: 45%;
-        right: 45%;
-        img{
-            width: 50%;
-        }
-    }
-
-    #countdown-container{
         display: none;
     }
 
-   #film{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 200%;
-    video{
-        display: none;
-    }
-    .text{
-        margin-top: 10%;
-        width: 80%;
-        left: 10%;
-        right: 10%;
-        h1{
-            font-size: 2em;
-            width: 80%;
-            margin: 30px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    }
-}
+ 
 
 #artist{
     top: 200%;
@@ -2045,7 +2050,7 @@ nav{
 
 
 
-@media only screen and (max-width: 641px), screen and (max-device-width: 641px), screen and (min-device-width: 320px) and (max-device-width: 641px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (max-device-width: 641px), screen and (min-device-width: 320px) and (max-device-width: 641px) and (-webkit-min-device-pixel-ratio: 2){
   #title{
         position: absolute;
         top: 0;
@@ -2054,26 +2059,22 @@ nav{
         background-size: bottom center;
         background: url(../../images/title-image.jpg) no-repeat bottom center;
         img{
-            width: 100%;
-            margin: 25% 0 auto 0;
+            width: 60%;
+            margin: 25% 20% auto 20%;
         }
     }
 
-    #countdown-container{
-        display: none !important;
+
+#stream{
+    .play{
+        width: 50%;
+        left: 25%;
+        right: 25%;
+        img{
+            width: 100%;
+        }
     }
-
-    #film{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-        background-size: 200%;
-    }
-
-
+}
 
     #artist{
         top: 200%;
@@ -2174,10 +2175,7 @@ nav{
         height: 100%;
     }
 
-    #countdown-container{
-        display: none !important;
-    }
-
+ 
 
    #title{
         position: absolute;
@@ -2187,8 +2185,8 @@ nav{
         background-size: bottom center;
         background: url(../../images/title-image.jpg) no-repeat bottom center;
         img{
-            width: 100%;
-            margin: 20% 0 auto 0;
+            width: 70%;
+            margin: 20% 15% auto 15%;
         }
     }
 
@@ -2196,39 +2194,6 @@ nav{
         display: none !important;
     }         
 
-    #film{
-        top: 100%;
-        background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-        background-size: 200%;
-        video{
-            display: none;
-        }
-    .text{
-        margin-top: 30%;
-        z-index: 9;
-
-        h1{
-            font-size: 2em;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-    .film-wrap{
-        iframe{
-            opacity: 1;
-            width: 100%;
-            display: none;
-            
-        }
-        video{
-            display: none;
-        }
-    }
-
-}
 
     #artist{
         top: 200%;
@@ -2345,8 +2310,8 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
         background-size: bottom center;
         background: url(../../images/title-image.jpg) no-repeat bottom center;
         img{
-            width: 100%;
-            margin: 25% 0 auto 0;
+            width: 80%;
+            margin: 25% 10% auto 10%;
         }
     }
 
@@ -2444,47 +2409,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
         display: none !important;
     }         
 
-   #film{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/artist/kraftmatiks.jpg) no-repeat top center;
-    background-size: 200%;
-    video{
-            display: none;
 
-    }
-    .text{
-        margin-top: 5%;
-
-        h1{
-            font-size: 2em;
-            line-height: 1;
-            width: 80%;
-            margin: 10px 10% 0 10%;
-        }
-        img{
-            max-width: 15%;
-            margin-top: 25%;
-        }
-    } 
-
-
-    .film-wrap{
-        iframe{
-            opacity: 1;
-            width: 100%;
-            display: none;
-            
-        }
-        video{
-            display: none;
-        }
-    }
-
-}
 
 #artist{
     top: 200%;

@@ -2,14 +2,29 @@
 <div id="wrapper">
     <div id="exit" class="exit hidden"></div>
 
-    
-    <!-- NAV -->
+
+    <!-- HERO BACKGROUND PICTURE -->
+    <section id="title">
+
+        <img src="images/landing-text-final.svg" itemprop="image" />
+
+    </section>
+
+    <div id="pointer">
+        <!-- CHANGE TO PNG FOR STATIC -->
+        <a href="#">
+            <p>Watch Now</p>
+            <img class="pointer" src="images/pointer.svg"/>
+        </a>
+    </div>
+
+        <!-- NAV -->
     <nav>
         <div class="nav-top-left">
-            <li><a class="scroll filmlink" href="#">The Film</a></li>
+            <li><a class="scroll filmlink" href="#film">The Film</a></li>
         </div>
         <div class="nav-top-center">
-            <li><a class="scroll booklink" href="#">The Book</a></li>
+            <li><a class="scroll booklink" href="#book">The Book</a></li>
         </div>
 
     </nav>
@@ -25,53 +40,69 @@
         </div>
     </div>
 
-    <!-- HERO BACKGROUND PICTURE -->
-    <section id="title">
-        <img src="images/key-title.jpg" alt="What Difference Does It Make?" class="hidden" />
-        <img src="images/landing-text.svg">
+
+    <section id="stream">
+
+
+        <a href="#" onClick="ga('send', 'event', 'RBMA15 Film', 'Play')">
+            <div class="play" id="play-button">
+            </div>
+        </a>
+
+        <div id="embed"></div>
 
     </section>
 
-    <div id="pointer">
-        <!-- CHANGE TO PNG FOR STATIC -->
-        <a href="#">
-        <p>Countdown to the premiere</p>
-        <span id="cntdwn"></span>
-        <img class="pointer" src="images/pointer.svg"/></a>
-    </div>
 
+    <section id="download">
+        <a name="download"></a>
+        
+        <h1>Download The Film</h1>
+        
 
-    <!-- COUNTDOWN -->
-    <section id="countdown-container"></section>
-
-    <!-- FILM SECTION -->
-    <section id="film">
-        <span id="filmlink"></span>
-        <div class="text">
-            <img src="images/play_w.png" id="play-button" />
-            <h1 itemprop="trailer">WATCH THE TRAILER</h1>
-            
-            
+        <div class="download-left">
+            <a onClick="ga('send', 'event', 'Download', 'SD Download')" href="#"><img src="images/standard_def_b.svg" alt="Download Standard Definition" /></a>
         </div>
+        
 
-        <div class="film-wrap" id="loop">
-            <video id="video" class="film-wrap" autoplay muted loop>
-                <source src="images/Dance2.mp4" type="video/mp4">
-                <source src="images/Dance2.webmhd.webm" type="video/webm">
-                <p>Your browser doesn't support HTML5 video.</p>
-            </video>
+        <div class="download-right">
+            <a href="#" onClick="ga('send', 'event', 'Download', 'HD Download')"><img src="images/high_def_b.svg" alt="Download High Definition" /></a>
         </div>
+        
+        <div class="instructions">
+            <h3>&#8674; Right click and ‘Save Link As...’</h3>
+        </div>
+        
 
-        <div class="film-wrap" id="embed">
-            <iframe frameborder="0" scrolling="no" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" id="rbmaplayer" width="640" height="360" src="http://www.youtube.com/embed/uVzx_p_DrL8?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;playsinline=1&amp;loop=1&amp;hd=1&amp;controls=0&amp;showinfo=1&amp;modestbranding=0&amp;iv_load_policy=3&amp;rel=0"></iframe>
+
+
+        <div class="download-share">
+            <a href="http://twitter.com/home?status=What Difference Does It Make? A feature-length film about making music. Stream and download it here. http://www.rbma15.com" target="blank"><img class="social-white" src="images/twitter-w.png"></a>
+
+            <!--FACEBOOK-->
+            <a href="#"><img class="fb-button" src="images/facebook-w.png"></a>
+            <iframe class="fb-like" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Frbma15.com&amp;width=200px&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+
+            <!--GOOGLE-->
+            <a href="https://plus.google.com/share?url=http://www.rbma15.com/" target="blank" rel="author"><img class="social-white" src="images/google-w.png"></a>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox"
+            addthis:url="http://rbma15.com" addthis:title="What Difference Does It Make? A Film About Making Music. Grab the free download.">
+                <a class="addthis_button_email"><img src="images/email.png" alt="email this" /></a>
+            </div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fcfbb11c460f6f">
+
+
+        </script>
+        <!-- AddThis Button END -->
         </div>
-    </section> <!-- END FILM -->
+    </section>
+
+
 
 
     <!-- OFF SCREEN BOOK IFRAME -->
-    <section id="bookframe">
-        <iframe src="/book" width="100%" height="100%" border="0"></iframe>
-    </section>
+    <section id="bookframe"></section>
 
     <div id="go-home"></div>
 
@@ -159,7 +190,8 @@
                 <p><a href="http://www.redbullmusicacademy.com" itemprop="creator" target="blank"><strong>Red Bull Music Academy</strong></a> has put together myriad projects to mark its 15th anniversary, chief among them a film and a book.
                 <br /><br />
 
-                <em><span itemprop="name">What Difference Does It Make? A Film About Making Music</span></em> explores the challenges that a life in music can bring. Shot at the 2013 Red Bull Music Academy in New York by award-winning director <a href="http://www.ralfschmerberg.de/home" target="blank" itemprop="director">Ralf Schmerberg</a>, and produced by his Berlin based artist collective <a href="http://mindpirates.org/verein/" target="blank" itemprop="producer">Mindpirates</a>, <em>What Difference Does It Make? A Film About Making Music</em> delves deeply into the many challenges, stages of development and triumphs that musicians experience. Featuring the likes of <span itemprop="actor">Brian Eno</span>, <span itemprop="actor">Giorgio Moroder</span>, <span itemprop="actor">Nile Rodgers</span>, <span itemprop="actor">Skream</span>, <span itemprop="actor">Richie Hawtin</span> and <span itemprop="actor">James Murphy</span>, it seeks to go beyond just music, and ask questions about life itself.
+
+                <em><span itemprop="name">What Difference Does It Make? A Film About Making Music</span></em> explores the challenges that a life in music can bring. Shot at the 2013 Red Bull Music Academy in New York by award-winning director <a href="http://www.ralfschmerberg.de/home" target="blank" itemprop="director">Ralf Schmerberg</a>, and produced by his Berlin based artist collective <a href="http://mindpirates.org/verein/" target="blank" itemprop="producer">Mindpirates</a>, <em>What Difference Does It Make? A Film About Making Music</em> delves deeply into the many challenges, stages of development and triumphs that musicians experience. Featuring the likes of <span itemprop="actor">Brian Eno</span>, <span itemprop="actor">Giorgio Moroder</span>, <span itemprop="actor">Nile Rodgers</a>, <span itemprop="actor">Skream</span>, <span itemprop="actor">Richie Hawtin</span> and <span itemprop="actor">James Murphy</span>, it seeks to go beyond just music, and ask questions about life itself.
                 <br /><br />
 
                 The book, <em>For The Record</em>, pairs up artists like Nile Rodgers, Erykah Badu and Lee ‘Scratch’ Perry for 15 wide-ranging and expansive conversations that touch on an array of topics – live performance, instruments/interfaces, conceptualism and drumming among them. In addition to the conversations, top music journalists – including Philip Sherburne, Joe Muggs, Jeff ‘Chairman’ Mao and Sheryl Garratt – contribute essays about each of the personalities included. Together with stunning visual design by Chris Rehberger’s <a href="http://www.doublestandards.net/website/index.php" target="blank">Double Standards agency</a>, the results make for one of the most insightful publications on the current state of music and the music industry.
@@ -187,7 +219,19 @@
             <iframe class="fb-like" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Frbma15.com&amp;width=200px&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
 
             <!--GOOGLE-->
-            <a href="https://plus.google.com/share?url=http://www.rbma15.com/" target="blank"><img class="social-white" src="images/google-w.png"></a>
+
+            <a href="https://plus.google.com/share?url=http://www.rbma15.com/" target="blank" rel="author"><img class="social-white" src="images/google-w.png"></a>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox"
+            addthis:url="http://rbma15.com" addthis:title="What Difference Does It Make? A Film About Making Music. Grab the free download.">
+                <a class="addthis_button_email"><img src="images/email.png" alt="email this" /></a>
+            </div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52fcfbb11c460f6f">
+
+
+        </script>
+        <!-- AddThis Button END -->
+
         </div><!-- END SOCIAL -->
     </div> <!-- END ABOUT ID -->
 
