@@ -519,12 +519,13 @@ nav{
 
 #stream{
     display: block;
+    border-top: 1px solid white;
     position: absolute;
     top: 100%;
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../../images/cecil.jpg) no-repeat center center;
+    background: url(../../images/crowd.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -547,20 +548,20 @@ nav{
     .play{
         z-index: 98;
         position: absolute;
-        bottom: 30px;
+        top: 40%;
         width: 30%;
         height: 100px;
         left: 35%;
         right: 35%;
         text-align: center;
-        background: url(../../images/play_b.svg) no-repeat center center;
+        background: url(../../images/play_w.svg) no-repeat center center;
         -webkit-background-size: contain;
         -moz-background-size: contain;
         -ms-background-size: contain;
         -o-background-size: contain;
         background-size: contain;
         &:hover{
-           background: url(../../images/play_w.svg) no-repeat center center;
+           background: url(../../images/play_b.svg) no-repeat center center;
            background-size: contain;
            -webkit-background-size: contain;
             -moz-background-size: contain;
@@ -1642,7 +1643,40 @@ nav{
 /************************ TINY LAPTOP VIEWPORT ******************************/
 @media only screen and (max-width: 700px){
 
-
+    #stream{
+    display: block;
+    border-top: 1px solid white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    background-size: 150%;
+    background-color: black;
+    text-align: center;
+    z-index: 2;
+    .play{
+        z-index: 98;
+        position: absolute;
+        top: 40%;
+        width: 40%;
+        height: 100px;
+        left: 30%;
+        right: 30%;
+        text-align: center;
+    }
+}
+    #download{
+        h1{
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
 
     #artist{
     position: absolute;
@@ -1744,7 +1778,7 @@ nav{
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../../images/cecil.jpg) no-repeat center center;
+    background: url(../../images/crowd.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2160,7 +2194,7 @@ nav{
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../../images/cecil.jpg) no-repeat center center;
+    background: url(../../images/crowd.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
