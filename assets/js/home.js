@@ -118,6 +118,7 @@ $(document).ready(function() {
 
 			//slide out book
 			else if(clk.hasClass('booklink')){
+				$('#bookframe').html('<iframe src="/book" width="100%" height="100%" border="0"></iframe>');
 				$('#bookframe').transition({
 					left: 0,
 					top: 0
