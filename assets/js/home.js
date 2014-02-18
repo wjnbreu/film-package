@@ -68,6 +68,7 @@ $(document).ready(function() {
 
 			//display appropriate vid based on country
 			if (country === 'Japan'){
+				alert('Hello Akiko. Hello Yukari.');
 				target.find('#embed').html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
 			}
 			else{
