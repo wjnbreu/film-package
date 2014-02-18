@@ -241,19 +241,6 @@ $(document).ready(function() {
 			$(this).attr('src', 'images/high_def_b.svg');
 		});
 
-		
-		//slide out facebook like button on click
-		$('#about').find('.social .fb-button').on('click', function(e){
-			e.preventDefault();
-			$(this).parent().parent().find('iframe').slideToggle('slow');
-		});
-
-		//and
-		$('#download').find('.fb-button').on('click', function(e){
-			e.preventDefault();
-			$(this).parent().parent().find('iframe').slideToggle('slow');
-		});
-
 
 
 		//on nav bar click, grab link class and pass to smooth scroll
