@@ -33,6 +33,7 @@ $(document).ready(function() {
 			//get ip for japan and choose links
 			$.getJSON("http://freegeoip.net/json/",function(data){
 				country = data.country_name;
+				alert(country);
 
 				
 				if (country === 'Japan'){
