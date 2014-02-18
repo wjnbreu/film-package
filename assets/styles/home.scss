@@ -562,13 +562,14 @@ nav{
         -o-background-size: contain;
         background-size: contain;
         &:hover{
-           background: url(../../images/play_b.svg) no-repeat center center;
-           background-size: contain;
-           -webkit-background-size: contain;
-            -moz-background-size: contain;
-            -ms-background-size: contain;
-            -o-background-size: contain;
-            background-size: contain; 
+            opacity: 0.6;
+           // background: url(../../images/play_b.svg) no-repeat center center;
+           // background-size: contain;
+           // -webkit-background-size: contain;
+           //  -moz-background-size: contain;
+           //  -ms-background-size: contain;
+           //  -o-background-size: contain;
+           //  background-size: contain; 
         }
     }
     #embed{
