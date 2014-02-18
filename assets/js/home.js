@@ -64,7 +64,7 @@ $(document).ready(function() {
 		function swapVideo(vid){
 			var height = (measureVideo());
 			var width = ($(window).width());
-			var target = vid.parent().parent();
+			var target = vid.parent();
 
 			//display appropriate vid based on country
 			if (country === 'Japan'){
@@ -78,7 +78,6 @@ $(document).ready(function() {
 			
 			target.find('.play').hide();
 			target.find('#embed').show();
-			target.find('.cover').hide();
 			target.find('#embed').css({
 				zIndex: '99'
 			});
@@ -256,12 +255,14 @@ $(document).ready(function() {
 
 
 		//on nav bar click, grab link class and pass to smooth scroll
-		$('nav').on('click', 'a.scroll', function(){
+		$('nav').on('click', 'a.scroll', function(e){
+			e.preventDefault();
 			smoothScroll($(this));
 			
 		});
 
-		$('#nav-bottom').on('click', 'a.scroll', function(){
+		$('#nav-bottom').on('click', 'a.scroll', function(e){
+			e.preventDefault();
 			smoothScroll($(this));
 			$('#pointer').fadeOut();
 		});
@@ -282,7 +283,8 @@ $(document).ready(function() {
 
 
 		//use css animated arrow on hero page to scroll down one page
-		$('#pointer').on('click', function(){
+		$('#pointer').on('click', function(e){
+			e.preventDefault();
 			var scrollAmount = $(window).height();
 			$('#wrapper').animate({
 					scrollTop: (scrollAmount)
@@ -292,7 +294,8 @@ $(document).ready(function() {
 		});
 
 		//if book iframe is open, allow exit button to close iframe
-		exit.on('click', function(){
+		exit.on('click', function(e){
+			e.preventDefault();
 			if (!(exit.hasClass('hidden'))){
 				if (win_width > 768){
 					$('#bookframe').transition({
@@ -321,7 +324,8 @@ $(document).ready(function() {
 		});
 
 		//change video background on play button click
-		$('#play-button').on('click', function(){
+		$('#play-button').on('click', function(e){
+			e.preventDefault();
 			swapVideo($(this));
 			$(this).fadeOut();
 
