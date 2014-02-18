@@ -35,7 +35,12 @@ $(document).ready(function() {
 				country = data.country_name;
 
 
-				
+			}).fail(function(textStatus){
+				sd_download.attr('href', sd);
+				hd_download.attr('href', hd);
+				init();
+
+			}).success(function(textStatus){
 				if (country === 'Japan'){
 					sd_download.attr('href', sd_jp);
 					hd_download.attr('href', hd_jp);
@@ -48,6 +53,8 @@ $(document).ready(function() {
 					hd_download.attr('href', hd);
 					init();
 				}
+
+				init();
 			});
 		}
 
