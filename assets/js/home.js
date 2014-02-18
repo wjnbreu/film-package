@@ -18,11 +18,11 @@ $(document).ready(function() {
 	var sd_download = $('#download').find('.download-left a');
 	var hd_download = $('#download').find('.download-right a');
 	
-	var hd = "https://s3.amazonaws.com/RBMAFilm/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
-	var sd = "https://s3.amazonaws.com/RBMAFilm/SD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
+	var hd = "https://d1cwrlyxfuylre.cloudfront.net/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
+	var sd = "https://d1cwrlyxfuylre.cloudfront.net/SD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music";
 	
-	var hd_jp = "https://s3.amazonaws.com/RBMAFilm/HD+JP+What+Difference+Does+It+Make%3F";
-	var sd_jp = "https://s3.amazonaws.com/RBMAFilm/SD+JP+What+Difference+Does+It+Make%3F";
+	var hd_jp = "https://d1cwrlyxfuylre.cloudfront.net/HD+JP+What+Difference+Does+It+Make%3F";
+	var sd_jp = "https://d1cwrlyxfuylre.cloudfront.net/SD+JP+What+Difference+Does+It+Make%3F";
 
 
 	findLocation();
