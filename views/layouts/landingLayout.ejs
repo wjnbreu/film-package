@@ -112,20 +112,9 @@ scriptNode.parentNode.insertBefore(newIFrame,scriptNode);
     <script type="text/javascript" src="/js/home.js"></script>
     <script type="text/javascript" src="/js/artist-section.js"></script>
 
-    <!--STAGING GA-->
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48108855-1', 'rbma15-stage.herokuapp.com');
-  ga('send', 'pageview');
-
-</script>
     
 <!--MASTER GA-->
-<!--
+
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -135,50 +124,8 @@ scriptNode.parentNode.insertBefore(newIFrame,scriptNode);
     ga('create', 'UA-45276832-1', 'rbma15.com');
     ga('send', 'pageview');
     </script>
-  -->
-    <!-- RBMH WRAPPER START -->
-<script type="text/javascript">
-
-  var edWrapperNameSpace = {};
-
-  edWrapperNameSpace.aGTM = [
-    "GTM-LVJ5",   // hq
-    "GTM-7W7M",   // hq
-    "GTM-HPZK",   // hq
-    "GTM-NTTRSC"  // property
-  ];    
   
-  var edWrapper = [];
 
-</script>
-
-<script type="text/javascript">
-
-  edWrapperNameSpace.sVers = -1; 
-  edWrapperNameSpace.aInitialInnerWrapper = [["downloads.redbull.com/webtrekk/innereWrapper/gtm/innerWrapper_gtm.js",false]];
-  edWrapperNameSpace.sWrapperSrc = ["downloads.redbull.com/webtrekk/edAnalyticsWrapper.js","downloads.redbull.com/webtrekk/confWrapper.js"];
-
-  (function (sVarName) {
-    window.edWrapperNameSpace.sEdWrapperObjectName = sVarName; window[sVarName] = window[sVarName] || [];
-    var script = document.createElement('script'); script.type = 'text/javascript'; script.asyn = false; 
-    script.src = ('https:' == document.location.protocol ? 'https://' : 'http://')+edWrapperNameSpace.sWrapperSrc[0] + "?v=" + edWrapperNameSpace.sVers;
-    var script2 = document.getElementsByTagName('script')[0]; script2.parentNode.insertBefore(script, script2);
-  })("edWrapper");
-
-</script>
-<!-- RBMH WRAPPER END -->
-
-<script type="text/javascript">
-    
-  edWrapper.push( [ 'trackPageView' , false , {1:'IntMS' , 2:'IntMS - int' , 3:'IntMS - int - www.rbma15.com'} , true ] );
-
-  edWrapper.push( [ 'trackPageVar' , 'Language' , 'en'] );
-  edWrapper.push( [ 'trackPageVar' , 'Domain incl. Subdomain' , window.location.hostname] );
-  edWrapper.push( [ 'trackPageVar' , 'Type' , 'IntMS'] );
-
-  edWrapper.push(['submit']);   
-  
-</script>
 
     <!-- RBMH WRAPPER START -->
 <script type="text/javascript">
