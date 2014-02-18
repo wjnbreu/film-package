@@ -67,7 +67,6 @@ $(document).ready(function() {
 			var height = (measureVideo());
 			var width = ($(window).width());
 			var target = vid.parent();
-			alert('Hello Yukari-san');
 
 			//display appropriate vid based on country
 			if (country === 'Japan'){
