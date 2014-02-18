@@ -697,6 +697,11 @@ nav{
     width: 100%;
     border-top: 1px solid white;
     background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: white;
     z-index: 2;
     font-family: 'Rail', helvetica, sans-serif;
@@ -1536,6 +1541,7 @@ nav{
     height: 100%;
     width: 100%;
     margin: 0;
+    background: black !important;
     .artist-list{
         width: 100%;
         margin: 0;

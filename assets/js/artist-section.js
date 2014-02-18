@@ -126,38 +126,47 @@ function addInfo(name, pic){
 artist.on('mouseenter', function(){
 	var name = $(this).data('name');
 	var pic = $(this).data('pic');
-	imageBlock.css({
-		display: 'block'
+	// imageBlock.css({
+	// 	display: 'block'
+	// });
+	$('#artist').css({
+		background: "url(../../images/artist/" + pic + ".jpg) no-repeat center center",
+		backgroundSize: 'cover',
+		backgroundColor: 'black'
 	});
 
 
 	//loop again through images and find matching one
 	images.each(function(){
-		$(this).addClass('hidden');
+		// $(this).addClass('hidden');
 		
-		if ($(this).hasClass(pic)){
-			$(this).removeClass('hidden');
-			$(this).transition({
-				width: '101%'
-			}, 900);
-		}
+		// if ($(this).hasClass(pic)){
+		// 	$(this).removeClass('hidden');
+		// 	$(this).transition({
+		// 		width: '101%'
+		// 	}, 900);
+		// }
 	});
 });
 
 artist.on('mouseleave', function(){
-	hideImages();
-	images.each(function(){
-		$(this).css({
-			width: '100%'
-		});
+	// hideImages();
+	// images.each(function(){
+	// 	$(this).css({
+	// 		width: '100%'
+	// 	});
+	// });
+	// imageBlock.css({
+	// 	display: 'none'
+	// });
+	$('#artist').css({
+		background: 'black',
+		backgroundColor: 'black'
 	});
-	imageBlock.css({
-		display: 'none'
-	});
-	artist.css({
-		color: 'white',
-		backgroundColor: 'transparent'
-	});
+	// artist.css({
+	// 	color: 'white',
+	// 	backgroundColor: 'transparent'
+	// });
 });
 
 
