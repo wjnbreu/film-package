@@ -33,12 +33,13 @@ $(document).ready(function() {
 			//get ip for japan and choose links
 			$.getJSON("http://freegeoip.net/json/",function(data){
 				country = data.country_name;
-				alert(country);
+
 
 				
 				if (country === 'Japan'){
 					sd_download.attr('href', sd_jp);
 					hd_download.attr('href', hd_jp);
+					init();
 
 				}
 
@@ -66,6 +67,7 @@ $(document).ready(function() {
 			var height = (measureVideo());
 			var width = ($(window).width());
 			var target = vid.parent();
+			alert(country);
 
 			//display appropriate vid based on country
 			if (country === 'Japan'){
