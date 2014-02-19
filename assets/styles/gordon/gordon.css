@@ -9,25 +9,25 @@
 /*FONTS LICENSED FROM MY FONTS*/
 @font-face {
   font-family: 'minion';
-  src: url("../../font/MinionPro-CnDisp.otf") format("opentype");
+  src: url("//d17vwh530ty7de.cloudfront.net/font/MinionPro-CnDisp.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'minion';
-  src: url("../../font/MinionPro-CnItDisp.otf") format("opentype");
+  src: url("//d17vwh530ty7de.cloudfront.net/font/MinionPro-CnItDisp.otf") format("opentype");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: 'minion';
-  src: url("../../font/MinionPro-BoldCnDisp.otf") format("opentype");
+  src: url("//d17vwh530ty7de.cloudfront.net/font/MinionPro-BoldCnDisp.otf") format("opentype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'minion';
-  src: url("../../font/MinionPro-BoldCnIt.otf") format("opentype");
+  src: url("//d17vwh530ty7de.cloudfront.net/font/MinionPro-BoldCnIt.otf") format("opentype");
   font-weight: bold;
   font-style: italic; }
 
@@ -41,7 +41,7 @@
 */
 @font-face {
   font-family: 'Clan';
-  src: url("../../font/ClanPro-NarrNews.otf") format("opentype");
+  src: url("//d17vwh530ty7de.cloudfront.net/font/ClanPro-NarrNews.otf") format("opentype");
   font-weight: 100;
   font-style: normal; }
 
