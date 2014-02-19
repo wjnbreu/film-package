@@ -21,10 +21,10 @@
         <!-- NAV -->
     <nav>
         <div class="nav-top-left">
-            <li><a class="scroll filmlink" href="#film">The Film</a></li>
+            <li><a class="scroll filmlink" onClick="ga('send', 'event', 'RBMA15', 'links', 'film')" href="#film">The Film</a></li>
         </div>
         <div class="nav-top-center">
-            <li><a class="scroll booklink" href="#book">The Book</a></li>
+            <li><a class="scroll booklink" onClick="ga('send', 'event', 'RBMA15', 'links', 'book')" href="#book">The Book</a></li>
         </div>
 
     </nav>
@@ -36,7 +36,7 @@
             <li><a class="scroll aboutlink" href="#">About</a></li>
         </div>
         <div class="logo">
-            <a class="titlelink" href="http://www.redbullmusicacademy.com" target="blank">.COM</a>
+            <a class="titlelink" onClick="ga('send', 'event', 'RBMA15', 'links', 'rb_main_site')" href="http://www.redbullmusicacademy.com" target="blank">.COM</a>
         </div>
     </div>
 
@@ -44,7 +44,7 @@
     <section id="stream">
 
 
-        <a href="#" id="play-button" onClick="ga('send', 'event', 'RBMA15 Film', 'Play')">
+        <a href="#" id="play-button" onClick="ga('send', 'event', 'RBMA15', 'Film', 'Play')">
             <div class="play"></div>
         </a>
 
