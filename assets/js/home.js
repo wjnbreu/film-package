@@ -131,7 +131,7 @@ $(document).ready(function() {
 			else if(clk.hasClass('aboutlink')){
 				$('#wrapper').animate({
 					scrollTop: $('#aboutlink').offset().top
-				}, scrollSpeed);
+				}, scrollSpeed * 2);
 				$('#pointer').fadeOut();
 			}
 			else if(clk.hasClass('titlelink')){
@@ -153,36 +153,42 @@ $(document).ready(function() {
 			winheight = $(window).height();
 			$('#pointer').fadeOut();
 
+			//top screen
 			if (scrolltop < (winheight / 2)){
 				$('#wrapper').animate({
+					//scroll to movie
 					scrollTop: (win_height)
 				}, scrollSpeed);
 			}
 
-			//if between first and third screen (countdown screen)
+			//film screen
 			if (scrolltop >= (winheight / 2) && scrolltop < (winheight * 2)){
 				$('#wrapper').animate({
+					//scroll to download
 					scrollTop: (win_height * 2)
 				}, scrollSpeed);
 			}
-			//between third and fourth screen (movie screen)
-			if (scrolltop >= (winheight * 2 ) && (scrolltop < winheight * 3)){
+			//download screen
+			if (scrolltop >= (winheight * 2 ) && (scrolltop < (winheight * 2.5) - 1)){
 				$('#wrapper').animate({
-					scrollTop: (win_height * 3)
+					//scroll to artists
+					scrollTop: (win_height * 2.5)
 				}, scrollSpeed);
 			}
 
-			//between fourth and fifth screen (artist screen)
-			if (scrolltop >= (winheight * 3 ) && (scrolltop < winheight * 4)){
+			//artist screen
+			if (scrolltop >= ((winheight * 2.5) - 10 ) && (scrolltop < (winheight * 3.5) - 1)){
 				$('#wrapper').animate({
-					scrollTop: (win_height * 4)
+					//scroll to about
+					scrollTop: (win_height * 3.5)
 				}, scrollSpeed);
 			}
 			//go to the bottom of the about screen
-			if (scrolltop >= (winheight * 4)){
+			if (scrolltop >= ((winheight * 3.5) - 1)){
 				$('#wrapper').animate({
+					//scroll to bottom of page
 					scrollTop: (win_height * 6)
-				}, scrollSpeed);
+				}, scrollSpeed * 1.5);
 			}
 		}
 
@@ -190,35 +196,40 @@ $(document).ready(function() {
 			var scrolltop = $('#wrapper').scrollTop();
 			winheight = $(window).height();
 
-			//if between first and third screen (movie screen)
+			//if on movie page
 			if (scrolltop >= (winheight / 2) && scrolltop < (winheight * 2)){
 				$('#wrapper').animate({
+					//scroll to top
 					scrollTop: 0
 				}, scrollSpeed);
 			}
-			//between third and fourth screen (info and about)
-			if (scrolltop >= ( winheight * 2 ) && ( scrolltop < winheight * 3 )){
+			//if on download page
+			if (scrolltop >= ( winheight * 2 ) &&  scrolltop < (winheight * 2.5) - 1){
 				$('#wrapper').animate({
+					//scroll back to movie page
 					scrollTop: win_height
 				}, scrollSpeed);
 			}
-			//go to the bottom of the about screen
-			if (scrolltop >= (winheight * 3) && scrolltop < (win_height * 4)){
+			//if on artist page
+			if (scrolltop >= ((winheight * 2.5) - 1) && scrolltop < (win_height * 3.5) - 1){
 				$('#wrapper').animate({
+					//scroll back to download page
 					scrollTop: (win_height * 2)
 				}, scrollSpeed);
 			}
 
-			//between fourth and fifth screen (artist screen)
-			if (scrolltop >= (winheight * 4 ) && (scrolltop < winheight * 5)){
+			//if on about screen
+			if (scrolltop >= (winheight * 3.5 - 1 ) && (scrolltop < winheight * 4.5)){
 				$('#wrapper').animate({
-					scrollTop: (win_height * 3) //allow extra padding
+					//scroll back to artist page
+					scrollTop: (win_height * 2.5) //allow extra padding
 				}, scrollSpeed);
 			}
 
-			if (scrolltop >= (win_height * 5)){
+			//if partway down about screen
+			if (scrolltop >= (win_height * 4.5) - 1){
 				$('#wrapper').animate({
-					scrollTop: (win_height * 4)
+					scrollTop: (win_height * 3.5)
 				}, scrollSpeed);
 			}
 		}
