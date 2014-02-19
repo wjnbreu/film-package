@@ -1,4 +1,14 @@
+var tag = document.createElement('script');
+		tag.src = "http://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+
+
+
 $(document).ready(function() {
+
 
 
 
@@ -9,6 +19,16 @@ $(document).ready(function() {
 	var win_width = $(window).width();
 	var elementHeight = 0; //used for call bounding rect to measure element
 	var exit = $('#wrapper').find('#exit');
+
+	//youtube
+	var i; //reset interval
+	var videoId;
+	var duration = 0;
+	var flagTwentyFive = 0;
+	var flagFifty = 0;
+	var flagSeventyFive = 0;
+	
+	
 
 	//number of content screens - 1
 	var scrollBottom = $(window).scrollTop() + (win_height * 4.5);
@@ -69,23 +89,109 @@ $(document).ready(function() {
 
 	function init(){
 
-		function swapVideo(vid){
+		var player;
+
+		window.onYouTubeIframeAPIReady = function(){
+			
 			var height = (measureVideo());
 			var width = ($(window).width());
+
+			if (country === 'Japan'){
+				videoId = 'HUUa-KNyqKk';
+			} else{
+				videoId = '_EDnMFJiv8U';
+			}
+
+			
+			player = new YT.Player('ytplayer', {
+				playerVars: {
+					modestbranding: true
+				},
+				height: height,
+				width: width,
+				videoId: videoId,
+				events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+				}
+			});
+
+			
+
+		}; //end onYouTubeIframeAPIReady
+
+		function onPlayerReady(event){
+			//change video background on play button click
+			$('#play-button').on('click', function(e){
+				e.preventDefault();
+				player.playVideo();
+				swapVideo($(this));
+				$(this).fadeOut();
+				duration = player.getDuration();
+				//check position every 10 seconds
+				i = setInterval(checkPlayer, 10000);
+			});
+		}
+
+		function onPlayerStateChange(event){
+			// if (player.getPlayerState() === 0){
+			// 	clearInterval(i);
+			// }
+			return;
+		}
+
+		function checkPlayer(){
+			//get current position
+			var p = player.getCurrentTime();
+			//get percent of video completed
+			var uglyPercent = (p / duration) * 100;
+			//round it
+			var percent = Math.round(uglyPercent);
+			if (percent >= 25){
+				if (flagTwentyFive === 0){
+					alert('25%');
+					ga('send', 'event', 'RBMA15', 'Film', '25perc');
+					flagTwentyFive = 1;
+				}
+				
+			}
+			if (percent >= 50){
+				if (flagFifty === 0){
+					alert('50%');
+					ga('send', 'event', 'RBMA15', 'Film', '50perc');
+					flagFifty = 1;
+				}
+				
+			}
+
+			if (percent >= 75){
+				if (flagSeventyFive === 0){
+					alert('75%');
+					ga('send', 'event', 'RBMA15', 'Film', '75perc');
+					flagSeventyFive = 1;
+				}
+				
+			}
+
+			
+		}
+		
+
+		function swapVideo(vid){
 			var target = vid.parent();
 
 			//display appropriate vid based on country
-			if (country === 'Japan'){
-				target.find('#embed').html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
+			// if (country === 'Japan'){
+			// 	target.find('#embed').empty().html('<iframe id="ytplayer" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
 				
-			}
-			else{
-				target.find('#embed').html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
-			}
+			// }
+			// else{
+			// 	target.find('#embed').empty().html('<iframe id="ytplayer" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
+			// }
 			
 			target.find('.play').hide();
-			target.find('#embed').show();
-			target.find('#embed').css({
+			target.find('#ytplayer').show();
+			target.find('#ytplayer').css({
 				zIndex: '99'
 			});
 		}
@@ -328,13 +434,8 @@ $(document).ready(function() {
 			}
 		});
 
-		//change video background on play button click
-		$('#play-button').on('click', function(e){
-			e.preventDefault();
-			swapVideo($(this));
-			$(this).fadeOut();
-
-		});
+		
+		
 
 
 
