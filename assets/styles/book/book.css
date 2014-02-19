@@ -501,7 +501,7 @@ footer {
   left: 20px;
   width: 40px;
   height: 60px;
-  background: url(../../images/book/arrow-l-black.png) no-repeat center center;
+  background: url(//d17vwh530ty7de.cloudfront.net/book/arrow-l-black.png) no-repeat center center;
   background-size: 80%;
   display: none;
   background-color: white;
@@ -511,7 +511,7 @@ footer {
   -ms-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out; }
   #nav-arrow-left:hover {
-    background: url(../../images/book/arrow-l.png) no-repeat center center;
+    background: url(//d17vwh530ty7de.cloudfront.net/book/arrow-l.png) no-repeat center center;
     background-size: 80%;
     background-color: black; }
 
@@ -522,7 +522,7 @@ footer {
   width: 40px;
   height: 60px;
   display: block;
-  background: url(../../images/book/arrow-r-black.png) no-repeat center center;
+  background: url(//d17vwh530ty7de.cloudfront.net/book/arrow-r-black.png) no-repeat center center;
   background-size: 80%;
   background-color: white;
   -webkit-transition: all .1s ease-in-out;
@@ -531,7 +531,7 @@ footer {
   -ms-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out; }
   #nav-arrow-right:hover {
-    background: url(../../images/book/arrow-r.png) no-repeat center center;
+    background: url(//d17vwh530ty7de.cloudfront.net/book/arrow-r.png) no-repeat center center;
     background-size: 80%;
     background-color: black; }
 
@@ -628,7 +628,7 @@ footer {
     #mobi-info .mobi-info {
       position: absolute;
       left: 0;
-      background: url(../../images/book/mobi-info.png) no-repeat center center;
+      background: url(//d17vwh530ty7de.cloudfront.net/book/mobi-info.png) no-repeat center center;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -819,7 +819,7 @@ footer {
     #mobi-info .mobi-info {
       position: absolute;
       left: 0;
-      background: url(../../images/book/mobi-info.png) no-repeat center center;
+      background: url(//d17vwh530ty7de.cloudfront.net/book/mobi-info.png) no-repeat center center;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -1006,7 +1006,7 @@ footer {
     #mobi-info .mobi-info {
       position: absolute;
       left: 0;
-      background: url(../../images/book/mobi-info.png) no-repeat center center;
+      background: url(//d17vwh530ty7de.cloudfront.net/book/mobi-info.png) no-repeat center center;
       background-size: 30%;
       width: 100px;
       height: 50px;
@@ -1192,7 +1192,7 @@ footer {
     #mobi-info .mobi-info {
       position: absolute;
       left: 0;
-      background: url(../../images/book/mobi-info.png) no-repeat center center;
+      background: url(//d17vwh530ty7de.cloudfront.net/book/mobi-info.png) no-repeat center center;
       background-size: 30%;
       width: 100px;
       height: 50px;

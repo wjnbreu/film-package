@@ -1,14 +1,3 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 
 @font-face {
   font-family: 'Clan';
@@ -83,9 +72,6 @@ h1, h2{
     text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
 
 hr {
     display: block;
@@ -96,17 +82,11 @@ hr {
     padding: 0;
 }
 
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
 
 img {
     vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
 
 fieldset {
     border: 0;
@@ -114,9 +94,7 @@ fieldset {
     padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
+
 
 textarea {
     resize: vertical;
@@ -221,11 +199,11 @@ h1, h2, h3, h4{
     right: 10px;
     width: 50px;
     height: 50px;
-    background: url(../../images/close.gif) no-repeat center center;
+    background: url(//d17vwh530ty7de.cloudfront.net/close.gif) no-repeat center center;
     background-size: 100%;
     z-index: 9999;
     &:hover{
-        background: url(../../images/close-black.gif) no-repeat center center;
+        background: url(//d17vwh530ty7de.cloudfront.net/close-black.gif) no-repeat center center;
         background-size: 100%;
     }
 }
@@ -432,7 +410,7 @@ nav{
     background-size: bottom center;
     min-width: 100%;
     min-height: 100%;
-    background: url(../../images/title-image.jpg) no-repeat bottom left;
+    background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom left;
     background-size: 80%;
     text-align: center;
     color: white;
@@ -522,7 +500,7 @@ nav{
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../../images/perry.jpg) no-repeat top center;
+    background: url(//d17vwh530ty7de.cloudfront.net/perry.jpg) no-repeat top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -551,7 +529,7 @@ nav{
         left: 35%;
         right: 35%;
         text-align: center;
-        background: url(../../images/play_w.svg) no-repeat center center;
+        background: url(//d17vwh530ty7de.cloudfront.net/play_w.svg) no-repeat center center;
         -webkit-background-size: contain;
         -moz-background-size: contain;
         -ms-background-size: contain;
@@ -768,7 +746,7 @@ nav{
         width: 50px;
         height: 50px;
         opacity: 1;
-        background: url(../../images/close.gif) no-repeat center center;
+        background: url(//d17vwh530ty7de.cloudfront.net/close.gif) no-repeat center center;
         background-size: 100%;
         z-index: 99999999999999999999999999;
         &:hover{
@@ -860,7 +838,7 @@ nav{
         margin-left: 20%;
         text-align: center;
         background-color: black;
-        background: url(../../images/loader.gif) no-repeat center center;
+        background: url(//d17vwh530ty7de.cloudfront.net/loader.gif) no-repeat center center;
         background-size: 10%;
         img{
             margin: 0;
@@ -1277,7 +1255,7 @@ nav{
     background-color: black !important;
     background-size: 100% !important;
     min-width: 100%;
-    background: url(../../images/title-image.jpg) no-repeat bottom center;
+    background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1326,7 +1304,7 @@ nav{
 @media only screen and (max-width: 1000px){
 
 #stream{
-    background: url(../../images/perry.jpg) no-repeat top center;
+    background: url(//d17vwh530ty7de.cloudfront.net/perry.jpg) no-repeat top center;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1467,7 +1445,7 @@ nav{
     background-color: black !important;
     background-size: 100% !important;
     min-width: 100%;
-    background: url(../../images/title-image.jpg) no-repeat bottom center;
+    background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1768,7 +1746,7 @@ nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../../images/title-image.jpg) no-repeat bottom center;
+    background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom center;
     img{
         width: 70%;
         margin-left: 15%;
@@ -1796,7 +1774,7 @@ nav{
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../../images/perry.jpg) no-repeat top center;
+    background: url(//d17vwh530ty7de.cloudfront.net/perry.jpg) no-repeat top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2008,7 +1986,7 @@ nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../../images/title-image.jpg) no-repeat bottom center;
+    background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom center;
     img{
         width: 50%;
         margin-left: 25%;
@@ -2136,7 +2114,7 @@ nav{
     right: 10px;
     width: 30px;
     height: 30px;
-    background: url(../../images/close.gif) no-repeat center center;
+    background: url(//d17vwh530ty7de.cloudfront.net/close.gif) no-repeat center center;
     background-size: 100%;
     z-index: 9999999999;
 }
@@ -2179,7 +2157,7 @@ nav{
         left: 0;
         background-size: 200% !important;
         background-size: bottom center;
-        background: url(../../images/title-image.jpg) no-repeat bottom center;
+        background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom center;
         img{
             width: 70%;
             margin: 20% 15% auto 15%;
@@ -2197,7 +2175,7 @@ nav{
         left: 0;
         height: 100%;
         width: 100%;
-        background: url(../../images/perry.jpg) no-repeat top center;
+        background: url(//d17vwh530ty7de.cloudfront.net/perry.jpg) no-repeat top center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -2388,7 +2366,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
         left: 0;
         background-size: 200% !important;
         background-size: bottom center;
-        background: url(../../images/title-image.jpg) no-repeat bottom center;
+        background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom center;
         img{
             width: 80%;
             margin: 25% 10% auto 10%;
@@ -2469,7 +2447,7 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
     background-size: 100% !important;
     background-size: bottom center;
     min-width: 100%;
-    background: url(../../images/title-image.jpg) no-repeat bottom center;
+    background: url(//d17vwh530ty7de.cloudfront.net/title-image.jpg) no-repeat bottom center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2583,13 +2561,6 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
 
 
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
 
 .ir {
     background-color: transparent;
@@ -2727,9 +2698,6 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
         content: " (" attr(title) ")";
     }
 
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
 
     .ir a:after,
     a[href^="javascript:"]:after,

@@ -91,7 +91,7 @@ $('#go-home').on('click', function(){
 function addInfo(name, pic){
 	artistBox.find('.insert-name').text(name);
 	artistBox.find('.exit').removeClass('hidden');
-	artistBox.find('.assets img').attr('src', '../images/artist/' + pic + '.jpg');
+	artistBox.find('.assets img').attr('src', '//d17vwh530ty7de.cloudfront.net/artist/' + pic + '.jpg');
 
 	
 

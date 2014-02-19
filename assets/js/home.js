@@ -242,19 +242,19 @@ $(document).ready(function() {
 
 		//REFACTOR TO FUNCTIONS!!!	
 		$('#download').find('.download-left img').on('mouseenter', function(){
-			$(this).attr('src', 'images/standard_def_back.svg');
+			$(this).attr('src', '//d17vwh530ty7de.cloudfront.net/standard_def_back.svg');
 		});
 
 		$('#download').find('.download-left img').on('mouseleave', function(){
-			$(this).attr('src', 'images/standard_def_b.svg');
+			$(this).attr('src', '//d17vwh530ty7de.cloudfront.net/standard_def_b.svg');
 		});
 
 		$('#download').find('.download-right img').on('mouseenter', function(){
-			$(this).attr('src', 'images/high_def_back.svg');
+			$(this).attr('src', '//d17vwh530ty7de.cloudfront.net/high_def_back.svg');
 		});
 
 		$('#download').find('.download-right img').on('mouseleave', function(){
-			$(this).attr('src', 'images/high_def_b.svg');
+			$(this).attr('src', '//d17vwh530ty7de.cloudfront.net/high_def_b.svg');
 		});
 
 
