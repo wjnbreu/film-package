@@ -127,9 +127,7 @@ textarea {
     outline: none;
    }
 
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
+
 
 .chromeframe {
     margin: 0.2em 0;
@@ -138,9 +136,7 @@ textarea {
     padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+
 
 
    //MAKE SURE DOUBLECLICK DOESN'T SCREW WITH ARTIST INFO
@@ -2294,6 +2290,32 @@ nav{
             line-height: 1.75;
             font-size: 0.8em;
         }
+        .next-artist{
+            position: absolute;
+            top: 17.5%;
+            right: 17px;
+            &:hover{
+                    right: 17px;
+                }
+            img{
+                max-width: 100%;
+                width: 20px;
+            }
+        }
+
+        .prev-artist{
+            position: absolute;
+            top: 17.5%;
+            left: 17px;
+            &:hover{
+                    left: 17px;
+                }
+            img{
+                max-width: 100%;
+                width: 20px;
+            }
+        }
+
         .assets{
             width: 70%;
             max-height: 60%;
@@ -2394,32 +2416,32 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
         }
     }
 
-        #artist-info{
+    #artist-info{
         .next-artist{
-        position: absolute;
-        top: 17.5%;
-        right: 17px;
-        &:hover{
-                right: 17px;
+            position: absolute;
+            top: 17.5%;
+            right: 17px;
+            &:hover{
+                    right: 17px;
+                }
+            img{
+                max-width: 100%;
+                width: 20px;
             }
-        img{
-            max-width: 100%;
-            width: 20px;
         }
-    }
 
-    .prev-artist{
-        position: absolute;
-        top: 17.5%;
-        left: 17px;
-        &:hover{
-                left: 17px;
+        .prev-artist{
+            position: absolute;
+            top: 17.5%;
+            left: 17px;
+            &:hover{
+                    left: 17px;
+                }
+            img{
+                max-width: 100%;
+                width: 20px;
             }
-        img{
-            max-width: 100%;
-            width: 20px;
         }
-    }
     }
 
 
