@@ -24,7 +24,7 @@ $(document).ready(function() {
 	var percentFifty = 0;
 	var percentSeventyFive = 0;
 
-	var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+	var iOS = ( navigator.userAgent.match(/(Android|iPad|iPhone|iPod)/g) ? true : false );
 	
 	var hd = "https://d1cwrlyxfuylre.cloudfront.net/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music.mp4";
 	var sd = "https://d1cwrlyxfuylre.cloudfront.net/SD-what-difference-does-it-make.mp4";
@@ -112,20 +112,21 @@ $(document).ready(function() {
 		};
 
 		function onPlayerReady(){
-
-		
+			//$('#embed').hide();
+			alert('player ready');
 			$('#play-button').on('click', function(e){
 				e.preventDefault();
 				$(this).fadeOut();
-				$('#embed').show();
+				//$('#embed').removeClass('hidden');
 				$('#embed').css({
-					zIndex: '99'
+					zIndex: '99',
+					visibility: 'visible'
 				});
 
 				//iOS not supporting autoplay, so skip for those devices
-				if( !(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+				//if( !iOS ){
 					player.playVideo();
-				}
+				//}
 				
 				
 				

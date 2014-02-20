@@ -547,10 +547,10 @@ nav{
         }
     }
     #embed{
-        z-index: 99;
         height: 100%;
+        z-index: 99;
         width: 100%;
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -1805,11 +1805,7 @@ nav{
         right: 25%;
 
     }
-    #embed{
-        z-index: 99;
-        height: 100%;
-        width: 100%;
-    }
+
 }
 
 
@@ -2211,11 +2207,7 @@ nav{
         background-size: contain;
       
     }
-    #embed{
-        z-index: 99;
-        height: 100%;
-        width: 100%;
-    }
+
 }
 
          
