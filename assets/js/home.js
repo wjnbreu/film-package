@@ -17,6 +17,9 @@ $(document).ready(function() {
 	var country;
 	var sd_download = $('#download').find('.download-left a');
 	var hd_download = $('#download').find('.download-right a');
+
+	var player;
+	var duration;
 	
 	var hd = "https://d1cwrlyxfuylre.cloudfront.net/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music.mp4";
 	var sd = "https://d1cwrlyxfuylre.cloudfront.net/SD-what-difference-does-it-make.mp4";
@@ -69,25 +72,73 @@ $(document).ready(function() {
 
 	function init(){
 
-		function swapVideo(vid){
+		addVideo();
+
+			
+
+		function addVideo(){
 			var height = (measureVideo());
 			var width = ($(window).width());
-			var target = vid.parent();
 
 			//display appropriate vid based on country
 			if (country === 'Japan'){
-				target.find('#embed').html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
+				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
 				
 			}
 			else{
-				target.find('#embed').html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=1&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
+				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
 			}
+
+			loadYouTube();
+		}
+
+		function loadYouTube(){
+			var tag = document.createElement('script');
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		}
+
+		window.onYouTubeIframeAPIReady = function(playerId){
+			player = new YT.Player('embed',{
+				events: {
+					'onReady': onPlayerReady
+				}
+				
+			});
+		};
+
+		function onPlayerReady(){
+			//change video background on play button click
+			$('#play-button').on('click', function(e){
+				//e.preventDefault();
+				//swapVideo($(this));
+				$(this).fadeOut();
+				$('#embed').show();
+				player.playVideo();
+				duration = player.getDuration();
+				i = setInterval(checkPlayer, 10000);
+
+			});
+		}
+
+		function checkPlayer(){
+			var position = player.getCurrentTime();
+			var uglyPercent = (position / duration) * 100;
+			var percent = Math.round(uglyPercent);
+			alert(percent);
+		}
+		
+
+		function swapVideo(vid){
+			
 			
 			target.find('.play').hide();
 			target.find('#embed').show();
 			target.find('#embed').css({
 				zIndex: '99'
 			});
+
 		}
 
 			//USED TO MESAURE SCREEN SIZE TO BE USED FOR VIDEO SIZE
@@ -328,17 +379,13 @@ $(document).ready(function() {
 			}
 		});
 
-		//change video background on play button click
-		$('#play-button').on('click', function(e){
-			e.preventDefault();
-			swapVideo($(this));
-			$(this).fadeOut();
+		
 
-		});
+		
 
 
 
-} //end init
+	} //end init
 }); //end doc ready
 
 
