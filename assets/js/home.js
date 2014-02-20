@@ -82,11 +82,11 @@ $(document).ready(function() {
 
 			//display appropriate vid based on country
 			if (country === 'Japan'){
-				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
+				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0&amp;origin=http://rbma15-stage.herokuapp.com" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
 				
 			}
 			else{
-				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
+				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0&amp;origin=http://rbma15-stage.herokuapp.com" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
 			}
 
 			loadYouTube();
@@ -126,7 +126,7 @@ $(document).ready(function() {
 			var position = player.getCurrentTime();
 			var uglyPercent = (position / duration) * 100;
 			var percent = Math.round(uglyPercent);
-			alert(percent);
+			console.log(percent);
 		}
 		
 
