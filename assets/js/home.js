@@ -27,6 +27,7 @@ $(document).ready(function() {
 	var flagTwentyFive = 0;
 	var flagFifty = 0;
 	var flagSeventyFive = 0;
+	var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
 	
 	
 
@@ -124,14 +125,16 @@ $(document).ready(function() {
 		function onPlayerReady(event){
 			//change video background on play button click
 			$('#play-button').on('click', function(e){
+				e.preventDefault();
+
 				$(this).hide();
-				//e.preventDefault();
-				//player.playVideo();
-				//swapVideo($(this));
-				//$(this).fadeOut();
-				//duration = player.getDuration();
+				swapVideo($(this));
+				duration = player.getDuration();
+
+				player.playVideo();
+				
 				//check position every 10 seconds
-				//i = setInterval(checkPlayer, 10000);
+				i = setInterval(checkPlayer, 10000);
 			});
 		}
 
