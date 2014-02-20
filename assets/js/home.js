@@ -12,14 +12,19 @@ $(document).ready(function() {
 
 	//number of content screens - 1
 	var scrollBottom = $(window).scrollTop() + (win_height * 4.5);
-	var backgrounds = ['top'];
 	var scrollSpeed = 500;
 	var country;
 	var sd_download = $('#download').find('.download-left a');
 	var hd_download = $('#download').find('.download-right a');
 
-	var player;
-	var duration;
+	//youtube
+	var player, duration, i, videoId;
+	//flags for GA youtube events
+	var percentTwentyFive = 0;
+	var percentFifty = 0;
+	var percentSeventyFive = 0;
+
+	var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
 	
 	var hd = "https://d1cwrlyxfuylre.cloudfront.net/HD+What+Difference+Does+It+Make%3F+A+Film+About+Making+Music.mp4";
 	var sd = "https://d1cwrlyxfuylre.cloudfront.net/SD-what-difference-does-it-make.mp4";
@@ -41,12 +46,14 @@ $(document).ready(function() {
 			}).fail(function(textStatus){
 				sd_download.attr('href', sd);
 				hd_download.attr('href', hd);
+				videoId = '_EDnMFJiv8U';
 				init();
 
 			}).success(function(textStatus){
 				if (country === 'Japan'){
 					sd_download.attr('href', sd_jp);
 					hd_download.attr('href', hd_jp);
+					videoId = 'HUUa-KNyqKk';
 					init();
 
 				}
@@ -54,6 +61,7 @@ $(document).ready(function() {
 				else {
 					sd_download.attr('href', sd);
 					hd_download.attr('href', hd);
+					videoId = '_EDnMFJiv8U';
 					init();
 				}
 
@@ -64,6 +72,7 @@ $(document).ready(function() {
 		catch (error){
 			sd_download.attr('href', sd);
 			hd_download.attr('href', hd);
+			videoId = '_EDnMFJiv8U';
 			init();
 		}
 	}
@@ -72,25 +81,8 @@ $(document).ready(function() {
 
 	function init(){
 
-		addVideo();
 
-			
-
-		function addVideo(){
-			var height = (measureVideo());
-			var width = ($(window).width());
-
-			//display appropriate vid based on country
-			if (country === 'Japan'){
-				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/HUUa-KNyqKk?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0&amp;origin=http://rbma15-stage.herokuapp.com" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
-				
-			}
-			else{
-				$('#embed').append('<iframe id="player" enablejsapi="1" width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/_EDnMFJiv8U?enablejsapi=1&amp;origin=*&amp;autoplay=0&amp;loop=1&amp;hd=1&amp;modestbranding=0&amp;origin=http://rbma15-stage.herokuapp.com" frameborder="0" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen></iframe>');
-			}
-
-			loadYouTube();
-		}
+		loadYouTube();
 
 		function loadYouTube(){
 			var tag = document.createElement('script');
@@ -100,48 +92,89 @@ $(document).ready(function() {
 		}
 
 		window.onYouTubeIframeAPIReady = function(playerId){
+			var height = (measureVideo());
+			var width = ($(window).width());
+
 			player = new YT.Player('embed',{
+				height: height,
+				width: width,
+				//use video id determined by ip geo
+				videoId: videoId,
 				events: {
-					'onReady': onPlayerReady
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
 				}
 				
 			});
+			
 		};
 
 		function onPlayerReady(){
-			//change video background on play button click
+
+		
 			$('#play-button').on('click', function(e){
-				//e.preventDefault();
-				//swapVideo($(this));
+				e.preventDefault();
 				$(this).fadeOut();
 				$('#embed').show();
-				player.playVideo();
-				duration = player.getDuration();
+				$('#embed').css({
+					zIndex: '99'
+				});
+				
+				//iOS not supporting autoplay, so skip for those devices
+				if (!iOS){
+					player.playVideo();
+				}
+				
+				
+				//check player every 10 seconds for video position
 				i = setInterval(checkPlayer, 10000);
 
 			});
 		}
 
+		function onPlayerStateChange(event){
+			if (event.data === 1){
+				//if video is playing, get duration of video (video won't load 
+				//duration on iOS until it has started playing)
+				console.log('playing');
+				duration = player.getDuration();
+			}
+			if (event.data === 2){
+				//video is paused
+				console.log('paused');
+			}
+
+			if (event.data === 0){
+				//when video is over, clear counter
+				clearInterval(i);
+			}
+		}
+
 		function checkPlayer(){
 			var position = player.getCurrentTime();
 			var uglyPercent = (position / duration) * 100;
+			//round percent to whole number
 			var percent = Math.round(uglyPercent);
-			console.log(percent);
+			
+			if (percent >= 25 && percentTwentyFive === 0 ){
+				percentTwentyFive = 1;
+				ga('send', 'event', 'RBMA15', 'Film', '25perc');
+				console.log('25 percent watched');
+			}
+			if (percent >= 50 && percentFifty === 0 ){
+				percentFifty = 1;
+				ga('send', 'event', 'RBMA15', 'Film', '50perc');
+				console.log('50 percent watched');
+			}
+			if (percent >= 75 && percentSeventyFive === 0 ){
+				percentSeventyFive = 1;
+				ga('send', 'event', 'RBMA15', 'Film', '75perc');
+				console.log('75 percent watched');
+			}
 		}
 		
 
-		function swapVideo(vid){
-			
-			
-			target.find('.play').hide();
-			target.find('#embed').show();
-			target.find('#embed').css({
-				zIndex: '99'
-			});
-
-		}
-
-			//USED TO MESAURE SCREEN SIZE TO BE USED FOR VIDEO SIZE
+		//USED TO MESAURE SCREEN SIZE TO BE USED FOR VIDEO SIZE
 		function measureVideo(){
 			var rect = document.getElementById("stream").getBoundingClientRect();
 			if (rect.height){
@@ -378,12 +411,6 @@ $(document).ready(function() {
 				
 			}
 		});
-
-		
-
-		
-
-
 
 	} //end init
 }); //end doc ready
