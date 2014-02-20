@@ -93,6 +93,7 @@ $(document).ready(function() {
 
 		window.onYouTubeIframeAPIReady = function(){
 			
+			alert('ready');
 			var height = (measureVideo());
 			var width = ($(window).width());
 
@@ -123,8 +124,9 @@ $(document).ready(function() {
 		function onPlayerReady(event){
 			//change video background on play button click
 			$('#play-button').on('click', function(e){
+				alert('click');
 				e.preventDefault();
-				player.playVideo();
+				//player.playVideo();
 				swapVideo($(this));
 				$(this).fadeOut();
 				duration = player.getDuration();
