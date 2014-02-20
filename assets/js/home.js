@@ -83,6 +83,8 @@ $(document).ready(function() {
 
 
 		loadYouTube();
+		
+		
 
 		function loadYouTube(){
 			var tag = document.createElement('script');
@@ -119,11 +121,12 @@ $(document).ready(function() {
 				$('#embed').css({
 					zIndex: '99'
 				});
-				
+
 				//iOS not supporting autoplay, so skip for those devices
-				if (!iOS){
+				if( !(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
 					player.playVideo();
 				}
+				
 				
 				
 				//check player every 10 seconds for video position
