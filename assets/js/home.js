@@ -112,21 +112,20 @@ $(document).ready(function() {
 		};
 
 		function onPlayerReady(){
-			//$('#embed').hide();
-			alert('player ready');
 			$('#play-button').on('click', function(e){
 				e.preventDefault();
 				$(this).fadeOut();
-				//$('#embed').removeClass('hidden');
-				$('#embed').css({
-					zIndex: '99',
-					visibility: 'visible'
-				});
+				
 
 				//iOS not supporting autoplay, so skip for those devices
-				//if( !iOS ){
+				if( !iOS ){
 					player.playVideo();
-				//}
+				}
+
+				$('#embed').css({
+					zIndex: '99',
+					opacity: '1'
+				});
 				
 				
 				
@@ -140,12 +139,10 @@ $(document).ready(function() {
 			if (event.data === 1){
 				//if video is playing, get duration of video (video won't load 
 				//duration on iOS until it has started playing)
-				console.log('playing');
 				duration = player.getDuration();
 			}
 			if (event.data === 2){
 				//video is paused
-				console.log('paused');
 			}
 
 			if (event.data === 0){
@@ -163,17 +160,14 @@ $(document).ready(function() {
 			if (percent >= 25 && percentTwentyFive === 0 ){
 				percentTwentyFive = 1;
 				ga('send', 'event', 'RBMA15', 'Film', '25perc');
-				console.log('25 percent watched');
 			}
 			if (percent >= 50 && percentFifty === 0 ){
 				percentFifty = 1;
 				ga('send', 'event', 'RBMA15', 'Film', '50perc');
-				console.log('50 percent watched');
 			}
 			if (percent >= 75 && percentSeventyFive === 0 ){
 				percentSeventyFive = 1;
 				ga('send', 'event', 'RBMA15', 'Film', '75perc');
-				console.log('75 percent watched');
 			}
 		}
 		

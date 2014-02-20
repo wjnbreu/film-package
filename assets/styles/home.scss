@@ -548,9 +548,9 @@ nav{
     }
     #embed{
         height: 100%;
-        z-index: 99;
+        //z-index: 99;
         width: 100%;
-        visibility: hidden;
+        opacity: 0;
     }
 }
 
