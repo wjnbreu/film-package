@@ -1,7 +1,7 @@
 var tag = document.createElement('script');
-		tag.src = "http://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+tag.src = "http://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
 
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
 		window.onYouTubeIframeAPIReady = function(){
 			
-			alert('ready');
+			
 			var height = (measureVideo());
 			var width = ($(window).width());
 
@@ -124,20 +124,20 @@ $(document).ready(function() {
 		function onPlayerReady(event){
 			//change video background on play button click
 			$('#play-button').on('click', function(e){
-				alert('click');
-				e.preventDefault();
+				$(this).hide();
+				//e.preventDefault();
 				//player.playVideo();
-				swapVideo($(this));
-				$(this).fadeOut();
-				duration = player.getDuration();
+				//swapVideo($(this));
+				//$(this).fadeOut();
+				//duration = player.getDuration();
 				//check position every 10 seconds
-				i = setInterval(checkPlayer, 10000);
+				//i = setInterval(checkPlayer, 10000);
 			});
 		}
 
 		function onPlayerStateChange(event){
 			// if (player.getPlayerState() === 0){
-			// 	clearInterval(i);
+			// clearInterval(i);
 			// }
 			return;
 		}
