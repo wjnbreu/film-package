@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "RBMA x 15",
   "engines": {
-    "node": "0.10.25"
+    "node": "0.10.29"
   },
   "dependencies": {
     "sails": "0.9.8",
